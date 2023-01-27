@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Single Block",
+        "varietal": "Malbec",
+        "colour_type": "Red",
+        "winery": "Argento",
+        "price": 5.453,
+        "img": "https://jumboargentina.vtexassets.com/arquivos/ids/679346-600-auto?v=637740885723170000&width=600&height=auto&aspect=true",
+        "stock": 25,
+        "year": 2018,
+        "province":"Mendoza",
+        "region":"Cruz, Maipú",
+        "alcohol": 14.5,
+        "volume": 740,
+        "url": "http://www.bodegaargento.com",
+        "description": "Este vino es la mejor expresión de nuestro terroir en Altamira. Un lugar que permite sentir las características típicas del Valle de Uco. El vino nace después de una selección de micro terroir dentro del viñedo, segmentados en bloques por sus diferentes perfiles de suelo. Una mínima intervención en el viñedo y la bodega, nos permite obtener un vino puro, orgánico y clásico de Altamira. El vino presenta intensos colores violáceos y aromas de cerezaa negra y flores de violeta. En boca es jugoso con buena textura, acidez, volumen y un final largo, tenso y vibrante."
+    }
+]
