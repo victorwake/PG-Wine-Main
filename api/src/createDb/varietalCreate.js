@@ -20,8 +20,8 @@ const insertVarietal = async () => {
         {name: 'Tannat'},
         {name: 'Semillón'},
         {name: 'Grenache'},
-        {name: 'Xbox One'},
-        {name: 'Xbox Series S/X'}
+        {name: 'Pinot grigio'},
+        {name: 'Blend'},
     ]
     await Varietal.bulkCreate(typeOfVarietal);
     console.log('varietal loaded in the db');  
