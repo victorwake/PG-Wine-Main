@@ -2,7 +2,7 @@
 {  
 "name": "Trivento Reserve Cabernet Sauvignon",
 "varietal":"Cabernet Sauvignon",
-"colour_type": "Red wine",
+"colour_type": "Red",
 "winery": "Bodega Trivento",
 "price": 1.324,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trivento-reserve-cabernet-sauvignon-2020-vino-trivento-986175_400x.jpg?v=1634676112",
@@ -20,7 +20,7 @@
 {  
 "name": "Benmarco Malbec",
 "varietal":"Malbec",
-"colour_type": "Red wine",
+"colour_type": "Red",
 "winery": "Susana Balbo Wines",
 "price": 2.529,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/benmarco-malbec-2019-vino-susana-balbo-wines-703333_400x.jpg?v=1652544895",
@@ -38,7 +38,7 @@
 {  
 "name": "Bira Rosso DUco",
 "varietal":"Blend",
-"colour_type": "Red wine",
+"colour_type": "Red",
 "winery": "Bira Wines",
 "price": 2.975,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/bira-rosso-duco-2019-vino-bira-wines-356904_400x.jpg?v=1614810233",
@@ -52,10 +52,11 @@
 "description": "BIRA nace de la búsqueda de las raíces familiares de dos amigos, Santiago Bernasconi y Federico Isgró, ambos con origen en Italia o la Suiza italiana. Uno del norte, otro del sur, pero ambos con preferencia por los vinos de la península. En esa búsqueda encuentran el viñedo de Sangiovese plantado en 1975 en el Valle de Uco, lo que los convence de llevar adelante la idea de desarrollar vinos con inspiración italiana, pero con alma argentina, en la altura de los Andes. BIRA en Argentina son inicialmente 3 vinos de corte con base Sangiovese, estilo de inspiración Toscana y que representarían la primera generación de los inmigrantes arribados a nuestro país, y 2 con base en Malbec, que representarían la primera generación de nacidos en el país. Los viñedos están ubicados en Gualtallary, La Consulta y La Arboleda, todos en Valle de Uco, Mendoza."
 
 },
+
 {  
 "name": "Alma Gemela Teroldego",
 "varietal":"Teroldego",
-"colour_type": "Red wine",
+"colour_type": "Red",
 "winery": "Onofri Wines",
 "price": 3.440,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/alma-gemela-teroldego-2018-vino-onofri-wines-130078_400x.jpg?v=1598228692",
@@ -69,10 +70,11 @@
 "description": "Esta es una excentricidad de Onofri en su catálogo. Una variedad del norte, de Alto Adige, que de pronto se ve plantada en medio del desierto del este mendocino en Lavalle y da un vino intenso, salvaje, casi con la rabia de alguien que se encuentra, de pronto, en un lugar que poco y nada tiene que ver con su hogar. Aquí hay frutas rojas maduras intensas, un lado herbal muy marcado y, sobre todo, mucha energía en taninos. Una bestia en la jaula."
 
 },
+
 {  
 "name": "Alma 4 Phos Pet Nat",
 "varietal":" Pinot noir",
-"colour_type": "pink wine",
+"colour_type": "Pink",
 "winery": "Zuccardi Valle de Uco",
 "price": 3.495,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/alma-4-phos-pet-nat-2021-vino-zuccardi-valle-de-uco-348447_400x.jpg?v=1635999460",
@@ -86,10 +88,11 @@
 "description": "Alma 4 es una línea de espumantes, nacido en 1999, que reúne a cuatro amigos mendocinos en torno a la elaboración de espumantes: la pareja Sebastián Zuccardi-Marcela Manini (el enólogo de la bodega Zuccardi y su mujer, quien también estudió enología) y los ingenieros agrónomos Mauricio Castro y Agustín López. Todos amigos del tiempo en que estudiaban el Liceo Agrícola de Mendoza. Cada espumante lo elaboran con el método de segunda fermentación en botella -algunos tienen largos periodos de crianza- y trabajan con ciertas variedades atípicas para las burbujas, como viognier. Sus uvas nacen en Vista Flores, Tupungato, Los Árboles y San José. Este método ancestral (una sola fermentación en botella) es un cien por cien pinot noir, de la zona de Ancón, en La Carrera, en el extremo norte del Valle de Uco. Aunque apenas se trata de mil botellas, es algo que tienen que probar. Tiene una adorable rusticidad, con toques especiados, pero sobre todo muchas frutas rojas ácidas en medio de tonos herbales. Es ligero, pero a la vez muy tenso. Tiene fuerza en las burbujas, espuma que pincha la lengua. "
 
 },
+
 {  
 "name": "Trapiche Iscay Syrah - Viognier",
 "varietal":" Blend",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Bodega Trapiche",
 "price": 23.310,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-iscay-syrah-viognier-2014-vino-trapiche-540542_400x.jpg?v=1598226898",
@@ -103,10 +106,11 @@
 "description": "Iscay representa la unión de dos componentes: la viticultura, como interacción entre el terroir y la vid; y la enología, combinación de Ciencia y Arte. Un vino creado por Marcelo Belmonte, Ingeniero Agrónomo, y Daniel Pi, Enólogo de la Bodega, que juntos dan origen a este excepcional ejemplar argentino, ícono de Trapiche. Un Blend elaborado a partir de dos variedades de uva para obtener el mejor corte y así, lograr el vino más selecto. De color rojo profundo con aromas aciruelados en nariz, este vino entrega notas florales y un toque de pimienta blanca. En boca es fresco, con taninos dulces que hacen de este blend un ejemplar elegante. "
 
 },
+
 {  
 "name": "Trapiche Gran Medalla Malbec",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Bodega Trapiche",
 "price": 6.214,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-malbec-2017-vino-trapiche-344080_400x.jpg?v=1605996589",
@@ -120,10 +124,11 @@
 "description": "Iscay representa la unión de dos componentes: la viticultura, como interacción entre el terroir y la vid; y la enología, combinación de Ciencia y Arte. Un vino creado por Marcelo Belmonte, Ingeniero Agrónomo, y Daniel Pi, Enólogo de la Bodega, que juntos dan origen a este excepcional ejemplar argentino, ícono de Trapiche. Un Blend elaborado a partir de dos variedades de uva para obtener el mejor corte y así, lograr el vino más selecto. De color rojo profundo con aromas aciruelados en nariz, este vino entrega notas florales y un toque de pimienta blanca. En boca es fresco, con taninos dulces que hacen de este blend un ejemplar elegante. "
 
 },
+
 {  
 "name": "Trapiche Gran Medalla Chardonnay",
 "varietal":"Chardonnay",
-"colour_type": "white wine",
+"colour_type": "White",
 "winery": "Bodega Trapiche",
 "price": 7.170,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-chardonnay-2020-vino-trapiche-132594_400x.jpg?v=1659374346",
@@ -136,10 +141,11 @@
 "url": "https://viners.com.ar/products/trapiche-gran-medalla-chardonnay-2020",
 "description":"Este Chardonnay expresa aromas de frutas tropicales, combinadas con notas cítricas y de azahares y un leve toque de especias, madreselva y brioche. De gran concentración de fruta en boca, es fresco y de carácter mineral, con un final sensacional. Tiene aromas de jazmín seco, pera especiada, mango seco, nuez moscada, praliné, masa de pastel y vainilla tostada. Es de cuerpo completo con capas carnosas y mantecosas de fruta madura y notas de pastelería. Delicioso. Final largo y equilibrado. Bebe ahora o espera."
 },
+
 {
 "name": "Trapiche Terroir Series Finca Orellana Malbec",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Bodega Trapiche",
 "price": 11.475,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-orellana-malbec-2014-vino-trapiche-776188_400x.jpg?v=1659385186",
@@ -156,7 +162,7 @@
 {  
 "name": "Trapiche Iscay Malbec - Cabernet Franc",
 "varietal":"Blend",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Bodega Trapiche",
 "price": 24.975,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-iscay-malbec-cabernet-franc-2014-vino-trapiche-723193_400x.jpg?v=1598228789",
@@ -170,10 +176,11 @@
 "description": "La cosecha 2017 de Iscay Malbec - Cabernet Franc 2017 fue considerada como el mejor vino de Argentina por el reconocido critico James Suckling, en su reporte anual con el top 100 de los mejores vinos argentinos de 2021, otorgándole el puntaje más alto -98 sobre 100. En este caso, la cosecha 2019, aún no fue puntuada por James Suckling.Iscay representa la unión de dos componentes: la viticultura, como interacción entre el terroir y la vid; y la enología, combinación de Ciencia y Arte. Un vino creado por Marcelo Belmonte, Ingeniero Agrónomo, y Daniel Pi, Enólogo de la Bodega, que juntos dan origen a este excepcional ejemplar argentino, ícono de Trapiche. Un Blend elaborado a partir de dos variedades de uva para obtener el mejor corte y así, lograr el vino más selecto. De color púrpura intenso, este vino combina aromas a violetas, frutas rojas maduras, sutiles notas especiadas y taninos generosos. El Malbec y el Cabernet Franc hacen una perfecta combinación que resulta en un ejemplar elegante y de final diáfano."
 
 },
+
 {  
 "name": "Trapiche Gran Medalla Cabernet Sauvignon",
 "varietal":"Cabernet Sauvignon",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Bodega Trapiche",
 "price": 7.170,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-cabernet-sauvignon-2017-vino-trapiche-348773_400x.jpg?v=1659478950",
@@ -187,10 +194,11 @@
 "description": "De color púrpura profundo, este Cabernet Sauvignon entrega aromas de frutas negras, violetas y un toque de grosellas negras, moras y notas balsámicas. De cuerpo completo en el paladar, con generosos sabores frutados, una textura aterciopelada y un final puro y persistente."
 
 },
+
 {  
 "name": "Trapiche Terroir Series Finca Coletto Malbec",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Bodega Trapiche",
 "price": 11.475,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-coletto-malbec-2018-vino-trapiche-995461_400x.jpg?v=1659385182",
@@ -201,13 +209,14 @@
 "alcohol": 15.0,
 "volume": 750,
 "url": "https://viners.com.ar/products/trapiche-terroir-series-finca-coletto-malbec-2018",
-"description": "Mejores Malbec de Argentina, por Tim Atkin, en su reporte anual de 2021. Desde sus inicios, Trapiche ha incursionado en la búsqueda de terroirs con un extraordinario potencial para elaborar vinos únicos, basándose en una filosofía inspirada en la riqueza de la diversidad. Terroir Series es el resultado de esta búsqueda. Una serie de ejemplares que reflejan la mejor expresión del terroir en las uvas Malbec y Cabernet Sauvignon, elegidas cada año entre todos los productores por Sergio Casé, Chief Winemaker de Trapiche. De color rojo violáceo intenso con aromas a frutos del bosque como moras y arándanos. En boca es fresco y redondo al comienzo con taninos dulces y tensos que le dan jugosidad y amplitud y elegancia en boca."
+"description": "Mejores Malbec de Argentina, por Tim Atkin, en su reporte anual de 2021. Desde sus inicios, Trapiche ha incursionado en la búsqueda de terroirs con un extraordinario potencial para elaborar vinos únicos, basándose en una filosofía inspirada en la riqueza de la diversidad. Terroir Series es el resultado de esta búsqueda. Una serie de ejemplares que reflejan la mejor expresión del terroir en las uvas Malbec y Cabernet Sauvignon, elegidas cada año entre todos los productores por Sergio Casé, Chief Winemaker de Trapiche. De color rojo violáceo intenso con aromas a frutos del bosque como moras y arándanos. En boca es fresco y Redondo al comienzo con taninos dulces y tensos que le dan jugosidad y amplitud y elegancia en boca."
 
 },
+
 {  
 "name": "Trapiche Terroir Series Finca Las Piedras Chardonnay Edición Limitada",
 "varietal":"Chardonnay",
-"colour_type": "white wine",
+"colour_type": "White",
 "winery": "Bodega Trapiche",
 "price": 11.475,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-las-piedras-chardonnay-2021-edicion-limitada-vino-trapiche-422078_400x.jpg?v=1659374356",
@@ -221,10 +230,11 @@
 "description": "Desde sus inicios, Trapiche ha incursionado en la búsqueda de terroirs con un extraordinario potencial para elaborar vinos únicos, basándose en una filosofía inspirada en la riqueza de la diversidad. Terroir Series es el resultado de esta búsqueda. Una serie de ejemplares que reflejan la mejor expresión del terroir, elegidas cada año entre todos los productores por Sergio Casé, Chief Winemaker de Trapiche. Entre dos arroyos y a una altura de 1.370 metros, este viñedo de chardonnay no se riega desde hace ya tres años. Y da vinos de mucha concentración y fuerza, con la profundidad de un gran blanco. Esta versión es tremenda en acidez y en madurez, las dos luchando y dando equilibrio. Es refrescante y profundo, rico en capas de sabores salinos. Además, hay una pequeña proporción (algo más de 1%) de vino criado bajo el velo de flor."
 
 },
+
 {  
 "name": "Costa & Pampa Sauvignon Blanc",
 "varietal":"Sauvignon Blanc",
-"colour_type": "white wine",
+"colour_type": "White",
 "winery": "Bodega Trapiche",
 "price": 3.682,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/costa-pampa-sauvignon-blanc-2018-vino-trapiche-996704_400x.jpg?v=1598559376",
@@ -238,10 +248,11 @@
 "description": "Esta línea representa la más delicada selección de uvas con el fin de obtener ediciones auténticas de la costa y la pampa. El particular clima marítimo, la majestuosidad del atlántico sur y el encanto de los campos de Chapadmalal, hacen de estos vinos ejemplares únicos que reflejan la generosidad de nuestras tierras y la frescura de nuestros mares; que combinadas en perfecta sintonía nacen para cautivar los paladares más exigentes y buscadores de nuevas aventuras. De un fino color amarillo con dejos verdosos, posee notas a hierbas frescas, intenso aroma a ruda y suaves notas cítricas. Presenta textura caudalosa en boca, fresco y con marcada presencia mineral."
 
 },
+
 {  
 "name": "Costa & Pampa Sauvignon Blanc",
 "varietal":"Sauvignon Blanc",
-"colour_type": "white wine",
+"colour_type": "White",
 "winery": "Bodega Trapiche",
 "price": 3.682,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/costa-pampa-sauvignon-blanc-2018-vino-trapiche-996704_400x.jpg?v=1598559376",
@@ -255,10 +266,11 @@
 "description": "Esta línea representa la más delicada selección de uvas con el fin de obtener ediciones auténticas de la costa y la pampa. El particular clima marítimo, la majestuosidad del atlántico sur y el encanto de los campos de Chapadmalal, hacen de estos vinos ejemplares únicos que reflejan la generosidad de nuestras tierras y la frescura de nuestros mares; que combinadas en perfecta sintonía nacen para cautivar los paladares más exigentes y buscadores de nuevas aventuras. De un fino color amarillo con dejos verdosos, posee notas a hierbas frescas, intenso aroma a ruda y suaves notas cítricas. Presenta textura caudalosa en boca, fresco y con marcada presencia mineral."
 
 },
+
 {  
 "name": "DV Catena Cabernet - Malbec",
 "varietal":"Blend",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 2.962,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-cabernet-malbec-2021-vino-catena-zapata-704715_400x.jpg?v=1674212074",
@@ -269,13 +281,14 @@
 "alcohol": 14.0,
 "volume": 750,
 "url": "https://viners.com.ar/collections/catena-zapata/products/dv-catena-cabernet-malbec-2021",
-"description": "DV Catena Cabernet Sauvignon-Malbec es un vino elegante y complejo, de color rojo rubí con reflejos violetas. A la nariz, intenso y concentrado, presenta notas de especias aportadas por el Cabernet Sauvignon del viñedo La Pirámide, y notas de moras maduras y ciruelas, características del Malbec del viñedo Angélica, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, con taninos integrados y redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
+"description": "DV Catena Cabernet Sauvignon-Malbec es un vino elegante y complejo, de color rojo rubí con reflejos violetas. A la nariz, intenso y concentrado, presenta notas de especias aportadas por el Cabernet Sauvignon del viñedo La Pirámide, y notas de moras maduras y ciruelas, características del Malbec del viñedo Angélica, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, con taninos integrados y Redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
 
 },
+
 {  
 "name": "Angelica Zapata Chardonnay Alta",
 "varietal":"Chardonnay",
-"colour_type": "white wine",
+"colour_type": "White",
 "winery": "Catena Zapata",
 "price": 3.920,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-chardonnay-alta-2018-vino-catena-zapata-625426_400x.jpg?v=1598225729",
@@ -289,10 +302,11 @@
 "description": "Angélica Chardonnay es un “single vineyard” que refleja características propias de la zona de gran altitud en donde se origina. Con días soleados y cálidos, y noches frescas al pie del Cordón del Plata, las uvas de Chardonnay adquieren una madurez plena y bien balanceada. Su color es amarillo intenso con reflejos verdosos claros. En nariz se presenta concentrado e intenso, con aromas de frutas cítricas y un toque mineral. En boca, de impacto dulce, untuoso, es brillante y fresco con sabores a frutas maduras, notas de vainilla y una excelente acidez natural que le otorga un final largo y persistente."
 
 },
+
 {  
 "name": "Angelica Zapata Cabernet Sauvignon Alta",
 "varietal":"Cabernet Sauvignon",
-"colour_type": "white wine",
+"colour_type": "White",
 "winery": "Catena Zapata",
 "price": 4.800,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-cabernet-sauvignon-alta-2016-vino-catena-zapata-650483_400x.jpg?v=1607729592",
@@ -306,10 +320,11 @@
 "description": "Angélica Zapata Cabernet Sauvignon Alta es un vino elegante y complejo, de color rojo rubí profundo. Se perciben en este vino aromas a frutas rojas, como cassis, cerezas y ciruelas maduras, junto a fragancias especiadas, tal como pimienta negra , clavo de olor, y notas suaves de orégano y tomillo. En la boca resulta un vino complejo, de buen cuerpo y estructura, taninos bien integrados, maduros, de excelente longitud e intensidad. El paso por roble aporta sabores especiados y vainilla."
 
 },
+
 {  
 "name": "D.V. Catena Garnacha Apelación",
-"varietal":"Garnacha",
-"colour_type": "red wine",
+"varietal":"Grenache",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 4.800,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-garnacha-apelacion-2017-vino-catena-zapata-545320_400x.jpg?v=1610646262",
@@ -323,10 +338,11 @@
 "description": "Las nuevas etiquetas D.V Catena Apelación son un homenaje a Don Domingo Vicente Catena, el padre de Nicolás Catena Zapata., que en los años 30 era famoso por su corte tinto, un vino que vendía en Buenos Aires como uno de los “más finos de Mendoza”. Esta línea son tres vinos que hablan de diferentes terroirs y nos cuentan parte de la historia vitivinícola argentina. Un homenaje al pasado mirando al futuro: D.V. Catena Blanco Histórico Apelación Agrelo un corte de semillón y Chenin blanc; D.V. Catena Garnacha Apelación Lunlunta; y D.V Catena Tinto Histórico Apelación Paraje Altamira un corte de Malbec y Petit Verdot. Muy aromático, con frutillas bien marcadas. También tiene algo herbal. En boca es de cuerpo medio, delicado, elegante y con una acidez bien presente que le aporta paso fresco y fluido."
 
 },
+
 {  
 "name": "Angelica Zapata Cabernet Franc Alta",
 "varietal":"Cabernet Franc",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 5.480,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-cabernet-franc-alta-2017-vino-catena-zapata-561776_400x.jpg?v=1646692712",
@@ -340,10 +356,11 @@
 "description": "El Angélica Zapata Cabernet Franc Alta, presenta un color rojo rubí con suaves tonalidades violáceas. Posee aroma intenso y concentrado con notas de cassis, grosellas maduras, y toques de vainilla y especias dulces como pimienta negra y clavo de olor. De impacto dulce y excelente estructura en boca, muestra frutos rojos maduros con marcados dejos a eucalipto y pimienta negra. Este vino, de excelente balance y elegancia, posee ahora un final bien estructurado y persistente."
 
 },
+
 {  
 "name": "Saint Felicien Rosé",
 "varietal":"Blend",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 6.970,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/saint-felicien-rose-2020-vino-catena-zapata-252934_400x.jpg?v=1613588773",
@@ -357,10 +374,11 @@
 "description": "Saint Felicien Rosé es un vino fresco, color rosa pálido con reflejos cobrizos. En nariz presenta dejos a hierbas mediterráneas, con notas de tomillo, azahar y pimienta rosa junto a frutilla y pomelo rosado. En boca es fresco, elegante y ligero. Las notas florales y frutales dejan un largo y grato recuerdo."
 
 },
+
 {  
 "name": "DV Catena Malbec Nicasia Vineyard",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 7.068,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-malbec-nicasia-vineyard-2016-vino-catena-zapata-185065_400x.jpg?v=1607729596",
@@ -371,13 +389,14 @@
 "alcohol": 14.0,
 "volume": 750,
 "url": "https://viners.com.ar/collections/catena-zapata/products/dv-catena-malbec-nicasia-vineyard-2019",
-"description": "DV Catena Malbec Nicasia es un vino elegante y complejo, de color rojo profundo con reflejos violetas. A la nariz, intenso y concentrado, presenta notas de moras maduras y frutos del bosque, características del Malbec del viñedo Nicasia, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, es amplio, con taninos suaves y redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
+"description": "DV Catena Malbec Nicasia es un vino elegante y complejo, de color rojo profundo con reflejos violetas. A la nariz, intenso y concentrado, presenta notas de moras maduras y frutos del bosque, características del Malbec del viñedo Nicasia, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, es amplio, con taninos suaves y Redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
 
 },
+
 {  
 "name": "DV Catena Malbec Adrianna Vineyard ",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 7.680,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-malbec-adrianna-vineyard-2018-vino-catena-zapata-545551_400x.jpg?v=1632254853",
@@ -388,13 +407,14 @@
 "alcohol": 14.0,
 "volume": 750,
 "url": "https://viners.com.ar/collections/catena-zapata/products/dv-catena-malbec-adrianna-vineyard-2019",
-"description": "DV Catena Malbec Adrianna es un vino elegante y complejo, de color rojo profundo con reflejos violetas. A la nariz, intenso y concentrado, presenta notas de cassis, frambuesa y violetas, características del Malbec del viñedo Adrianna, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, es amplio, con taninos suaves y redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
+"description": "DV Catena Malbec Adrianna es un vino elegante y complejo, de color rojo profundo con reflejos violetas. A la nariz, intenso y concentrado, presenta notas de cassis, frambuesa y violetas, características del Malbec del viñedo Adrianna, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, es amplio, con taninos suaves y Redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
 
 },
+
 {  
 "name": "Angelica Zapata Malbec Alta ",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 8.720,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-malbec-alta-2016-vino-catena-zapata-441822_400x.jpg?v=1607729573",
@@ -408,10 +428,11 @@
 "description": "Angélica Zapata Malbec es un blend proveniente de uvas Malbec de diferentes viñedos. El resultado es un vino de gran concentración y elegancia. El viñedo Angélica aporta aromas de ciruelas maduras, mermelada de frutos rojos, suavidad y volumen al paladar. La Pirámide entrega aromas de frutos negros de carozo y notas especiadas de pimienta negra y clavo de olor. Nicasia cuartel 2, aporta frutos rojos del bosque , frescura y elegancia. El cuartel 3 de Adrianna presenta aromas florales intensos que recuerdan a violeta y lavanda, mientras que el cuartel 9 de este viñedo aporta un color violeta oscuro y profundo, aroma de frutos negros maduros, notas minerales y un largo final en boca .Estos cinco elementos se conjugan de manera excepcional otorgando una gran complejidad al blend final. Ideal para acompañar un gran asado argentino."
 
 },
+
 {  
 "name": "Adrianna Vineyards White Stones Chardonnay",
 "varietal":"Chardonnay",
-"colour_type": "white wine",
+"colour_type": "White",
 "winery": "Catena Zapata",
 "price": 28.800,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-white-stones-chardonnay-2019-vino-catena-zapata-570952_400x.jpg?v=1643485472",
@@ -425,10 +446,11 @@
 "description": "White Stones “Piedras Blancas”, es el nombre de una pequeña parcela del viñedo Adrianna. Su nombre hace referencia a la composición del suelo que posee abundante presencia de piedras ovaladas blancas, cubiertas de grava. El suelo pedregoso impide el crecimiento profundo de las raíces, proporcionando óptimas condiciones de drenaje. Este suelo, pobre en materia orgánica contribuye a que las vides soporten mejor las condiciones de stress."
 
 },
+
 {  
 "name": "Adrianna Vineyard Fortuna Terrae Malbec",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 33.200,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-fortuna-terrae-malbec-2018-vino-catena-zapata-153169_400x.jpg?v=1643485495",
@@ -442,10 +464,11 @@
 "description": "Fortuna Terrae - “Suerte de la Tierra” en latín - hace referencia a las “afortunadas” vides de esta pequeña parcela del Viñedo Adrianna. De hecho, los suelos arcillosos profundos de este sector albergan gran cantidad de pastos nativos que previenen la erosión, atrayendo a insectos benéficos, pájaros cantores y zorros montañosos. Debido al frescor que imparten los suelos profundos y la altura, los vinos Fortuna Terrae presentan una óptima acidez y delicados aromas a flores. Conviene disfrutar este vino luego de algunos años o décadas posteriores al año de cosecha. Aromas de mora, con sutiles notas de té negro y perfumes. De gran cuerpo, con taninos finos y polvorientos. Increíble longitud y consistencia. Fermentado con 60% de racimos enteros. Añejado durante 14 meses en barricas de roble. Vino glorioso, de fluída y extraordinaria textura. Para beber ahora, o mejor aún dentro de tres o cuatro años"
 
 },
+
 {  
 "name": "Adrianna Vineyard River Malbec ",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 41.500,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-river-malbec-2018-vino-catena-zapata-151736_400x.jpg?v=1643485481",
@@ -459,10 +482,11 @@
 "description": "Este vino lleva el nombre de una pequeña parcela cubierta por piedras ovaladas blancas, que pertenecieron al lecho de un antiguo río. La abundancia de piedras facilita un drenaje óptimo y la adaptación a temperaturas extremas. Las piedras retienen el calor del día, irradiándolo durante la noche, moderando el frío nocturno. A su vez, en noches de frío extremo, funcionan como cubos de hielo, moderando el calor diurno. Los Malbecs provenientes de suelos calcáreos son extraordinariamente aromáticos, concentrados y opulentos. Este vino puede beberse joven o luego de varias décadas."
 
 },
+
 {  
 "name": "Adrianna Vineyard Mundus Bacillus Terrae Malbec",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 86.600,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/adrianna-vineyard-mundus-bacillus-terrae-malbec-2019-vino-catena-zapata-606408_400x.jpg?v=1662575030",
@@ -476,10 +500,11 @@
 "description": "La familia Catena inicia su segunda centuria como productora de vinos en Mendoza, Argentina. El viñedo Adrianna, situado a una altura de casi 1.500 msnm, lleva el nombre de la hija menor de Nicolás Catena Zapata. Los suelos de esta parcela, están compuestos por carbonato de calcio y fósiles marinos que cubrieran la región millones de años atrás. Las capas calcáreas proporcionan un buen drenaje y son ricas en rizo bacterias, los microorganismos que ayudan a la raíz de la vid a soportar el stress y absorber las nutrientes. De allí, el término “mundus bacillus terrae” o “elegantes microbios de la tierra”."
 
 },
+
 {  
 "name": "Adrianna Vineyard Mundus Bacillus Terrae Malbec",
 "varietal":"Malbec",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 95.200,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-mundus-bacillus-terrae-malbec-2018-vino-catena-zapata-774377_400x.jpg?v=1643474731",
@@ -493,10 +518,11 @@
 "description": "La familia Catena inicia su segunda centuria como productora de vinos en Mendoza, Argentina. El viñedo Adrianna, situado a una altura de casi 1.500 msnm, lleva el nombre de la hija menor de Nicolás Catena Zapata. Los suelos de esta parcela, están compuestos por carbonato de calcio y fósiles marinos que cubrieran la región millones de años atrás. Las capas calcáreas proporcionan un buen drenaje y son ricas en rizo bacterias, los microorganismos que ayudan a la raíz de la vid a soportar el stress y absorber las nutrientes. De allí, el término “mundus bacillus terrae” o “elegantes microbios de la tierra”.."
 
 },
+
 {  
 "name": "Catena Zapata Estiba Reservada",
 "varietal":"Cabernet Sauvignon",
-"colour_type": "red wine",
+"colour_type": "Red",
 "winery": "Catena Zapata",
 "price": 106.000,
 "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-estiba-reservada-2016-vino-catena-zapata-585579_400x.jpg?v=1643474740",
