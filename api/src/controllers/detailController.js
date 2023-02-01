@@ -7,7 +7,7 @@ const getDetails = async (req, res) => {
 
   if (!wine) {
     return res.status(401).json({
-      msg: `La ${id} no corresponde a una id vino no es una id válida`,
+      msg: `La ${id} no corresponde a una id vino válida`,
     });
   } else {
     const wineDetail = await Wine.findOne({
