@@ -9,7 +9,7 @@ const router = Router();
 
 router.use('/general', generalRouter);
 router.use('/varietal', varietalRouter);
-router.use('/', detailRouter);
+router.use('/winedetail', detailRouter);
 
 
 module.exports = router;
