@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.general {
+    /* height: 100vh; */
+    width: 100%;
+}
+
+.general_nav {
+    display: grid;
+    place-items: center;
+    background-color: #813c40;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px auto;
+    color: #fff;
+}
+
+.menu_bar {
+    display: none;
+}
+
+.general_filter {
+    float: left;
+    padding: 10px;
+    gap: 20px
+}
+
+.general_data {
+    border: 4px solid red;
+    width: 100%;
+}
+
+
+/* @media screen and (max-width: 800px) {
+    .general_nav {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        margin-left: -100%;
+    }
+    .general_filter {
+        display: block;
+        float: none;
+    }
+    .menu_bar {
+        display: block;
+    }
+} */
