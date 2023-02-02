@@ -39,7 +39,7 @@ export const THEME_DARK = 'THEME_DARK';
 export const getWines = () => {
     return async (dispatch) => {
         try {
-            const response = await axios.get('http://localhost:3001/wines');
+            const response = await axios.get('http://localhost:3001/general');
             dispatch({
                 type: GET_WINES,
                 payload: response.data
