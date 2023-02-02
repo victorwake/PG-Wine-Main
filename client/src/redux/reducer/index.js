@@ -49,17 +49,23 @@ const rootReducer = (state = initialState, action) => {
                         
             }
     
-            case 'FILTER_CREATED':
-                const filterCreated = action.payload === 'Created' ? 
-                state.allWine.filter(el => el.createdInDb) 
-                : state.allWine.filter( el => !el.createdInDb)
-                return {
-                    ...state, //me devuelve el estado anterior
-                    wines: action.payload === 'All'? state.allWines 
-                    : filterCreated  
+            // case 'FILTER_CREATED':
+            //     const filterCreated = action.payload === 'Created' ? 
+            //     state.allWine.filter(el => el.createdInDb) 
+            //     : state.allWine.filter( el => !el.createdInDb)
+            //     return {
+            //         ...state, //me devuelve el estado anterior
+            //         wines: action.payload === 'All'? state.allWines 
+            //         : filterCreated  
     
+            // }
+    
+                   case 'CLEAN_FILTERS':
+            return {
+                ...state,
+                recipes: state.allRecipe,
+                currentPage: 1
             }
-    
             case 'ORDER_BY_NAME': //'Asc. Desc'
                 let sortName = action.payload ==='Asc'?
                 state.allWines.sort(function(a, b) {
@@ -86,8 +92,8 @@ const rootReducer = (state = initialState, action) => {
                 };
     
     
-            case 'ORDER_BY_TYPE':
-                let sortTipo = action.payload === 'Tinto' ?
+            case 'ORDER_BY_PRICE':
+                let sortTipo = action.payload === 'Precio' ?
                 state.wines.sort(function(a, b) {
                     if (a.tipo > b.tipo) {
                         return 1;

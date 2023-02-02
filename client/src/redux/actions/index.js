@@ -1,37 +1,4 @@
 import axios from 'axios';
-export function getDetail(id){
-   
-    return async function (dispatch){
-        try {
-            if(id){
-                const detail = await axios.get(`http://localhost:3001/`);
-                dispatch ({
-                    type: 'GET_DETAIL',
-                    payload: detail.data
-                })
-            } else {
-                dispatch({
-                    type: 'GET_DETAIL',
-                    payload: []
-                    
-    
-                })
-            }
-
-        } catch(error){
-            console.log(error)   
-
-        }  
-    }            
-
-}
-
-
-
-import axios from 'axios';
-
-
-
 
 export function getWines(){
     return async function(dispatch) {
@@ -88,13 +55,13 @@ export function filterWineByVarietal(payload){ //el payload es el value q me va 
 
 }
 
-export function filterCreated(payload){// el payload es la opcion que yo elija en el form
-    return {
-        type: 'FILTER_CREATED',
-        payload
-    }
+// export function filterCreated(payload){// el payload es la opcion que yo elija en el form
+//     return {
+//         type: 'FILTER_CREATED',
+//         payload
+//     }
 
-}
+// }
 
 export function orderByName(payload) {
     return {
@@ -103,12 +70,17 @@ export function orderByName(payload) {
     }
 }
 
-export function orderByWeight(payload) {
+export function orderByPrice(payload) {
     return {
-        type: 'ORDER_BY_WEIGHT',
+        type: 'ORDER_BY_PRICE',
         payload
     }
 }
+export function cleanAllFilters() {
+    return dispatch => {
+        dispatch({ type: 'CLEAN_FILTERS' })
+    }
+};
 
 export function getDetail(id){
     
