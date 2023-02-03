@@ -1,7 +1,8 @@
 import './general.css';
-import { SearchBar } from '../searchBar/SearchBar';
 import { NavBar } from '../navBar/NavBar';
+import { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import { getVarietal, getWines } from '../../redux/actions';
 
 
 
@@ -9,13 +10,17 @@ import {useDispatch, useSelector} from 'react-redux';
 export const General = () => {
 
     const dispatch = useDispatch();
-    // const allVarietal = useSelector(state => state.varietal)
+    const allWines = useSelector(state=> state.wines)
+    const allVarietal = useSelector(state => state.varietal)
 
-    // function handleClick(e){
-    //     e.preventDefault();
-    //     // dispatch(cleanAllFilters());
-    //     }
-        
+    function handleClick(e){
+        e.preventDefault();
+        // dispatch(cleanAllFilters());
+        }
+     useEffect(()=>{
+       dispatch(getWines());
+       dispatch(getVarietal())
+     },[]);        
 
     return (
         <div className='general'>

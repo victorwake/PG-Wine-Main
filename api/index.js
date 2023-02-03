@@ -19,8 +19,8 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-// const { insertVarietal } = require('./src/createDb/varietalCreate.js');
-// const { insertWine } = require('./src/createDb/wineCreate.js');
+const { insertVarietal } = require('./src/createDb/varietalCreate.js');
+const { insertWine } = require('./src/createDb/wineCreate.js');
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
