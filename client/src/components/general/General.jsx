@@ -5,9 +5,6 @@ import {useDispatch, useSelector} from 'react-redux';
 import { getVarietal, getWines } from '../../redux/actions';
 
 
-
-
-
 export const General = () => {
 
     const dispatch = useDispatch();
