@@ -28,6 +28,11 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 varietal: action.payload
             }
+            case 'GET_WINERY':
+                return {
+                    ...state,
+                    varietal: action.payload
+                }
     
             case 'POST_WINE':
                 return {
