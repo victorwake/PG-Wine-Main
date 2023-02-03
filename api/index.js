@@ -25,7 +25,7 @@ const { conn } = require('./src/db.js');
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   server.listen(3003, () => {
-    console.log('%s listening at 3003'); // eslint-disable-line no-console
+    console.log('%s listening at 3001'); // eslint-disable-line no-console
   //  insertVarietal();
   //  insertWine();
   });
