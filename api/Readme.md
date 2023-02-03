@@ -2,7 +2,7 @@
 
 http:// localhost:3001/general (entrega el listado completo de vino,con todas sus datos)
 
-http:// localhost:3001/general/?name={nombre_vino} (entrega el resultado de la busqueda por nombres de vinos que contenga ese string)
+http:// localhost:3001/general/?name={nombre_vino} (entrega el resultado de la busqueda por nombres de vinos que contenga ese string, pasando el valor por query-params)
 
 http:// localhost:3001/varietal (entrega el listado de varietales, almacenados en la DB)
 
