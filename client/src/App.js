@@ -10,11 +10,12 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/general" element={<General />}/>
         <Route path="/general" element={<General />} />
         <Route path="/colourtype" element={<WinType />} />
         <Route path="/winedetail/:id" element={<Details />} />
       </Routes>
-      
+
     </div>
   );
 }
