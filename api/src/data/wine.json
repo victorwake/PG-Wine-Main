@@ -1,8 +1,8 @@
 [
   {
-    "name": "Gran VU Blend",
+    "name": "Gran VU",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 32800,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/75-granvublend.png",
@@ -16,9 +16,9 @@
     "description": "73% Malbec, 27% Cabernet Suavignon. De un intenso color rojo bordo, profundo. La nariz es delicada, de una expresión aromática intensa y compleja con aromas que recuerdan a frutos negros, regaliz y mentolados. En boca es redondo, presenta taninos maduros y estructurados. De muy buen volumen con final largo y persistente."
   },
   {
-    "name": "Primus Malbec",
+    "name": "Primus",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 12500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/10-primus-malbec.png",
@@ -32,9 +32,9 @@
     "description": "Este vino presenta un color rojo violeta, profundo e intenso. En nariz es complejo, se destacan notas a ciruelas, moras y arándanos que se combinan con sutiles notas balsámicas y florales. En boca es elegante con muy buena estructura, taninos dulces, excelente acidez y un largo y placentero final."
   },
   {
-    "name": "Primus Cabernet Suavignon",
+    "name": "Primus",
     "varietal":"Cabernet Suavignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 2200,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/77-primus-cabernet-sauvignon.png",
@@ -48,9 +48,9 @@
     "description": "Color rojo rubí intenso con reflejos azules. Complejo y delicado en nariz, aromas que recuerdan a cassis, combinados con regaliz y notas de pimienta negra. En boca es intenso, se perciben notas a frutos negros y pimiento. De buen cuerpo y estructura, presencia de taninos firmes, pero agradables al mismo tiempo. Muy buena acidez natural, final largo y persistente."
   },
   {
-    "name": "Primus Pinot Noir",
+    "name": "Primus",
     "varietal":"Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 12500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/14-primus-pinot-noir.png",
@@ -64,9 +64,9 @@
     "description": "A la vista presenta color rojo rubí con tonalidades cereza, brillante. Aromáticamente es complejo y delicado, se perciben notas a frutilla, cereza, especias y balsámicas. En boca es amplio e intenso con final largo y persistente, elegante."
   },
   {
-    "name": "Primus Chardonnay",
+    "name": "Primus",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 5990,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/8-primus-chardonnay.png",
@@ -80,9 +80,9 @@
     "description": "Presenta un color amarillo dorado con reflejos verdosos, brillante. En nariz es intenso, dulce, aromas a frutas que se combinan con notas florales. Su paso por roble francés le otorga complejidad. En boca es amplio, untuoso y de gran concentración. Posee marcada acidez natural y un prolongado y elegante final."
   },
    {
-    "name": "Single Vineyard Malbec Finca San Pablo",
+    "name": "Single Vineyard Finca San Pablo",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 19550,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/52-svlapampa2017copia1.png",
@@ -96,9 +96,9 @@
     "description": "Este vino se destaca por la complejidad de sus aromas que combinan frutas negras y florales. En boca posee buena estructura, con taninos de textura fina, acidez refrescante, notas de frutas negras, grafito, pimienta y especias. Su final es elegante y prolongado."
   },
   {
-    "name": "Single Vineyard Malbec Finca Los Jabalíes",
+    "name": "Single Vineyard Finca Los Jabalíes",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 17940,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/85-svlosjabaliesmalbec2017copia4.png",
@@ -112,9 +112,9 @@
     "description": "Este vino se destaca por la intensidad y complejidad de sus aromas frutales y de violetas. En boca es elegante y exótico, con taninos sedosos, notas de frutos negros, pimienta y grafito. Su acidez refrescante le otorga un prolongado final."
   },
   {
-    "name": "Single Vineyard Malbec Finca El Tomillo",
+    "name": "Single Vineyard Finca El Tomillo",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 9860,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/86-sveltomillome-copiaes5.png",
@@ -128,9 +128,9 @@
     "description": "Este vino se destaca por la complejidad de sus aromas de frutas rojas y especias variadas. En boca es elegante, con taninos aterciopelados, notas minerales y especiadas, acidez refrescante y un largo y placentero final."
   },
   {
-    "name": "Single Vineyard Pinot Noir Finca Los Jabalíes",
+    "name": "Single Vineyard Finca Los Jabalíes",
     "varietal":"Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 8140,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/55-svlassequoiasmi(5)ja4.png",
@@ -144,9 +144,9 @@
     "description": "Este vino se destaca por la intensidad y complejidad de sus aromas. En boca es elegante y sabroso, con una mineralidad calcárea que lo hace fresco y persistente. "
   },
   {
-    "name": "Single Vineyard Chardonnay Finca Las Sequoias",
+    "name": "Single Vineyard Finca Las Sequoias",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 13200,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/95-chardonnay(nueva).png",
@@ -160,9 +160,9 @@
     "description": "Este vino se destaca por la intensidad y complejidad de sus aromas frutales y florales. En boca posee notas de cereza roja y grosella, taninos finos, una acidez refrescante y un largo y delicado final."
   },
   {
-    "name": "Single Vineyard Suavignon Blanc Finca Los Nogales",
+    "name": "Single Vineyard Finca Los Nogales",
     "varietal":"Suavignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 4600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/2019_SV%20Los%20Nogales_SanPablo_SauvingnonBlanc%20MI.png",
@@ -178,7 +178,7 @@
   {
     "name": "Numina Gran Corte",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 5500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/6-numina-grancorte.png",
@@ -192,9 +192,9 @@
     "description": "64% Malbec, 18% Cabernet Suavignon, 11% Merlot, 5% Cabernet Franc, 2% Petit Verdot. Este vino se destaca por la elegancia e intensidad de sus aromas. En boca es directo, refrescante y sabroso, con notas herbales y especiadas, acidez cítrica y cierto volumen obtenido de su contacto con las borras de fermentación por ocho meses."
   },
   {
-    "name": "Numina Petit Verdot ",
+    "name": "Numina",
     "varietal":"Petit Verdot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 3600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2018-09/87-petit-verdot-readaptada.png",
@@ -208,9 +208,9 @@
     "description": "De un color rojo violáceo intenso, presenta notas mentoladas y especiadas como el regaliz y el laurel combinadas con notas de frutos negros como arándanos y cassis dando como resultado un vino expresivo y de gran complejidad. En boca es intenso, presenta taninos firmes y jugosos, que le confieren un final fresco y prolongado."
   },
   {
-    "name": "Numina Cabernet Franc",
+    "name": "Numina",
     "varietal":"Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 4600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/68-numina-cabernet.png",
@@ -224,9 +224,9 @@
     "description": "De color rojo con tonalidades bordó de buena intensidad y limpidez, ofrece aromas de mucha expresión y tipicidad varietal, con notas de crema de cassisy arándanos,sumado a especias como clavo de olor. En boca se sienten taninos maduros, dulces y redondos, amplio y untuoso en la mitad del paladar, tiene un final muy persistente."
   },
   {
-    "name": "Numina Malbec",
+    "name": "Numina",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 3600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/67-numina-malbec.png",
@@ -240,9 +240,9 @@
     "description": "Presenta un color rojo violeta, intenso y profundo. Sus aromas a grosellas y arándanos se combinan con notas a mermelada de ciruela y especias, que le otorgan complejidad y elegancia. En la boca se percibe fresco, jugoso, largo y persistente."
   },
   {
-    "name": "Numina Syrah",
+    "name": "Numina",
     "varietal":"Syrah",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 3400,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2015-10/69-69-numina_syrah.png",
@@ -256,9 +256,9 @@
     "description": "Posee un color rojo rubí. Su aroma combina notas a frutos negros y especias, con delicadas notas ahumadas. La entrada en boca es dulce, fresco, taninos sedosos, final largo y persistente."
   },
   {
-    "name": "Reserva Malbec",
+    "name": "Reserva",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 2200,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-02/19-(bs)malbec2.png",
@@ -272,9 +272,9 @@
     "description": "A la vista presenta color rojo intenso con tonos violáceos. En nariz se percibe fresco, intenso y complejo, destacándose notas a frutas rojas, flores como rosas y violetas que se combinan con notas balsámicas. En la boca es frutado, fresco y jugoso, de buena estructura y largo final."
   },
   {
-    "name": "Reserva Cabernet Suavignon",
+    "name": "Reserva",
     "varietal":"Cabernet Suavignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 2460,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/16-cabsouvarg.png",
@@ -288,9 +288,9 @@
     "description": "Color rojo rubí intenso. En la nariz presenta buena expresión y tipicidad varietal, se destacan las notas a pimienta negra y casis. En la boca es carnoso, de estructura tánica fina y elegante, final largo y persistente."
   },
   {
-    "name": "Reserva Pinot Noir",
+    "name": "Reserva",
     "varietal":"Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 2580,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/24-pinotnoirarg.png",
@@ -304,9 +304,9 @@
     "description": "Color rojo cereza, límpido y brillante. Complejo, aromas a jalea de frutillas, cerezas que se combinan con sutiles notal a hoja de tabaco y hierbas frescas como orégano. Entrada amable, jugoso complejo y largo."
   },
   {
-    "name": "Reserva Chardonnay",
+    "name": "Reserva",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 2330,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/22-chardonnayarg.png",
@@ -320,9 +320,9 @@
     "description": "Color amarillo claro con reflejos verdosos, brillante. Aroma complejo, se destacan notas cítricas, durazno blanco, con toque florales. En la boca es suave, amplio y fresco, con notas frutales y minerales. Su acidez natural lo hace un vino fresco y su paso por roble y trabajo sobre borras le confieren elegancia y untuosidad."
   },
   {
-    "name": "Reserva Suavignon Blanc",
+    "name": "Reserva",
     "varietal":"Suavignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 2330,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/26-sauvignonblancarg.png",
@@ -338,7 +338,7 @@
   {
     "name": "Reserva Corte de Tintas",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 2640,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-02/81-cortedetintastinto.png",
@@ -352,9 +352,9 @@
     "description": "60% Malbec, 30% Cabernet Suavignon, 10% Cabernet Franc. Color rojo rubí, intenso. Complejo en nariz, se destacan notas especiadas como regaliz y pimienta negra que se combinan con sutiles notas de pimiento rojo, grosellas negras, tabaco. En boca, se hace presente el malbec por su sedosidad, luego, la jugosidad, estructura y complejidad dejan en evidencia la combinación con los otros varietales. Final persistente."
   },
   {
-    "name": "Reserva Merlot",
+    "name": "Reserva",
     "varietal":"Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 2330,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/20-merlotarg.png",
@@ -368,9 +368,9 @@
     "description": "A la vista presenta color rojo con tonalidades bordó. En la nariz es complejo, se destacan aromas a membrillo y frutos rojos y dulce de tomate. En la boca es sedoso y envolvente, de muy buena estructura."
   },
   {
-    "name": "Reserva Rosado",
+    "name": "Reserva",
     "varietal":"Syrah",
-    "colour_type": "Pink",
+    "colour_type": "Rosado",
     "winery": "Salentein",
     "price": 2330,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/84-rosearg.png",
@@ -384,9 +384,9 @@
     "description": "En la nariz se perciben intensos aromas a frutas frescas como frutillas y cerezas que se combinan con sutiles notas florales. Color rosa pálido, brillante. En la boca es frutado, con equilibrada acidez, final fresco y persistente."
   },
   {
-    "name": "Reserva Cabernet Franc",
+    "name": "Reserva",
     "varietal":"Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 4600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-02/100-cabfrancarg.png",
@@ -402,7 +402,7 @@
   {
     "name": "Reserva Corte de Blancas",
     "varietal":"Blend",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 2640,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-02/99-cortedetintasblanco.png",
@@ -416,9 +416,9 @@
     "description": "62% Chardonnay, 28% Gewürztraminer, 10% Suavignon Blanc. Color amarillo acerado con reflejos verdosos, límpido, brillante. Aromático y complejo, se destacan notas a flores de azahar y jazmín que se combinan con notas frutales de lichi, damasco y cáscara de naranja. En la boca se hacen presentes notas cítricas como pomelo y una acidez vibrante, que lo hacen un vino fresco y de persistente final."
   },
   {
-    "name": "Killka Malbec",
+    "name": "Killka",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Malbec.png",
@@ -432,9 +432,9 @@
     "description": "De rojo violáceo, sus aromas recuerdan a ciruelas, moras y violetas con un toque de vainilla aportado por el contacto con roble. Frutado, con taninos dulces y sedosos en boca, con un elegante final."
   },
   {
-    "name": "Killka Malbec Blanco",
+    "name": "Killka",
     "varietal":"Malbec",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Malbec-Blanco.png",
@@ -448,9 +448,9 @@
     "description": "Brillante, transparente, con destellos acerados. En nariz presenta aromas que recuerdan a frutilla, damasco y delicadas notas de flores blancas. En boca tiene la elegancia y frescura de un vino blanco y al mismo tiempo se percibe la fuerza y textura del Malbec, que le da su origen. Se destaca su acidez refrescante que le confiere buena longitud."
   },
   {
-    "name": "Killka Chardonnay",
+    "name": "Killka",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-chardonnay.png",
@@ -464,9 +464,9 @@
     "description": "De color amarillo con reflejos verdosos, presenta aromas frutales que recuerdan a manzana verde y pera. En boca es fresco y armónico, destacándose su carácter mineral."
   },
   {
-    "name": "Killka Cabernet Suavignon",
+    "name": "Killka",
     "varietal":"Cabernet Suavignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Cabernet-Sauvignon.png",
@@ -482,7 +482,7 @@
   {
     "name": "Killka Corte de Tintas",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Corte-de-Tintas.png",
@@ -496,9 +496,9 @@
     "description": "50% Malbec, 35% Cabernet Suavignon, 15% Petit Verdot. De color rojo intenso, de taninos estructurados y de prolongado final, posee aromas de frutas rojas tales como ciruela, frambuesa y moras que aporta el Malbec. El Cabernet Sauvignon le otorga notas de pimiento maduro y pimienta negra. Grafito y minerales provienen del Petit Verdot. La vainilla y chocolate son aportados por su paso por roble. En boca es amplio y complejo, debido a la combinación de varietales que intervienen en este blend. Final largo y persistente."
   },
   {
-    "name": "Killka Suavignon Blanc",
+    "name": "Killka",
     "varietal":"Suavignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Sauvignon-Blanc.png",
@@ -512,9 +512,9 @@
     "description": "Brillante, de color amarillo leve con destellos verdosos. Posee un aroma cítrico que nos recuerda al pomelo rosado y un toque herbal con presencia de espárrago y arveja. Con un tono suave y frutado con una acidez bien marcada en boca, lo convierten en un vino muy fresco, resultante de la intervención de distintos clones."
   },
   {
-    "name": "Portillo Malbec",
+    "name": "Portillo",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_Malbec.png",
@@ -528,9 +528,9 @@
     "description": "Color rojo violeta intenso brillante. Nariz frutada donde prevalecen frutas rojas frescas (ciruelas y moras) sin aromas cocido o mermeladas; boca: entrada fresca debido a su acidez natural, sensación frutal, taninos redondos o maduros, final dulce y largo. Equilibrado e intenso con carácter varietal claro."
   },
   {
-    "name": "Portillo Cabernet Suavignon",
+    "name": "Portillo",
     "varietal":"Cabernet Suavignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_cabernet_sauvignon2.png",
@@ -544,9 +544,9 @@
     "description": "Colores rojo rubí brillante. Nariz frutada donde se destacan aromas de pimienta y pimientos, moras y frutos rojos. En boca: jugoso y equilibrado, con gran carácter varietal."
   },
   {
-    "name": "Portillo Suavignon Blanc",
+    "name": "Portillo",
     "varietal":"Suavignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_Sauvignon_Blanc.png",
@@ -560,9 +560,9 @@
     "description": "De color amarillo, con tonos verdosos bien marcados. Nariz frutal, resaltan aromas durazno blanco y pomelo rosado. En boca: vino suave con acidez bien marcada, que lo hace fresco y de caudalías medias."
   },
   {
-    "name": "Portillo Chardonnay",
+    "name": "Portillo",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_chardonnay.png",
@@ -576,9 +576,9 @@
     "description": "De color amarillo dorado con reflejos verdosos. En nariz frutas como ananá, manzana y cítricos, se destacan aromas minerales como grafito. En boca con muy buena acidez, redondo y persistente."
   },
   {
-    "name": "Portillo Rosado de Malbec",
+    "name": "Portillo Rosé",
     "varietal":"Malbec",
-    "colour_type": "White",
+    "colour_type": "Rosado",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_rosado_de_Malbec.png",
@@ -594,7 +594,7 @@
   {
     "name": "Portillo Dulce Natural",
     "varietal":"Suavignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 1030,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_dulce_natural.png",
@@ -608,9 +608,9 @@
     "description": "Color amarillo verdoso brillante con aromas a frutas donde se destacan el durazno, pomelo, ananá y banana. En boca es delicadamente dulce y equilibrado."
   },
   {
-    "name": "Portillo Merlot",
+    "name": "Portillo",
     "varietal":"Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_Merlot.png",
@@ -624,9 +624,9 @@
     "description": "De color rojo brillante e intenso. Posee aromas que recuerdan a la guinda, mora y especias. En boca la fruta es concentrada, con taninos suaves y un final prolongado. Joven y frutado."
   },
   {
-    "name": "Portillo Tempranillo",
+    "name": "Portillo",
     "varietal":"Tempranillo",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_tempranillo.png",
@@ -640,9 +640,9 @@
     "description": "De color rojo rubí. Posee aromas a frutas rojas maduras, como la ciruela, guinda y mora. En boca se presenta fresco y frutado, con taninos dulces y buena concentración."
   },
   {
-    "name": "Portillo Syrah",
+    "name": "Portillo",
     "varietal":"Syrah",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_Syrah.png",
@@ -658,7 +658,7 @@
   {
     "name": "Salentein Brut Nature",
     "varietal":"Blend",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Salentein",
     "price": 2925,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/60-espumantes-brut.png",
@@ -674,7 +674,7 @@
   {
     "name": "Salentein Brut Rose",
     "varietal":"Pinot Noir",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Salentein",
     "price": 2925,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/70-70-botella_rose.png",
@@ -690,7 +690,7 @@
   {
     "name": "Salentein Extra Brut",
     "varietal":"Blend",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Salentein",
     "price": 2704,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2012-09/59-espumante_01.png",
@@ -706,7 +706,7 @@
   {
     "name": "Salentein Blanc de Blancs",
     "varietal":"Chardonnay",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Salentein",
     "price": 1800,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-10/97-espumantes-brutcopia.png",
@@ -722,7 +722,7 @@
   {
     "name": "Alyda Van Salentein Brut Nature",
     "varietal":"Blend",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Salentein",
     "price": 4400,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2017-06/80-botella-alyda.png",
@@ -736,9 +736,9 @@
     "description": "50% Pinot Noir, 45% Chardonnay, 5% Pinot Meunier. La elegancia, frescura y sofisticación de Alyda van Salentein se reflejan en este Cuvée Prestige elaborado por nuestro Chef de Cave con las mejores uvas Pinot Noir, Chardonnay y Pinot Meunier del Valle de Uco."
   },
   {
-    "name": "Alyda Van Salentein Brut Nature Rose",
+    "name": "Alyda Van Salentein Brut Nature Rosé",
     "varietal":"Blend",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Salentein",
     "price": 4600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/94-80-botella-alydacopiaja.png",
@@ -752,9 +752,9 @@
     "description": "90% Pinot Noir, 10% Pinot Meunier. Su color es rosa salmón, su aroma presenta notas a frutos rojos como cerezas y frambuesas. A su vez, presenta notas a pan tostado por el aporte de levaduras. En boca es frutado, amplio y muy fresco. Se destacada por la presencia de burbujas finas y persistentes."
   },
   {
-    "name": "Otronia Chardonnay",
+    "name": "Otronia",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Otronia",
     "price": 22050,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-chardonnay.png",
@@ -768,9 +768,9 @@
     "description": "Amarillo pálido brillante con reflejos verdosos. : Notas de frutas blancas como durazno y pera, combinadas con un toque floral. Se perciben aromas de hierbas, té de manzanilla, tomillo, que recuerdan el entorno natural del que proceden las uvas que dan origen a este complejo vino."
   },
   {
-    "name": "Otronia Pinot Noir",
+    "name": "Otronia",
     "varietal":"Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Otronia",
     "price": 22050,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-pinot-noir.png",
@@ -784,9 +784,9 @@
     "description": "Rojo rubí delicado con reflejos violáceos. Pinot Noir de gran caracter, notas de frambuesas y cerezas combinadas con hierbas como oregano, tomillo, trufa y flores. Gran complejidad y finura en este espléndido vino patagónico. : Estructura delicada y persistente. Taninos sedosos, combinados con una acidez natural firme, que le dan una vitalidad y profundidad únicas. De intensidad media, su gran caracterísica es la finura y complejidad."
   },
   {
-    "name": "45 Rugientes Corte de Blancas",
+    "name": "45 Rugientes",
     "varietal":"Blend",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Otronia",
     "price": 6070,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-45R-corte-blancas.png",
@@ -800,9 +800,9 @@
     "description": "60% Gewürztraminer, 30% Pinot Gris, 10% Chardonnay. Amarillo pálido brillante con reflejos verdosos. Este vino presenta aromas de frutas tropicales, cascara de cítricos y recuerdos florals de Jazmín gracias al aporte del Gewürztraminer. Al abrirse, aparecen algunas notas minerales. En la boca encontramos sensaciones de frescor y dulzura. De larga persistencia."
   },
   {
-    "name": "45 Rugientes Pinot Noir",
+    "name": "45 Rugientes",
     "varietal":"Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Otronia",
     "price": 6070,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-45R-pinot-noir.png",
@@ -816,9 +816,9 @@
     "description": "Rojo rubí delicado, con reflejos violáceos. Se perciben frutas rojas como cerezas y fresas, combinadas con notas especiadas de pimienta negra, canela y toques minerales, muy característicos de este peculiar terroir. Es necesario tomarse unos minutos para descubrir las múltiples capas aromáticas de este gran Pinot Noir Patagónico.  Se caracteriza por su frescura y delicadeza. Muy complejo, de estructura media, elegante y fino."
   },
   {
-    "name": "45 Rugientes Merlot",
+    "name": "45 Rugientes",
     "varietal":"Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Otronia",
     "price": 6070,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-45-R-merlot.png",
@@ -832,9 +832,9 @@
     "description": "Rojo rubí intenso. Aromas de fruta roja fresca, jalea de membrillo, notas especiadas de pimentón dulce, pimienta negra y mentol. Vino de buena frescura, expresivo, equilibrado y elegante con un final de boca persistente."
   },
   {
-    "name": "45 Rugientes Rosé",
+    "name": "45 Rugientes",
     "varietal":"Pinot Noir",
-    "colour_type": "Pink",
+    "colour_type": "Rosado",
     "winery": "Otronia",
     "price": 6070,
     "image": "https://www.otronia.com/assets/images/vinos/45-rugientes-rose.png",
@@ -850,7 +850,7 @@
   {
     "name": "Otronia Brut Nature",
     "varietal":"Chardonnay",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Otronia",
     "price": 17500,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-brut-nature.png",
@@ -866,7 +866,7 @@
   {
     "name": "Otronia Brut Rosé",
     "varietal":"Pinot Noir",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Otronia",
     "price": 9480,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-brut-nature-rose.png",
@@ -880,9 +880,9 @@
     "description": "Delicado color rosado con tonos bronce. Presenta aromas de pan tostado, cereza, fresas silvestres y praliné. En boca las suaves burbujas aportan textura equilibrada y elegancia, complementada por una gran acidez y una delicada sensación de untuosidad."
   },
   {
-    "name": "Fabre Montmayou Patagonia Gran Reserva ",
+    "name": "Patagonia Gran Reserva ",
     "varietal": "Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1200,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_849763-MLA48124228658_112021-F.webp",
@@ -896,9 +896,9 @@
     "description": "Color rojo intenso intenso. Nariz muy compleja de frutas silvestres como moras y fresas. La crianza en roble aporta notas de vainilla y caramelo que armonizan maravillosamente con la fruta. Un vino con cuerpo y excelente estructura, muy elegante en boca."
   },
   {
-    "name": "Fabre Montmayou Patagonia Barrel Selection ",
+    "name": "Patagonia Barrel Selection ",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2440,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_980776-MLA31635145395_072019-F.webp",
@@ -912,9 +912,9 @@
     "description": "Color rojo intenso con tonos violáceos. Elegantes y atractivos aromas a regaliz, violetas y especias. Un vino muy rico y complejo, un verdadero Malbec de la Patagonia."
   },
   {
-    "name": "Fabre Montmayou Patagonia Barrel Selection",
+    "name": "Patagonia Barrel Selection",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 4000,
     "image": "https://images.vivino.com/thumbs/-UZ-ynZFTVeWjtIXBu9UfQ_pb_x600.png",
@@ -928,9 +928,9 @@
     "description": "Nariz jóven pero talentosa, fruta negra de madurez avanzada, la madera (30% del mosto, 12 m en barrica) se descubre sutilmente muy atrás, hizo su trabajo suavizando la potencia del CS, aportó suave concentración y calidez, y se retiró. Su color (rubí, jóven, sin el brillo de juventud), lo confirma. Nariz de fruta negra madura, toques de vainilla, humo y chocolate. La boca es dominada por acidez y fruta jugosa, le sigue un tanino suave, pero débil que no amarra mucho, se fuga rápido."
   },
   {
-    "name": "Fabre Montmayou Patagonia Gran Reserva",
+    "name": "Patagonia Gran Reserva",
     "varietal": "Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2250,
     "image": "http://www.bodegasfabre.com/internacional/fabre_patagonia/productos/vinculos/vinos/images/16.jpg",
@@ -944,9 +944,9 @@
     "description": "De intenso color rojo profundo. En nariz se destacan aromas muy elegantes y complejos a frutos negros del bosque con notas de vainilla y café. En boca es un vino muy equilibrado, con gran estructura y taninos sedosos. "
   },
   {
-    "name": "Fabre Montmayou Patagonia Barrel Selection",
+    "name": "Patagonia Barrel Selection",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 5000,
     "image": "https://www.lanaval.com.mx/84046-product_default/tinto-fabre-montmayou-patagonia-malbec-barrel-selection-750-ml-.jpg",
@@ -960,9 +960,9 @@
     "description": "Color rojo intenso con tonos violáceos. Elegante y atarctivo con aromaas de licor, violetas y especias. Un vino muy rico y complejo "
   },
   {
-    "name": "Fabre Montmayou Grand Vin",
+    "name": "Grand Vin",
     "varietal": "Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 9200,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_613450-MLA31645182169_072019-F.webp",
@@ -976,9 +976,9 @@
     "description": "85% Malbec, 10% Cabernet Suavignon, 5% Merlot. Color rojo intenso con densos tonos violáceos. El bouquet, atractivo y encantador, proporciona una explosión de frutos rojos de cereza y ciruela. El roble francés agrega deliciosos toques de vainilla, café y una interesante complejidad. En boca, el vino es rico y bien estructurado con taninos suaves. Un final largo y elegante. Excelente combinado con platos delicados, carnes a la parrilla y postres de chocolate."
   }, 
   {
-    "name": "Fabre Montmayou Gran Reserva Cabernet Suavignon",
+    "name": "Gran Reserva",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 4100,
     "image": "https://www.brancastore.com.ar/699-thickbox_default/fabre-montmayou-gran-reserva-cabernet-sauvignon-750ml.jpg",
@@ -992,9 +992,9 @@
     "description": "Color rojo rubí muy intenso. Atractivo bouquet con toques de moras, frambuesas, especias y menta. Buena intensidad en boca, con taninos sedosos muy equilibrados con el roble. Ideal con carnes rojas, caza y quesos ricos."
   }, 
   {
-    "name": "Fabre Montmayou Gran Reserva Malbec",
+    "name": "Gran Reserva",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 4060,
     "image": "https://www.brancastore.com.ar/700-thickbox_default/fabre-montmayou-gran-reserva-malbec-750ml.jpg",
@@ -1008,9 +1008,9 @@
     "description": "Color rojo con tonos violáceos brillantes. Ramo muy complejo y elegante. Abundancia de frutos rojos silvestres como moras y cerezas, regaliz y delicados toques florales. En boca, el vino muestra un notable equilibr"
   }, 
   {
-    "name": "Fabre Montmayou Reserva Syrah",
+    "name": "Reserva",
     "varietal": "Syrah",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2100,
     "image": "https://vinotecaligier.com/media/catalog/product/cache/1/image/1000x/9df78eab33525d08d6e5fb8d27136e95/b/e/be72436.jpg",
@@ -1024,9 +1024,9 @@
     "description": " Color rojo con tonos púrpuras brillantes. Un buqué complejo y elegante. Aromas poderosos de frutas rojas silvestres como moras y cerezas, toques de regaliz y delicados aromas de flores. En boca el vino tiene un equilibrio notable con taninos muy elegantes, finos y sedosos. Perfecto con carnes rojas, caza, quesos ricos y chocolate."
   }, 
   {
-    "name": "Fabre Montmayou Reserva Merlot",
+    "name": "Reserva",
     "varietal": "Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1500,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_764296-MLA49073393370_022022-F.webp",
@@ -1040,9 +1040,9 @@
     "description": "Color rojo picota muy intenso. Los aromas son una notable combinación de bayas silvestres, vainilla y café. En boca es un vino complejo y aterciopelado, afrutado, con un final agradable. Ideal combinado con carnes a la brasa, pastas y quesos suaves."
   }, 
   {
-    "name": "Fabre Montmayou Reserva Malbec",
+    "name": "Reserva",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1500,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_606004-MLA49073393131_022022-F.webp",
@@ -1056,9 +1056,9 @@
     "description": "Color rojo intenso con tonos violáceos. Nariz muy intensa con frutos rojos de cereza y especias. Complejo y bien equilibrado con notas de vainilla y chocolate del roble. Un vino de estilo moderno, con taninos dulces y sedosos."
   },
   {
-    "name": "Fabre Montmayou Reserva Cabernet Suavignon",
+    "name": "Reserva",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2250,
     "image": "https://www.brancastore.com.ar/23-thickbox_default/fabre-montmayou-reserva-cabernet-sauvignon-750ml.jpg",
@@ -1072,9 +1072,9 @@
     "description": "Color rojo intenso. Muy buena concentración en nariz, con aromas de moras oscuras y frutos de cassis. Jugoso y afrutado en boca, con notas de café y cuero del roble."
   }, 
   {
-    "name": "Fabre Montmayou Reserva Cabernet Franc",
+    "name": "Reserva",
     "varietal": "Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1500,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_739219-MLA49073391799_022022-F.webp",
@@ -1088,9 +1088,9 @@
     "description": "Color rojo intenso. Elegante en nariz, con aromas de frutas rojas y negras y recuerdos mentolados. Fresco y bien equilibrado, con un largo final. Se sirve mejor con estofado de cordero, cerdo, caza y postre de chocolate."
   }, 
   {
-    "name": "Fabre Montmayou Reserva Chardonnay",
+    "name": "Reserva",
     "varietal": "Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Fabre Montmayou",
     "price": 2245,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_804718-MLA42519281955_072020-F.webp",
@@ -1104,9 +1104,9 @@
     "description": "Color amarillo claro. Un Chardonnay rico, de buena estructura y gran acidez. En nariz es fresco con elegantes aromas a peras blancas y cítricos. En boca es rico y con cuerpo."
   }, 
   {
-    "name": "Fabre Montmayou Reserva Torrontés",
+    "name": "Reserva",
     "varietal": "Torrontés",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Fabre Montmayou",
     "price": 2400,
     "image": "https://winebox.pe/wp-content/uploads/2019/01/fabre-montmayou-torrontes-min.jpg",
@@ -1120,9 +1120,9 @@
     "description": "Delicado aroma de flores blancas, lichi con un toque de lima que le agrega al vino una deliciosa frescura. Ees un vino elegnate y bien balanceado.    "
   }, 
   {
-    "name": "Fabre Montmayou Reserva Malbec",
+    "name": "Reserva",
     "varietal": "Malbec",
-    "colour_type": "Pink",
+    "colour_type": "Rosado",
     "winery": "Fabre Montmayou",
     "price": 2800,
     "image": "https://winebox.pe/wp-content/uploads/2018/12/fabre-montmayou-rose-malbec-min.jpg",
@@ -1136,9 +1136,9 @@
     "description": "Un color rosado pálido muy delicado. El vino tiene aromas de frutas frescas de fresas y frambuesas con toques cítricos. Un vino fresco y equilibrado, el rosado perfecto para beber al sol y delicioso con pescados a la brasa o empanadas de atún."
   },
   {
-    "name": "El Enemigo Cabernet Franc",
+    "name": "El Enemigo",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "https://universovigil.com/ventas/55-thickbox_default/el-enemigo-cabernet-franc.jpg",
@@ -1154,7 +1154,7 @@
   {
     "name": "El Enemigo Bonarda",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "http://www.universovigil.com/assets/img/chachingo/vinos/vino-el-enemigo-bonarda.png",
@@ -1168,9 +1168,9 @@
     "description":"85% Bonarda, 15% Cabernet Franc. En vista púrpura intenso y brillante. En nariz fruta madura acompotada con un dejo herbáceo y especiado. En boca entra dulce, de cuerpo medio, y algo ligero."
   },
   {
-    "name": "El Enemigo Chardonay",
+    "name": "El Enemigo",
     "varietal":"Chardonay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "El Enemigo",
     "price": 5280,
     "image": "https://universovigil.com/ventas/59-thickbox_default/elenemigo-chardonnay.jpg",
@@ -1184,9 +1184,9 @@
     "description": "Fresco, chispeante y notablemente aterciopelado en boca."
   },
   {
-    "name": "El Enemigo Malbec",
+    "name": "El Enemigo",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "https://universovigil.com/ventas/56-thickbox_default/el-enemigo-malbec.jpg",
@@ -1202,7 +1202,7 @@
   {
     "name": "El Enemigo Syrah-Viognier",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "http://www.universovigil.com/assets/img/chachingo/vinos/vino-el-enemigo-syrah-viognier.png",
@@ -1216,9 +1216,9 @@
     "description": "92% Syrah, 8% Viognier. Violáceo y profundo, que despliega aromas en numerosas capas, entre las que destacan la ciruela fresca y los matices herbales y florales; al paladar es imponente, con un fluir jugoso y frutado que conquista por su amable equilibrio"
   },
   {
-    "name": "El Enemigo Single Vineyard Bonarda El Barranco",
+    "name": "El Enemigo Single Vineyard El Barranco",
     "varietal":"Bonarda",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "http://www.universovigil.com/assets/img/chachingo/vinos/vino-el-enemigo-sv-bonarda-elbarranco.png",
@@ -1232,9 +1232,9 @@
     "description": "Ciruelas frescas, frutillas y hasta guindas se funden con tonos terrosos, especiados y balsámicos. En boca se luce con sabor frutal definido, textura delicada y balance. Taninos mullido de grano fino y final jugoso."
   },
   {
-    "name": "El Enemigo Single Vineyard Bonarda El Mirador",
+    "name": "El Enemigo Single Vineyard El Mirador",
     "varietal":"Bonarda",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6590,
     "image": "http://www.universovigil.com/assets/img/chachingo/vinos/vino-el-enemigo-sv-bonarda-elmirador.png",
@@ -1248,9 +1248,9 @@
     "description": "Aromas a cereza y frambuesa se sienten directos y puros. En el padar se siente vivo con una acidez explosiva que le otorga frescura y entusiasmo. Sabores ágiles de grosella y frambuesa se inclinan más hacia el rojo que hacia el negro, mientras que el roble achocolatado suave hace una aparición de fondo en el final. "
   },
   {
-    "name": "El Enemigo Single Vineyard Bonarda La Esperanza",
+    "name": "El Enemigo Single Vineyard La Esperanza",
     "varietal":"Bonarda",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "https://universovigil.com/ventas/119-thickbox_default/el-enemigo-bonarda-singlevineyard-la-esperanza.jpg",
@@ -1264,9 +1264,9 @@
     "description": "Aromas de fruta negra madura llegan con toques de ciruela e higo. El paladar es exquisito pero robusto y bien equilibrado, con taninos muy redondos. Los sabores de ciruela terrosa y bayas silvestres son profundos y satisfactorios. Un Bonarda jugoso y de textura agradable, con un final largo con insinuaciones de chocolate."
   },
   {
-    "name": "El Enemigo Single Vineyard Bonarda Los Paraisos",
+    "name": "El Enemigo Single Vineyard Los Paraisos",
     "varietal":"Bonarda",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "https://universovigil.com/ventas/120-thickbox_default/el-enemigo-bonarda-singlevineyard-los-paraisos.jpg",
@@ -1282,7 +1282,7 @@
   {
     "name": "Gran Enemigo Single Vineyard Agrelo",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 12375,
     "image": "https://universovigil.com/ventas/62-large_default/gran-enemigo-single-vineyard-agrelo.jpg",
@@ -1298,7 +1298,7 @@
   {
     "name": "Gran Enemigo Single Vineyard Gualtallary",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 12375,
     "image": "https://universovigil.com/ventas/121-large_default/gran-enemigo-gualtallary-2015.jpg",
@@ -1314,7 +1314,7 @@
   {
     "name": "Gran Enemigo Single Vineyard Chacayes",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 12375,
     "image": "https://universovigil.com/ventas/41-large_default/gran-enemigo-single-vineyard-chacayes.jpg",
@@ -1330,7 +1330,7 @@
   {
     "name": "Gran Enemigo Single Vineyard El Cepillo",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "El Enemigo",
     "price": 12375,
     "image": "https://universovigil.com/ventas/63-thickbox_default/gran-enemigo-single-vineyard-el-cepillo.jpg",
@@ -1344,9 +1344,9 @@
     "description": "85% Cabernet Franc, 15% Malbec. Tiene la textura tensa construida a partir de taninos firmes y filosos, los sabores recuerdan a las frutas roja, y hay notas a hierbas que aportan complejidad y también frescor. La acidez vivaz, acompaña al vino hasta el final dejando una suave sensación refrescante en un tinto elegante, vertical, de sabores largos y frutales"
   },
   {
-    "name": "Special Blend Del Fin Del Mundo",
+    "name": "Special Blend",
     "varietal": "Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price":  16500,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/08/Special-Blend-2-2.png",
@@ -1360,9 +1360,9 @@
     "description": "40% Malbec, 40% Cabernet Suavignon, 20% Merlot. De intenso color rojo violáceo. Aroma a frutos rojos intensos, con notas a moras negras, chocolate y especias. Boca frutada, suaves, maduros y sedosos taninos, equilibrado, de gran cuerpo y un excepcional final de boca."
   },
   {
-    "name": "Single Vineyard Del Fin Del Mundo Malbec",
+    "name": "Single Vineyard",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -1376,9 +1376,9 @@
     "description": "Color rojo intenso con refljos violetas. Aromas a violetas, cerezas negras, con notas a regaliz y anís. Taninos suaves, paladar jugoso y prolongado final.."
   },
   {
-    "name": "Single Vineyard Del Fin Del Mundo Cabernet Franc",
+    "name": "Single Vineyard",
     "varietal": "Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -1392,9 +1392,9 @@
     "description": "De color rojo granate. Aroma intenso, frutado, con notas a grosellas, cassis y un ligero especiado. Notas a vainilla, chocolate y tabaco. En boca es frutado, equilibrado y un largo final de boca" 
   },
   {
-    "name": "Single Vineyard Del Fin Del Mundo Chardonnay",
+    "name": "Single Vineyard",
     "varietal": "Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -1408,9 +1408,9 @@
     "description": "Color amarillo verdoso con destellos plateados. Expresivo, complejo, frutas tropicales, mineral y ligeras notas cítricas. En boca se presenta untuoso, equilibrado y prolongado final."
   },
   {
-    "name": "Single Vineyard Del Fin Del Mundo Syrah",
+    "name": "Single Vineyard",
     "varietal": "Syrah",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -1424,9 +1424,9 @@
     "description": "Color rojo intenso con reflejos violetas. Aromas frutado, floral y especiado, con notas a vainilla y chocolate. Boca amable, de gran volumen, de sedosos taninos y largo final de boca."
   },
   {
-    "name": "Single Vineyard Del Fin Del Mundo Pinot Noir",
+    "name": "Single Vineyard",
     "varietal": "Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -1440,9 +1440,9 @@
     "description": "Color rojo rubí intenso y brillante. Aromas a frutos rojos, frutilla y frambuesas. Boca equilibrada, fresca acidez y taninos delicados."
   },
   {
-    "name": "Gran Reserva Del Fin Del Mundo Blend",
+    "name": "Gran Reserva",
     "varietal": "Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 3500,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/06/Gran-Reserva-1-1.png",
@@ -1456,9 +1456,9 @@
     "description": "37% Malbec, 24% Cabernet Suavignon, 21% Meerlot, 18% Cabernet Franc. Color rojo intenso. Aroma muy frutado, con notas a coco, vainilla y especias. En boca es equilibrado, de gran volumen, sedoso, de taninos suaves y un largo final."
   },
   {
-    "name": "Reserva Del Fin Del Mundo Malbec",
+    "name": "Reserva",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/Reserva-FDM-Malbec.png",
@@ -1472,9 +1472,9 @@
     "description": "Color rojo profundo con reflejos violetas. Aroma floral a violetas,con notas frutadas a ciruela. Con reminiscencias a chocolate,tabaco y vainilla. En boca es frutado, amable, equilibrado, debuen volumen, rica acidez y largo final de boca. Elegante."
   },
   {
-    "name": "Reserva Del Fin Del Mundo Pinot Noir",
+    "name": "Reserva",
     "varietal": "Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54324_default_big.jpeg",
@@ -1488,9 +1488,9 @@
     "description": "Color rojo rubí brillante. Aroma frutado, recuerdos a guindas y frambuesas, con sutiles notas a humo. En boca es frutado, de sedosos taninos y largo final."
   },
   {
-    "name": "Reserva Del Fin Del Mundo Cabernet Franc",
+    "name": "Reserva",
     "varietal": "Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54320_default_medium.jpeg",
@@ -1504,9 +1504,9 @@
     "description": "Color rojo carmín intenso. Aroma frutado, con notas a grosellas, cassis y cerezas negras con notas a especies y pimiento calahorra, tabaco y humo. Con taninos suaves y equilibrados. Largo final de boca."
   },
   {
-    "name": "Reserva Del Fin Del Mundo Cabernet Suavignon",
+    "name": "Reserva",
     "varietal": "Cabernet Suavignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54320_default_medium.jpeg",
@@ -1520,9 +1520,9 @@
     "description": "De color rojo granate. Aroma intenso, frutado, con notas a grosellas, cassis y un ligero especiado. Notas a vainilla, chocolate y tabaco. En boca es frutado, equilibrado y un largo final de boca."
   },
   {
-    "name": "Reserva Del Fin Del Mundo Merlot",
+    "name": "Reserva",
     "varietal": "Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Reserva-Del-Fin-Del-Mundo-Merlot.png",
@@ -1538,7 +1538,7 @@
   {
     "name": "Reserva Del Fin Del Mundo Chardonnay",
     "varietal": "Chardonnay",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/reserva-chardonnay1-afcfc0ff952615359b15905897875425-640-0.jpg",
@@ -1552,9 +1552,9 @@
     "description": "Color amarillo intenso con destellos verdosos característicos de la variedad. El aroma es frutado con notas cítricas y tropicales. Intensamente delicado con notas que recuerdan a vainilla y coco. A la boca se presenta frutado, agradable, de muy buena acidez, toques minerales y de final gustoso y equilibrado."
   },
   {
-    "name": "La Poderosa Syrah",
+    "name": "La Poderosa",
     "varietal": "Syrah",
-    "colour_type": "Pink",
+    "colour_type": "Rosado",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://www.envero.com.ar/image/cache/data/la%20poderosa%20rose-500x500.jpg",
@@ -1568,9 +1568,9 @@
     "description": "De color rosa tenue con matices salmón. Aromas a frutos rojos y sutiles notas florales. Boca fresca, jugosa, recuerda a cítricos como el pomelo rosado, de buen volumen y equilibrado final. "
 },
 {
-    "name": "La Poderosa Dulce Natural",
+    "name": "La Poderosa",
     "varietal": "Dulce",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65299_default_medium.jpeg",
@@ -1584,9 +1584,9 @@
     "description": "Color amarillo verdoso, con destellos dorados. Aromas florales a jazmín y azahar, con notas a hierbas frescas y durazno blanco. Frutas maduras e intensas, equilibrada acidez, final untuoso y dulce."
 },
 {
-    "name": "La Poderosa Semillón",
+    "name": "La Poderosa",
     "varietal": "Pinot Noir",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/La-Poderosa-Semillon.png",
@@ -1600,9 +1600,9 @@
     "description": "Color amarillo con suaves destellos verdes. Aroma frutado, con notas cítricas y té negro. Notas a frutos secos. En boca es frutado de marcada acidez y refrescante final."
 },
   {
-    "name": "La Poderosa Malbec",
+    "name": "La Poderosa",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/f077deed2021d255f119dc6cd31ac18b/l/a/la_poderosa_semillon.jpg",
@@ -1616,9 +1616,9 @@
     "description": "Color rojo intenso con reflejos violetas. Aroma floral con notas frutadas de ciruelas y mermeladas de frutos rojos. En boca es frutado, muy equilibrado, de adecuada acidez y buen cuerpo, taninos suaves y muy largo final de boca"
   },
   {
-    "name": "La Poderosa Pinot Noir",
+    "name": "La Poderosa",
     "varietal": "Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://http2.mlstatic.com/D_NQ_NP_743825-MLA52268790169_112022-O.jpg",
@@ -1634,7 +1634,7 @@
   {
     "name": "La Poderosa Extra Brut",
     "varietal": "Blend",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1750,
     "image": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3090693_1_f.jpg",
@@ -1648,9 +1648,9 @@
     "description": "80% Pinot Noir, 20% Chardonnay. Brillante, con destellos cobrizos. Presenta finas burbujas que se  reflejan en una corona persistente. Aromas a flores blancas y  cítricos, con delicadas notas a pan tostado. En boca es refrescante y su acidez representa la tipicidad de los espumantes patagónicos."
   },
   {
-    "name": "Newen Reservado Malbec",
+    "name": "Newen",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63221_default_medium.jpeg",
@@ -1664,9 +1664,9 @@
     "description": "Color rojo intenso, reflejos violetas. Aroma floral, violetas, con notas frutadas de ciruelas y mermeladas de frutos rojos. Vainilla, humo y coco. En boca es frutado, muy equilibrado, de adecuada acidez, de buen cuerpo, taninos suaves y muy largo final de boca."
 },
 {
-    "name": "Newen Reservado Pinot Noir",
+    "name": "Newen",
     "varietal": "Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63219_default_medium.jpeg",
@@ -1680,9 +1680,9 @@
     "description": "Color rojo rubí brillante. Aroma frutado, con notas a guindas, cerezas y dulce de leche. Reminiscencias a vainilla y coco."
 },
 {
-    "name": "Newen Reservado Merlot",
+    "name": "Newen",
     "varietal": "Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Newen-Reservado-Merlot.png",
@@ -1696,9 +1696,9 @@
     "description": "Color rojo rubí intenso. Aroma frutado con notas a frambuesas y mermelada de tomates. En boca es muy frutado, equilibrado, de taninos suaves y largo final de boca."
   },
   {
-    "name": "Newen Reservado Cabernet Suavignon",
+    "name": "Newen",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Newen-Reservado-Cabernet-Sauvignon.png",
@@ -1712,9 +1712,9 @@
     "description": "Color rojo rubí intenso. En boca es muy frutado, equilibrado, gustoso, pleno con taninos suaves y maduros. Extenso final de boca"
   },
   {
-    "name": "Newen Reservado Suavignon Blanc",
+    "name": "Newen",
     "varietal": "Sauvignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63218_default_medium.jpeg",
@@ -1728,9 +1728,9 @@
     "description":"Color amarillo verdoso brillante. Aroma intenso, recuerdos a hierbas, frutado con notas cítricas de pomelo y con un toque mineral. De entrada amable en boca, frutado y de equilibrada y distinguida acidez. Delicioso largo final de boca."
   },
   {
-    "name": "Postales Roble Del Fin Del Mundo Malbec",
+    "name": "Postales Roble",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63323_default_medium.jpeg",
@@ -1744,9 +1744,9 @@
     "description":"Color rojo violáceo intenso. Intensos aromas a frutos rojos y notas a vainilla. En boca es frutado, fresco, de suaves taninos y largo final."
   },
   {
-    "name": "Postales Roble Del Fin Del Mundo Blend",
+    "name": "Postales Roble",
     "varietal": "Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
     "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/postales-cab-malbec2-f09859fbe434e2e40e15905252200583-640-0.jpeg",
@@ -1760,9 +1760,9 @@
     "description":"Cabernet Suavignon, Malbec. Color rojo intenso. Aroma a frutos rojos maduros con notas a mermelada de ciruelas. En boca es frutado de taninos suaves y buen cuerpo. Largo final de boca"
   },
   {
-    "name": "Postales Roble Del Fin Del Mundo Cabernet Suavignon",
+    "name": "Postales Roble",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
     "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/postales-cab-malbec2-f09859fbe434e2e40e15905252200583-640-0.jpeg",
@@ -1776,9 +1776,9 @@
     "description":"Color rojo rubí oscuro. Aroma frutado, con notas a frutos rojos maduros y a especias. En boca es frutado con suaves taninos, equilibrado y de buen cuerpo. Largo final de boca."
   },
   {
-    "name": "Postales Roble Del Fin Del Mundo Pinot Noir",
+    "name": "Postales Roble",
     "varietal": "Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
     "image": "https://static.wixstatic.com/media/424dab_6cc16f93b2094014afc191b598516b9e~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/424dab_6cc16f93b2094014afc191b598516b9e~mv2.jpg",
@@ -1792,9 +1792,9 @@
     "description":"Color rojo rubí. Brillante. Aroma frutado, que recuerda a cerezas y frutillas y destacadas notas minerales. En boca es fresco y frutado, con un equilibrado y prolongado final."
   },
   {
-    "name": "Postales Del Fin del Mundo Suavignon Blanc",
+    "name": "Postales",
     "varietal":"Suavignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega del Fin del Mundo",
     "price": 1050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63327_default_big.jpeg",
@@ -1808,9 +1808,9 @@
     "description": "Color brillante, amarillo verdoso. Aroma intenso, futado con notas cítricas de pomelo, tropicales y recuerdos a hierbas. Boca amable, frutado y con una equilibrada acidez. Largo final de boca."
   },
   {
-    "name": "Postales Del Fin del Mundo Malbec",
+    "name": "Postales",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 1050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63326_default_big.jpeg",
@@ -1824,9 +1824,9 @@
     "description": "Color rojo profundo con reflejos violetas. Aroma muy frutado, recuerdos a ciruelas maduras yun toque floral a violetas. Vino muy futado, de entrada amable, taninos suaves, de buen cuerpo y laargo final de boca."
   },
   {
-    "name": "Postales Del Fin del Mundo Cabernet Suavignon Malbec",
+    "name": "Postales",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 1050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65300_default_big.jpeg",
@@ -1837,12 +1837,12 @@
     "alcohol": 13.7,
     "volume": 750,
     "url": "https://bodegadelfindelmundo.com/",
-    "description": "Rojo intenso con reflejos violetas. Aromas a frutos rojos maduros y mermelada de ciruela. En boca es frutado, amable, de buen cuerpo, con taninos suaves y final en boca equilibrado."
+    "description": "Cabernet Suavignon, Malbec. Rojo intenso con reflejos violetas. Aromas a frutos rojos maduros y mermelada de ciruela. En boca es frutado, amable, de buen cuerpo, con taninos suaves y final en boca equilibrado."
   },
   {
-    "name": "Ventus Roble Del Fin Del Mundo Malbec",
+    "name": "Ventus Roble",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Roble-Malbec.png",
@@ -1856,9 +1856,9 @@
     "description": "Color rojo brillante con destellos violáceos. Aroma muy frutado con notas a vainilla. En boca muy frutado, redondo con suaves taninos y equilibrado final."
   },
   {
-    "name": "Ventus Roble Del Fin Del Mundo Cabernet Suavignon",
+    "name": "Ventus Roble",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Roble-Cabernet-Sauvignon.png",
@@ -1872,9 +1872,9 @@
     "description": "Color rojo rubí oscuro. Aroma muy frutado con notas a frutos rojos maduros, especias y notas a café. En boca es frutado, equilibrado, de suaves taninos y largo final de boca."
   },
   {
-    "name": "Ventus Roble Del Fin Del Mundo Cabernet Chardonnay",
+    "name": "Ventus Roble",
     "varietal":"Chardonnay",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Roble-Chardonnay-600x1166.png",
@@ -1888,9 +1888,9 @@
     "description": "Color rojo rubí oscuro. Aroma muy frutado con notas a frutos rojos maduros, especias y notas a café. En boca es frutado, equilibrado, de suaves taninos y largo final de boca."
   },
   {
-    "name": "Ventus Del Fin Del Mundo Merlot Cabernet Suavignon Malbec",
+    "name": "Ventus",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Blend-Tinto.png",
@@ -1904,9 +1904,9 @@
     "description": "50% Merlot, 30% Cabernet Suavignon, 20% Malbec. Color Rojo rubí intenso, brillante. Aroma muy frutado con notas especiadas. En boca entrada amable, muy frutado, redondo, taninos suaves y equilibrado final de boca."
   },
   {
-    "name": "Ventus Del Fin Del Mundo Suavignon Blanc Chardonnay",
+    "name": "Ventus",
     "varietal":"Blend",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Blend-Blanco.png",
@@ -1922,7 +1922,7 @@
   {
     "name": "Extra Brut Del Fin del Mundo",
     "varietal":"Blend",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Bodega del Fin del Mundo",
     "price": 2500,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Espumante-Extra-Brut.png",
@@ -1938,7 +1938,7 @@
   {
     "name": "Brut Nature Del Fin del Mundo",
     "varietal":"Pinot Noir",
-    "colour_type": "Sparkling",
+    "colour_type": "Espumante",
     "winery": "Bodega del Fin del Mundo",
     "price": 2000,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Espumante-Brut-Nature.png",
@@ -1952,9 +1952,9 @@
     "description": "Color amarillo dorado. Brillante. Burbuja fina y abundante. Corona blanca y persistente. De aroma intenso, complejo, recuerdos a pan tostado y frutos secos, y delicadas notas a frutas confitadas. Entrada amable, cremoso, suave, pequeñas burbujas resaltan las notas tostadas. Largo final de boca, con notas minerales y equilibrada acidez."
   },
   {
-    "name": "Altosur Malbec",
+    "name": "Altosur",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 5.453,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_20_.png",
@@ -1965,12 +1965,12 @@
     "alcohol": 14,
     "volume": 750,
     "url": "http://www.sophenia.com.ar/",
-    "description": "De atractivos rojos con tonos violetas. En nariz intensos frutos, cereza, moras y ciruelas frescas combinadas con notas especiadas y florales. En boca sus dulces y Redondos taninos aumentan la sensación de frutosidad y equilibrio. Buena intensidad, concentración y persistencia."
+    "description": "De atractivos rojos con tonos violetas. En nariz intensos frutos, cereza, moras y ciruelas frescas combinadas con notas especiadas y florales. En boca sus dulces y Tintoondos taninos aumentan la sensación de frutosidad y equilibrio. Buena intensidad, concentración y persistencia."
   },
   {
-    "name": "Altosur Cabernet Suavignon",
+    "name": "Altosur",
     "varietal": "Cabernet Suavignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_19_.png",
@@ -1984,9 +1984,9 @@
     "description": "Rojo rubí intenso. Un varietal expresivo y profundo, con carácter, notas especiadas, fruta fresca, pimiento y chocolate. De estructura tánica ágil, de buen volumen y armonioso con un largo final de boca."
   },
   {
-    "name": "Altosur Bonarda",
+    "name": "Altosur",
     "varietal": "Bonarda",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_19_.png",
@@ -2000,9 +2000,9 @@
     "description": "Color rojo violáceo con destellos fucsias. Intensa expresión aromática de frutas frescas de ciruela y frutilla amalgamadas con notas mentoladas y especias. En boca es lineal, mineral y con una acidez fresca. Muy persistente y equilibrado."
   },
   {
-    "name": "Altosur Blend",
+    "name": "Altosur",
     "varietal": "Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_21_.png",
@@ -2016,9 +2016,9 @@
     "description": "50% Malbec, 40% Cabernet Suavignon, 10% Syrah. Color rojo rubí con notas violáceas. En nariz es muy expresivo, con intensos aromas frutales como ciruela, combinados con especias, resaltando el tomillo y pimienta negra En boca tiene muy buena estructura, taninos suaves y jugosos, con una entrada dulce y acidez equilibrada que le confiere frescura, "
   },
   {
-    "name": "Altosur Malbec Rosé",
+    "name": "Altosur Rosé",
     "varietal": "Malbec",
-    "colour_type": "Pink",
+    "colour_type": "Rosado",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_36_.png",
@@ -2032,9 +2032,9 @@
     "description": "Color rosado pálido con notas piel de cebolla . En nariz de intensos frutos del bosque, frutilla, cereza, mora con interesantes notas minerales. En boca es un vino suave, aterciopelado, de gran frescura y frutosidad."
   },
   {
-    "name": "Altosur Suavignon Blanc",
+    "name": "Altosur",
     "varietal": "Suavignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_17_.png",
@@ -2050,7 +2050,7 @@
   {
     "name": "Altosur",
     "varietal": "Torrontés",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_16_.png",
@@ -2064,9 +2064,9 @@
     "description": "Color amarillo pálido con delicados reflejos verdosos, de intensos aromas florales combinados con frutos tropicales, hierbas como manzanilla y notas cítricas. De paladar intenso y consistente, sensaciones cítricas y minerales aumentan su frescura con un elegante y refrescante final."
   },
   {
-    "name": "Altosur Chardonnay",
+    "name": "Altosur",
     "varietal": "Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_15_.png",
@@ -2082,7 +2082,7 @@
   {
     "name": "Altosur Dulce Natural",
     "varietal": "Dulce",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 1600,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_40_.jpg",
@@ -2096,9 +2096,9 @@
     "description": "Color dorado brillante. con algunas notas verdosas. De aromas muy frescos y frutales donde se combinan cítricos, manzana verde y banana con notas a frutos secos y y dejos de té verde y manzanilla. En boca la dulzura se equilibra con una acidez que le da frescura y se perciben las mismas notas frutales que se identifican en la nariz. "
   },
   {
-    "name": "Argento Single Block Malbec",
+    "name": "Single Block",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 7316,
     "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/730/568/products/img_03072022_204731_332_x_600_pixel1-edcde26d5a613f61dd16671728089793-640-0.jpg",
@@ -2112,9 +2112,9 @@
     "description": "El vino presenta intensos colores violáceos y aromas de cereza negra y flores de violeta. En boca es jugoso con buena textura, acidez, volumen y un final largo, tenso y vibrante."
   },
   {
-    "name": "Argento Single Block Malbec",
+    "name": "Single Block",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 7320,
     "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/730/568/products/img_03072022_204731_332_x_600_pixel1-edcde26d5a613f61dd16671728089793-640-0.jpg",
@@ -2128,9 +2128,9 @@
     "description": "El vino presenta intensos colores violáceos y aromas de cereza negra y flores de violeta. En boca es jugoso con buena textura, acidez, volumen y un final largo, tenso y vibrante."
   },
   {
-    "name": "Argento Estate Bottled Pinot Grigio",
+    "name": "Estate Bottled",
     "varietal": "Pinot Grigio",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Argento",
     "price": 1150,
     "image": "https://th.bing.com/th/id/OIP.thTXJ4iyNCBoDbhhkEY7aQAAAA?pid=imageDet&rs=1",
@@ -2144,9 +2144,9 @@
     "description": "Elegante Pinot grigio, ofrece aromas florales y a frutas tropicales. Ligero y limpio con damasco maduro y sabores de melocotón blanco, notas de manzanilla y final brillante."
   },
   {
-    "name": "Argento Estate Bottled Malbec",
+    "name": "Estate Bottled",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 1149,
     "image": "https://bodegaargento.com/assets/img/vinos/rdm/es/Botella-Estate-Bottled-RDM.png",
@@ -2160,9 +2160,9 @@
     "description": "De color morado profundo, con aromas a ciruelas, cerezas y notas de violeta. En boca se perciben sabores de ciruelas y frutos rojos. Su final en boca se presenta con taninos suaves y balanceados."
   },
   {
-    "name": "Argento Single Vineyard Agrelo Cabernet Franc",
+    "name": "Single Vineyard Agrelo",
     "varietal": "Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
     "image": "https://images.vivino.com/thumbs/UhunMK_zSG6DNjIrDHSOeg_pb_x600.png",
@@ -2176,9 +2176,9 @@
     "description": "Color rojo intenso. Ataque voluptuoso y fresco, aromas excepcionales. Un paladar muy aromático, con frambuesas y hierbas, taninos potentes, paladar medio con buen peso. Final largo y vibrante."
   },
   {
-    "name": "Argento Single Vineyard Altamira Malbec",
+    "name": "Single Vineyard Altamira",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64875_default_big.jpeg",
@@ -2192,9 +2192,9 @@
     "description": "Color rojo intenso. Muy aromático, fresco, vibrante, con frutos rojos y hierbas. Gran carácter mineral, largo en boca y jugoso, con un final complejo."
   },
   {
-    "name": "Argento Single Vineyard Agrelo Malbec",
+    "name": "Single Vineyard Agrelo",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
     "image": "https://vinomanos.com/wp-content/uploads/2020/12/argento-finca-agrelo-malbec.png",
@@ -2208,9 +2208,9 @@
     "description": "Rojo intenso con tonos violáceos. Gran riqueza aromática, elegante, intenso en nariz. Frutos rojos, ciruela, especias y violetas. Final vibrante con taninos aterciopelados"
   },
   {
-    "name": "Argento Single Vineyard Agrelo Cabernet Franc",
+    "name": "Single Vineyard Agrelo",
     "varietal": "Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64877_default_big.jpeg",
@@ -2224,9 +2224,9 @@
     "description": "Color rojo intenso. Ataque voluptuoso y fresco, aromas excepcionales. Un paladar muy aromático, con frambuesas y hierbas, taninos potentes, paladar medio con buen peso. Final largo y vibrante."
   },
   {
-    "name": "Argento Estate Collection Malbec",
+    "name": "Estate Collection",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 2383,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64878_default_big.jpeg",
@@ -2240,9 +2240,9 @@
     "description": "Este Malbec tiene aromas a frutos rojos y ciruelas, combinados con notas balsámicas. Un vino con buena estructura, frescura y largo final."
   },
   {
-    "name": "Argento Estate Collection Malbec Cabernet Franc",
+    "name": "Estate Collection",
     "varietal": "Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 2383,
     "image": "https://www.espaciovino.com.ar/media/default/0001/67/thumb_66279_default_medium.jpeg",
@@ -2256,9 +2256,9 @@
     "description": "70% Malbec, 30% Cabernet Franc. Este blend tiene aromas de frutos rojos, especias y notas balsámicas. Un vino de taninos firmes y final persistente.."
   },
   {
-    "name": "Artesano de Argento Malbec",
+    "name": "Artesano",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 1566,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64887_default_medium.jpeg",
@@ -2272,9 +2272,9 @@
     "description": "Color rojo intenso, aromas a cereza, frambuesa, hojas y frutos de grosella. Cuerpo rico y lleno, taninos aterciopelados y final largo."
   },
   {
-    "name": "Artesano de Argento Cabernet Franc",
+    "name": "Artesano",
     "varietal": "Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 1750,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64887_default_medium.jpeg",
@@ -2285,12 +2285,12 @@
     "alcohol": 14.9,
     "volume": 750,
     "url": "http://www.bodegaargento.com",
-    "description": "Color morado intenso, aromas concentrados a ciruelas, cerezas negras y notas de violeta. Redondo en boca, taninos suaves, final largo."
+    "description": "Color morado intenso, aromas concentrados a ciruelas, cerezas negras y notas de violeta. Tintoondo en boca, taninos suaves, final largo."
   },
   {
-    "name": " Argento Estate Reserva Chardonnay",
+    "name": "Estate Reserva",
     "varietal": "Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Argento",
     "price": 1492,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64881_default_medium.jpeg",
@@ -2304,9 +2304,9 @@
     "description": "Este magnífica Chardonnay, con un ligero paso por roble, ofrece aromas de fruta tropical fresca. Estos sabores de frutas se complementan con notas minerales y una textura sutil y mantecosa que conduce a un final fresco y redondo. "
   },
   {
-    "name": "Argento Estate Reserva Cabernet Franc",
+    "name": "Estate Reserva",
     "varietal": "Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 1492,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64880_default_big.jpeg",
@@ -2320,9 +2320,9 @@
     "description": "Color rubí delicado, aromas a cerezas, frambuesas, grosellas y frutas. Algunas especias, hierbas y cassis. Rico y de gran cuerpo, aromas muy expresivos y taninos dulces. Final largo."
   },
   {
-    "name": "Argento Estate Reserva Malbec",
+    "name": "Estate Reserva",
     "varietal": "Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Argento",
     "price": 5.453,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64879_default_big.jpeg",
