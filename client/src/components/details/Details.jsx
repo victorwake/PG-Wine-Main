@@ -1,32 +1,40 @@
 import './details.css'
 import React from 'react'
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getDetail } from '../actions';
+import { getDetails } from '../../redux/actions';
 
 
-export default function Detail(){
+export const Details =() =>{
     const dispatch = useDispatch();
     const {id} = useParams();
-    const navigate = useNavigate();
- 
-    useEffect(() => {
-        dispatch(getDetail(id)); 
-        return()=> {dispatch(getDetail())}
+         useEffect(() => {
+           dispatch(getDetails(id))
+        // return()=> {dispatch(getDetail(id))}
     },[id, dispatch]);
+
      const detail = useSelector((state) => state.detail)
+    //  if (id){
+    //      detail.id = "0290f910-4a4c-4d1d-a9f6-3158c66ec3f6"
+    //  }
+
      return (
+          <div className='fondo'>
+                  <div className="container_detail">
+                     <div>
+                      <h1 className="winenamedetail">{detail.name}</h1>
 
-        <div>
-        <h1 className="winedetail">{detail[0].name}</h1>
-        <img className='image_detail' src={detail[0].image} alt='not found'/>
-        <p> : {!detail[0].createdInDb? detail[0].height : detail[0].heightMin + ' - ' + detail[0].heightMax}</p>
-        <p>: {!detail[0].createdInDb? detail[0].weight : detail[0].weightMin + ' - ' + detail[0].weightMax}</p>
-        <p> : {detail[0].life_span}</p>
-        <p>:  {!detail[0].createdInDb? detail[0].temperament + ' ' : detail[0].temperaments.map((el, index) => detail[0].temperaments.length -1 === index? el.name : el.name + (', '))}</p>
-        </div> 
+                           <img className='image_detail' src={detail.image} alt='not found'/>
+                         
+                         <p>{detail.winery} </p>
+                         
+                         <p> {detail.varietal} </p>
 
+                     </div> 
 
-    )
-}
+            </div>
+          
+          </div>
+     )
+      }

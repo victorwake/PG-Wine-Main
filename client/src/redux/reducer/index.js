@@ -45,7 +45,7 @@ const rootReducer = (state = initialState, action) => {
                 })
                     return {
                         ...state, //me traigo todo lo de estado
-                        wines: varietalFiltered
+                        wines: wineFiltered
                         
             }
     

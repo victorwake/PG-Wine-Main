@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export function getWines(){
     return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/', {
+        var json = await axios.get('http://localhost:3001/wine', {
 
         });
         return dispatch({
@@ -30,7 +30,7 @@ export function getWineName(name){ //name o payload, da igual
 
 export function getVarietal(){
     return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/temperament/');
+        var json = await axios.get('http://localhost:3001/varietal/');
         return dispatch({
             type: 'GET_VARIETAL',
             payload: json.data
@@ -82,12 +82,12 @@ export function cleanAllFilters() {
     }
 };
 
-export function getDetail(id){
+export function getDetails(id){
     
         return async function (dispatch){
             try {
                 if(id){
-                    const detail = await axios.get(`http://localhost:3001/`);
+                    const detail = await axios.get(`http://localhost:3001/winedetail/:id`);
                     dispatch ({
                         type: 'GET_DETAIL',
                         payload: detail.data
