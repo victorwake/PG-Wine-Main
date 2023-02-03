@@ -1,9 +1,8 @@
 import './general.css';
-import { SearchBar } from '../searchBar/SearchBar';
 import { NavBar } from '../navBar/NavBar';
+import { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { useState } from 'react';
-
+import { getVarietal, getWines } from '../../redux/actions';
 
 
 
@@ -11,33 +10,17 @@ import { useState } from 'react';
 export const General = () => {
 
     const dispatch = useDispatch();
-    // const allVarietal = useSelector(state => state.varietal)
+    const allWines = useSelector(state=> state.wines)
+    const allVarietal = useSelector(state => state.varietal)
 
-    // function handleClick(e){
-    //     e.preventDefault();
-    //     // dispatch(cleanAllFilters());
-    //     }
-    const [ images, setImages] = useState([])
-    const [ imageToRemove, setImageToRemove] = useState(null)
-    
-    function handleRemove(){
-
-    }
-    function handleOpenWidget(){
-        var myWidget = window.cloudinary.createUploadWidget(
-            {
-            cloudName: 'dsyss1x3l', 
-            uploadPreset: 'dionisiowine'
-            }, 
-            (error, result) => { 
-              if (!error && result && result.event === "success") { 
-                console.log('Done! Here is the image info: ', result.info); 
-              }
-            }
-          )
-          myWidget.open()
-    }
-   
+    function handleClick(e){
+        e.preventDefault();
+        // dispatch(cleanAllFilters());
+        }
+     useEffect(()=>{
+       dispatch(getWines());
+       dispatch(getVarietal())
+     },[]);        
 
     return (
         <div className='general'>
@@ -47,9 +30,6 @@ export const General = () => {
             <div className='general_data'>
                 <h1>aca van las card</h1>
             </div>
-            <div>
-        <button onClick={() => handleOpenWidget()}>Upload Picture</button>
-        </div>
         </div>
 
     )
