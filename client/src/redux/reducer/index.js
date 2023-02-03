@@ -1,4 +1,4 @@
-import {} from '../actions/index.js';
+
 const initialState = {
     wines : [],
     varietal : [],
