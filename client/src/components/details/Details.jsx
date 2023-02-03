@@ -1,5 +1,5 @@
 import './details.css'
-import { getWineDetail } from '../../redux/actions'
+import { getDetails } from '../../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
@@ -14,7 +14,7 @@ export const Details = () => {
     const id = "4a301fc4-4a6c-4cb5-ac0c-d9b6826e6aa1"
 
     useEffect(() => {
-        dispatch(getWineDetail(id))
+        dispatch(getDetails(id))
     }, [dispatch, id])
 
     return (

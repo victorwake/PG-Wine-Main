@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-
-export function getWines(){
+export function getWines() {
     return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/wine', {
+        var json = await axios.get('http://localhost:3001/general', {
 
         });
         return dispatch({
@@ -11,25 +10,24 @@ export function getWines(){
             payload: json.data
         })
     }
+}
 
- }
-
-export function getWineName(name){ //name o payload, da igual
+export function getWineName(name) { //name o payload, da igual
     return async function(dispatch) {
         try {
-            var json = await axios.get('http://localhost:3001/wine?name=' + name);
-            return dispatch ({
+            var json = await axios.get('http://localhost:3001/general?name=' + name);
+            return dispatch({
                 type: 'GET_WINE_NAME',
                 payload: json.data //json.data es lo q devuelve esa ruta
             })
-      } catch (error) {
-        alert('wine not found');
+        } catch (error) {
+            alert('wine not found');
 
         }
     }
 }
 
-export function getVarietal(){
+export function getVarietal() {
     return async function(dispatch) {
         var json = await axios.get('http://localhost:3001/varietal/');
         return dispatch({
@@ -38,7 +36,7 @@ export function getVarietal(){
         })
     }
 }
-export function getWinery(){
+export function getWinery() {
     return async function(dispatch) {
         var json = await axios.get('http://localhost:3001/winery/');
         return dispatch({
@@ -48,7 +46,7 @@ export function getWinery(){
     }
 }
 
-export function postWine(payload){
+export function postWine(payload) {
     return async function(dispatch) {
         const data = await axios.post('http://localhost:3001/wine/', payload);
         console.log(data)
@@ -56,7 +54,7 @@ export function postWine(payload){
     }
 }
 
-export function filterWineByVarietal(payload){ //el payload es el value q me va a llegar
+export function filterWineByVarietal(payload) { //el payload es el value q me va a llegar
     console.log(payload)
     return {
         type: 'FILTER_BY_VARIETAL',
@@ -92,9 +90,29 @@ export function cleanAllFilters() {
     }
 };
 
-export const getWineDetail = id => {
-    return dispatch => axios(`http://localhost:3001/winedetail/${id}`)
-    .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data}))
-    .catch(err => console.log(err));
-};
-export const GET_WINE_DETAIL = 'GET_WINE_DETAIL';
+export function getDetails(id) {
+
+    return async function(dispatch) {
+        try {
+            if (id) {
+                const detail = await axios.get(`http://localhost:3001/winedetail/:id`);
+                dispatch({
+                    type: 'GET_DETAIL',
+                    payload: detail.data
+                })
+            } else {
+                dispatch({
+                    type: 'GET_DETAIL',
+                    payload: []
+
+
+                })
+            }
+
+        } catch (error) {
+            console.log(error)
+
+        }
+    }
+
+}
