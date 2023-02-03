@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 export function getWines(){
     return async function(dispatch) {
         var json = await axios.get('http://localhost:3001/wine', {
@@ -33,6 +34,15 @@ export function getVarietal(){
         var json = await axios.get('http://localhost:3001/varietal/');
         return dispatch({
             type: 'GET_VARIETAL',
+            payload: json.data
+        })
+    }
+}
+export function getWinery(){
+    return async function(dispatch) {
+        var json = await axios.get('http://localhost:3001/winery/');
+        return dispatch({
+            type: 'GET_WINERY',
             payload: json.data
         })
     }
@@ -82,29 +92,9 @@ export function cleanAllFilters() {
     }
 };
 
-export function getDetails(id){
-    
-        return async function (dispatch){
-            try {
-                if(id){
-                    const detail = await axios.get(`http://localhost:3001/winedetail/:id`);
-                    dispatch ({
-                        type: 'GET_DETAIL',
-                        payload: detail.data
-                    })
-                } else {
-                    dispatch({
-                        type: 'GET_DETAIL',
-                        payload: []
-                        
-        
-                    })
-                }
-
-            } catch(error){
-                console.log(error)   
-
-            }  
-        }            
-    
-  }
+export const getWineDetail = id => {
+    return dispatch => axios(`http://localhost:3001/winedetail/${id}`)
+    .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data}))
+    .catch(err => console.log(err));
+};
+export const GET_WINE_DETAIL = 'GET_WINE_DETAIL';

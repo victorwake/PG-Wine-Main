@@ -1,9 +1,11 @@
-import {
-
-} from '../actions/index.js';
-
+import {} from '../actions/index.js';
 const initialState = {
-    
+    wines : [],
+    varietal : [],
+    winery : [],
+    allWines : [],
+    currentPage : 1,
+    winedetails: [],
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -31,7 +33,7 @@ const rootReducer = (state = initialState, action) => {
             case 'GET_WINERY':
                 return {
                     ...state,
-                    varietal: action.payload
+                    winery: action.payload
                 }
     
             case 'POST_WINE':
@@ -68,7 +70,7 @@ const rootReducer = (state = initialState, action) => {
                    case 'CLEAN_FILTERS':
             return {
                 ...state,
-                recipes: state.allRecipe,
+                wines: state.allWines,
                 currentPage: 1
             }
             case 'ORDER_BY_NAME': //'Asc. Desc'
@@ -123,21 +125,15 @@ const rootReducer = (state = initialState, action) => {
                 
     
             };
-            case 'GET_DETAIL':
-                 return {
-                     ...state,
-                     detail: action.payload
-                 }
-    
-            
-            
-            default:
-                return state;
-        }
+            case 'GET_WINE_DETAIL':
+                return {
+                    ...state,
+                    wineDetail: action.payload
+                };
         
     
     }
-
+ }
 
 export default rootReducer;
 
