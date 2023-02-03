@@ -3,16 +3,14 @@ import './general.css';
 import { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getVarietal, getWines } from '../../redux/actions';
-
-
-
-
+import Card from '../card/Card'
 
 export const General = () => {
 
     const dispatch = useDispatch();
     const allWines = useSelector(state=> state.wines)
-    // const allVarietal = useSelector(state => state.varietal)
+    const allVarietal = useSelector(state => state.varietal)
+
 
     function handleClick(e){
         e.preventDefault();
@@ -29,9 +27,22 @@ export const General = () => {
                 <NavBar/>
             </div>
             <div className='general_data'>
-                <h1>aca van las card</h1>
+                {allWines.map(e => {
+                    return(
+                        <div className='cardgrid'>
+                        <Card
+                        
+                                name={e.name}
+                                varietal={e.varietal}
+                                image= {e.image} 
+                                winery={e.winery}
+                                price= {e.price}
+                            />
+                        </div>)})}
             </div>
         </div>
 
+
+       
     )
 }
