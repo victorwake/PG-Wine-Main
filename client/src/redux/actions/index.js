@@ -3,15 +3,13 @@ import axios from 'axios';
 
 export function getWines(){
     return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/wine', {
-
+        var json = await axios.get('http://localhost:3001/general', {
         });
         return dispatch({
             type: 'GET_WINES',
             payload: json.data
         })
     }
-
  }
 
 export function getWineName(name){ //name o payload, da igual

@@ -15,14 +15,14 @@ const rootReducer = (state = initialState, action) => {
             case 'GET_WINES':
             return {
                 ...state, //guardo el estado
-                wine: action.payload, //
+                wines: action.payload, //
                 allWines: action.payload 
             }
     
             case 'GET_WINE_NAME':
                 return {
                     ...state,
-                    wine: action.payload //es el arreglo q estoy renderizando
+                    wines: action.payload //es el arreglo q estoy renderizando
                 }
     
             case 'GET_VARIETAL':
