@@ -1,3 +1,4 @@
+import { NavBar } from '../navBar/NavBar';
 import './general.css';
 import { NavBar } from '../navBar/NavBar';
 import { useState, useEffect } from 'react';
@@ -5,8 +6,8 @@ import {useDispatch, useSelector} from 'react-redux';
 import { getVarietal, getWines } from '../../redux/actions';
 
 
-export const General = () => {
 
+export const General = () => {
     const dispatch = useDispatch();
     const allWines = useSelector(state=> state.wines)
     const allVarietal = useSelector(state => state.varietal)
@@ -33,3 +34,10 @@ export const General = () => {
     )
 }
 
+    return (
+        <NavBar />
+    )
+
+
+
+}
