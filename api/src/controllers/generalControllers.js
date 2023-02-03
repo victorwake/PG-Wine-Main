@@ -1,5 +1,6 @@
 const { Wine } = require("../db.js");
 
+<<<<<<< HEAD
 const getDbWines = async (req, res, next) => {
   try {
     const wines = await Wine.findAll();
@@ -18,3 +19,23 @@ const getDbWines = async (req, res, next) => {
 };
 
 module.exports = { getDbWines };
+=======
+const getDbWines = async(req, res, next) => {
+    try {
+        const wines = await Wine.findAll();
+        const { name } = req.query;
+        if (name) {
+            let wineName = await wines.filter((el) =>
+                el.name.toLowerCase().includes(name.toLowerCase())
+            );
+            wineName.length ? res.status(200).send(wineName) : res.status(400).json({ msg: "No se encuentra ningún vino con este nombre" });
+        } else {
+            res.status(200).send(wines);
+        }
+    } catch (error) {
+        res.status(400).json({ error: err.message });
+    }
+};
+
+module.exports = { getDbWines }
+>>>>>>> adf19d32e6d5837eecf8e3a9bbded53b956a6597

@@ -23,6 +23,7 @@ const { conn } = require('./src/db.js');
 //  const { insertWine } = require('./src/createDb/wineCreate.js');
 
 // Syncing all the models at once.
+<<<<<<< HEAD
 conn.sync({ force: false }).then(() => {
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
@@ -30,3 +31,12 @@ conn.sync({ force: false }).then(() => {
 //  insertWine();
   });
 });
+=======
+conn.sync({ force: true }).then(() => {
+    server.listen(3001, () => {
+        console.log('%s listening at 3001'); // eslint-disable-line no-console
+        insertVarietal();
+        insertWine();
+    });
+});
+>>>>>>> adf19d32e6d5837eecf8e3a9bbded53b956a6597
