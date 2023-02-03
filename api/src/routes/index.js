@@ -1,12 +1,22 @@
 const { Router } = require('express');
-// Importar todos los routers;
-// Ejemplo: const authRouter = require('./auth.js');
 
+//Import Routes
+const searchWineByIdRouter = require('./searchWineByIdRouter');
+const getAllProvincesRouter = require('./getAllProvincesRouter');
+const filterByProvinceRouter = require('./filterByProvinceRouter');
+const createWineRouter = require('./createWineRouter');
+const deleteWineRouter = require('./deleteWineRouter');
+const updateWineRouter = require('./updateWineRouter');
 
 const router = Router();
 
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
+//Routes
+router.use('/', searchWineByIdRouter);
+router.use('/', getAllProvincesRouter);
+router.use('/', filterByProvinceRouter);
+router.use('/', createWineRouter);
+router.use('/', deleteWineRouter);
+router.use('/', updateWineRouter);
 
 
 module.exports = router;

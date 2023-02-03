@@ -24,21 +24,13 @@ const insertVarietal = async () => {
         {name: 'Blend'},
         {name: 'dulce'},
         {name: 'Estra brut'},
+        {name: 'rose'},
     ]
     await Varietal.bulkCreate(typeOfVarietal);
     console.log('varietal loaded in the db');  
 };
 
-const getDbVarietal = async (req, res, next) => {
-    try {
-        const varietalDb = await Varietal.findAll()
-        res.send(varietalDb)
-    } catch (err) {
-        next(err)
-    }
-};
 
 module.exports = {
     insertVarietal,
-    getDbVarietal,
 }
