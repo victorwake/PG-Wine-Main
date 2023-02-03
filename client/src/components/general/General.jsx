@@ -7,6 +7,7 @@ import { getVarietal, getWines } from '../../redux/actions';
 
 
 
+
 export const General = () => {
 
     const dispatch = useDispatch();
@@ -20,7 +21,7 @@ export const General = () => {
      useEffect(()=>{
        dispatch(getWines());
        dispatch(getVarietal())
-     },[]);        
+     },[dispatch]);        
 
     return (
         <div className='general'>

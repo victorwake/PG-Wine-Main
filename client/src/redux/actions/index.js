@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export function getWines() {
     return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/wine', {
+        var json = await axios.get('http://localhost:3001/general', {
 
         });
         return dispatch({
@@ -10,13 +10,12 @@ export function getWines() {
             payload: json.data
         })
     }
-
 }
 
 export function getWineName(name) { //name o payload, da igual
     return async function(dispatch) {
         try {
-            var json = await axios.get('http://localhost:3001/wine?name=' + name);
+            var json = await axios.get('http://localhost:3001/general?name=' + name);
             return dispatch({
                 type: 'GET_WINE_NAME',
                 payload: json.data //json.data es lo q devuelve esa ruta
