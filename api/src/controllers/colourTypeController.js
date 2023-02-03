@@ -1,8 +1,8 @@
-const { wine } = require("../db.js");
+const { Wine } = require("../db.js");
 
 const getColourType = async (req, res) => {
   let type = req.params.type;
-  let wines = await wine.findAll();
+  let wines = await Wine.findAll();
   let wineType = await wines.some((el) =>
     el.colour_type.toLowerCase().includes(type.toLowerCase())
   );

@@ -5,7 +5,6 @@ import './card.css';
 import React from "react";
 
 
-<<<<<<< HEAD
 export default function Card({image, name, varietal , winery,price, id}) {
     return (
         <div>
@@ -19,8 +18,6 @@ export default function Card({image, name, varietal , winery,price, id}) {
             
         </div>
     );
-=======
-export const Card = () => {
->>>>>>> 8dee92399bd045ddf9b0519a318e17a553e887e5
+
 
 }

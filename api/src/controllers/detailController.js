@@ -2,7 +2,7 @@ const { Wine } = require("../db.js");
 
 const getDetails = async (req, res) => {
   let id = req.params.id;
-  let wines = await wine.findAll();
+  let wines = await Wine.findAll();
   let wine = await wines.some((el) => el.id === id);
 
   if (!wine) {
@@ -10,7 +10,7 @@ const getDetails = async (req, res) => {
       msg: `La ${id} no corresponde a una id vino válida`,
     });
   } else {
-    const wineDetail = await wine.findOne({
+    const wineDetail = await Wine.findOne({
       where: { id: id },
     });
     console.log(wineDetail);

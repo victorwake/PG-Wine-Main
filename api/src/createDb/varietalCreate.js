@@ -9,6 +9,7 @@ const insertVarietal = async () => {
         {name: 'Pinot Noir'},
         {name: 'Cabernet Franc'},
         {name: 'Malbec'},
+        {name: 'Corte'},
         {name: 'Cabernet Sauvignon'},
         {name: 'Chardonnay'},
         {name: 'Pedro Ximénez'},
@@ -23,14 +24,16 @@ const insertVarietal = async () => {
         {name: 'Blend'},
         {name: 'Dulce'},
         {name: 'Extra Brut'},
-        {name: 'Tempranillo'},
-        {name: 'Petit Verdot'},
-        {name: 'dulce'},
-        {name: 'Estra brut'},
+        {name: 'Pink'},
     ]
     await Varietal.bulkCreate(typeOfVarietal);
     console.log('varietal loaded in the db');  
 };
+
+
+module.exports = {
+    insertVarietal
+}
 
 
 module.exports = {

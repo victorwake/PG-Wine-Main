@@ -1,6 +1,5 @@
 import { NavBar } from '../navBar/NavBar';
 import './general.css';
-import { NavBar } from '../navBar/NavBar';
 import { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getVarietal, getWines } from '../../redux/actions';
@@ -10,11 +9,10 @@ import { getVarietal, getWines } from '../../redux/actions';
 
 
 export const General = () => {
-<<<<<<< HEAD
 
     const dispatch = useDispatch();
     const allWines = useSelector(state=> state.wines)
-    const allVarietal = useSelector(state => state.varietal)
+    // const allVarietal = useSelector(state => state.varietal)
 
     function handleClick(e){
         e.preventDefault();
@@ -22,7 +20,7 @@ export const General = () => {
         }
      useEffect(()=>{
        dispatch(getWines());
-       dispatch(getVarietal())
+    //    dispatch(getVarietal())
      },[]);        
 
     return (
@@ -36,12 +34,4 @@ export const General = () => {
         </div>
 
     )
-=======
-    return (
-        <NavBar />
-    )
-
-
-
->>>>>>> 8dee92399bd045ddf9b0519a318e17a553e887e5
 }
