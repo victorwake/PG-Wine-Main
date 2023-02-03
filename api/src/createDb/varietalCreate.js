@@ -27,8 +27,12 @@ const insertVarietal = async () => {
         {name: 'Petit Verdot'},
         {name: 'dulce'},
         {name: 'Extra brut'},
+<<<<<<< HEAD
         {name: 'Pink'}
 
+=======
+        {name: 'rose'},
+>>>>>>> 6cc14e96a2bdc8bca49c3ba2522317a92fdf2eb3
     ]
     await Varietal.bulkCreate(typeOfVarietal);
     console.log('varietal loaded in the db');  
