@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+<<<<<<< HEAD
 
 export function getWines(){
     return async function(dispatch) {
@@ -89,10 +90,82 @@ export function cleanAllFilters() {
         dispatch({ type: 'CLEAN_FILTERS' })
     }
 };
+=======
+/*Cambio de tema*/
+export const themeChange = (theme) => {
+    if (theme === 'light') {
+        return {
+            type: THEME_LIGHT
+        };
+    } else if (theme === 'dark') {
+        return {
+            type: THEME_DARK
+        };
+    }
+};
+export const THEME_CHANGE = 'THEME_CHANGE';
+
+export  const themeLight = () => {
+    return {
+        type: THEME_LIGHT,
+        theme: 'light'
+    }
+};
+export const THEME_LIGHT = 'THEME_LIGHT';
+
+export  const themeDark = () => {
+    return {
+        type: THEME_DARK,
+        theme: 'dark'
+    } 
+};
+export const THEME_DARK = 'THEME_DARK';
+
+/*Fin de cambio de tema*/
+
+/*----------------------------------------------*/
+
+
+
+export const getWines = () => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.get('http://localhost:3001/general');
+            dispatch({
+                type: GET_WINES,
+                payload: response.data
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+export const GET_WINES = 'GET_WINES';
+
+export const getWineType = (type) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.get(`http://localhost:3001/colourtype/${type}`);
+            dispatch({
+                type: GET_WINE_TYPE,
+                payload: response.data
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+export const GET_WINE_TYPE = 'GET_WINE_TYPE';
+>>>>>>> 8dee92399bd045ddf9b0519a318e17a553e887e5
 
 export const getWineDetail = id => {
     return dispatch => axios(`http://localhost:3001/winedetail/${id}`)
     .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data}))
     .catch(err => console.log(err));
 };
+<<<<<<< HEAD
 export const GET_WINE_DETAIL = 'GET_WINE_DETAIL';
+=======
+export const GET_WINE_DETAIL = 'GET_WINE_DETAIL';
+
+>>>>>>> 8dee92399bd045ddf9b0519a318e17a553e887e5

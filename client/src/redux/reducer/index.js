@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const initialState = {
     wines : [],
@@ -6,10 +7,28 @@ const initialState = {
     allWines : [],
     currentPage : 1,
     winedetails: [],
+=======
+import {
+    THEME_CHANGE, 
+    THEME_LIGHT, 
+    THEME_DARK,
+    GET_WINES,
+    GET_WINE_TYPE,
+    GET_WINE_DETAIL
+
+} from '../actions/index.js';
+
+const initialState = {
+    theme: 'light',
+    wines: [],
+    winType: [],
+    wineDetail: []
+>>>>>>> 8dee92399bd045ddf9b0519a318e17a553e887e5
 }
 
 const rootReducer = (state = initialState, action) => {
     switch(action.type) {
+<<<<<<< HEAD
         
 
             case 'GET_WINES':
@@ -132,6 +151,41 @@ const rootReducer = (state = initialState, action) => {
                 };
         
     
+=======
+        case THEME_CHANGE:
+            return {
+                ...state,
+                theme: action.theme
+            };
+        case THEME_LIGHT:
+            return {
+                ...state,
+                theme: 'light'
+            };
+        case THEME_DARK:
+            return {
+                ...state,
+                theme: 'dark'
+            };
+        case GET_WINES:
+            return {
+                ...state,
+                wines: action.payload
+            };
+        case GET_WINE_TYPE:
+            return {
+                ...state,
+                winType: action.payload
+            };
+        case GET_WINE_DETAIL:
+            return {
+                ...state,
+                wineDetail: action.payload
+            };
+        
+        default:
+            return state;
+>>>>>>> 8dee92399bd045ddf9b0519a318e17a553e887e5
     }
  }
 
