@@ -9,7 +9,7 @@ const login = require('./userLogin.js')
 
 const router = Router();
 
-router.use('/general', generalRouter);
+router.use('/home', generalRouter);
 router.use('/varietal', varietalRouter);
 router.use('/winedetail', detailRouter);
 router.use('/colourtype', colourTypeRouter);
