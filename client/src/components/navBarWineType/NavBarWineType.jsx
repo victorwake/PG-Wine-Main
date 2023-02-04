@@ -11,7 +11,7 @@ export const NavBarWineType = () => {
     <div class="cards-wrapper">
     <Fragment >
       <div class="card-wrapper">
-      <Link to={"/colortype/" + "tinto"}  style={{ color: "inherit", textDecoration: "inherit" }}>
+      <Link to={"/vinos/" + "tinto"}  style={{ color: "inherit", textDecoration: "inherit" }}>
         <div class="card-1 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
@@ -24,6 +24,7 @@ export const NavBarWineType = () => {
       </div>
 
       <div class="card-wrapper">
+      <Link to={"/vinos/" + "blanco"}  style={{ color: "inherit", textDecoration: "inherit" }}>
         <div class="card-2 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
@@ -32,9 +33,11 @@ export const NavBarWineType = () => {
             </div>
           </fragment>
         </div>
+        </Link>
       </div>
 
       <div class="card-wrapper">
+      <Link to={"/vinos/" + "rosado"}  style={{ color: "inherit", textDecoration: "inherit" }}>
         <div class="card-3 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
@@ -43,9 +46,11 @@ export const NavBarWineType = () => {
             </div>
           </fragment>
         </div>
+        </Link>
       </div>
 
       <div class="card-wrapper">
+      <Link to={"/vinos/" + "espumante"}  style={{ color: "inherit", textDecoration: "inherit" }}>
         <div class="card-4 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
@@ -54,6 +59,7 @@ export const NavBarWineType = () => {
             </div>
           </fragment>
         </div>
+        </Link>
       </div>
     </Fragment>
     </div>

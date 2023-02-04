@@ -11,8 +11,10 @@ export const WineType= () => {
     const currentPage = useSelector(state => state.currentPage);
     const clase = useSelector((state) => state.clase);
     const dispatch = useDispatch();
-    const wineType = useSelector(state => state.winType)
+    const wine = useSelector(state => state.winType)
     const {type} = useParams();
+    console.log(type)
+    console.log(wine)
 
     // paginado
     // const winesPerPage = 10;
@@ -30,7 +32,7 @@ export const WineType= () => {
             <div className="wine-type">
                 <div className="wine-type-title">
                     <h1>Vinos {type}</h1>
-                    {wineType?.map((w => (
+                    {wine.map((w => (
                         <Fragment key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                                 <Card
@@ -43,11 +45,8 @@ export const WineType= () => {
                             </Link>
                         </Fragment>
                     )))}
-
             </div>
             </div>
-            
-
         </div>
     );
     }

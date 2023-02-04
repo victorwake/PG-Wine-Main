@@ -54,19 +54,11 @@ export const GET_WINES = 'GET_WINES';
 
 /*----------------------------------------------*/
 
-export const getWineType = (type) => {
-    return async (dispatch) => {
-        try {
-            const response = await axios.get(`http://localhost:3001/colortype/${type}`);
-            dispatch({
-                type: GET_WINE_TYPE,
-                payload: response.data
-            });
-        } catch (error) {
-            console.log(error);
-        }
-    }
-}
+export const getWineType = type => {
+    return dispatch => axios(`http://localhost:3001/vinos/${type}`)
+        .then(res => dispatch({ type: GET_WINE_TYPE, payload: response.data})
+        .catch (err => console.log(err)));
+};
 export const GET_WINE_TYPE = 'GET_WINE_TYPE';
 
 /*----------------------------------------------*/

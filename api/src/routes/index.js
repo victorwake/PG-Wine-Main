@@ -12,7 +12,7 @@ const router = Router();
 router.use('/home', generalRouter);
 router.use('/varietal', varietalRouter);
 router.use('/details', detailRouter);
-router.use('/colortype', colorTypeRouter);
+router.use('/vinos', colorTypeRouter);
 router.use('/auth', login);
 
 

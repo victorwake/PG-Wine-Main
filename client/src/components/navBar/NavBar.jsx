@@ -1,4 +1,6 @@
 import "./navBar.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
@@ -13,22 +15,24 @@ export const NavBar = () => {
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+          Vinos
           </a>
           <ul class="dropdown-menu">
-            <li><p class="dropdown-item" >Action</p></li>
-            <li><p class="dropdown-item" >Another action</p></li>
-            <li></li>
-            <li><p class="dropdown-item" >Something else here</p></li>
+          <Link to={"/vinos/" + "tinto"}  style={{ color: "inherit", textDecoration: "inherit" }}>
+              <li><p class="dropdown-item" >Tintos</p></li>
+          </Link>
+          <Link to={"/vinos/" + "blanco"}  style={{ color: "inherit", textDecoration: "inherit" }}>
+              <li><p class="dropdown-item" >Blancos</p></li>
+          </Link>
+          <Link to={"/vinos/" + "rosado"}  style={{ color: "inherit", textDecoration: "inherit" }}>
+              <li><p class="dropdown-item" >Rosados</p></li>
+          </Link>
+          <Link to={"/vinos/" + "espumante"}  style={{ color: "inherit", textDecoration: "inherit" }}>
+              <li><p class="dropdown-item" >Espumantes</p></li>
+          </Link>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
