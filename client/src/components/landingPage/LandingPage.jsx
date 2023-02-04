@@ -7,7 +7,7 @@ export const LandingPage = () => {
         <div className="landing-page">
         <h1>Landing Page</h1>
 
-        <Link to={"/general"}>
+        <Link to={"/home"}>
             <button className="button">Dionisio Wine</button>
         </Link>
         </div>
