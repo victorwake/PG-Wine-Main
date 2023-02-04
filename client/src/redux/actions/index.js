@@ -116,7 +116,6 @@ export function getDetails(id) {
     }
 
 }
-=======
 /*Cambio de tema*/
 export const themeChange = (theme) => {
     if (theme === 'light') {
@@ -151,21 +150,6 @@ export const THEME_DARK = 'THEME_DARK';
 
 /*----------------------------------------------*/
 
-
-
-export const getWines = () => {
-    return async (dispatch) => {
-        try {
-            const response = await axios.get('http://localhost:3001/general');
-            dispatch({
-                type: GET_WINES,
-                payload: response.data
-            });
-        } catch (error) {
-            console.log(error);
-        }
-    }
-};
 export const GET_WINES = 'GET_WINES';
 
 export const getWineType = (type) => {

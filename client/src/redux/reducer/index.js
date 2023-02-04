@@ -1,4 +1,3 @@
-import { getWines, getWineName, getVarietal, getWinery, postWinery, filterWineByVarietal, orderByName, orderByPrice, cleanAllFilters, getDetails } from '../actions/index.js';
 
 const initialState = {
     wines: [],
@@ -41,8 +40,6 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
             }
-
-
         case 'FILTER_BY_VARIETAL':
             const allVarietales = state.allWines //aca tb para el filtro desde todos
             const wineFiltered = action.payload === 'All' ?
@@ -57,18 +54,7 @@ const rootReducer = (state = initialState, action) => {
 
             }
 
-            // case 'FILTER_CREATED':
-            //     const filterCreated = action.payload === 'Created' ? 
-            //     state.allWine.filter(el => el.createdInDb) 
-            //     : state.allWine.filter( el => !el.createdInDb)
-            //     return {
-            //         ...state, //me devuelve el estado anterior
-            //         wines: action.payload === 'All'? state.allWines 
-            //         : filterCreated  
-
-            // }
-
-        case 'CLEAN_FILTERS':
+            case 'CLEAN_FILTERS':
             return {
                 ...state,
                 wines: state.all,
@@ -99,8 +85,6 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 wines: sortName,
             };
-
-
         case 'ORDER_BY_PRICE':
             let sortTipo = action.payload === 'Precio' ?
                 state.wines.sort(function(a, b) {
@@ -124,74 +108,14 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 wines: sortTipo,
-
-
             };
         case 'GET_DETAIL':
             return {
                 ...state,
                 detail: action.payload
             }
-
-
-
-=======
-import {
-    THEME_CHANGE, 
-    THEME_LIGHT, 
-    THEME_DARK,
-    GET_WINES,
-    GET_WINE_TYPE,
-    GET_WINE_DETAIL
-
-} from '../actions/index.js';
-
-const initialState = {
-    theme: 'light',
-    wines: [],
-    winType: [],
-    wineDetail: []
+            default:
+                return state;
+        }
 }
-
-const rootReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case THEME_CHANGE:
-            return {
-                ...state,
-                theme: action.theme
-            };
-        case THEME_LIGHT:
-            return {
-                ...state,
-                theme: 'light'
-            };
-        case THEME_DARK:
-            return {
-                ...state,
-                theme: 'dark'
-            };
-        case GET_WINES:
-            return {
-                ...state,
-                wines: action.payload
-            };
-        case GET_WINE_TYPE:
-            return {
-                ...state,
-                winType: action.payload
-            };
-        case GET_WINE_DETAIL:
-            return {
-                ...state,
-                wineDetail: action.payload
-            };
-        
-        default:
-            return state;
-    }
-
-
-}
-
-
 export default rootReducer;

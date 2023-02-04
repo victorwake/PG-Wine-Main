@@ -1,6 +1,5 @@
 import { NavBar } from '../navBar/NavBar';
 import './general.css';
-import { NavBar } from '../navBar/NavBar';
 import { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getVarietal, getWines } from '../../redux/actions';
@@ -32,12 +31,4 @@ export const General = () => {
         </div>
 
     )
-}
-
-    return (
-        <NavBar />
-    )
-
-
-
 }
