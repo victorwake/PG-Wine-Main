@@ -51,6 +51,7 @@ export const Home = () => {
                                 image= {e.image} 
                                 winery={e.winery}
                                 price= {e.price}
+                                id= {e.id}
                             />
                         </div>)})}
             </div>

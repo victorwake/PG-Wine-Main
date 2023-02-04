@@ -13,7 +13,7 @@ export const Details = () => {
     const wineDetail = useSelector((state) => state.wineDetail);
     const clase = useSelector((state) => state.clase);
     const {id} = useParams();
-    
+    console.log(id)
 
     useEffect(() => {
         dispatch(getWineDetail(id))

@@ -3,7 +3,7 @@ const { Wine } = require("../db.js");
 const getDetails = async (req, res) => {
   let id = req.params.id;
   let wines = await Wine.findAll();
-  let wine = await wines.some((el) => el.id === id);
+  let wine = await wines.filter((el) => el.id === id);
 
   if (!wine) {
     return res.status(401).json({
