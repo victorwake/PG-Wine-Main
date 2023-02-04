@@ -3,8 +3,23 @@ import { Login } from '../login/Login';
 import './navBar.css';
 import { Link } from 'react-router-dom';
 import { Filter } from '../filters/Filter';
+import { useSelector, useDispatch } from 'react-redux';
+import { getWinery, getColourType } from '../../redux/actions';
 
 export const NavBar = () => {
+
+const allTypes = useSelector(state => state.colourType)
+const allWinery = useSelector(state => state.winery)
+const dispatch = useDispatch()
+
+function handleFilterbyType(e){
+  dispatch(getColourType(e.target.value))
+  }
+
+function handleFilterbyWinery(e){
+  dispatch(getWinery(e.target.value))
+  }
+
     return (
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -15,30 +30,28 @@ export const NavBar = () => {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>˙
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href={<Login/>}>Login</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
               Vinos
-            </a>
-            <ul class="dropdown-menu">
-              <li><p class="dropdown-item" >Tintos</p></li>
-              <li><p class="dropdown-item" >Blancos</p></li>
-              <li><p class="dropdown-item" >Rosados</p></li>
-              <li><p class="dropdown-item" >Espumantes</p></li>
-            </ul>
+            </a> 
+            <ul class="dropdown-menu" onChange={(e)=>handleFilterbyType(e)}>
+              {allTypes.map( el => (
+                <option class="dropdown-item" value={el}>{el}</option>
+              ))}  
+            </ul> 
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Bodegas            </a>
-            <ul class="dropdown-menu">
-              <li><p class="dropdown-item" >Rutini</p></li>
-              <li><p class="dropdown-item" >Trapiche</p></li>
-              <li><p class="dropdown-item" >Costa&Pampa</p></li>
-              <li><p class="dropdown-item" >El Enemigo</p></li>
+            <ul class="dropdown-menu" onChange={(e)=>handleFilterbyWinery(e)}>
+              {allWinery.map( el => (
+                <option class="dropdown-item" value={el} >{el}</option>
+              ))}  
             </ul>
           </li>
           <li class="nav-item">
@@ -50,70 +63,3 @@ export const NavBar = () => {
     </div>
   </nav>
     );}
-// export const NavBar = () => {
-
-//     function handleClick(e){
-//         e.preventDefault();
-//         // dispatch(cleanAllFilters());
-//         }
-
-//     return(
-//         <div className='general_nav'>
-//             <div className='menu_bar'>
-//                 <a href='#' className='bt_menu'><span class='icon_list'/>Menu</a>
-//             </div>
-//                 <div className='general_filter' >
-//                     <div className='filter'>
-//                         <label>Varietal: </label>
-//                         <select>
-//                             {/* {allVarietal.map(d => (
-//                                 <option value={d.name}>{d.name}</option>
-//                             ))}  */}     
-//                          </select>
-//                     </div>
-//                     <div className='filter'>
-//                         <label>Tipo: </label> 
-//                         <select>
-//                             {/* {allTipes.map(d => (
-//                                     <option value={d.name}>{d.name}</option>
-//                                 ))} */}
-//                         </select>
-//                     </div>
-//                     <div className='filter'>
-//                         <label>Region: </label> 
-//                         <select>
-//                         {/* {allDiets.map(d => (
-//                                 <option value={d.name}>{d.name}</option>                                
-//                                 ))} */}
-//                         </select>
-//                     </div>
-//                     <div className='filter'>
-//                         <label>Bodega: </label> 
-//                         <select>
-//                         {/* {allDiets.map(d => (
-//                                 <option value={d.name}>{d.name}</option>
-//                             ))} */}
-//                         </select>
-//                     </div >
-//                     <div className="order">
-//                         <label>Ordenar por Nombre:  </label>
-//                         <select >
-//                             <option value= 'asc'>A-Z</option>
-//                             <option value= 'desc'>Z-A</option>
-//                         </select>
-//                     </div>
-//                     <div className="order">
-//                         <label> Precio: </label>
-//                         <select  >
-//                             <option value= 'asc'>Mayor Precio</option>
-//                             <option value= 'desc'>Menor Precio</option>
-//                         </select>
-//                     </div>
-//                     <button className="refreshButton" onClick={ e => {handleClick (e)}}>Clean filter</button>
-//                 </div>
-//                 <div className="serchBar">
-//                     <SearchBar/>
-//                 </div>
-//             </div>
-//     )
-// }

@@ -3,6 +3,7 @@ import { getWines, getWineName, getVarietal, getWinery, postWinery, filterWineBy
 const initialState = {
     wines: [],
     varietal: [],
+    colourType: [],
     winery: [],
     allWines: [],
     currentPage: 1
@@ -26,6 +27,11 @@ const rootReducer = (state = initialState, action) => {
                 wines: action.payload //es el arreglo q estoy renderizando
             }
 
+        case `GET_COLOUR_TYPE`:
+            return {
+                ...state,
+                colourType: action.payload
+            }
         case 'GET_VARIETAL':
             return {
                 ...state,

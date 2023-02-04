@@ -26,7 +26,28 @@ export function getWineName(name) { //name o payload, da igual
         }
     }
 }
-
+export function getColourType(name) {
+    return async function(dispatch) {
+        try {
+            var json = await axios.get(`http://localhost:3001/colourtype/` + name);
+            return dispatch({
+                type: `GET_COLOUR_TYPE`,
+                payload: json.data
+            })
+        } catch (error) {
+            alert('wine not found')
+        }
+    }
+}
+export function getListType() {
+    return async function(dispatch) {
+        var json = await axios.get(`http://localhost:3001/listype`);
+        return dispatch({
+            type: `GET_COLOUR_TYPE`,
+            payload: json.data
+        })
+    }
+}
 export function getVarietal() {
     return async function(dispatch) {
         var json = await axios.get('http://localhost:3001/varietal/');
@@ -38,7 +59,7 @@ export function getVarietal() {
 }
 export function getWinery() {
     return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/winery/');
+        var json = await axios.get('http://localhost:3001/listwinery');
         return dispatch({
             type: 'GET_WINERY',
             payload: json.data
