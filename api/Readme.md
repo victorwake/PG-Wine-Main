@@ -14,4 +14,4 @@ http://localhost:3001/colourtype/{colour_type} (entrega el listado de vinos que 
 
 http://localhost:3001/winery/{winery} (entrega el listado de vinos que cumplan con la condición de winery pasado por parámetro)
 
-http://localhost:3001/listype (entrega el listado de tipos vino, disponibles en la db)
+http://localhost:3001/listype (entrega el listado de tipos vino, disponibles)
