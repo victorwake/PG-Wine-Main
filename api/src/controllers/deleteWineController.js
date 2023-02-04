@@ -9,7 +9,7 @@ const deleteWine = async (req, res) => {
     allWines.splice(index, 1);
     res.send('Wine deleted succesfully!!');
   } else {
-      res.status(404).send('Wine not found');
+      res.status(404).send('This ID does not exist, try with another');
     }
 
   if(idDeleteWine) {

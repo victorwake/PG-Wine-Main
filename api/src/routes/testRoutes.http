@@ -1,14 +1,8 @@
-### // GET ALL WINES
-GET http://localhost:3001/wines HTTP/1.1
-
-### // SEARCH WINES BY NAME
-GET http://localhost:3001/wines?name=Guana HTTP/1.1
-
 ### // GET ALL PROVINCES
 GET http://localhost:3001/provinces HTTP/1.1
 
 ### // FILTER WINES BY PROVINCE
-GET http://localhost:3001/Guana HTTP/1.1
+GET http://localhost:3001/Mendoza HTTP/1.1
 
 ### // SEARCH A WINE BY ID
 GET http://localhost:3001/wines/df1f82f2-f601-47ad-9958-8cb1a9d81b02 HTTP/1.1
@@ -57,3 +51,9 @@ Content-Type: application/json
   "url": "https://www.google.com",
   "description": "Best mexican wine"
 }
+
+### // ORDER WINES BY PRICE ASCENDING
+GET http://localhost:3001/orderAsc/price HTTP/1.1
+
+### // ORDER WINES BY PRICE DESCENDING
+GET http://localhost:3001/orderDes/price HTTP/1.1

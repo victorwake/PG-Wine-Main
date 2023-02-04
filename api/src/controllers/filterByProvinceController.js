@@ -13,7 +13,7 @@ const filterWinesByProvince = async (req, res) => {
       })
       filterProvince.length > 0 ?
         res.send(filterProvince) : 
-        res.status(404).send('This province has not wines, please try with another');
+        res.status(404).send(`"${province}" has not wines, please try with another`);
     }
 }
 

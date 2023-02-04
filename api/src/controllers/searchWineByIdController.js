@@ -8,7 +8,7 @@ const searchWineById = async (req, res) => {
       let filterWine = await allWines.filter(el => el.id == id);
       filterWine.length > 0 ?
       res.send(filterWine) :
-      res.status(404).send('Wine not found, try with another');
+      res.status(404).send('Wine ID not found, try with another');
     }
 }
 
