@@ -4,16 +4,21 @@ import {
     THEME_DARK,
     GET_WINES,
     GET_WINE_TYPE,
-    GET_WINE_DETAIL
- 
-
+    GET_WINE_DETAIL,
+    GET_VARIETAL,
+    GET_WINERY,
+    GET_WINE_NAME,
+    GET_COLOUR_TYPE
 } from '../actions/index.js';
 
 const initialState = {
     theme: 'light',
     wines: [],
     winType: [],
-    wineDetail: []
+    wineDetail: [],
+    varietal:[],
+    winery:[]
+
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -53,6 +58,22 @@ const rootReducer = (state = initialState, action) => {
                     ...state,
                     varietal: action.payload
                 };
+                case GET_WINERY:
+                    return {
+                        ...state,
+                        winery: action.payload
+                    };
+                    case GET_COLOUR_TYPE:
+            return {
+                ...state,
+                colourType: action.payload
+            }
+            case GET_WINE_NAME:
+                return {
+                    ...state,
+                    colourType: action.payload
+                }
+
 
         default:
             return state;

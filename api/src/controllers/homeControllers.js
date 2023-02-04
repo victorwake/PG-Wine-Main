@@ -1,9 +1,10 @@
 const { Wine } = require("../db.js");
 
-
 const getDbWines = async (req, res, next) => {
+  console.log('aca si entre')
   try {
     const wines = await Wine.findAll();
+    console.log(wines)
     const { name } = req.query;
     if (name) {
       let wineName = await wines.filter((el) =>
@@ -14,9 +15,8 @@ const getDbWines = async (req, res, next) => {
       res.status(200).send(wines);
     }
   } catch (error) {
-    res.status(400).json({ error: err.message });
+    res.status(400).json({ error: error.message });
   }
 };
 
 module.exports = { getDbWines };
-

@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const router = Router();
-const { getDbWines } = require ('../controllers/generalControllers')
+const { getDbWines } = require ('../controllers/homeControllers')
 
 
 

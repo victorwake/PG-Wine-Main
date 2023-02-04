@@ -49,8 +49,17 @@ export const getWines = () => {
         }
     }
 };
-export const GET_WINES = 'GET_WINES';
 
+export const GET_WINES = 'GET_WINES';
+export function getVarietal() {
+    return async function(dispatch) {
+        var json = await axios.get('http://localhost:3001/varietal/');
+        return dispatch({
+            type: 'GET_VARIETAL',
+            payload: json.data
+        })
+    }
+}export const GET_VARIETAL = 'GET_VARIETAL';
 export function getWineName(payload) {
     return async function(dispatch) {
         try {
@@ -64,9 +73,41 @@ export function getWineName(payload) {
 
         }
     }
+}export const GET_WINE_NAME = 'GET_WINE_NAME';
+export function getWinery() {
+    return async function(dispatch) {
+        var json = await axios.get('http://localhost:3001/winery/');
+        return dispatch({
+            type: 'GET_WINERY',
+            payload: json.data
+        })
+    }
 }
+export const GET_WINERY= 'GET_WINERY';
 
-
+export function getColourType(name) {
+    return async function(dispatch) {
+        try {
+            var json = await axios.get('http://localhost:3001/colourtype/ + name');
+            return dispatch({
+                type: GET_COLOUR_TYPE,
+                payload: json.data
+            })
+        } catch (error) {
+            alert('wine not found')
+        }
+    }
+}
+export const GET_COLOUR_TYPE= 'GET_COLOUR_TYPE';
+export function getListType() {
+    return async function(dispatch) {
+        var json = await axios.get('http://localhost:3001/listype');
+        return dispatch({
+            type: GET_COLOUR_TYPE,
+            payload: json.data
+        })
+    }
+}
 export const getWineType = (type) => {
     return async (dispatch) => {
         try {

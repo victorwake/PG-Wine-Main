@@ -20,7 +20,9 @@ export const Details = () => {
     }, [dispatch, id])
 
     return (
+        
         <div className={'details-container-' + clase}>
+       
             <div className={'details-img-' + clase}>
                 <img src={wineDetail.image} alt={wineDetail.name} />
             </div>

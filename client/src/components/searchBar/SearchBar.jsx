@@ -27,11 +27,21 @@ function handleSubmit(e){
     }}
     setInput('')
 }
+function handleSelectWinery(e){
+    setInput({
+        ...input,
+        winery: [...input.winery, e.target.value], //lo que ya había mas lo nuevo
+    })
+}
 
     return (
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>handleImputChange(e)}/>
-            <button class="btn btn-outline-success" type="submit" onClick={(e)=> handleSubmit(e)}>Buscar</button>
+        <form className="d-flex" role="search">
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>handleImputChange(e)}/>
+            <button className="btn btn-outline-success" type="submit" onClick={(e)=> handleSubmit(e)}>Buscar</button>
+            
         </form>
-    )
+  
+  
+ 
+  )
 }
