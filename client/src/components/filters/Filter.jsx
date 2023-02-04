@@ -33,7 +33,7 @@ export const Filter = () => {
 
     return (
         <div>
-            <label for="customRange2" class="form-label">Precios: </label>
+            <label for="customRange2" class="form-label">Rangos: </label>
             <select onChange={(e)=> handleRange(e)}>
                 <option value="10000">$0 - $10.000</option>
                 <option value="30000">$10.000 - $30.000</option>
