@@ -14,7 +14,6 @@ function App() {
         <Route path="/colourtype" element={<WinType />} />
         <Route path="/winedetail/:id" element={<Details />} />
       </Routes>
-      
     </div>
   );
 }

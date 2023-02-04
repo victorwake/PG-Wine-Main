@@ -66,7 +66,6 @@ export function getWineName(payload) {
     }
 }
 
-
 export const getWineType = (type) => {
     return async (dispatch) => {
         try {
@@ -83,8 +82,23 @@ export const getWineType = (type) => {
 export const GET_WINE_TYPE = 'GET_WINE_TYPE';
 
 export const getWineDetail = id => {
-    return dispatch => axios(`http://localhost:3001/winedetail/${id}`)
+    return dispatch => axios(`http://localhost:3001/winedetail/`+id)
     .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data}))
     .catch(err => console.log(err));
-};
+
+    // export function getWineDetail (id){
+    //     return async function(dispatch) {
+    //         try {
+    //         const json = await axios.get(`http://localhost:3001/winedetail/`+ id)
+    //         return dispatch({
+    //             type: 'GET_WINE_DETAIL',
+    //             payload: json.data
+    //         })}
+    //         catch(error){
+    //             console.log(error)
+    //         }
+    //     }
+    }
+
+;
 export const GET_WINE_DETAIL = 'GET_WINE_DETAIL';

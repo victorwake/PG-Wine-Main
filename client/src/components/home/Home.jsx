@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getVarietal, getWines } from '../../redux/actions';
 import Card from '../card/Card'
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
 
@@ -29,16 +30,19 @@ export const Home = () => {
             <div className='home_data'>
                 {allWines.map(e => {
                     return(
+                        <Link to={`/winedetail/${e.id}`} key={e.id}>
                         <div className='cardgrid'>
                         <Card
-                        
-                                name={e.name}
-                                varietal={e.varietal}
-                                image= {e.image} 
-                                winery={e.winery}
-                                price= {e.price}
-                            />
-                        </div>)})}
+                      
+                        image= {e.image} 
+                        name={e.name}
+                        varietal={e.varietal}
+                        winery={e.winery}
+                        price= {e.price}
+                        />
+                        </div>
+                        </Link>
+                        )})}
             </div>
         </div>
 
