@@ -1,0 +1,16 @@
+
+.home-container-light{
+    height: 100vh;
+    padding-top: 8px;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
+}
+
+
+.card-container-home-light{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    align-items: center;
+    justify-content: center;
+    
+}

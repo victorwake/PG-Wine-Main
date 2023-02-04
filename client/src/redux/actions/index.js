@@ -35,11 +35,12 @@ export const THEME_DARK = 'THEME_DARK';
 /*----------------------------------------------*/
 
 
+/*----------------------------------------------*/
 
 export const getWines = () => {
     return async (dispatch) => {
         try {
-            const response = await axios.get('http://localhost:3001/general');
+            const response = await axios.get('http://localhost:3001/home');
             dispatch({
                 type: GET_WINES,
                 payload: response.data
@@ -51,10 +52,12 @@ export const getWines = () => {
 };
 export const GET_WINES = 'GET_WINES';
 
+/*----------------------------------------------*/
+
 export const getWineType = (type) => {
     return async (dispatch) => {
         try {
-            const response = await axios.get(`http://localhost:3001/colourtype/${type}`);
+            const response = await axios.get(`http://localhost:3001/colortype/${type}`);
             dispatch({
                 type: GET_WINE_TYPE,
                 payload: response.data
@@ -66,10 +69,31 @@ export const getWineType = (type) => {
 }
 export const GET_WINE_TYPE = 'GET_WINE_TYPE';
 
+/*----------------------------------------------*/
+
 export const getWineDetail = id => {
-    return dispatch => axios(`http://localhost:3001/winedetail/${id}`)
+    return dispatch => axios(`http://localhost:3001/details/${id}`)
     .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data}))
     .catch(err => console.log(err));
 };
 export const GET_WINE_DETAIL = 'GET_WINE_DETAIL';
 
+/*----------------------------------------------*/
+
+export const cleanWineDetail = payload => {
+    return dispatch => {
+        dispatch({ type: CLEAN_DETAIL, payload})
+    }
+};
+export const CLEAN_DETAIL = 'CLEAN_DETAIL';
+
+/*----------------------------------------------*/
+
+export const changeCurrentPage = payload => {
+    return dispatch => {
+        dispatch({ type: CURRENT_PAGE, payload})
+    }
+};
+export const CURRENT_PAGE = 'CURRENT_PAGE';
+
+/*----------------------------------------------*/

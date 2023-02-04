@@ -19,7 +19,7 @@ module.exports = (sequelize) => {
 
     },
 
-    colour_type: {
+    color_type: {
       type: DataTypes.STRING,
     },
 

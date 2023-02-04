@@ -1,19 +1,19 @@
 const { Wine } = require("../db.js");
 
-const getColourType = async (req, res) => {
+const getColorType = async (req, res) => {
   let type = req.params.type;
   let wines = await Wine.findAll();
   let wineType = await wines.some((el) =>
-    el.colour_type.toLowerCase().includes(type.toLowerCase())
+    el.color_type.toLowerCase().includes(type.toLowerCase())
   );
 
   if (!wineType) {
     return res.status(401).json({
-      msg: `Acción no permitida, indica un colour_type que corresponda`,
+      msg: `Acción no permitida, indica un color_type que corresponda`,
     });
   } else {
     let wineTypeFind = await wines.filter(
-      (el) => el.colour_type.toLowerCase() === type.toLowerCase()
+      (el) => el.color_type.toLowerCase() === type.toLowerCase()
     );
 
     try {
@@ -22,7 +22,7 @@ const getColourType = async (req, res) => {
         : res
             .status(400)
             .json({
-              msg: "Acción no permitida, indica un colour_type que corresponda",
+              msg: "Acción no permitida, indica un color_type que corresponda",
             });
       console.log(wineTypeFind);
     } catch (err) {
@@ -31,4 +31,4 @@ const getColourType = async (req, res) => {
   }
 };
 
-module.exports = { getColourType };
+module.exports = { getColorType };
