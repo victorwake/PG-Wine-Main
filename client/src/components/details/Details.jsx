@@ -30,7 +30,7 @@ export const Details = () => {
                 <p><b>Bodega:</b> {wineDetail.winery}</p>
                 <p><b>Ubicacion / Origen:</b> {wineDetail.province}, {wineDetail.region}</p>
                 <p><b>Sitio Web:</b> {wineDetail.url}</p>
-                <p><b>% Alcohol:</b> {wineDetail.alcohol}%</p>
+                <p><b>Alcohol:</b> {wineDetail.alcohol}%</p>
                 <p><b>Año:</b> {wineDetail.year}</p>
                 <p><b>Precio:</b> ${wineDetail.price}</p>
                 <p><b>Nota de cata:</b> {wineDetail.description}</p>

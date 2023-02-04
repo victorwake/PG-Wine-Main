@@ -33,7 +33,6 @@ export const Home = () => {
                         <Link to={`/winedetail/${e.id}`} key={e.id}>
                         <div className='cardgrid'>
                         <Card
-                      
                         image= {e.image} 
                         name={e.name}
                         varietal={e.varietal}
