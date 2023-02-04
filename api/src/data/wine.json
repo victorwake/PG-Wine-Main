@@ -13,7 +13,7 @@
     "alcohol": 15,
     "volume": 750,
     "url": "http://www.bodegasalentein.com/es/home.html",
-    "description": "73% Malbec, 27% Cabernet Suavignon. De un intenso color rojo bordo, profundo. La nariz es delicada, de una expresión aromática intensa y compleja con aromas que recuerdan a frutos negros, regaliz y mentolados. En boca es redondo, presenta taninos maduros y estructurados. De muy buen volumen con final largo y persistente."
+    "description": "73% Malbec, 27% Cabernet Sauvignon. De un intenso color rojo bordo, profundo. La nariz es delicada, de una expresión aromática intensa y compleja con aromas que recuerdan a frutos negros, regaliz y mentolados. En boca es redondo, presenta taninos maduros y estructurados. De muy buen volumen con final largo y persistente."
   },
   {
     "name": "Primus",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Primus",
-    "varietal":"Cabernet Suavignon",
+    "varietal":"Cabernet Sauvignon",
     "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 2200,
@@ -161,7 +161,7 @@
   },
   {
     "name": "Single Vineyard Finca Los Nogales",
-    "varietal":"Suavignon Blanc",
+    "varietal":"Sauvignon Blanc",
     "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 4600,
@@ -189,7 +189,7 @@
     "alcohol": 14.5,
     "volume": 750,
     "url": "http://www.bodegasalentein.com/es/home.html",
-    "description": "64% Malbec, 18% Cabernet Suavignon, 11% Merlot, 5% Cabernet Franc, 2% Petit Verdot. Este vino se destaca por la elegancia e intensidad de sus aromas. En boca es directo, refrescante y sabroso, con notas herbales y especiadas, acidez cítrica y cierto volumen obtenido de su contacto con las borras de fermentación por ocho meses."
+    "description": "64% Malbec, 18% Cabernet Sauvignon, 11% Merlot, 5% Cabernet Franc, 2% Petit Verdot. Este vino se destaca por la elegancia e intensidad de sus aromas. En boca es directo, refrescante y sabroso, con notas herbales y especiadas, acidez cítrica y cierto volumen obtenido de su contacto con las borras de fermentación por ocho meses."
   },
   {
     "name": "Numina",
@@ -273,7 +273,7 @@
   },
   {
     "name": "Reserva",
-    "varietal":"Cabernet Suavignon",
+    "varietal":"Cabernet Sauvignon",
     "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 2460,
@@ -321,7 +321,7 @@
   },
   {
     "name": "Reserva",
-    "varietal":"Suavignon Blanc",
+    "varietal":"Sauvignon Blanc",
     "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 2330,
@@ -349,7 +349,7 @@
     "alcohol": 14.5,
     "volume": 750,
     "url": "http://www.bodegasalentein.com/es/home.html",
-    "description": "60% Malbec, 30% Cabernet Suavignon, 10% Cabernet Franc. Color rojo rubí, intenso. Complejo en nariz, se destacan notas especiadas como regaliz y pimienta negra que se combinan con sutiles notas de pimiento rojo, grosellas negras, tabaco. En boca, se hace presente el malbec por su sedosidad, luego, la jugosidad, estructura y complejidad dejan en evidencia la combinación con los otros varietales. Final persistente."
+    "description": "60% Malbec, 30% Cabernet Sauvignon, 10% Cabernet Franc. Color rojo rubí, intenso. Complejo en nariz, se destacan notas especiadas como regaliz y pimienta negra que se combinan con sutiles notas de pimiento rojo, grosellas negras, tabaco. En boca, se hace presente el malbec por su sedosidad, luego, la jugosidad, estructura y complejidad dejan en evidencia la combinación con los otros varietales. Final persistente."
   },
   {
     "name": "Reserva",
@@ -413,7 +413,7 @@
     "alcohol": 13.5,
     "volume": 750,
     "url": "http://www.bodegasalentein.com/es/home.html",
-    "description": "62% Chardonnay, 28% Gewürztraminer, 10% Suavignon Blanc. Color amarillo acerado con reflejos verdosos, límpido, brillante. Aromático y complejo, se destacan notas a flores de azahar y jazmín que se combinan con notas frutales de lichi, damasco y cáscara de naranja. En la boca se hacen presentes notas cítricas como pomelo y una acidez vibrante, que lo hacen un vino fresco y de persistente final."
+    "description": "62% Chardonnay, 28% Gewürztraminer, 10% Sauvignon Blanc. Color amarillo acerado con reflejos verdosos, límpido, brillante. Aromático y complejo, se destacan notas a flores de azahar y jazmín que se combinan con notas frutales de lichi, damasco y cáscara de naranja. En la boca se hacen presentes notas cítricas como pomelo y una acidez vibrante, que lo hacen un vino fresco y de persistente final."
   },
   {
     "name": "Killka",
@@ -465,7 +465,7 @@
   },
   {
     "name": "Killka",
-    "varietal":"Cabernet Suavignon",
+    "varietal":"Cabernet Sauvignon",
     "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 1500,
@@ -493,11 +493,11 @@
     "alcohol": 14.3,
     "volume": 750,
     "url": "http://www.bodegasalentein.com/es/home.html",
-    "description": "50% Malbec, 35% Cabernet Suavignon, 15% Petit Verdot. De color rojo intenso, de taninos estructurados y de prolongado final, posee aromas de frutas rojas tales como ciruela, frambuesa y moras que aporta el Malbec. El Cabernet Sauvignon le otorga notas de pimiento maduro y pimienta negra. Grafito y minerales provienen del Petit Verdot. La vainilla y chocolate son aportados por su paso por roble. En boca es amplio y complejo, debido a la combinación de varietales que intervienen en este blend. Final largo y persistente."
+    "description": "50% Malbec, 35% Cabernet Sauvignon, 15% Petit Verdot. De color rojo intenso, de taninos estructurados y de prolongado final, posee aromas de frutas rojas tales como ciruela, frambuesa y moras que aporta el Malbec. El Cabernet Sauvignon le otorga notas de pimiento maduro y pimienta negra. Grafito y minerales provienen del Petit Verdot. La vainilla y chocolate son aportados por su paso por roble. En boca es amplio y complejo, debido a la combinación de varietales que intervienen en este blend. Final largo y persistente."
   },
   {
     "name": "Killka",
-    "varietal":"Suavignon Blanc",
+    "varietal":"Sauvignon Blanc",
     "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 1500,
@@ -529,7 +529,7 @@
   },
   {
     "name": "Portillo",
-    "varietal":"Cabernet Suavignon",
+    "varietal":"Cabernet Sauvignon",
     "colour_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
@@ -545,7 +545,7 @@
   },
   {
     "name": "Portillo",
-    "varietal":"Suavignon Blanc",
+    "varietal":"Sauvignon Blanc",
     "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 995,
@@ -593,7 +593,7 @@
   },
   {
     "name": "Portillo Dulce Natural",
-    "varietal":"Suavignon Blanc",
+    "varietal":"Sauvignon Blanc",
     "colour_type": "Blanco",
     "winery": "Salentein",
     "price": 1030,
@@ -672,7 +672,7 @@
     "description": "60% Chardonnay, 40% Pinot Noir. Salentein Brut Nature es un Cuvée Excepcionnelle elaborado con las mejores uvas de nuestros viñedos. Dorado brillante, con un particular y atractivo tono característico del Pinot Noir. Su intenso aroma recuerda a cerezas, damascos y miel con una delicada nota a pan tostado. En boca es amplio y untuoso. Su fina y persistente burbuja completa este elegante, complejo e intenso espumante."
   },
   {
-    "name": "Salentein Brut Rose",
+    "name": "Brut Rose",
     "varietal":"Pinot Noir",
     "colour_type": "Espumante",
     "winery": "Salentein",
@@ -688,7 +688,7 @@
     "description": "De color rosado brillante delicado, posee un intenso aroma de cerezas y frambuesas típico del Pinot Noir de zonas de altura. En boca es amplio, frutado y fresco. Burbuja fina y persistente."
   },
   {
-    "name": "Salentein Extra Brut",
+    "name": "Extra Brut",
     "varietal":"Blend",
     "colour_type": "Espumante",
     "winery": "Salentein",
@@ -704,7 +704,7 @@
     "description": "65% Chardonnay, 35% Pinot Noir. Salentein Extra Brut es un Cuvée Spéciale elaborado con uvas Chardonnay y Pinot Noir de parcelas seleccionadas de nuestra finca El Oasis en el Valle de Uco. Su aroma fresco y expresivo recuerda a la manzana verde y cítricos con una delicada nota a pan tostado. En boca su entrada es suave y frutal con una fina y persistente burbuja que completa este armónico y equilibrado espumante."
   },
   {
-    "name": "Salentein Blanc de Blancs",
+    "name": "Blanc de Blancs",
     "varietal":"Chardonnay",
     "colour_type": "Espumante",
     "winery": "Salentein",
@@ -848,7 +848,7 @@
     "description": "Salmón suave y delicado. Aromas de fruta roja , pimienta rosa y flores. Fresca acidez con sabores frutales, buen volumen y un final persistente debido a la crianza"
   },
   {
-    "name": "Otronia Brut Nature",
+    "name": "Brut Nature",
     "varietal":"Chardonnay",
     "colour_type": "Espumante",
     "winery": "Otronia",
@@ -864,7 +864,7 @@
     "description": "Suave color amarillo pálido, presenta aromas dde pan tostado, frutas como durazno blanco, cítricos y notas herbales y florales. En boca las suaves burbujas aportan textura equilibrada y elegancia, complementada por una gran acidez y una delicada sensación de untuosidad."
   },
   {
-    "name": "Otronia Brut Rosé",
+    "name": "Brut Nature Rosé",
     "varietal":"Pinot Noir",
     "colour_type": "Espumante",
     "winery": "Otronia",
@@ -885,7 +885,7 @@
     "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1200,
-    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_849763-MLA48124228658_112021-F.webp",
+    "image": "https://static.wixstatic.com/media/bc6f70_756369d0ab4f46fcbf6905190c63ff90~mv2.png/v1/fill/w_2000,h_2000,al_c/bc6f70_756369d0ab4f46fcbf6905190c63ff90~mv2.png",
     "stock": 25,
     "year": 2013,
     "province": "Rio Negro",
@@ -901,7 +901,7 @@
     "colour_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2440,
-    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_980776-MLA31635145395_072019-F.webp",
+    "image": "https://static.wixstatic.com/media/bc6f70_04a5c1f20da74a80a9e28ad50df41956~mv2.png/v1/fill/w_1102,h_1102,al_c,q_90,usm_0.66_1.00_0.01/bc6f70_04a5c1f20da74a80a9e28ad50df41956~mv2.webp",
     "stock": 25,
     "year": 2015,
     "province": "Rio Negro",
@@ -973,7 +973,7 @@
     "alcohol": 14,
     "volume": 750,
     "url": "https://www.fabremontmayou.com/?lang=es",
-    "description": "85% Malbec, 10% Cabernet Suavignon, 5% Merlot. Color rojo intenso con densos tonos violáceos. El bouquet, atractivo y encantador, proporciona una explosión de frutos rojos de cereza y ciruela. El roble francés agrega deliciosos toques de vainilla, café y una interesante complejidad. En boca, el vino es rico y bien estructurado con taninos suaves. Un final largo y elegante. Excelente combinado con platos delicados, carnes a la parrilla y postres de chocolate."
+    "description": "85% Malbec, 10% Cabernet Sauvignon, 5% Merlot. Color rojo intenso con densos tonos violáceos. El bouquet, atractivo y encantador, proporciona una explosión de frutos rojos de cereza y ciruela. El roble francés agrega deliciosos toques de vainilla, café y una interesante complejidad. En boca, el vino es rico y bien estructurado con taninos suaves. Un final largo y elegante. Excelente combinado con platos delicados, carnes a la parrilla y postres de chocolate."
   }, 
   {
     "name": "Gran Reserva",
@@ -1357,7 +1357,7 @@
     "alcohol": 14.6,
     "volume": 750,
     "url": "https://bodegadelfindelmundo.com/",
-    "description": "40% Malbec, 40% Cabernet Suavignon, 20% Merlot. De intenso color rojo violáceo. Aroma a frutos rojos intensos, con notas a moras negras, chocolate y especias. Boca frutada, suaves, maduros y sedosos taninos, equilibrado, de gran cuerpo y un excepcional final de boca."
+    "description": "40% Malbec, 40% Cabernet Sauvignon, 20% Merlot. De intenso color rojo violáceo. Aroma a frutos rojos intensos, con notas a moras negras, chocolate y especias. Boca frutada, suaves, maduros y sedosos taninos, equilibrado, de gran cuerpo y un excepcional final de boca."
   },
   {
     "name": "Single Vineyard",
@@ -1381,7 +1381,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
-    "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
+    "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63330_default_big.jpeg",
     "stock": 25,
     "year": 2018,
     "province":"Neuquén",
@@ -1397,7 +1397,7 @@
     "colour_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
-    "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/f/i/fin_single_vineyard_chardonnay.webp",
     "stock": 25,
     "year": 2018,
     "province":"Neuquén",
@@ -1413,7 +1413,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
-    "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/f/i/fin_single_vineyard_syrah_1.webp",
     "stock": 25,
     "year": 2018,
     "province":"Neuquén",
@@ -1429,7 +1429,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
-    "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/f/i/fin_single_vineyard_pinot_noir_1.webp",
     "stock": 25,
     "year": 2018,
     "province":"Neuquén",
@@ -1453,7 +1453,7 @@
     "alcohol": 14.2,
     "volume": 750,
     "url": "https://bodegadelfindelmundo.com/",
-    "description": "37% Malbec, 24% Cabernet Suavignon, 21% Meerlot, 18% Cabernet Franc. Color rojo intenso. Aroma muy frutado, con notas a coco, vainilla y especias. En boca es equilibrado, de gran volumen, sedoso, de taninos suaves y un largo final."
+    "description": "37% Malbec, 24% Cabernet Sauvignon, 21% Meerlot, 18% Cabernet Franc. Color rojo intenso. Aroma muy frutado, con notas a coco, vainilla y especias. En boca es equilibrado, de gran volumen, sedoso, de taninos suaves y un largo final."
   },
   {
     "name": "Reserva",
@@ -1505,7 +1505,7 @@
   },
   {
     "name": "Reserva",
-    "varietal": "Cabernet Suavignon",
+    "varietal": "Cabernet Sauvignon",
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
@@ -1536,9 +1536,9 @@
     "description": "De color rojo púrpura. Aroma muy frutado, recuerdos a frambuesas y grosellas, con notas a chocolate y coco. En boca es muy frutado, complejo y gran final."
   },
   {
-    "name": "Reserva Del Fin Del Mundo Chardonnay",
+    "name": "Reserva",
     "varietal": "Chardonnay",
-    "colour_type": "Tinto",
+    "colour_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/reserva-chardonnay1-afcfc0ff952615359b15905897875425-640-0.jpg",
@@ -1605,7 +1605,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
-    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/f077deed2021d255f119dc6cd31ac18b/l/a/la_poderosa_semillon.jpg",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/l/a/la_poderosa_malbec.webp",
     "stock": 25,
     "year": 2019,
     "province":"Neuquén",
@@ -1653,7 +1653,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
-    "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63221_default_medium.jpeg",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_malbec.webp",
     "stock": 25,
     "year": 2019,
     "province":"Neuquén",
@@ -1669,7 +1669,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
-    "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63219_default_medium.jpeg",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_pinot_noir.webp",
     "stock": 25,
     "year": 2019,
     "province":"Neuquén",
@@ -1685,7 +1685,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
-    "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Newen-Reservado-Merlot.png",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_merlot.webp",
     "stock": 25,
     "year": 2019,
     "province":"Neuquén",
@@ -1701,7 +1701,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
-    "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Newen-Reservado-Cabernet-Sauvignon.png",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_cabernet_sauvignon.webp",
     "stock": 25,
     "year": 2019,
     "province":"Neuquén",
@@ -1717,7 +1717,7 @@
     "colour_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
-    "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63218_default_medium.jpeg",
+    "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_sauvignon_blanc.webp",
     "stock": 25,
     "year": 2019,
     "province":"Neuquén",
@@ -1733,7 +1733,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
-    "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63323_default_medium.jpeg",
+    "image": "https://static.wixstatic.com/media/424dab_dcb6b3025e53414582bf065c7e22c1fe~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/424dab_dcb6b3025e53414582bf065c7e22c1fe~mv2.jpg",
     "stock": 25,
     "year": 2020,
     "province":"Neuquén",
@@ -1757,7 +1757,7 @@
     "alcohol": 13.9,
     "volume": 750,
     "url": "https://bodegadelfindelmundo.com/",
-    "description":"Cabernet Suavignon, Malbec. Color rojo intenso. Aroma a frutos rojos maduros con notas a mermelada de ciruelas. En boca es frutado de taninos suaves y buen cuerpo. Largo final de boca"
+    "description":"Cabernet Sauvignon, Malbec. Color rojo intenso. Aroma a frutos rojos maduros con notas a mermelada de ciruelas. En boca es frutado de taninos suaves y buen cuerpo. Largo final de boca"
   },
   {
     "name": "Postales Roble",
@@ -1765,7 +1765,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
-    "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/postales-cab-malbec2-f09859fbe434e2e40e15905252200583-640-0.jpeg",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_654866-MLA52268813607_112022-F.webp",
     "stock": 25,
     "year": 2019,
     "province":"Neuquén",
@@ -1793,7 +1793,7 @@
   },
   {
     "name": "Postales",
-    "varietal":"Suavignon Blanc",
+    "varietal":"Sauvignon Blanc",
     "colour_type": "Blanco",
     "winery": "Bodega del Fin del Mundo",
     "price": 1050,
@@ -1829,7 +1829,7 @@
     "colour_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 1050,
-    "image": "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65300_default_big.jpeg",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_873895-MLA44830072255_022021-F.webp",
     "stock": 25,
     "year": 2020,
     "province": "Neuquén",
@@ -1837,7 +1837,7 @@
     "alcohol": 13.7,
     "volume": 750,
     "url": "https://bodegadelfindelmundo.com/",
-    "description": "Cabernet Suavignon, Malbec. Rojo intenso con reflejos violetas. Aromas a frutos rojos maduros y mermelada de ciruela. En boca es frutado, amable, de buen cuerpo, con taninos suaves y final en boca equilibrado."
+    "description": "Cabernet Sauvignon, Malbec. Rojo intenso con reflejos violetas. Aromas a frutos rojos maduros y mermelada de ciruela. En boca es frutado, amable, de buen cuerpo, con taninos suaves y final en boca equilibrado."
   },
   {
     "name": "Ventus Roble",
@@ -1874,7 +1874,7 @@
   {
     "name": "Ventus Roble",
     "varietal":"Chardonnay",
-    "colour_type": "Tinto",
+    "colour_type": "Blanco",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Roble-Chardonnay-600x1166.png",
@@ -1901,7 +1901,7 @@
     "alcohol": 13.7,
     "volume": 750,
     "url": "https://bodegadelfindelmundo.com/",
-    "description": "50% Merlot, 30% Cabernet Suavignon, 20% Malbec. Color Rojo rubí intenso, brillante. Aroma muy frutado con notas especiadas. En boca entrada amable, muy frutado, redondo, taninos suaves y equilibrado final de boca."
+    "description": "50% Merlot, 30% Cabernet Sauvignon, 20% Malbec. Color Rojo rubí intenso, brillante. Aroma muy frutado con notas especiadas. En boca entrada amable, muy frutado, redondo, taninos suaves y equilibrado final de boca."
   },
   {
     "name": "Ventus",
@@ -1917,10 +1917,10 @@
     "alcohol": 13.7,
     "volume": 750,
     "url": "https://bodegadelfindelmundo.com/",
-    "description": "50% Suavignon Blanc, 40% Chardonnay. Color amarillo intenso con destellos verdosos. Aroma muy frutado con notas cítricas y frutas tropicales, como ananá y bananas. En boca es frutado, con una marcada acidez y un prolongado final de boca."
+    "description": "50% Sauvignon Blanc, 40% Chardonnay. Color amarillo intenso con destellos verdosos. Aroma muy frutado con notas cítricas y frutas tropicales, como ananá y bananas. En boca es frutado, con una marcada acidez y un prolongado final de boca."
   },
   {
-    "name": "Extra Brut Del Fin del Mundo",
+    "name": "Extra Brut",
     "varietal":"Blend",
     "colour_type": "Espumante",
     "winery": "Bodega del Fin del Mundo",
@@ -1936,7 +1936,7 @@
     "description": "80% Pinot Noir, 20% Chardonnay. Brillante, con destellos cobrizos. Presenta unas burbujas que se reflejan en una corona persistente. Aromas a flores blancas y cítricos, con delicadas notas a pan tostado. En boca es refrescante y su acidez representa la tipicidad de los espumantes patagónicos."
   },
   {
-    "name": "Brut Nature Del Fin del Mundo",
+    "name": "Brut Nature",
     "varietal":"Pinot Noir",
     "colour_type": "Espumante",
     "winery": "Bodega del Fin del Mundo",
@@ -1969,7 +1969,7 @@
   },
   {
     "name": "Altosur",
-    "varietal": "Cabernet Suavignon",
+    "varietal": "Cabernet Sauvignon",
     "colour_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 2000,
@@ -2013,7 +2013,7 @@
     "alcohol": 14,
     "volume": 750,
     "url": "http://www.sophenia.com.ar/",
-    "description": "50% Malbec, 40% Cabernet Suavignon, 10% Syrah. Color rojo rubí con notas violáceas. En nariz es muy expresivo, con intensos aromas frutales como ciruela, combinados con especias, resaltando el tomillo y pimienta negra En boca tiene muy buena estructura, taninos suaves y jugosos, con una entrada dulce y acidez equilibrada que le confiere frescura, "
+    "description": "50% Malbec, 40% Cabernet Sauvignon, 10% Syrah. Color rojo rubí con notas violáceas. En nariz es muy expresivo, con intensos aromas frutales como ciruela, combinados con especias, resaltando el tomillo y pimienta negra En boca tiene muy buena estructura, taninos suaves y jugosos, con una entrada dulce y acidez equilibrada que le confiere frescura, "
   },
   {
     "name": "Altosur Rosé",
@@ -2033,7 +2033,7 @@
   },
   {
     "name": "Altosur",
-    "varietal": "Suavignon Blanc",
+    "varietal": "Sauvignon Blanc",
     "colour_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 2000,
@@ -2101,7 +2101,7 @@
     "colour_type": "Tinto",
     "winery": "Argento",
     "price": 7316,
-    "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/730/568/products/img_03072022_204731_332_x_600_pixel1-edcde26d5a613f61dd16671728089793-640-0.jpg",
+    "image": "https://bodegaargento.com/assets/img/vinos/Botella-Single-Block.png",
     "stock": 25,
     "year": 2018,
     "province":"Mendoza",
@@ -2117,7 +2117,7 @@
     "colour_type": "Tinto",
     "winery": "Argento",
     "price": 7320,
-    "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/730/568/products/img_03072022_204731_332_x_600_pixel1-edcde26d5a613f61dd16671728089793-640-0.jpg",
+    "image": "https://bodegaargento.com/assets/img/vinos/Botella-Single-Block.png",
     "stock": 25,
     "year": 2017,
     "province":"Mendoza",
@@ -2165,7 +2165,7 @@
     "colour_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
-    "image": "https://images.vivino.com/thumbs/UhunMK_zSG6DNjIrDHSOeg_pb_x600.png",
+    "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64877_default_big.jpeg",
     "stock": 25,
     "year": 2019,
     "province":"Mendoza",
@@ -2324,7 +2324,7 @@
     "varietal": "Malbec",
     "colour_type": "Tinto",
     "winery": "Argento",
-    "price": 5.453,
+    "price": 1492,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64879_default_big.jpeg",
     "stock": 25,
     "year": 2018,
@@ -2338,7 +2338,7 @@
   {
     "name": "1831",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 10600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_1831.png",
@@ -2354,7 +2354,7 @@
   {
     "name": "1831",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 10600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2021/04/pro_1831_cb_es.png",
@@ -2370,7 +2370,7 @@
   {
     "name": "Altura Maxima",
     "varietal":"Pinot Noir",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 44100,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2021/04/AM_Pinot_Noir.png",
@@ -2386,7 +2386,7 @@
   {
     "name": "El Arenal",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 7000,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2021/02/pro_el_arenal.png",
@@ -2402,7 +2402,7 @@
   {
     "name": "Altura Maxima ",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 24500,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2019/02/pro_altura-e1608213512444.png",
@@ -2418,7 +2418,7 @@
   {
     "name": "Autentico",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 3740,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_autentico.png",
@@ -2434,7 +2434,7 @@
   {
     "name": "Lote Especial",
     "varietal":"Tannat",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 3600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_le_tannat.png",
@@ -2450,7 +2450,7 @@
   {
     "name": "Lote Especial",
     "varietal":"Bonarda",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 3600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_le_bonarda.png",
@@ -2466,7 +2466,7 @@
   {
     "name": "Lote Especial",
     "varietal":"Syrah",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 3600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_le_syrah.png",
@@ -2482,7 +2482,7 @@
   {
     "name": "Estate",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Colomé",
     "price": 3400,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_estate.png",
@@ -2498,7 +2498,7 @@
   {
     "name": "Estate Torrontés",
     "varietal":"Torrontés",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Colomé",
     "price": 3400,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_torrontes.png",
@@ -2514,7 +2514,7 @@
   {
     "name": "Arlene Series",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 10600,
     "image": "https://www.espaciovino.com.ar/media/default/0001/61/thumb_60816_default_big.jpeg",
@@ -2530,7 +2530,7 @@
   {
     "name": "Grand Reserve",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 5400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55413_default_big.jpeg",
@@ -2546,7 +2546,7 @@
   {
     "name": "Grand Reserve",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 5400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55414_default_big.jpeg",
@@ -2562,7 +2562,7 @@
   {
     "name": "Grand Reserve",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 5400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56114_default_big.jpeg",
@@ -2578,7 +2578,7 @@
   {
     "name": "Grand Reserve Trinità",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 10600,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55415_default_big.jpeg",
@@ -2594,7 +2594,7 @@
   {
     "name": "Limited Edition",
     "varietal":"Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 7300,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64712_default_big.jpeg",
@@ -2610,7 +2610,7 @@
   {
     "name": "Limited Edition",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Piattelli",
     "price": 4250,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64711_default_big.jpeg",
@@ -2626,7 +2626,7 @@
   {
     "name": "Limited Edition",
     "varietal":"Merlot",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 7300,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64710_default_big.jpeg",
@@ -2642,7 +2642,7 @@
   {
     "name": "Natural Sweet Torrontés",
     "varietal":"Torrontés",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Piattelli",
     "price": 2050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64709_default_big.jpeg",
@@ -2658,7 +2658,7 @@
   {
     "name": "Reserve",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55416_default_big.jpeg",
@@ -2674,7 +2674,7 @@
   {
     "name": "Reserve",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price": 3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56111_default_big.jpeg",
@@ -2690,7 +2690,7 @@
   {
     "name": "Reserve",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Piattelli",
     "price":2750,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55425_default_big.jpeg",
@@ -2706,7 +2706,7 @@
   {
     "name": "Reserve",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price":3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55417_default_big.jpeg",
@@ -2722,7 +2722,7 @@
   {
     "name": "Reserve",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price":3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56113_default_big.jpeg",
@@ -2738,7 +2738,7 @@
 {
     "name": "Reserve",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Piattelli",
     "price":3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56112_default_big.jpeg",
@@ -2754,7 +2754,7 @@
 {
     "name": "Rosé of Malbec",
     "varietal":"Blend",
-    "colour_type": "Pink",
+    "colour_type": "Rosado",
     "winery": "Piattelli",
     "price":2750,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55419_default_big.jpeg",
@@ -2770,7 +2770,7 @@
   {
     "name": "Torrontés",
     "varietal":"Torrontés",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Piattelli",
     "price": 2750,
     "image": "https://www.espaciovino.com.ar/media/default/0001/61/thumb_60719_default_big.jpeg",
@@ -2781,12 +2781,12 @@
     "alcohol": 14,
     "volume": 750,
     "url": "https://www.piattellivineyards.com",
-    "description": "Color amarillo pálido con tonos verdes. Su aroma intenso posee notas florales y frutales como rosas y durazno blanco, combinadas con notas de vainilla que provienen de su leve paso por barricas de roble. Redondo en la boca, de excelente concentración, es un vino largo, balanceado y elegante."
+    "description": "Color amarillo pálido con tonos verdes. Su aroma intenso posee notas florales y frutales como rosas y durazno blanco, combinadas con notas de vainilla que provienen de su leve paso por barricas de roble. Tintoondo en la boca, de excelente concentración, es un vino largo, balanceado y elegante."
   },
   {
     "name": "Felino Chardonnay",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Viña Cobos",
     "price": 3600,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/felino-chardonnay-2018-vino-vina-cobos-885150_600x.jpg?v=1615340721",
@@ -2802,7 +2802,7 @@
   {
     "name": "Angelica Zapata Cabernet Franc Alta",
     "varietal":"Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 5480,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-cabernet-franc-alta-2017-vino-catena-zapata-561776_600x.jpg?v=1646692712",
@@ -2818,7 +2818,7 @@
   {
     "name": "Catena Zapata Estiba Reservada",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 106000,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-estiba-reservada-2016-vino-catena-zapata-585579_600x.jpg?v=1643474740",
@@ -2834,7 +2834,7 @@
   {  
     "name": "Trivento Reserve Cabernet Sauvignon",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Trivento",
     "price": 1324,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trivento-reserve-cabernet-sauvignon-2020-vino-trivento-986175_400x.jpg?v=1634676112",
@@ -2850,7 +2850,7 @@
   {  
     "name": "Benmarco Malbec",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Susana Balbo Wines",
     "price": 2529,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/benmarco-malbec-2019-vino-susana-balbo-wines-703333_400x.jpg?v=1652544895",
@@ -2866,7 +2866,7 @@
   {  
     "name": "Bira Rosso DUco",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bira Wines",
     "price": 2975,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/bira-rosso-duco-2019-vino-bira-wines-356904_400x.jpg?v=1614810233",
@@ -2882,7 +2882,7 @@
   {  
     "name": "Alma 4 Phos Pet Nat",
     "varietal":"Pinot Noir",
-    "colour_type": "Pink",
+    "colour_type": "Rosado",
     "winery": "Zuccardi Valle de Uco",
     "price": 3495,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/alma-4-phos-pet-nat-2021-vino-zuccardi-valle-de-uco-348447_400x.jpg?v=1635999460",
@@ -2898,7 +2898,7 @@
   {  
     "name": "Trapiche Iscay Syrah - Viognier",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 23310,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-iscay-syrah-viognier-2014-vino-trapiche-540542_400x.jpg?v=1598226898",
@@ -2914,7 +2914,7 @@
   {  
     "name": "Trapiche Gran Medalla Malbec",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 6214,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-malbec-2017-vino-trapiche-344080_400x.jpg?v=1605996589",
@@ -2930,7 +2930,7 @@
   {  
     "name": "Trapiche Gran Medalla Chardonnay",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega Trapiche",
     "price": 7170,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-chardonnay-2020-vino-trapiche-132594_400x.jpg?v=1659374346",
@@ -2946,7 +2946,7 @@
   {
     "name": "Trapiche Terroir Series Finca Orellana Malbec",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 11475,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-orellana-malbec-2014-vino-trapiche-776188_400x.jpg?v=1659385186",
@@ -2962,7 +2962,7 @@
   {  
     "name": "Trapiche Iscay Malbec - Cabernet Franc",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 24975,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-iscay-malbec-cabernet-franc-2014-vino-trapiche-723193_400x.jpg?v=1598228789",
@@ -2978,7 +2978,7 @@
   {  
     "name": "Trapiche Gran Medalla Cabernet Sauvignon",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 7170,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-cabernet-sauvignon-2017-vino-trapiche-348773_400x.jpg?v=1659478950",
@@ -2994,7 +2994,7 @@
   {  
     "name": "Trapiche Terroir Series Finca Coletto Malbec",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 11475,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-coletto-malbec-2018-vino-trapiche-995461_400x.jpg?v=1659385182",
@@ -3005,12 +3005,12 @@
     "alcohol": 15,
     "volume": 750,
     "url": "https://www.trapiche.com.ar",
-    "description": "De color rojo violáceo intenso con aromas a frutos del bosque como moras y arándanos. En boca es fresco y Redondo al comienzo con taninos dulces y tensos que le dan jugosidad y amplitud y elegancia en boca."
+    "description": "De color rojo violáceo intenso con aromas a frutos del bosque como moras y arándanos. En boca es fresco y Tintoondo al comienzo con taninos dulces y tensos que le dan jugosidad y amplitud y elegancia en boca."
   },
   {  
     "name": "Trapiche Terroir Series Finca Las Piedras Chardonnay Edición Limitada",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega Trapiche",
     "price": 11475,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-las-piedras-chardonnay-2021-edicion-limitada-vino-trapiche-422078_400x.jpg?v=1659374356",
@@ -3026,7 +3026,7 @@
   {  
     "name": "Costa & Pampa Sauvignon Blanc",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega Trapiche",
     "price": 3682,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/costa-pampa-sauvignon-blanc-2018-vino-trapiche-996704_400x.jpg?v=1598559376",
@@ -3042,7 +3042,7 @@
   {  
     "name": "Costa & Pampa Sauvignon Blanc",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Bodega Trapiche",
     "price": 3682,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/costa-pampa-sauvignon-blanc-2018-vino-trapiche-996704_400x.jpg?v=1598559376",
@@ -3058,7 +3058,7 @@
   {  
     "name": "DV Catena Cabernet - Malbec",
     "varietal":"Blend",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 2962,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-cabernet-malbec-2021-vino-catena-zapata-704715_400x.jpg?v=1674212074",
@@ -3069,12 +3069,12 @@
     "alcohol": 14,
     "volume": 750,
     "url": "https://catenazapata.com",
-    "description": "50% Cabernet Sauvingnon, 50% Malbec. De impacto dulce y gran complejidad, con taninos integrados y Redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí. "
+    "description": "50% Cabernet Sauvingnon, 50% Malbec. De impacto dulce y gran complejidad, con taninos integrados y Tintoondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí. "
   },
   {  
     "name": "Angelica Zapata Chardonnay Alta",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Catena Zapata",
     "price": 3920,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-chardonnay-alta-2018-vino-catena-zapata-625426_400x.jpg?v=1598225729",
@@ -3090,7 +3090,7 @@
   {  
     "name": "Angelica Zapata Cabernet Sauvignon Alta",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Catena Zapata",
     "price": 4800,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-cabernet-sauvignon-alta-2016-vino-catena-zapata-650483_400x.jpg?v=1607729592",
@@ -3106,7 +3106,7 @@
   {  
     "name": "D.V. Catena Garnacha Apelación",
     "varietal":"Grenache",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 4800,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-garnacha-apelacion-2017-vino-catena-zapata-545320_400x.jpg?v=1610646262",
@@ -3122,7 +3122,7 @@
   {  
     "name": "Angelica Zapata Cabernet Franc Alta",
     "varietal":"Cabernet Franc",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 5480,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-cabernet-franc-alta-2017-vino-catena-zapata-561776_400x.jpg?v=1646692712",
@@ -3138,7 +3138,7 @@
   {  
     "name": "Saint Felicien Rosé",
     "varietal":"Blend",
-    "colour_type": "Pink",
+    "colour_type": "Rosado",
     "winery": "Catena Zapata",
     "price": 6970,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/saint-felicien-rose-2020-vino-catena-zapata-252934_400x.jpg?v=1613588773",
@@ -3154,7 +3154,7 @@
   {  
     "name": "DV Catena Malbec Nicasia Vineyard",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 7068,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-malbec-nicasia-vineyard-2016-vino-catena-zapata-185065_400x.jpg?v=1607729596",
@@ -3165,12 +3165,12 @@
     "alcohol": 14,
     "volume": 750,
     "url": "https://catenazapata.com",
-    "description": "En nariz, intenso y concentrado, presenta notas de moras maduras y frutos del bosque, características del Malbec del viñedo Nicasia, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, es amplio, con taninos suaves y Redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
+    "description": "En nariz, intenso y concentrado, presenta notas de moras maduras y frutos del bosque, características del Malbec del viñedo Nicasia, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, es amplio, con taninos suaves y Tintoondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
   },
   {  
     "name": "DV Catena Malbec Adrianna Vineyard ",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 7680,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-malbec-adrianna-vineyard-2018-vino-catena-zapata-545551_400x.jpg?v=1632254853",
@@ -3181,12 +3181,12 @@
     "alcohol": 14,
     "volume": 750,
     "url": "https://catenazapata.com",
-    "description": "En nariz, intenso y concentrado, presenta notas de cassis, frambuesa y violetas, características del Malbec del viñedo Adrianna, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, es amplio, con taninos suaves y Redondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
+    "description": "En nariz, intenso y concentrado, presenta notas de cassis, frambuesa y violetas, características del Malbec del viñedo Adrianna, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, es amplio, con taninos suaves y Tintoondos, de final largo y persistente. Ideal para acompañar carnes de caza, como el ciervo y el jabalí."
   },
   {  
     "name": "Angelica Zapata Malbec Alta ",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 8720,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-malbec-alta-2016-vino-catena-zapata-441822_400x.jpg?v=1607729573",
@@ -3200,9 +3200,9 @@
     "description": "Angélica Zapata Malbec es un blend proveniente de uvas Malbec de diferentes viñedos. El resultado es un vino de gran concentración y elegancia. El viñedo Angélica aporta aromas de ciruelas maduras, mermelada de frutos rojos, suavidad y volumen al paladar. La Pirámide entrega aromas de frutos negros de carozo y notas especiadas de pimienta negra y clavo de olor. Nicasia cuartel 2, aporta frutos rojos del bosque , frescura y elegancia. El cuartel 3 de Adrianna presenta aromas florales intensos que recuerdan a violeta y lavanda, mientras que el cuartel 9 de este viñedo aporta un color violeta oscuro y profundo, aroma de frutos negros maduros, notas minerales y un largo final en boca .Estos cinco elementos se conjugan de manera excepcional otorgando una gran complejidad al blend final. Ideal para acompañar un gran asado argentino."
   },
   {  
-    "name": "Adrianna Vineyards White Stones Chardonnay",
+    "name": "Adrianna Vineyards Blanco Stones Chardonnay",
     "varietal":"Chardonnay",
-    "colour_type": "White",
+    "colour_type": "Blanco",
     "winery": "Catena Zapata",
     "price": 28800,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-white-stones-chardonnay-2019-vino-catena-zapata-570952_400x.jpg?v=1643485472",
@@ -3213,12 +3213,12 @@
     "alcohol": 12.9,
     "volume": 750,
     "url": "https://catenazapata.com",
-    "description": "White Stones “Piedras Blancas”, es el nombre de una pequeña parcela del viñedo Adrianna. Su nombre hace referencia a la composición del suelo que posee abundante presencia de piedras ovaladas blancas, cubiertas de grava. El suelo pedregoso impide el crecimiento profundo de las raíces, proporcionando óptimas condiciones de drenaje. Este suelo, pobre en materia orgánica contribuye a que las vides soporten mejor las condiciones de stress."
+    "description": "Blanco Stones “Piedras Blancas”, es el nombre de una pequeña parcela del viñedo Adrianna. Su nombre hace referencia a la composición del suelo que posee abundante presencia de piedras ovaladas blancas, cubiertas de grava. El suelo pedregoso impide el crecimiento profundo de las raíces, proporcionando óptimas condiciones de drenaje. Este suelo, pobre en materia orgánica contribuye a que las vides soporten mejor las condiciones de stress."
   },
   {  
     "name": "Adrianna Vineyard Fortuna Terrae Malbec",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 33200,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-fortuna-terrae-malbec-2018-vino-catena-zapata-153169_400x.jpg?v=1643485495",
@@ -3234,7 +3234,7 @@
   {  
     "name": "Adrianna Vineyard River Malbec ",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 41500,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-river-malbec-2018-vino-catena-zapata-151736_400x.jpg?v=1643485481",
@@ -3250,7 +3250,7 @@
   {  
     "name": "Adrianna Vineyard Mundus Bacillus Terrae Malbec",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 86600,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/adrianna-vineyard-mundus-bacillus-terrae-malbec-2019-vino-catena-zapata-606408_400x.jpg?v=1662575030",
@@ -3266,7 +3266,7 @@
   {  
     "name": "Adrianna Vineyard Mundus Bacillus Terrae Malbec",
     "varietal":"Malbec",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 95200,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-mundus-bacillus-terrae-malbec-2018-vino-catena-zapata-774377_400x.jpg?v=1643474731",
@@ -3282,7 +3282,7 @@
   {  
     "name": "Catena Zapata Estiba Reservada",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Red",
+    "colour_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 106000,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-estiba-reservada-2016-vino-catena-zapata-585579_400x.jpg?v=1643474740",
