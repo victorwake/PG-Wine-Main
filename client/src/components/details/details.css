@@ -1,4 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Wire+One&display=swap");
 
+*{
+margin: 0;
+padding: 0;
+}
+body{
+font-family: 'Open Sans', sans-serif;
+}
+header{
+background-color: #F9F8FC;
+height: 316px;
+}
 
 .winedetail {
     border-radius: 10px;
@@ -7,10 +19,10 @@
     height:270px;
     background-color: transparent;
     opacity: 0.9;
-    margin-top: 0px;
     padding-top: 0px;
     color: rgb(150, 150, 151);
     border-color: rgb(196, 198, 69) ;
+
 }
 .imagedetail {
 display: flex;
@@ -19,7 +31,7 @@ padding-right: 80px;
 padding-top: 15px;
 font-size: 50px;
 color: rgb(86, 86, 86);
-
+padding: auto;
 padding-left: -600px;
 margin-left: 420px;
 }
@@ -38,3 +50,61 @@ margin-left: 420px;
     font-size: x-large;
     border-color: rgb(5, 5, 5) ;
 }
+.imagen{
+width:400px;
+height: 400px;
+margin-left: 365px;
+padding-left: 150px;
+border-radius: 10px;
+border-color: black;
+
+
+
+}
+.nombre{
+    font-size:50px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+}
+.variedad{
+    font-size:40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+}
+.tipo{
+    font-size:35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+}
+.bodega{
+    font-size:35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center; 
+}
+.origen{
+    font-size:35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center; 
+}
+.alcohol{
+    font-size:35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center; 
+}
+.year{
+    font-size:40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center; 
+}
+.price{
+    font-size:40px;
+    font-family: 'Wire One', sans-serif;
+    position:fixed;
+    top: 8vw;
+    right: 7vw;
+    font-weight: 700; 
+    
+    
+
+}
+
