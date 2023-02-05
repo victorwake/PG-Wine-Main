@@ -8,8 +8,9 @@ export const LandingPage = () => {
 
         <div className="landing-page">
       <Link to={"/home"}>
-            <button className="button">Dionisio Wine</button>
+            <button className="button">Dionisio Wines</button>
         </Link>
+        <h1 className="titulo">Dionisio Wines</h1>
       <video
          autoPlay 
          loop
@@ -23,16 +24,9 @@ export const LandingPage = () => {
             zIndex:-1,
 
              }}>
-             
-            {/* style={{ 
-      backgroundImage: "url(/Mi proyecto.png)" }} */}
-        <h1>Landing Page</h1>
-        
-            
             <source src={Logo} type="video/mp4"></source>
         </video>
-        
        
-        </div>
+               </div>
     );
 }
