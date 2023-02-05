@@ -6,7 +6,8 @@ import {
     GET_WINE_TYPE,
     GET_WINE_DETAIL,
     CLEAN_DETAIL, 
-    CURRENT_PAGE, 
+    CURRENT_PAGE,
+    GET_BY_NAME
 
 } from '../actions/index.js';
 
@@ -16,6 +17,7 @@ const initialState = {
     wineType: [],
     wineDetail: {},
     currentPage: 1,
+    wineByName: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -59,8 +61,12 @@ const rootReducer = (state = initialState, action) => {
             return {
             ...state,
                 currentPage: action.payload
-        }    
-        
+        }
+        case GET_BY_NAME:
+            return {
+                ...state,
+                wines: action.payload
+            }        
         default:
             return state;
     }

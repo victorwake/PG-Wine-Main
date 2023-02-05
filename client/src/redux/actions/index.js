@@ -94,3 +94,18 @@ export const changeCurrentPage = payload => {
 export const CURRENT_PAGE = 'CURRENT_PAGE';
 
 /*----------------------------------------------*/
+
+export const getWinesByName = (name) => {
+    return async (dispatch) => {
+        try {
+            const response = await axios.get('http://localhost:3001/home/?name=' + name);
+            dispatch({
+                type: GET_BY_NAME,
+                payload: response.data
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+export const GET_BY_NAME = 'GET_BY_NAME';
