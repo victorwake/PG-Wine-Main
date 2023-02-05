@@ -15,11 +15,13 @@ export const WineType= () => {
     const wine = useSelector(state => state.wineType)
     const {type} = useParams();
 
+    let wines = [...wine]
+
     // paginado
-    // const winesPerPage = 10;
-    // const indexLastWine = currentPage * winesPerPage;
-    // const indexFirstWine = indexLastWine - winesPerPage;
-    // const currentWines = allWines.slice(indexFirstWine, indexLastWine);
+    const winesPerPage = 15;
+    const indexLastWine = currentPage * winesPerPage;
+    const indexFirstWine = indexLastWine - winesPerPage;
+    const currentWines = wines.slice(indexFirstWine, indexLastWine);
 
     useEffect(() => {
         dispatch(getWineType(type))
@@ -30,10 +32,13 @@ export const WineType= () => {
         <div className={"wine-container-" + clase}>
             <NavBar/>
             <h1 className={"wine-type-h1-" + clase}>Vinos {type}</h1>
+            <div className={"pagination-container-type-" + clase} >
+                {<Pagination wines = {wines.length} winesPerPage = {winesPerPage} />}
+                </div>
             <div className="wine-type">
                 <div className={"card-container-wine-" + clase}>
                     
-                    {wine.map((w => (
+                    {currentWines?.map((w => (
                         <Fragment key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                                 <Card

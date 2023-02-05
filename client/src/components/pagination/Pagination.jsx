@@ -3,14 +3,14 @@ import "./pagination.css";
 import { useSelector, useDispatch } from "react-redux";
 import { changeCurrentPage } from "../../redux/actions";
 
-export const Pagination = ({ allWines, winesPerPage }) => {
+export const Pagination = ({ wines, winesPerPage }) => {
     const clase= useSelector(store => store.theme);
     const dispatch = useDispatch();
     const currentPage = useSelector(state => state.currentPage)
 
     const pageNumber = [];
 
-    for(let i = 1; i <= Math.ceil(allWines / winesPerPage); i++) { 
+    for(let i = 1; i <= Math.ceil(wines / winesPerPage); i++) { 
         pageNumber.push(i)
     }
 
