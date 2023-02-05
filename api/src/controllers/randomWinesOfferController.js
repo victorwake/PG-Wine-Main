@@ -5,7 +5,7 @@ const randomWinesOffer = async (req, res) => {
     let offer = [];
 
     for(let i = 0; i < 10; i++) {
-      offer.push(allWines[Math.floor(Math.random() * 30)])
+      offer.push(allWines[Math.floor(Math.random() * 100)])
     }
       offer.forEach(el => el.price = el.price * .9);
       res.send(offer); 

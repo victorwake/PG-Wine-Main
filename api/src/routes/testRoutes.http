@@ -64,5 +64,5 @@ GET http://localhost:3001/orderAsc/price/0/2 HTTP/1.1
 GET http://localhost:3001/orderDes/price/1/2 HTTP/1.1
 
 
-### // GENERATE 5 RANDOM WINES OFFER
+### // GENERATE 10 RANDOM WINES OFFER
 GET http://localhost:3001/offer/random HTTP/1.1
