@@ -18,9 +18,9 @@ export const Details = () => {
 
     useEffect(() => {
         dispatch(getWineDetail(id))
-        // return () => {
-        //     dispatch(cleanWineDetail())
-        // }
+        return () => {
+            dispatch(cleanWineDetail({}))
+        }
     }, [dispatch, id])
 
     return (
