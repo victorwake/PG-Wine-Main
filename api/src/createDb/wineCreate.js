@@ -6,7 +6,7 @@ const insertWine = async () => {
         Wine.create({
             name: el.name,
             varietal: el.varietal,
-            colour_type: el.colour_type,
+            color_type: el.color_type,
             winery: el.winery,
             price: el.price,
             image: el.image,

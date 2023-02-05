@@ -2,7 +2,7 @@
     {
         "name": "Single Block",
         "varietal": "Malbec",
-        "colour_type": "Red",
+        "color_type": "Red",
         "winery": "Argento",
         "price": 4,
         "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/730/568/products/img_03072022_204731_332_x_600_pixel1-edcde26d5a613f61dd16671728089793-640-0.jpg",
@@ -18,7 +18,7 @@
     {
         "name": "Single Block",
         "varietal": "Malbec",
-        "colour_type": "Red",
+        "color_type": "Red",
         "winery": "Argento",
         "price": 3,
         "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/730/568/products/img_03072022_204731_332_x_600_pixel1-edcde26d5a613f61dd16671728089793-640-0.jpg",
@@ -34,7 +34,7 @@
     {
         "name": "Estate Bottled",
         "varietal": "Pinot grigio",
-        "colour_type": "White",
+        "color_type": "White",
         "winery": "Argento",
         "price": 2,
         "image": "https://th.bing.com/th/id/OIP.thTXJ4iyNCBoDbhhkEY7aQAAAA?pid=imageDet&rs=1",
@@ -50,7 +50,7 @@
     {
         "name": "Estate Bottled",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Argento",
         "price": 1,
         "image": "https://bodegaargento.com/assets/img/vinos/rdm/es/Botella-Estate-Bottled-RDM.png",
@@ -66,7 +66,7 @@
     {
         "name": "Single Vineyard",
         "varietal": "Cabernet Franc",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Argento",
         "price": 6,
         "image": "https://images.vivino.com/thumbs/UhunMK_zSG6DNjIrDHSOeg_pb_x600.png",
@@ -82,7 +82,7 @@
     {
         "name": "Single Vineyard",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Argento",
         "price": 7,
         "image": "https://vinomanos.com/wp-content/uploads/2020/12/argento-finca-agrelo-malbec.png",
@@ -98,7 +98,7 @@
     {
         "name": "Single Vineyard",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Argento",
         "price": 8,
         "image": "https://vinomanos.com/wp-content/uploads/2020/12/argento-finca-agrelo-malbec.png",
@@ -114,7 +114,7 @@
     {
         "name": "Estate Collection",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Argento",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64878_default_medium.jpeg",
@@ -130,7 +130,7 @@
     {
         "name": "Estate Collection",
         "varietal": "Cabernet Franc",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Argento",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/67/thumb_66279_default_medium.jpeg",
@@ -146,7 +146,7 @@
     {
         "name": "Artesano",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Argento",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64887_default_medium.jpeg",
@@ -162,7 +162,7 @@
     {
         "name": "Artesano",
         "varietal": "Cabernet Franc",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Argento",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64887_default_medium.jpeg",
@@ -178,7 +178,7 @@
     {
         "name": "Estate Reserva",
         "varietal": "Chardonnay",
-        "colour_type": "White",
+        "color_type": "White",
         "winery": "Argento",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64881_default_medium.jpeg",
@@ -194,7 +194,7 @@
     {
         "name": "Estate Reserva",
         "varietal": "Cabernet Franc",
-        "colour_type": "Red",
+        "color_type": "Red",
         "winery": "Argento",
         "price": 5.453,
         "image": "https://http2.mlstatic.com/D_NQ_NP_982714-MLA49244895287_032022-O.jpg",
@@ -210,7 +210,7 @@
     {
         "name": "Estate Reserva",
         "varietal": "Malbec",
-        "colour_type": "Red",
+        "color_type": "Red",
         "winery": "Argento",
         "price": 5.453,
         "image": "https://http2.mlstatic.com/D_NQ_NP_956135-MLA47465267741_092021-O.jpg",
@@ -242,7 +242,7 @@
     {
         "name": "Special Blend",
         "varietal": "Blend",
-        "colour_type": "Red",
+        "color_type": "Red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/08/Special-Blend-2-2.png",
@@ -258,7 +258,7 @@
     {
         "name": "Single Vineyard",
         "varietal": "Malbec",
-        "colour_type": "Red",
+        "color_type": "Red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -274,7 +274,7 @@
     {
         "name": "Single Vineyard",
         "varietal": "Cabernet Franc",
-        "colour_type": "Red",
+        "color_type": "Red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -290,7 +290,7 @@
     {
         "name": "Single Vineyard",
         "varietal": "Chardonnay",
-        "colour_type": "white",
+        "color_type": "white",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -306,7 +306,7 @@
     {
         "name": "Single Vineyard",
         "varietal": "Syrah",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -322,7 +322,7 @@
     {
         "name": "Single Vineyard",
         "varietal": "Pinot Noir",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -338,7 +338,7 @@
     {
         "name": "Gran Reserva",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/06/Gran-Reserva-1-1.png",
@@ -354,7 +354,7 @@
     {
         "name": "Reserva",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/Reserva-FDM-Malbec.png",
@@ -370,7 +370,7 @@
     {
         "name": "Reserva",
         "varietal": "Pinot Noir",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/Reserva-FDM-Malbec.png",
@@ -386,7 +386,7 @@
     {
         "name": "La poderosa",
         "varietal": "Syrah",
-        "colour_type": "rose",
+        "color_type": "rose",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://www.envero.com.ar/image/cache/data/la%20poderosa%20rose-500x500.jpg",
@@ -402,7 +402,7 @@
     {
         "name": "La poderosa",
         "varietal": "dulce",
-        "colour_type": "white",
+        "color_type": "white",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65299_default_medium.jpeg",
@@ -418,7 +418,7 @@
     {
         "name": "La poderosa",
         "varietal": "Pinot Noir",
-        "colour_type": "white",
+        "color_type": "white",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/f077deed2021d255f119dc6cd31ac18b/l/a/la_poderosa_semillon.jpg",
@@ -434,7 +434,7 @@
     {
         "name": "La poderosa",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/f077deed2021d255f119dc6cd31ac18b/l/a/la_poderosa_semillon.jpg",
@@ -450,7 +450,7 @@
     {
         "name": "La poderosa",
         "varietal": "Pinot Noir",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://http2.mlstatic.com/D_NQ_NP_743825-MLA52268790169_112022-O.jpg",
@@ -466,7 +466,7 @@
     {
         "name": "La poderosa",
         "varietal": "Blend",
-        "colour_type": "sparkling",
+        "color_type": "sparkling",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3090693_1_f.jpg",
@@ -482,7 +482,7 @@
     {
         "name": "Newen",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63221_default_medium.jpeg",
@@ -498,7 +498,7 @@
     {
         "name": "Newen",
         "varietal": "Pinot Noir",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63219_default_medium.jpeg",
@@ -514,7 +514,7 @@
     {
         "name": "Newen",
         "varietal": "Merlot",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Newen-Reservado-Merlot.png",
@@ -530,7 +530,7 @@
     {
         "name": "Newen",
         "varietal": "Cabernet Sauvignon",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Newen-Reservado-Cabernet-Sauvignon.png",
@@ -546,7 +546,7 @@
     {
         "name": "Newen",
         "varietal": "Sauvignon Blanc",
-        "colour_type": "white",
+        "color_type": "white",
         "winery": "Bodega Del Fin Del Mundo",
         "price": 5.453,
         "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63218_default_medium.jpeg",
@@ -585,7 +585,7 @@
     {
         "name": "Alto Sur",
         "varietal": "Malbec",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Finca Sophenia",
         "price": 5.453,
         "image": "http://www.sophenia.com.ar/archivos/vinos_big_20_.png",
@@ -601,7 +601,7 @@
     {
         "name": "Alto Sur",
         "varietal": "Cabernet Sauvignon",
-        "colour_type": "red",
+        "color_type": "red",
         "winery": "Finca Sophenia",
         "price": 5.453,
         "image": "http://www.sophenia.com.ar/archivos/vinos_big_19_.png",

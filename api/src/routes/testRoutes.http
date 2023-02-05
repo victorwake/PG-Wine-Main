@@ -1,11 +1,14 @@
 ### // GET ALL PROVINCES
 GET http://localhost:3001/provinces HTTP/1.1
 
+
 ### // FILTER WINES BY PROVINCE
-GET http://localhost:3001/Mendoza HTTP/1.1
+GET http://localhost:3001/Gua HTTP/1.1
+
 
 ### // SEARCH A WINE BY ID
 GET http://localhost:3001/wines/df1f82f2-f601-47ad-9958-8cb1a9d81b02 HTTP/1.1
+
 
 ### // CREATE A WINE 
 POST http://localhost:3001/wines HTTP/1.1
@@ -31,6 +34,7 @@ Content-Type: application/json
 ### // DELETE A WINE
 DELETE http://localhost:3001/wines/c08b5b89-37e7-48ec-856f-1534255a222f HTTP/1.1
 
+
 ### // UPDATE A WINE
 PUT http://localhost:3001/wines/df1f82f2-f601-47ad-9958-8cb1a9d81b02 HTTP/1.1
 Content-Type: application/json
@@ -52,8 +56,13 @@ Content-Type: application/json
   "description": "Best mexican wine"
 }
 
-### // ORDER WINES BY PRICE ASCENDING
-GET http://localhost:3001/orderAsc/price HTTP/1.1
+### // ORDER WINES BY PRICE ASCENDING /MIN/MAX
+GET http://localhost:3001/orderAsc/price/0/2 HTTP/1.1
 
-### // ORDER WINES BY PRICE DESCENDING
-GET http://localhost:3001/orderDes/price HTTP/1.1
+
+### // ORDER WINES BY PRICE DESCENDING /MIN/MAX
+GET http://localhost:3001/orderDes/price/1/2 HTTP/1.1
+
+
+### // GENERATE 5 RANDOM WINES OFFER
+GET http://localhost:3001/offer/random HTTP/1.1

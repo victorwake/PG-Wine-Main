@@ -4,7 +4,7 @@ const createWine = async (req, res) => {
   let {
     name,
     varietal,
-    colour_type,
+    color_type,
     winery,
     price,
     alcohol,
@@ -18,7 +18,7 @@ const createWine = async (req, res) => {
     description
   } = req.body;
 
-  if(!name || !varietal || !colour_type || !winery || !price || !image || !stock || !url || !description) {
+  if(!name || !varietal || !color_type || !winery || !price || !image || !stock || !url || !description) {
     res.status(500).send('Complete all required fields');
   } else if(price < 0 || alcohol < 0 || volume < 0 || stock < 0) {
       res.status(500).send('Numerous negatives are not allowed');  
@@ -26,7 +26,7 @@ const createWine = async (req, res) => {
         await Wine.create ({
           name,
           varietal,
-          colour_type,
+          color_type,
           winery,
           price,
           alcohol,
