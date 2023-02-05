@@ -24,9 +24,9 @@ export const Details = () => {
                 <img src={wineDetail.image} alt={wineDetail.name} />
             </div>
             <div className={'details-info-'}>
-                <h1><b>Vino {wineDetail.colour_type}</b> {wineDetail.name}</h1>
+                <h1><b>Vino {wineDetail.color_type}</b> {wineDetail.name}</h1>
                 <h2><b>Variedad:</b> {wineDetail.varietal}</h2>
-                <p><b>Tipo:</b> {wineDetail.colour_type}</p>
+                <p><b>Tipo:</b> {wineDetail.color_type}</p>
                 <p><b>Bodega:</b> {wineDetail.winery}</p>
                 <p><b>Ubicacion / Origen:</b> {wineDetail.province}, {wineDetail.region}</p>
                 <p><b>Sitio Web:</b> {wineDetail.url}</p>

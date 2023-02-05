@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/colourtype" element={<WinType />} />
+        <Route path="/colortype" element={<WinType />} />
         <Route path="/winedetail/:id" element={<Details />} />
       </Routes>
     </div>

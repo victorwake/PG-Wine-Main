@@ -9,8 +9,6 @@ export const SearchBar = () => {
     const dispatch = useDispatch();
     const [input, setInput]=useState('')
 
-
-
 function handleImputChange(e){
     e.preventDefault()
     setInput(e.target.value)
@@ -18,16 +16,12 @@ function handleImputChange(e){
 
 function handleSubmit(e){
     e.preventDefault()
-    if(!input){ alert('No encontramos nada con ese Nombre')}
-    else{
     try{
-        if (input){dispatch(getWinery(input))}
-        if (input){dispatch(getWineName(input))}
+        dispatch(getWineName(input))
     }catch(error){
         return error
     }}
     setInput('')
-}
 
     return (
         <form class="d-flex" role="search">

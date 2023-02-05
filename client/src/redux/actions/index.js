@@ -51,17 +51,16 @@ export const getWines = () => {
 };
 export const GET_WINES = 'GET_WINES';
 
-export function getWineName(payload) {
+export function getWineName(name) {
     return async function(dispatch) {
         try {
-            var json = await axios.get('http://localhost:3001/home?name=' + payload);
+            var json = await axios.get('http://localhost:3001/home?name=' + name);
             return dispatch({
                 type: 'GET_WINE_NAME',
                 payload: json.data 
             })
         } catch (error) {
             alert('wine not found');
-
         }
     }
 }
@@ -69,7 +68,7 @@ export function getWineName(payload) {
 export const getWineType = (type) => {
     return async (dispatch) => {
         try {
-            const response = await axios.get(`http://localhost:3001/colourtype/${type}`);
+            const response = await axios.get(`http://localhost:3001/colortype/${type}`);
             dispatch({
                 type: GET_WINE_TYPE,
                 payload: response.data

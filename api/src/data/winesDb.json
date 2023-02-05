@@ -2,7 +2,7 @@
   {
     "name": "Gran VU",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 32800,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/75-granvublend.png",
@@ -18,7 +18,7 @@
   {
     "name": "Primus",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 12500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/10-primus-malbec.png",
@@ -34,7 +34,7 @@
   {
     "name": "Primus",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 2200,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/77-primus-cabernet-sauvignon.png",
@@ -50,7 +50,7 @@
   {
     "name": "Primus",
     "varietal":"Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 12500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/14-primus-pinot-noir.png",
@@ -66,7 +66,7 @@
   {
     "name": "Primus",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 5990,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/8-primus-chardonnay.png",
@@ -82,7 +82,7 @@
    {
     "name": "Single Vineyard Finca San Pablo",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 19550,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/52-svlapampa2017copia1.png",
@@ -98,7 +98,7 @@
   {
     "name": "Single Vineyard Finca Los Jabalíes",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 17940,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/85-svlosjabaliesmalbec2017copia4.png",
@@ -114,7 +114,7 @@
   {
     "name": "Single Vineyard Finca El Tomillo",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 9860,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/86-sveltomillome-copiaes5.png",
@@ -130,7 +130,7 @@
   {
     "name": "Single Vineyard Finca Los Jabalíes",
     "varietal":"Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 8140,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/55-svlassequoiasmi(5)ja4.png",
@@ -146,7 +146,7 @@
   {
     "name": "Single Vineyard Finca Las Sequoias",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 13200,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/95-chardonnay(nueva).png",
@@ -162,7 +162,7 @@
   {
     "name": "Single Vineyard Finca Los Nogales",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 4600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/2019_SV%20Los%20Nogales_SanPablo_SauvingnonBlanc%20MI.png",
@@ -178,7 +178,7 @@
   {
     "name": "Numina Gran Corte",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 5500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/6-numina-grancorte.png",
@@ -194,7 +194,7 @@
   {
     "name": "Numina",
     "varietal":"Petit Verdot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 3600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2018-09/87-petit-verdot-readaptada.png",
@@ -210,7 +210,7 @@
   {
     "name": "Numina",
     "varietal":"Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 4600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/68-numina-cabernet.png",
@@ -226,7 +226,7 @@
   {
     "name": "Numina",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 3600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/67-numina-malbec.png",
@@ -242,7 +242,7 @@
   {
     "name": "Numina",
     "varietal":"Syrah",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 3400,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2015-10/69-69-numina_syrah.png",
@@ -258,7 +258,7 @@
   {
     "name": "Reserva",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 2200,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-02/19-(bs)malbec2.png",
@@ -274,7 +274,7 @@
   {
     "name": "Reserva",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 2460,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/16-cabsouvarg.png",
@@ -290,7 +290,7 @@
   {
     "name": "Reserva",
     "varietal":"Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 2580,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/24-pinotnoirarg.png",
@@ -306,7 +306,7 @@
   {
     "name": "Reserva",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 2330,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/22-chardonnayarg.png",
@@ -322,7 +322,7 @@
   {
     "name": "Reserva",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 2330,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/26-sauvignonblancarg.png",
@@ -338,7 +338,7 @@
   {
     "name": "Reserva Corte de Tintas",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 2640,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-02/81-cortedetintastinto.png",
@@ -354,7 +354,7 @@
   {
     "name": "Reserva",
     "varietal":"Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 2330,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/20-merlotarg.png",
@@ -370,7 +370,7 @@
   {
     "name": "Reserva",
     "varietal":"Syrah",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Salentein",
     "price": 2330,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-01/84-rosearg.png",
@@ -386,7 +386,7 @@
   {
     "name": "Reserva",
     "varietal":"Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 4600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-02/100-cabfrancarg.png",
@@ -402,7 +402,7 @@
   {
     "name": "Reserva Corte de Blancas",
     "varietal":"Blend",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 2640,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2021-02/99-cortedetintasblanco.png",
@@ -418,7 +418,7 @@
   {
     "name": "Killka",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Malbec.png",
@@ -434,7 +434,7 @@
   {
     "name": "Killka",
     "varietal":"Malbec",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Malbec-Blanco.png",
@@ -450,7 +450,7 @@
   {
     "name": "Killka",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-chardonnay.png",
@@ -466,7 +466,7 @@
   {
     "name": "Killka",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Cabernet-Sauvignon.png",
@@ -482,7 +482,7 @@
   {
     "name": "Killka Corte de Tintas",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Corte-de-Tintas.png",
@@ -498,7 +498,7 @@
   {
     "name": "Killka",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 1500,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-08/Kilka-Sauvignon-Blanc.png",
@@ -514,7 +514,7 @@
   {
     "name": "Portillo",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_Malbec.png",
@@ -530,7 +530,7 @@
   {
     "name": "Portillo",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_cabernet_sauvignon2.png",
@@ -546,7 +546,7 @@
   {
     "name": "Portillo",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_Sauvignon_Blanc.png",
@@ -562,7 +562,7 @@
   {
     "name": "Portillo",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_chardonnay.png",
@@ -578,7 +578,7 @@
   {
     "name": "Portillo Rosé",
     "varietal":"Malbec",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_rosado_de_Malbec.png",
@@ -594,7 +594,7 @@
   {
     "name": "Portillo Dulce Natural",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Salentein",
     "price": 1030,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_dulce_natural.png",
@@ -610,7 +610,7 @@
   {
     "name": "Portillo",
     "varietal":"Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_Merlot.png",
@@ -626,7 +626,7 @@
   {
     "name": "Portillo",
     "varietal":"Tempranillo",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_tempranillo.png",
@@ -642,7 +642,7 @@
   {
     "name": "Portillo",
     "varietal":"Syrah",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Salentein",
     "price": 995,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2022-09/Portillo_Syrah.png",
@@ -658,7 +658,7 @@
   {
     "name": "Salentein Brut Nature",
     "varietal":"Blend",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Salentein",
     "price": 2925,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/60-espumantes-brut.png",
@@ -674,7 +674,7 @@
   {
     "name": "Brut Rose",
     "varietal":"Pinot Noir",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Salentein",
     "price": 2925,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2016-05/70-70-botella_rose.png",
@@ -690,7 +690,7 @@
   {
     "name": "Extra Brut",
     "varietal":"Blend",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Salentein",
     "price": 2704,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2012-09/59-espumante_01.png",
@@ -706,7 +706,7 @@
   {
     "name": "Blanc de Blancs",
     "varietal":"Chardonnay",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Salentein",
     "price": 1800,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-10/97-espumantes-brutcopia.png",
@@ -722,7 +722,7 @@
   {
     "name": "Alyda Van Salentein Brut Nature",
     "varietal":"Blend",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Salentein",
     "price": 4400,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2017-06/80-botella-alyda.png",
@@ -738,7 +738,7 @@
   {
     "name": "Alyda Van Salentein Brut Nature Rosé",
     "varietal":"Blend",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Salentein",
     "price": 4600,
     "image": "http://www.bodegasalentein.com/imagenes/vinos/2020-09/94-80-botella-alydacopiaja.png",
@@ -754,7 +754,7 @@
   {
     "name": "Otronia",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Otronia",
     "price": 22050,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-chardonnay.png",
@@ -770,7 +770,7 @@
   {
     "name": "Otronia",
     "varietal":"Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Otronia",
     "price": 22050,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-pinot-noir.png",
@@ -786,7 +786,7 @@
   {
     "name": "45 Rugientes",
     "varietal":"Blend",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Otronia",
     "price": 6070,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-45R-corte-blancas.png",
@@ -802,7 +802,7 @@
   {
     "name": "45 Rugientes",
     "varietal":"Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Otronia",
     "price": 6070,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-45R-pinot-noir.png",
@@ -818,7 +818,7 @@
   {
     "name": "45 Rugientes",
     "varietal":"Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Otronia",
     "price": 6070,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-45-R-merlot.png",
@@ -834,7 +834,7 @@
   {
     "name": "45 Rugientes",
     "varietal":"Pinot Noir",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Otronia",
     "price": 6070,
     "image": "https://www.otronia.com/assets/images/vinos/45-rugientes-rose.png",
@@ -850,7 +850,7 @@
   {
     "name": "Brut Nature",
     "varietal":"Chardonnay",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Otronia",
     "price": 17500,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-brut-nature.png",
@@ -866,7 +866,7 @@
   {
     "name": "Brut Nature Rosé",
     "varietal":"Pinot Noir",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Otronia",
     "price": 9480,
     "image": "https://www.otronia.com/assets/images/vinos/otronia-brut-nature-rose.png",
@@ -882,7 +882,7 @@
   {
     "name": "Patagonia Gran Reserva ",
     "varietal": "Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1200,
     "image": "https://static.wixstatic.com/media/bc6f70_756369d0ab4f46fcbf6905190c63ff90~mv2.png/v1/fill/w_2000,h_2000,al_c/bc6f70_756369d0ab4f46fcbf6905190c63ff90~mv2.png",
@@ -898,7 +898,7 @@
   {
     "name": "Patagonia Barrel Selection ",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2440,
     "image": "https://static.wixstatic.com/media/bc6f70_04a5c1f20da74a80a9e28ad50df41956~mv2.png/v1/fill/w_1102,h_1102,al_c,q_90,usm_0.66_1.00_0.01/bc6f70_04a5c1f20da74a80a9e28ad50df41956~mv2.webp",
@@ -914,7 +914,7 @@
   {
     "name": "Patagonia Barrel Selection",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 4000,
     "image": "https://images.vivino.com/thumbs/-UZ-ynZFTVeWjtIXBu9UfQ_pb_x600.png",
@@ -930,7 +930,7 @@
   {
     "name": "Patagonia Gran Reserva",
     "varietal": "Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2250,
     "image": "http://www.bodegasfabre.com/internacional/fabre_patagonia/productos/vinculos/vinos/images/16.jpg",
@@ -946,7 +946,7 @@
   {
     "name": "Patagonia Barrel Selection",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 5000,
     "image": "https://www.lanaval.com.mx/84046-product_default/tinto-fabre-montmayou-patagonia-malbec-barrel-selection-750-ml-.jpg",
@@ -962,7 +962,7 @@
   {
     "name": "Grand Vin",
     "varietal": "Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 9200,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_613450-MLA31645182169_072019-F.webp",
@@ -978,7 +978,7 @@
   {
     "name": "Gran Reserva",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 4100,
     "image": "https://www.brancastore.com.ar/699-thickbox_default/fabre-montmayou-gran-reserva-cabernet-sauvignon-750ml.jpg",
@@ -994,7 +994,7 @@
   {
     "name": "Gran Reserva",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 4060,
     "image": "https://www.brancastore.com.ar/700-thickbox_default/fabre-montmayou-gran-reserva-malbec-750ml.jpg",
@@ -1010,7 +1010,7 @@
   {
     "name": "Reserva",
     "varietal": "Syrah",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2100,
     "image": "https://vinotecaligier.com/media/catalog/product/cache/1/image/1000x/9df78eab33525d08d6e5fb8d27136e95/b/e/be72436.jpg",
@@ -1026,7 +1026,7 @@
   {
     "name": "Reserva",
     "varietal": "Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1500,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_764296-MLA49073393370_022022-F.webp",
@@ -1042,7 +1042,7 @@
   {
     "name": "Reserva",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1500,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_606004-MLA49073393131_022022-F.webp",
@@ -1058,7 +1058,7 @@
   {
     "name": "Reserva",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 2250,
     "image": "https://www.brancastore.com.ar/23-thickbox_default/fabre-montmayou-reserva-cabernet-sauvignon-750ml.jpg",
@@ -1074,7 +1074,7 @@
   {
     "name": "Reserva",
     "varietal": "Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Fabre Montmayou",
     "price": 1500,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_739219-MLA49073391799_022022-F.webp",
@@ -1090,7 +1090,7 @@
   {
     "name": "Reserva",
     "varietal": "Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Fabre Montmayou",
     "price": 2245,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_804718-MLA42519281955_072020-F.webp",
@@ -1106,7 +1106,7 @@
   {
     "name": "Reserva",
     "varietal": "Torrontés",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Fabre Montmayou",
     "price": 2400,
     "image": "https://winebox.pe/wp-content/uploads/2019/01/fabre-montmayou-torrontes-min.jpg",
@@ -1122,7 +1122,7 @@
   {
     "name": "Reserva",
     "varietal": "Malbec",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Fabre Montmayou",
     "price": 2800,
     "image": "https://winebox.pe/wp-content/uploads/2018/12/fabre-montmayou-rose-malbec-min.jpg",
@@ -1138,7 +1138,7 @@
   {
     "name": "El Enemigo",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "https://universovigil.com/ventas/55-thickbox_default/el-enemigo-cabernet-franc.jpg",
@@ -1154,7 +1154,7 @@
   {
     "name": "El Enemigo Bonarda",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "http://www.universovigil.com/assets/img/chachingo/vinos/vino-el-enemigo-bonarda.png",
@@ -1170,7 +1170,7 @@
   {
     "name": "El Enemigo",
     "varietal":"Chardonay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "El Enemigo",
     "price": 5280,
     "image": "https://universovigil.com/ventas/59-thickbox_default/elenemigo-chardonnay.jpg",
@@ -1186,7 +1186,7 @@
   {
     "name": "El Enemigo",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "https://universovigil.com/ventas/56-thickbox_default/el-enemigo-malbec.jpg",
@@ -1202,7 +1202,7 @@
   {
     "name": "El Enemigo Syrah-Viognier",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "http://www.universovigil.com/assets/img/chachingo/vinos/vino-el-enemigo-syrah-viognier.png",
@@ -1218,7 +1218,7 @@
   {
     "name": "El Enemigo Single Vineyard El Barranco",
     "varietal":"Bonarda",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "http://www.universovigil.com/assets/img/chachingo/vinos/vino-el-enemigo-sv-bonarda-elbarranco.png",
@@ -1234,7 +1234,7 @@
   {
     "name": "El Enemigo Single Vineyard El Mirador",
     "varietal":"Bonarda",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6590,
     "image": "http://www.universovigil.com/assets/img/chachingo/vinos/vino-el-enemigo-sv-bonarda-elmirador.png",
@@ -1250,7 +1250,7 @@
   {
     "name": "El Enemigo Single Vineyard La Esperanza",
     "varietal":"Bonarda",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "https://universovigil.com/ventas/119-thickbox_default/el-enemigo-bonarda-singlevineyard-la-esperanza.jpg",
@@ -1266,7 +1266,7 @@
   {
     "name": "El Enemigo Single Vineyard Los Paraisos",
     "varietal":"Bonarda",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 6560,
     "image": "https://universovigil.com/ventas/120-thickbox_default/el-enemigo-bonarda-singlevineyard-los-paraisos.jpg",
@@ -1282,7 +1282,7 @@
   {
     "name": "Gran Enemigo Single Vineyard Agrelo",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 12375,
     "image": "https://universovigil.com/ventas/62-large_default/gran-enemigo-single-vineyard-agrelo.jpg",
@@ -1298,7 +1298,7 @@
   {
     "name": "Gran Enemigo Single Vineyard Gualtallary",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 12375,
     "image": "https://universovigil.com/ventas/121-large_default/gran-enemigo-gualtallary-2015.jpg",
@@ -1314,7 +1314,7 @@
   {
     "name": "Gran Enemigo Single Vineyard Chacayes",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 12375,
     "image": "https://universovigil.com/ventas/41-large_default/gran-enemigo-single-vineyard-chacayes.jpg",
@@ -1330,7 +1330,7 @@
   {
     "name": "Gran Enemigo Single Vineyard El Cepillo",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "El Enemigo",
     "price": 12375,
     "image": "https://universovigil.com/ventas/63-thickbox_default/gran-enemigo-single-vineyard-el-cepillo.jpg",
@@ -1346,7 +1346,7 @@
   {
     "name": "Special Blend",
     "varietal": "Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price":  16500,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/08/Special-Blend-2-2.png",
@@ -1362,7 +1362,7 @@
   {
     "name": "Single Vineyard",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/FIN-2020-Malbec.png",
@@ -1378,7 +1378,7 @@
   {
     "name": "Single Vineyard",
     "varietal": "Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63330_default_big.jpeg",
@@ -1394,7 +1394,7 @@
   {
     "name": "Single Vineyard",
     "varietal": "Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/f/i/fin_single_vineyard_chardonnay.webp",
@@ -1410,7 +1410,7 @@
   {
     "name": "Single Vineyard",
     "varietal": "Syrah",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/f/i/fin_single_vineyard_syrah_1.webp",
@@ -1426,7 +1426,7 @@
   {
     "name": "Single Vineyard",
     "varietal": "Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 7200,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/f/i/fin_single_vineyard_pinot_noir_1.webp",
@@ -1442,7 +1442,7 @@
   {
     "name": "Gran Reserva",
     "varietal": "Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 3500,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/06/Gran-Reserva-1-1.png",
@@ -1458,7 +1458,7 @@
   {
     "name": "Reserva",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://bodegadelfindelmundo.com/wp-content/uploads/2020/07/Reserva-FDM-Malbec.png",
@@ -1474,7 +1474,7 @@
   {
     "name": "Reserva",
     "varietal": "Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54324_default_big.jpeg",
@@ -1490,7 +1490,7 @@
   {
     "name": "Reserva",
     "varietal": "Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54320_default_medium.jpeg",
@@ -1506,7 +1506,7 @@
   {
     "name": "Reserva",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54320_default_medium.jpeg",
@@ -1522,7 +1522,7 @@
   {
     "name": "Reserva",
     "varietal": "Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Reserva-Del-Fin-Del-Mundo-Merlot.png",
@@ -1538,7 +1538,7 @@
   {
     "name": "Reserva",
     "varietal": "Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 2500,
     "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/reserva-chardonnay1-afcfc0ff952615359b15905897875425-640-0.jpg",
@@ -1554,7 +1554,7 @@
   {
     "name": "La Poderosa",
     "varietal": "Syrah",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://www.envero.com.ar/image/cache/data/la%20poderosa%20rose-500x500.jpg",
@@ -1570,7 +1570,7 @@
 {
     "name": "La Poderosa",
     "varietal": "Dulce",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65299_default_medium.jpeg",
@@ -1586,7 +1586,7 @@
 {
     "name": "La Poderosa",
     "varietal": "Pinot Noir",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/La-Poderosa-Semillon.png",
@@ -1602,7 +1602,7 @@
   {
     "name": "La Poderosa",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/l/a/la_poderosa_malbec.webp",
@@ -1618,7 +1618,7 @@
   {
     "name": "La Poderosa",
     "varietal": "Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1550,
     "image": "https://http2.mlstatic.com/D_NQ_NP_743825-MLA52268790169_112022-O.jpg",
@@ -1634,7 +1634,7 @@
   {
     "name": "La Poderosa Extra Brut",
     "varietal": "Blend",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1750,
     "image": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3090693_1_f.jpg",
@@ -1650,7 +1650,7 @@
   {
     "name": "Newen",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_malbec.webp",
@@ -1666,7 +1666,7 @@
 {
     "name": "Newen",
     "varietal": "Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_pinot_noir.webp",
@@ -1682,7 +1682,7 @@
 {
     "name": "Newen",
     "varietal": "Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_merlot.webp",
@@ -1698,7 +1698,7 @@
   {
     "name": "Newen",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_cabernet_sauvignon.webp",
@@ -1714,7 +1714,7 @@
   {
     "name": "Newen",
     "varietal": "Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1400,
     "image": "https://www.shopfindelmundowines.com/media/catalog/product/cache/e9d72905d614b4ebbe8a3378542a5e7b/n/e/newen_sauvignon_blanc.webp",
@@ -1730,7 +1730,7 @@
   {
     "name": "Postales Roble",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
     "image": "https://static.wixstatic.com/media/424dab_dcb6b3025e53414582bf065c7e22c1fe~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/424dab_dcb6b3025e53414582bf065c7e22c1fe~mv2.jpg",
@@ -1746,7 +1746,7 @@
   {
     "name": "Postales Roble",
     "varietal": "Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
     "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/postales-cab-malbec2-f09859fbe434e2e40e15905252200583-640-0.jpeg",
@@ -1762,7 +1762,7 @@
   {
     "name": "Postales Roble",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_654866-MLA52268813607_112022-F.webp",
@@ -1778,7 +1778,7 @@
   {
     "name": "Postales Roble",
     "varietal": "Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Del Fin Del Mundo",
     "price": 1320,
     "image": "https://static.wixstatic.com/media/424dab_6cc16f93b2094014afc191b598516b9e~mv2.jpg/v1/fill/w_900,h_1200,al_c,q_85/424dab_6cc16f93b2094014afc191b598516b9e~mv2.jpg",
@@ -1794,7 +1794,7 @@
   {
     "name": "Postales",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega del Fin del Mundo",
     "price": 1050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63327_default_big.jpeg",
@@ -1810,7 +1810,7 @@
   {
     "name": "Postales",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 1050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/64/thumb_63326_default_big.jpeg",
@@ -1826,7 +1826,7 @@
   {
     "name": "Postales",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 1050,
     "image": "https://http2.mlstatic.com/D_NQ_NP_2X_873895-MLA44830072255_022021-F.webp",
@@ -1842,7 +1842,7 @@
   {
     "name": "Ventus Roble",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Roble-Malbec.png",
@@ -1858,7 +1858,7 @@
   {
     "name": "Ventus Roble",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Roble-Cabernet-Sauvignon.png",
@@ -1874,7 +1874,7 @@
   {
     "name": "Ventus Roble",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Roble-Chardonnay-600x1166.png",
@@ -1890,7 +1890,7 @@
   {
     "name": "Ventus",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Blend-Tinto.png",
@@ -1906,7 +1906,7 @@
   {
     "name": "Ventus",
     "varietal":"Blend",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega del Fin del Mundo",
     "price": 960,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Ventus-Blend-Blanco.png",
@@ -1922,7 +1922,7 @@
   {
     "name": "Extra Brut",
     "varietal":"Blend",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Bodega del Fin del Mundo",
     "price": 2500,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Espumante-Extra-Brut.png",
@@ -1938,7 +1938,7 @@
   {
     "name": "Brut Nature",
     "varietal":"Pinot Noir",
-    "colour_type": "Espumante",
+    "color_type": "Espumante",
     "winery": "Bodega del Fin del Mundo",
     "price": 2000,
     "image": "https://sentipatagonia.com.ar/wp-content/uploads/2020/08/Espumante-Brut-Nature.png",
@@ -1954,7 +1954,7 @@
   {
     "name": "Altosur",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 5.453,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_20_.png",
@@ -1970,7 +1970,7 @@
   {
     "name": "Altosur",
     "varietal": "Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_19_.png",
@@ -1986,7 +1986,7 @@
   {
     "name": "Altosur",
     "varietal": "Bonarda",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_19_.png",
@@ -2002,7 +2002,7 @@
   {
     "name": "Altosur",
     "varietal": "Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_21_.png",
@@ -2018,7 +2018,7 @@
   {
     "name": "Altosur Rosé",
     "varietal": "Malbec",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_36_.png",
@@ -2034,7 +2034,7 @@
   {
     "name": "Altosur",
     "varietal": "Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_17_.png",
@@ -2050,7 +2050,7 @@
   {
     "name": "Altosur",
     "varietal": "Torrontés",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_16_.png",
@@ -2066,7 +2066,7 @@
   {
     "name": "Altosur",
     "varietal": "Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 2000,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_15_.png",
@@ -2082,7 +2082,7 @@
   {
     "name": "Altosur Dulce Natural",
     "varietal": "Dulce",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Finca Sophenia",
     "price": 1600,
     "image": "http://www.sophenia.com.ar/archivos/vinos_big_40_.jpg",
@@ -2098,7 +2098,7 @@
   {
     "name": "Single Block",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 7316,
     "image": "https://bodegaargento.com/assets/img/vinos/Botella-Single-Block.png",
@@ -2114,7 +2114,7 @@
   {
     "name": "Single Block",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 7320,
     "image": "https://bodegaargento.com/assets/img/vinos/Botella-Single-Block.png",
@@ -2130,7 +2130,7 @@
   {
     "name": "Estate Bottled",
     "varietal": "Pinot Grigio",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Argento",
     "price": 1150,
     "image": "https://th.bing.com/th/id/OIP.thTXJ4iyNCBoDbhhkEY7aQAAAA?pid=imageDet&rs=1",
@@ -2146,7 +2146,7 @@
   {
     "name": "Estate Bottled",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 1149,
     "image": "https://bodegaargento.com/assets/img/vinos/rdm/es/Botella-Estate-Bottled-RDM.png",
@@ -2162,7 +2162,7 @@
   {
     "name": "Single Vineyard Agrelo",
     "varietal": "Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64877_default_big.jpeg",
@@ -2178,7 +2178,7 @@
   {
     "name": "Single Vineyard Altamira",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64875_default_big.jpeg",
@@ -2194,7 +2194,7 @@
   {
     "name": "Single Vineyard Agrelo",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
     "image": "https://vinomanos.com/wp-content/uploads/2020/12/argento-finca-agrelo-malbec.png",
@@ -2210,7 +2210,7 @@
   {
     "name": "Single Vineyard Agrelo",
     "varietal": "Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 4998,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64877_default_big.jpeg",
@@ -2226,7 +2226,7 @@
   {
     "name": "Estate Collection",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 2383,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64878_default_big.jpeg",
@@ -2242,7 +2242,7 @@
   {
     "name": "Estate Collection",
     "varietal": "Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 2383,
     "image": "https://www.espaciovino.com.ar/media/default/0001/67/thumb_66279_default_medium.jpeg",
@@ -2258,7 +2258,7 @@
   {
     "name": "Artesano",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 1566,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64887_default_medium.jpeg",
@@ -2274,7 +2274,7 @@
   {
     "name": "Artesano",
     "varietal": "Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 1750,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64887_default_medium.jpeg",
@@ -2290,7 +2290,7 @@
   {
     "name": "Estate Reserva",
     "varietal": "Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Argento",
     "price": 1492,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64881_default_medium.jpeg",
@@ -2306,7 +2306,7 @@
   {
     "name": "Estate Reserva",
     "varietal": "Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 1492,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64880_default_big.jpeg",
@@ -2322,7 +2322,7 @@
   {
     "name": "Estate Reserva",
     "varietal": "Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Argento",
     "price": 1492,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64879_default_big.jpeg",
@@ -2338,7 +2338,7 @@
   {
     "name": "1831",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 10600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_1831.png",
@@ -2354,7 +2354,7 @@
   {
     "name": "1831",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 10600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2021/04/pro_1831_cb_es.png",
@@ -2370,7 +2370,7 @@
   {
     "name": "Altura Maxima",
     "varietal":"Pinot Noir",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 44100,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2021/04/AM_Pinot_Noir.png",
@@ -2386,7 +2386,7 @@
   {
     "name": "El Arenal",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 7000,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2021/02/pro_el_arenal.png",
@@ -2402,7 +2402,7 @@
   {
     "name": "Altura Maxima ",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 24500,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2019/02/pro_altura-e1608213512444.png",
@@ -2418,7 +2418,7 @@
   {
     "name": "Autentico",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 3740,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_autentico.png",
@@ -2434,7 +2434,7 @@
   {
     "name": "Lote Especial",
     "varietal":"Tannat",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 3600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_le_tannat.png",
@@ -2450,7 +2450,7 @@
   {
     "name": "Lote Especial",
     "varietal":"Bonarda",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 3600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_le_bonarda.png",
@@ -2466,7 +2466,7 @@
   {
     "name": "Lote Especial",
     "varietal":"Syrah",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 3600,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_le_syrah.png",
@@ -2482,7 +2482,7 @@
   {
     "name": "Estate",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Colomé",
     "price": 3400,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_estate.png",
@@ -2498,7 +2498,7 @@
   {
     "name": "Estate Torrontés",
     "varietal":"Torrontés",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Colomé",
     "price": 3400,
     "image": "https://www.bodegacolome.com/wp-content/uploads/2020/07/pro_torrontes.png",
@@ -2514,7 +2514,7 @@
   {
     "name": "Arlene Series",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 10600,
     "image": "https://www.espaciovino.com.ar/media/default/0001/61/thumb_60816_default_big.jpeg",
@@ -2530,7 +2530,7 @@
   {
     "name": "Grand Reserve",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 5400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55413_default_big.jpeg",
@@ -2546,7 +2546,7 @@
   {
     "name": "Grand Reserve",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 5400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55414_default_big.jpeg",
@@ -2562,7 +2562,7 @@
   {
     "name": "Grand Reserve",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 5400,
     "image": "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56114_default_big.jpeg",
@@ -2578,7 +2578,7 @@
   {
     "name": "Grand Reserve Trinità",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 10600,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55415_default_big.jpeg",
@@ -2594,7 +2594,7 @@
   {
     "name": "Limited Edition",
     "varietal":"Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 7300,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64712_default_big.jpeg",
@@ -2610,7 +2610,7 @@
   {
     "name": "Limited Edition",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Piattelli",
     "price": 4250,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64711_default_big.jpeg",
@@ -2626,7 +2626,7 @@
   {
     "name": "Limited Edition",
     "varietal":"Merlot",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 7300,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64710_default_big.jpeg",
@@ -2642,7 +2642,7 @@
   {
     "name": "Natural Sweet Torrontés",
     "varietal":"Torrontés",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Piattelli",
     "price": 2050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64709_default_big.jpeg",
@@ -2658,7 +2658,7 @@
   {
     "name": "Reserve",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55416_default_big.jpeg",
@@ -2674,7 +2674,7 @@
   {
     "name": "Reserve",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price": 3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56111_default_big.jpeg",
@@ -2690,7 +2690,7 @@
   {
     "name": "Reserve",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Piattelli",
     "price":2750,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55425_default_big.jpeg",
@@ -2706,7 +2706,7 @@
   {
     "name": "Reserve",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price":3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55417_default_big.jpeg",
@@ -2722,7 +2722,7 @@
   {
     "name": "Reserve",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price":3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56113_default_big.jpeg",
@@ -2738,7 +2738,7 @@
 {
     "name": "Reserve",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Piattelli",
     "price":3050,
     "image": "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56112_default_big.jpeg",
@@ -2754,7 +2754,7 @@
 {
     "name": "Rosé of Malbec",
     "varietal":"Blend",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Piattelli",
     "price":2750,
     "image": "https://www.espaciovino.com.ar/media/default/0001/56/thumb_55419_default_big.jpeg",
@@ -2770,7 +2770,7 @@
   {
     "name": "Torrontés",
     "varietal":"Torrontés",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Piattelli",
     "price": 2750,
     "image": "https://www.espaciovino.com.ar/media/default/0001/61/thumb_60719_default_big.jpeg",
@@ -2786,7 +2786,7 @@
   {
     "name": "Felino Chardonnay",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Viña Cobos",
     "price": 3600,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/felino-chardonnay-2018-vino-vina-cobos-885150_600x.jpg?v=1615340721",
@@ -2802,7 +2802,7 @@
   {
     "name": "Angelica Zapata Cabernet Franc Alta",
     "varietal":"Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 5480,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-cabernet-franc-alta-2017-vino-catena-zapata-561776_600x.jpg?v=1646692712",
@@ -2818,7 +2818,7 @@
   {
     "name": "Catena Zapata Estiba Reservada",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 106000,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-estiba-reservada-2016-vino-catena-zapata-585579_600x.jpg?v=1643474740",
@@ -2834,7 +2834,7 @@
   {  
     "name": "Trivento Reserve Cabernet Sauvignon",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Trivento",
     "price": 1324,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trivento-reserve-cabernet-sauvignon-2020-vino-trivento-986175_400x.jpg?v=1634676112",
@@ -2850,7 +2850,7 @@
   {  
     "name": "Benmarco Malbec",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Susana Balbo Wines",
     "price": 2529,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/benmarco-malbec-2019-vino-susana-balbo-wines-703333_400x.jpg?v=1652544895",
@@ -2866,7 +2866,7 @@
   {  
     "name": "Bira Rosso DUco",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bira Wines",
     "price": 2975,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/bira-rosso-duco-2019-vino-bira-wines-356904_400x.jpg?v=1614810233",
@@ -2882,7 +2882,7 @@
   {  
     "name": "Alma 4 Phos Pet Nat",
     "varietal":"Pinot Noir",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Zuccardi Valle de Uco",
     "price": 3495,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/alma-4-phos-pet-nat-2021-vino-zuccardi-valle-de-uco-348447_400x.jpg?v=1635999460",
@@ -2898,7 +2898,7 @@
   {  
     "name": "Trapiche Iscay Syrah - Viognier",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 23310,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-iscay-syrah-viognier-2014-vino-trapiche-540542_400x.jpg?v=1598226898",
@@ -2914,7 +2914,7 @@
   {  
     "name": "Trapiche Gran Medalla Malbec",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 6214,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-malbec-2017-vino-trapiche-344080_400x.jpg?v=1605996589",
@@ -2930,7 +2930,7 @@
   {  
     "name": "Trapiche Gran Medalla Chardonnay",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Trapiche",
     "price": 7170,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-chardonnay-2020-vino-trapiche-132594_400x.jpg?v=1659374346",
@@ -2946,7 +2946,7 @@
   {
     "name": "Trapiche Terroir Series Finca Orellana Malbec",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 11475,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-orellana-malbec-2014-vino-trapiche-776188_400x.jpg?v=1659385186",
@@ -2962,7 +2962,7 @@
   {  
     "name": "Trapiche Iscay Malbec - Cabernet Franc",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 24975,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-iscay-malbec-cabernet-franc-2014-vino-trapiche-723193_400x.jpg?v=1598228789",
@@ -2978,7 +2978,7 @@
   {  
     "name": "Trapiche Gran Medalla Cabernet Sauvignon",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 7170,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-gran-medalla-cabernet-sauvignon-2017-vino-trapiche-348773_400x.jpg?v=1659478950",
@@ -2994,7 +2994,7 @@
   {  
     "name": "Trapiche Terroir Series Finca Coletto Malbec",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Bodega Trapiche",
     "price": 11475,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-coletto-malbec-2018-vino-trapiche-995461_400x.jpg?v=1659385182",
@@ -3010,7 +3010,7 @@
   {  
     "name": "Trapiche Terroir Series Finca Las Piedras Chardonnay Edición Limitada",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Trapiche",
     "price": 11475,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/trapiche-terroir-series-finca-las-piedras-chardonnay-2021-edicion-limitada-vino-trapiche-422078_400x.jpg?v=1659374356",
@@ -3026,7 +3026,7 @@
   {  
     "name": "Costa & Pampa Sauvignon Blanc",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Trapiche",
     "price": 3682,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/costa-pampa-sauvignon-blanc-2018-vino-trapiche-996704_400x.jpg?v=1598559376",
@@ -3042,7 +3042,7 @@
   {  
     "name": "Costa & Pampa Sauvignon Blanc",
     "varietal":"Sauvignon Blanc",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Bodega Trapiche",
     "price": 3682,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/costa-pampa-sauvignon-blanc-2018-vino-trapiche-996704_400x.jpg?v=1598559376",
@@ -3058,7 +3058,7 @@
   {  
     "name": "DV Catena Cabernet - Malbec",
     "varietal":"Blend",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 2962,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-cabernet-malbec-2021-vino-catena-zapata-704715_400x.jpg?v=1674212074",
@@ -3074,7 +3074,7 @@
   {  
     "name": "Angelica Zapata Chardonnay Alta",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Catena Zapata",
     "price": 3920,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-chardonnay-alta-2018-vino-catena-zapata-625426_400x.jpg?v=1598225729",
@@ -3090,7 +3090,7 @@
   {  
     "name": "Angelica Zapata Cabernet Sauvignon Alta",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Catena Zapata",
     "price": 4800,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-cabernet-sauvignon-alta-2016-vino-catena-zapata-650483_400x.jpg?v=1607729592",
@@ -3106,7 +3106,7 @@
   {  
     "name": "D.V. Catena Garnacha Apelación",
     "varietal":"Grenache",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 4800,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-garnacha-apelacion-2017-vino-catena-zapata-545320_400x.jpg?v=1610646262",
@@ -3122,7 +3122,7 @@
   {  
     "name": "Angelica Zapata Cabernet Franc Alta",
     "varietal":"Cabernet Franc",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 5480,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-cabernet-franc-alta-2017-vino-catena-zapata-561776_400x.jpg?v=1646692712",
@@ -3138,7 +3138,7 @@
   {  
     "name": "Saint Felicien Rosé",
     "varietal":"Blend",
-    "colour_type": "Rosado",
+    "color_type": "Rosado",
     "winery": "Catena Zapata",
     "price": 6970,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/saint-felicien-rose-2020-vino-catena-zapata-252934_400x.jpg?v=1613588773",
@@ -3154,7 +3154,7 @@
   {  
     "name": "DV Catena Malbec Nicasia Vineyard",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 7068,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-malbec-nicasia-vineyard-2016-vino-catena-zapata-185065_400x.jpg?v=1607729596",
@@ -3170,7 +3170,7 @@
   {  
     "name": "DV Catena Malbec Adrianna Vineyard ",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 7680,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/dv-catena-malbec-adrianna-vineyard-2018-vino-catena-zapata-545551_400x.jpg?v=1632254853",
@@ -3186,7 +3186,7 @@
   {  
     "name": "Angelica Zapata Malbec Alta ",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 8720,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/angelica-zapata-malbec-alta-2016-vino-catena-zapata-441822_400x.jpg?v=1607729573",
@@ -3202,7 +3202,7 @@
   {  
     "name": "Adrianna Vineyards Blanco Stones Chardonnay",
     "varietal":"Chardonnay",
-    "colour_type": "Blanco",
+    "color_type": "Blanco",
     "winery": "Catena Zapata",
     "price": 28800,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-white-stones-chardonnay-2019-vino-catena-zapata-570952_400x.jpg?v=1643485472",
@@ -3218,7 +3218,7 @@
   {  
     "name": "Adrianna Vineyard Fortuna Terrae Malbec",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 33200,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-fortuna-terrae-malbec-2018-vino-catena-zapata-153169_400x.jpg?v=1643485495",
@@ -3234,7 +3234,7 @@
   {  
     "name": "Adrianna Vineyard River Malbec ",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 41500,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-river-malbec-2018-vino-catena-zapata-151736_400x.jpg?v=1643485481",
@@ -3250,7 +3250,7 @@
   {  
     "name": "Adrianna Vineyard Mundus Bacillus Terrae Malbec",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 86600,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/adrianna-vineyard-mundus-bacillus-terrae-malbec-2019-vino-catena-zapata-606408_400x.jpg?v=1662575030",
@@ -3266,7 +3266,7 @@
   {  
     "name": "Adrianna Vineyard Mundus Bacillus Terrae Malbec",
     "varietal":"Malbec",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 95200,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-mundus-bacillus-terrae-malbec-2018-vino-catena-zapata-774377_400x.jpg?v=1643474731",
@@ -3282,7 +3282,7 @@
   {  
     "name": "Catena Zapata Estiba Reservada",
     "varietal":"Cabernet Sauvignon",
-    "colour_type": "Tinto",
+    "color_type": "Tinto",
     "winery": "Catena Zapata",
     "price": 106000,
     "image": "https://cdn.shopify.com/s/files/1/0215/7051/9140/products/catena-zapata-estiba-reservada-2016-vino-catena-zapata-585579_400x.jpg?v=1643474740",
