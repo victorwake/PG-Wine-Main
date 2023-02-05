@@ -13,7 +13,7 @@ import {
 const initialState = {
     theme: 'light',
     wines: [],
-    winType: {},
+    wineType: [],
     wineDetail: {},
     currentPage: 1,
 }
@@ -43,7 +43,7 @@ const rootReducer = (state = initialState, action) => {
         case GET_WINE_TYPE:
             return {
                 ...state,
-                winType: action.payload
+                wineType: action.payload
             };
         case GET_WINE_DETAIL:
             return {

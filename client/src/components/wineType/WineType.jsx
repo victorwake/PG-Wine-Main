@@ -6,15 +6,14 @@ import {getWineType} from '../../redux/actions';
 import { useParams } from 'react-router-dom';
 import { Card } from '../card/Card';
 import { Link } from 'react-router-dom';
+import { NavBar } from '../navBar/NavBar';
 
 export const WineType= () => {
     const currentPage = useSelector(state => state.currentPage);
-    const clase = useSelector((state) => state.clase);
+    const clase = useSelector((state) => state.theme);
     const dispatch = useDispatch();
-    const wine = useSelector(state => state.winType)
+    const wine = useSelector(state => state.wineType)
     const {type} = useParams();
-    console.log(type)
-    console.log(wine)
 
     // paginado
     // const winesPerPage = 10;
@@ -28,10 +27,12 @@ export const WineType= () => {
 
 
     return (
-        <div class="wine-type-conteiner">
+        <div className={"wine-container-" + clase}>
+            <NavBar/>
+            <h1 className={"wine-type-h1-" + clase}>Vinos {type}</h1>
             <div className="wine-type">
-                <div className="wine-type-title">
-                    <h1>Vinos {type}</h1>
+                <div className={"card-container-wine-" + clase}>
+                    
                     {wine.map((w => (
                         <Fragment key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit' }}>
