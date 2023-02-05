@@ -6,16 +6,16 @@
   }
 
 .cards-wrapper {
-  background-color: rgb(224, 224, 224);
+  
   font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
-  height: 100%;
   list-style: none;
   padding: 0 5%;
   display: flex;
   justify-content: center;
   margin-top: 80px;
-    
+  margin-bottom: 80px;
+  background-color: rgb(224, 224, 224);
 }
 
 @media screen and (max-width: 888px) {
