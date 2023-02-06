@@ -1,14 +1,14 @@
 /* Modo light end */
 .container-pagination-light {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     height: 100%;
     width: 100%;
     background-color: rgb(224, 224, 224);
 }
 
 .pagination-light {
-    display: inline-block;
+    /* display: inline-block; */
     margin-top: 10px;
 }
 
@@ -41,6 +41,9 @@
     box-shadow: -3px -2px 6px rgba(0, 0, 0, 0.555), 3px 2px 4px rgb(255, 255, 255);
 }
 
+.page-iten-light:hover {
+    cursor: pointer;
+}
 
 /* Modo light fin */
 

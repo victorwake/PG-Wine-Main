@@ -32,8 +32,7 @@
 }
 
 .pagination-container-type-light{
-    position: relative;
-    list-style: none;
+    /* position: relative; */
     display: flex;
     justify-content: center;
 }

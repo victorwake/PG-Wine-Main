@@ -7,6 +7,12 @@ import {
     GET_WINE_DETAIL,
     CLEAN_DETAIL, 
     CURRENT_PAGE, 
+    NAME_ORDER,
+    RESET_PAGE,
+    PRICE_ORDER,
+    CLEAN_ALL_FILTERS, 
+    
+
 
 } from '../actions/index.js';
 
@@ -16,6 +22,9 @@ const initialState = {
     wineType: [],
     wineDetail: {},
     currentPage: 1,
+    nameOrder:'',
+    useFilter: false,
+    price: ''
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -55,11 +64,35 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 wineDetail: action.payload
             };
+        case NAME_ORDER:
+                return {
+                ...state,
+                nameOrder: action.payload
+            }
         case CURRENT_PAGE:
+                return {
+                ...state,
+                currentPage: action.payload
+            }    
+         ///////////////////////////////    
+        case CLEAN_ALL_FILTERS:
+            return {
+                ...state,
+                currentPage: 1,
+                useFilter: false,
+                typeFilter: '',
+                nameOrder:'',
+            }
+        case RESET_PAGE:
             return {
             ...state,
-                currentPage: action.payload
-        }    
+            currentPage: action.payload
+            }
+        case PRICE_ORDER:
+            return {
+                ...state,
+                price: action.payload
+            }
         
         default:
             return state;

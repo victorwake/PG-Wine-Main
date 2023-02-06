@@ -59,6 +59,7 @@ export const getWineType = (type) => {
         try {
             const response = await axios.get(`http://localhost:3001/vinos/${type}`);
             dispatch({ type: GET_WINE_TYPE, payload: response.data});
+            dispatch(changeCurrentPage(1)); // actualiza el currentPage a 1
         } catch (error) {
             console.log(error);
         }
@@ -94,3 +95,50 @@ export const changeCurrentPage = payload => {
 export const CURRENT_PAGE = 'CURRENT_PAGE';
 
 /*----------------------------------------------*/
+
+
+export const cleanAllFilters = () => {
+    return dispatch => {
+        dispatch({ type: CLEAN_ALL_FILTERS })
+    }
+};
+export const CLEAN_ALL_FILTERS = 'CLEAN_ALL_FILTERS';
+/*----------------------------------------------*/
+
+
+export const resetPage = payload => {
+    return dispatch => {
+        dispatch({ type: RESET_PAGE, payload})
+    }
+}
+export const RESET_PAGE = 'RESET_PAGE';
+/*----------------------------------------------*/
+
+export const getPrice = payload => {
+    return dispatch => {
+        dispatch({ type: PRICE_ORDER, payload })
+    }
+};
+export const PRICE_ORDER = 'PRICE_ORDER';
+
+/*------------------------------------------------*/
+
+
+
+export const changeUseFilter = payload => {
+    return dispatch => {
+        dispatch({ type: USE_FILTER, payload })
+    }
+};
+export const USE_FILTER = 'USE_FILTER';
+/*----------------------------------------------*/
+
+
+export const changeNameOrder = payload => {
+    return dispatch => {
+        dispatch({ type: NAME_ORDER, payload })
+    }
+};
+export const NAME_ORDER = 'NAME_ORDER';
+/*----------------------------------------------*/
+
