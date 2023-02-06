@@ -1,144 +1,112 @@
-import { getWines, getWineName, getVarietal, getWinery, postWinery, filterWineByVarietal, orderByName, orderByPrice, cleanAllFilters, getDetails } from '../actions/index.js';
+import {
+    THEME_CHANGE,
+    THEME_LIGHT,
+    THEME_DARK,
+    GET_WINES,
+    GET_WINE_TYPE,
+    GET_WINE_DETAIL,
+    CLEAN_DETAIL,
+    CURRENT_PAGE,
+    NAME_ORDER,
+    RESET_PAGE,
+    PRICE_ORDER,
+    CLEAN_ALL_FILTERS,
+    GET_BY_NAME,
+    GET_BY_RANGE_PRICE
+
+} from '../actions/index.js';
 
 const initialState = {
+    theme: 'light',
     wines: [],
-    varietal: [],
-    colourType: [],
-    winery: [],
-    allWines: [],
-    currentPage: 1
-
+    wineType: [],
+    wineDetail: {},
+    currentPage: 1,
+    nameOrder: '',
+    useFilter: false,
+    price: ''
 }
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
-
-
-        case 'GET_WINES':
-            return {
-                ...state, //guardo el estado
-                wines: action.payload,
-                allWines: action.payload
-            }
-
-        case 'GET_WINE_NAME':
+        case THEME_CHANGE:
             return {
                 ...state,
-                wines: action.payload //es el arreglo q estoy renderizando
-            }
-
-        case `GET_COLOUR_TYPE`:
-            return {
-                ...state,
-                colourType: action.payload
-            }
-        case 'GET_VARIETAL':
-            return {
-                ...state,
-                varietal: action.payload
-            }
-        case 'GET_WINERY':
-            return {
-                ...state,
-                winery: action.payload
-            }
-
-        case 'POST_WINE':
-            return {
-                ...state,
-            }
-
-
-        case 'FILTER_BY_VARIETAL':
-            const allVarietales = state.allWines //aca tb para el filtro desde todos
-            const wineFiltered = action.payload === 'All' ?
-                state.allWines : allVarietales.filter(el => {
-                    return el.varietal ? el.varietal.includes(action.payload) :
-                        el.varietal ? el.varietal.map(ele => ele.name).includes(action.payload) : []
-
-                })
-            return {
-                ...state, //me traigo todo lo de estado
-                wines: wineFiltered
-
-            }
-
-            // case 'FILTER_CREATED':
-            //     const filterCreated = action.payload === 'Created' ? 
-            //     state.allWine.filter(el => el.createdInDb) 
-            //     : state.allWine.filter( el => !el.createdInDb)
-            //     return {
-            //         ...state, //me devuelve el estado anterior
-            //         wines: action.payload === 'All'? state.allWines 
-            //         : filterCreated  
-
-            // }
-
-        case 'CLEAN_FILTERS':
-            return {
-                ...state,
-                wines: state.all,
-                currentPage: 1
-            }
-
-        case 'ORDER_BY_NAME': //'Asc. Desc'
-            let sortName = action.payload === 'Asc' ?
-                state.allWines.sort(function(a, b) {
-                    if (a.name.toLowerCase() > b.name.toLowerCase()) {
-                        return 1;
-                    }
-                    if (b.name.toLowerCase() > a.name.toLowerCase()) {
-                        return -1;
-                    }
-                    return 0; // si son iguales lo deja como están quiere decir
-                }) :
-                state.allWines.sort(function(a, b) { // si no, ordenalo 'Desc'
-                    if (a.name.toLowerCase() > b.name.toLowerCase()) {
-                        return -1;
-                    }
-                    if (b.name.toLowerCase() > a.name.toLowerCase()) {
-                        return 1;
-                    }
-                    return 0;
-                })
-            return {
-                ...state,
-                wines: sortName,
+                theme: action.theme
             };
-
-
-        case 'ORDER_BY_PRICE':
-            let sortTipo = action.payload === 'Precio' ?
-                state.wines.sort(function(a, b) {
-                    if (a.tipo > b.tipo) {
-                        return 1;
-                    }
-                    if (b.tipo > a.tipo) {
-                        return -1;
-                    }
-                    return 0;
-                }) :
-                state.wines.sort(function(a, b) {
-                    if (a.tipo > b.tipo) {
-                        return -1;
-                    }
-                    if (b.tipo > a.tipo) {
-                        return 1;
-                    }
-                    return 0;
-                });
+        case THEME_LIGHT:
             return {
                 ...state,
-                wines: sortTipo,
-
-
+                theme: 'light'
             };
-        case 'GET_DETAIL':
+        case THEME_DARK:
             return {
                 ...state,
-                detail: action.payload
+                theme: 'dark'
+            };
+        case GET_WINES:
+            return {
+                ...state,
+                wines: action.payload
+            };
+        case GET_WINE_TYPE:
+            return {
+                ...state,
+                wineType: action.payload
+            };
+        case GET_WINE_DETAIL:
+            return {
+                ...state,
+                wineDetail: action.payload
+            };
+        case CLEAN_DETAIL:
+            return {
+                ...state,
+                wineDetail: action.payload
+            };
+        case NAME_ORDER:
+            return {
+                ...state,
+                nameOrder: action.payload
             }
-
+        case CURRENT_PAGE:
+            return {
+                ...state,
+                currentPage: action.payload
+            }
+            ///////////////////////////////    
+        case CLEAN_ALL_FILTERS:
+            return {
+                ...state,
+                currentPage: 1,
+                useFilter: false,
+                typeFilter: '',
+                nameOrder: '',
+                price: '', // Faltaba setear el precio 
+            }
+        case RESET_PAGE:
+            return {
+                ...state,
+                currentPage: action.payload
+            }
+        case PRICE_ORDER:
+            return {
+                ...state,
+                price: action.payload
+            }
+        case GET_BY_NAME:
+            return {
+                ...state,
+                wines: action.payload
+            }
+        case GET_BY_RANGE_PRICE:
+            return {
+                ...state,
+                wineType: action.payload,
+                price: ''
+            }
+        default:
+            return state;
     }
 }
 

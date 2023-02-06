@@ -1,143 +1,5 @@
 import axios from 'axios';
 
-export function getWines() {
-    return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/general', {
-
-        });
-        return dispatch({
-            type: 'GET_WINES',
-            payload: json.data
-        })
-    }
-}
-
-export function getWineName(name) { //name o payload, da igual
-    return async function(dispatch) {
-        try {
-            var json = await axios.get('http://localhost:3001/general?name=' + name);
-            return dispatch({
-                type: 'GET_WINE_NAME',
-                payload: json.data //json.data es lo q devuelve esa ruta
-            })
-        } catch (error) {
-            alert('wine not found');
-
-        }
-    }
-}
-export function getColourType(name) {
-    return async function(dispatch) {
-        try {
-            var json = await axios.get(`http://localhost:3001/colourtype/` + name);
-            return dispatch({
-                type: `GET_COLOUR_TYPE`,
-                payload: json.data
-            })
-        } catch (error) {
-            alert('wine not found')
-        }
-    }
-}
-export function getListType() {
-    return async function(dispatch) {
-        var json = await axios.get(`http://localhost:3001/listype`);
-        return dispatch({
-            type: `GET_COLOUR_TYPE`,
-            payload: json.data
-        })
-    }
-}
-export function getVarietal() {
-    return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/varietal/');
-        return dispatch({
-            type: 'GET_VARIETAL',
-            payload: json.data
-        })
-    }
-}
-export function getWinery() {
-    return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/listwinery');
-        return dispatch({
-            type: 'GET_WINERY',
-            payload: json.data
-        })
-    }
-}
-
-export function postWine(payload) {
-    return async function(dispatch) {
-        const data = await axios.post('http://localhost:3001/wine/', payload);
-        console.log(data)
-        return data;
-    }
-}
-
-export function filterWineByVarietal(payload) { //el payload es el value q me va a llegar
-    console.log(payload)
-    return {
-        type: 'FILTER_BY_VARIETAL',
-        payload
-    }
-
-}
-
-// export function filterCreated(payload){// el payload es la opcion que yo elija en el form
-//     return {
-//         type: 'FILTER_CREATED',
-//         payload
-//     }
-
-// }
-
-export function orderByName(payload) {
-    return {
-        type: 'ORDER_BY_NAME', //despacho con ese type
-        payload
-    }
-}
-
-export function orderByPrice(payload) {
-    return {
-        type: 'ORDER_BY_PRICE',
-        payload
-    }
-}
-export function cleanAllFilters() {
-    return dispatch => {
-        dispatch({ type: 'CLEAN_FILTERS' })
-    }
-};
-
-export function getDetails(id) {
-
-    return async function(dispatch) {
-        try {
-            if (id) {
-                const detail = await axios.get(`http://localhost:3001/winedetail/:id`);
-                dispatch({
-                    type: 'GET_DETAIL',
-                    payload: detail.data
-                })
-            } else {
-                dispatch({
-                    type: 'GET_DETAIL',
-                    payload: []
-
-
-                })
-            }
-
-        } catch (error) {
-            console.log(error)
-
-        }
-    }
-
-}
-=======
 /*Cambio de tema*/
 export const themeChange = (theme) => {
     if (theme === 'light') {
@@ -152,7 +14,7 @@ export const themeChange = (theme) => {
 };
 export const THEME_CHANGE = 'THEME_CHANGE';
 
-export  const themeLight = () => {
+export const themeLight = () => {
     return {
         type: THEME_LIGHT,
         theme: 'light'
@@ -160,11 +22,11 @@ export  const themeLight = () => {
 };
 export const THEME_LIGHT = 'THEME_LIGHT';
 
-export  const themeDark = () => {
+export const themeDark = () => {
     return {
         type: THEME_DARK,
         theme: 'dark'
-    } 
+    }
 };
 export const THEME_DARK = 'THEME_DARK';
 
@@ -173,11 +35,12 @@ export const THEME_DARK = 'THEME_DARK';
 /*----------------------------------------------*/
 
 
+/*----------------------------------------------*/
 
 export const getWines = () => {
-    return async (dispatch) => {
+    return async(dispatch) => {
         try {
-            const response = await axios.get('http://localhost:3001/general');
+            const response = await axios.get('http://localhost:3001/home');
             dispatch({
                 type: GET_WINES,
                 payload: response.data
@@ -189,14 +52,15 @@ export const getWines = () => {
 };
 export const GET_WINES = 'GET_WINES';
 
+/*----------------------------------------------*/
+
 export const getWineType = (type) => {
-    return async (dispatch) => {
+    return async(dispatch) => {
         try {
-            const response = await axios.get(`http://localhost:3001/colourtype/${type}`);
-            dispatch({
-                type: GET_WINE_TYPE,
-                payload: response.data
-            });
+            const response = await axios.get(`http://localhost:3001/vinos/${type}`);
+            dispatch({ type: GET_WINE_TYPE, payload: response.data });
+            dispatch(changeCurrentPage(1)); // actualiza el currentPage a 1
+            dispatch(cleanAllFilters()) // resetea los filtros
         } catch (error) {
             console.log(error);
         }
@@ -204,10 +68,110 @@ export const getWineType = (type) => {
 }
 export const GET_WINE_TYPE = 'GET_WINE_TYPE';
 
+/*----------------------------------------------*/
+
 export const getWineDetail = id => {
-    return dispatch => axios(`http://localhost:3001/winedetail/${id}`)
-    .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data}))
-    .catch(err => console.log(err));
+    return dispatch => axios(`http://localhost:3001/details/${id}`)
+        .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data }))
+        .catch(err => console.log(err));
 };
 export const GET_WINE_DETAIL = 'GET_WINE_DETAIL';
 
+/*----------------------------------------------*/
+
+export const cleanWineDetail = payload => {
+    return dispatch => {
+        dispatch({ type: CLEAN_DETAIL, payload })
+    }
+};
+export const CLEAN_DETAIL = 'CLEAN_DETAIL';
+
+/*----------------------------------------------*/
+
+export const changeCurrentPage = payload => {
+    return dispatch => {
+        dispatch({ type: CURRENT_PAGE, payload })
+    }
+};
+export const CURRENT_PAGE = 'CURRENT_PAGE';
+
+/*----------------------------------------------*/
+
+
+
+export const cleanAllFilters = () => {
+    return dispatch => {
+        dispatch({ type: CLEAN_ALL_FILTERS })
+    }
+};
+export const CLEAN_ALL_FILTERS = 'CLEAN_ALL_FILTERS';
+/*----------------------------------------------*/
+
+
+export const resetPage = payload => {
+    return dispatch => {
+        dispatch({ type: RESET_PAGE, payload })
+    }
+}
+export const RESET_PAGE = 'RESET_PAGE';
+/*----------------------------------------------*/
+
+export const getPrice = payload => {
+    return dispatch => {
+        dispatch({ type: PRICE_ORDER, payload })
+    }
+};
+export const PRICE_ORDER = 'PRICE_ORDER';
+
+/*------------------------------------------------*/
+
+
+
+export const changeUseFilter = payload => {
+    return dispatch => {
+        dispatch({ type: USE_FILTER, payload })
+    }
+};
+export const USE_FILTER = 'USE_FILTER';
+/*----------------------------------------------*/
+
+
+export const changeNameOrder = payload => {
+    return dispatch => {
+        dispatch({ type: NAME_ORDER, payload })
+    }
+};
+export const NAME_ORDER = 'NAME_ORDER';
+/*----------------------------------------------*/
+
+export const getWinesByName = (name) => {
+    return async(dispatch) => {
+        try {
+            const response = await axios.get('http://localhost:3001/home/?name=' + name);
+            dispatch({
+                type: GET_BY_NAME,
+                payload: response.data
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+export const GET_BY_NAME = 'GET_BY_NAME';
+/*----------------------------------------------*/
+
+export const getPriceRange = (min, max) => {
+    return async(dispatch) => {
+        try {
+            const response = await axios.get(`http://localhost:3001/orderAsc/price/` + min + `/` + max)
+                // const response = await axios.get(`http://localhost:3001/products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
+            dispatch({
+                type: GET_BY_RANGE_PRICE,
+                payload: response.data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+};
+export const GET_BY_RANGE_PRICE = 'GET_BY_RANGE_PRICE';
