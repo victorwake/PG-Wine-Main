@@ -1,4 +1,4 @@
-import './general.css';
+import './home.css';
 import { NavBar } from '../navBar/NavBar';
 import { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
@@ -6,7 +6,7 @@ import { getVarietal, getWines, getWinery, getColourType, getListType } from '..
 
 
 
-export const General = () => {
+export const Home = () => {
     const dispatch = useDispatch();
     const allWines = useSelector(state=> state.wines)
     const allVarietal = useSelector(state => state.varietal)

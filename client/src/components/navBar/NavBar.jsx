@@ -1,6 +1,6 @@
+import './navBar.css';
 import { SearchBar } from '../searchBar/SearchBar';
 import { Login } from '../login/Login';
-import './navBar.css';
 import { Link } from 'react-router-dom';
 import { Filter } from '../filters/Filter';
 import { useSelector, useDispatch } from 'react-redux';
@@ -47,7 +47,8 @@ function handleFilterbyWinery(e){
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Bodegas            </a>
+              Bodegas: 
+              </a>
             <ul class="dropdown-menu" onChange={(e)=>handleFilterbyWinery(e)}>
               {allWinery.map( el => (
                 <option class="dropdown-item" value={el} >{el}</option>
@@ -62,4 +63,5 @@ function handleFilterbyWinery(e){
       </div>
     </div>
   </nav>
-    );}
+  )
+}

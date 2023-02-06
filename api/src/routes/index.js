@@ -8,8 +8,6 @@ const wineryListRouter = require('./wineryListRouter.js');
 const typeWineListRouter = require('./typeListRouter.js');
 const login = require('./userLogin.js')
 
-
-
 const router = Router();
 
 router.use('/general', generalRouter);
