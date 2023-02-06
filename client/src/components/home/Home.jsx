@@ -1,52 +1,88 @@
-import './home.css';
 import { NavBar } from '../navBar/NavBar';
-import { useState, useEffect } from 'react';
+import './home.css';
+import { Fragment, useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { getVarietal, getWines, getWinery, getColourType, getListType } from '../../redux/actions';
-
+import { getWines } from '../../redux/actions';
+import { Card }from '../card/Card'
+import { NavBarWineType } from '../navBarWineType/NavBarWineType';
+import { Link } from 'react-router-dom';
+import { Sale } from '../sale/Sale'
+import _ from 'lodash';
 
 
 export const Home = () => {
+
     const dispatch = useDispatch();
     const allWines = useSelector(state=> state.wines)
-    const allVarietal = useSelector(state => state.varietal)
-    const page = useSelector(state => state.currentPage)
+    const clase= useSelector(store => store.theme);
 
+    const shuffledWines = _.shuffle(allWines);
+    const tenRandomWines = shuffledWines.slice(0, 8);
+    const discountedWines = tenRandomWines.map((w) => ({
+        ...w,
+        price: w.price * 0.9,
+    }));
     
-    const winePerPage = 18;
-    const lasWine = page * winePerPage // 1 *  = 9
-    const firstWine = lasWine-winePerPage // 9 - 9 = 0
-    const winePage = allWines.slice(firstWine, lasWine)
-               
-    function handleClick(e){
-        e.preventDefault();
-        // dispatch(cleanAllFilters());
-        }
+    //Lo usariamos cuando tengamos los filtros, se cambiaria el allWines.slide por este
 
-
-     useEffect(()=>{
-       dispatch(getWines());
-       dispatch(getVarietal());
-       dispatch(getWinery());
-    //    dispatch(getColourType)
-       dispatch(getListType())
-     },[dispatch]);        
-
+    useEffect(()=>{
+        if(!allWines.length)dispatch(getWines())
+    },[]);        
 
     return (
-        <div className='general'>
-            <div className='general_nav'>
-                <h1>Hola tu vieja</h1>
-                {/* <NavBar/> */}
+        <div className={"home-container-" + clase}>
+            <div className='home_nav'>
+                <NavBar/>
             </div>
-            <div className='general_data'>
-                <h1>aca van las card</h1>
+            <NavBarWineType />
+            <h2 className={"sale-type-h2-" + clase}>Ofertas al 10%</h2>
+            <div  className={"card-container-home-" + clase} >
+            <div>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        {/* <img src="..." class="d-block w-100" alt="..."/> */}
+                        <h5>Promo 1</h5>
+                        </div>
+                        <div class="carousel-item">
+                        {/* <img src="..." class="d-block w-100" alt="..."/> */}
+                        <h5>Promo 2</h5>
+                        </div>
+                        <div class="carousel-item active">
+                        {/* <img src="..." class="d-block w-100" alt="..."/> */}
+                        <h5>Promo 3</h5>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            {/* {discountedWines?.map((w => (
+                    <Fragment key={w.id}>
+                        <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        <Card
+                            name={w.name}
+                            varietal={w.varietal}
+                            image= {w.image} 
+                            winery={w.winery}
+                            price= {w.price}
+                            />
+                        </Link>
+                    </Fragment>
+                )))}   */}
             </div>
         </div>
-
     )
 }
-
-
-
-

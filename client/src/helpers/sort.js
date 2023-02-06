@@ -13,3 +13,16 @@ export const nameDES = (a, b) => {
     if(nA < nB) return 1;
     return 0 
 }
+
+
+export const priceASC = (a, b) => {
+    if (a.price < b.price) return -1;
+    if (a.price > b.price) return 1;
+    return 0;
+}
+
+export const priceDES = (a, b) => {
+    if (a.price > b.price) return -1;
+    if (a.price < b.price) return 1;
+    return 0;
+}

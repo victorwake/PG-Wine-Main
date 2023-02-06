@@ -1,3 +1,4 @@
+import { NavBar } from '../navBar/NavBar';
 import './general.css';
 import { NavBar } from '../navBar/NavBar';
 import { useState, useEffect } from 'react';
@@ -47,6 +48,16 @@ export const General = () => {
     )
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+    return (
+        <NavBar />
+    )
+
+
+
+}
+>>>>>>> adf19d32e6d5837eecf8e3a9bbded53b956a6597
