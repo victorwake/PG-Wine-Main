@@ -10,9 +10,8 @@ import {
     NAME_ORDER,
     RESET_PAGE,
     PRICE_ORDER,
-    CLEAN_ALL_FILTERS, 
-    
-
+    CLEAN_ALL_FILTERS,
+    GET_BY_NAME
 
 } from '../actions/index.js';
 
@@ -93,7 +92,11 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 price: action.payload
             }
-        
+        case GET_BY_NAME:
+            return {
+                ...state,
+                wines: action.payload
+            }        
         default:
             return state;
     }

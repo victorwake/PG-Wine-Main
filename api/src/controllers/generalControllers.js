@@ -13,7 +13,7 @@ const getDbWines = async (req, res, next) => {
       res.status(200).send(wines);
     }
   } catch (error) {
-    res.status(400).json({ error: err.message });
+    res.status(400).json({ error: err.msg });
   }
 };
 

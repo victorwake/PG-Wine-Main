@@ -6,4 +6,7 @@
     transition-duration: 01s;
     background-color: rgb(224, 224, 224) !important;
     color: #333333;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
 }
