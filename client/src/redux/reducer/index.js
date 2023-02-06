@@ -54,7 +54,7 @@ const rootReducer = (state = initialState, action) => {
             const wineFiltered = action.payload === 'All' ?
                 state.allWines : allVarietales.filter(el => {
                     return el.varietal ? el.varietal.includes(action.payload) :
-                        el.varietal?.map(ele => ele.name).includes(action.payload)
+                        el.varietal ? el.varietal.map(ele => ele.name).includes(action.payload) : []
 
                 })
             return {
@@ -138,71 +138,8 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 detail: action.payload
             }
-<<<<<<< HEAD
-    
-}}
-=======
 
-
-
-=======
-import {
-    THEME_CHANGE, 
-    THEME_LIGHT, 
-    THEME_DARK,
-    GET_WINES,
-    GET_WINE_TYPE,
-    GET_WINE_DETAIL
-
-} from '../actions/index.js';
-
-const initialState = {
-    theme: 'light',
-    wines: [],
-    winType: [],
-    wineDetail: []
-}
-
-const rootReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case THEME_CHANGE:
-            return {
-                ...state,
-                theme: action.theme
-            };
-        case THEME_LIGHT:
-            return {
-                ...state,
-                theme: 'light'
-            };
-        case THEME_DARK:
-            return {
-                ...state,
-                theme: 'dark'
-            };
-        case GET_WINES:
-            return {
-                ...state,
-                wines: action.payload
-            };
-        case GET_WINE_TYPE:
-            return {
-                ...state,
-                winType: action.payload
-            };
-        case GET_WINE_DETAIL:
-            return {
-                ...state,
-                wineDetail: action.payload
-            };
-        
-        default:
-            return state;
     }
-
-
 }
-
->>>>>>> adf19d32e6d5837eecf8e3a9bbded53b956a6597
 
 export default rootReducer;

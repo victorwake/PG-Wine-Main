@@ -11,11 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/general" element={<General />}/>
-<<<<<<< HEAD
-        {/* <Route path="/general" element={<General />} /> */}
-=======
         <Route path="/general" element={<General />} />
->>>>>>> adf19d32e6d5837eecf8e3a9bbded53b956a6597
         <Route path="/colourtype" element={<WinType />} />
         <Route path="/winedetail/:id" element={<Details />} />
       </Routes>
