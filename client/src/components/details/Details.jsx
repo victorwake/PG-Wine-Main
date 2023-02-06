@@ -37,7 +37,7 @@ export const Details = () => {
                 <p className='year'><b>Año:</b> {wineDetail.year}</p>
                 <p  className='price'><b>Precio:</b> {wineDetail.price}</p>
                 <p className='cata'><b>Nota de cata:</b></p>
-                <p>{wineDetail.description}</p>
+                <p className='descripcion'>{wineDetail.description}</p>
             </div>
         </div>
     );

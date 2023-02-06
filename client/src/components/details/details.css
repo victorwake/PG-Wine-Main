@@ -8,9 +8,10 @@ body{
 font-family: 'Open Sans', sans-serif;
 }
 header{
-background-color: #F9F8FC;
+background-color: #74723d;
 height: 316px;
 }
+
 
 .winedetail {
     border-radius: 10px;
@@ -34,6 +35,8 @@ color: rgb(86, 86, 86);
 padding: auto;
 padding-left: -600px;
 margin-left: 420px;
+border-color: black;
+border-radius: 3px;
 }
 .button_detail{
     display: flex;
@@ -57,54 +60,84 @@ margin-left: 365px;
 padding-left: 150px;
 border-radius: 10px;
 border-color: black;
+border-radius: 3px;
 
 
 
 }
 .nombre{
+   display: flex;
     font-size:50px;
     font-family: 'Wire One', sans-serif;
-    text-align: center;
+    margin-left: 70px;
+    margin-top: -300px;
+    
+
 }
 .variedad{
+    display: flex;
     font-size:40px;
     font-family: 'Wire One', sans-serif;
     text-align: center;
+    margin-left: 70px;
 }
 .tipo{
+    display: flex;
     font-size:35px;
     font-family: 'Wire One', sans-serif;
     text-align: center;
+    margin-left: 70px;
 }
 .bodega{
+    display: flex;
     font-size:35px;
     font-family: 'Wire One', sans-serif;
-    text-align: center; 
+    text-align: center;
+    margin-left: 70px; 
 }
 .origen{
+    display: flex;
     font-size:35px;
     font-family: 'Wire One', sans-serif;
     text-align: center; 
+    margin-left: 70px;
 }
 .alcohol{
+    display: flex;
     font-size:35px;
     font-family: 'Wire One', sans-serif;
-    text-align: center; 
+    text-align: center;
+    margin-left: 70px;
 }
 .year{
+    display: flex;
     font-size:40px;
     font-family: 'Wire One', sans-serif;
     text-align: center; 
+    margin-left: 70px;
 }
 .price{
+    display: flex;
     font-size:40px;
     font-family: 'Wire One', sans-serif;
     position:fixed;
     top: 8vw;
     right: 7vw;
     font-weight: 700; 
-    
-    
-
+    margin-left: 30px;
+    border:3px;
+    border-color: blueviolet;
 }
-
+.cata{
+    display: flex;
+    font-size:40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center; 
+    margin-left: 10px;
+}
+.descripcion{
+    display: flex;
+    font-size:30px;
+    font-family: 'Wire One', sans-serif;
+    margin-left: 10px;
+}
