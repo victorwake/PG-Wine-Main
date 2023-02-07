@@ -3,7 +3,7 @@ GET http://localhost:3001/provinces HTTP/1.1
 
 
 ### // FILTER WINES BY PROVINCE
-GET http://localhost:3001/Gua HTTP/1.1
+GET http://localhost:3001/Valle HTTP/1.1
 
 
 ### // SEARCH A WINE BY ID
@@ -15,9 +15,9 @@ POST http://localhost:3001/wines HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Guana Wine",
-  "varietal": "Blend",
-  "colour_type": "White",
+  "name": "Marian",
+  "varietal": ["Blend"],
+  "color_type": "White",
   "winery": "Argento",
   "price": 2000,
   "alcohol": 14,
@@ -42,7 +42,7 @@ Content-Type: application/json
 {
   "name": "Spanish Wine",
   "varietal": "Blend",
-  "colour_type": "White",
+  "color_type": "White",
   "winery": "Argento",
   "price": 127,
   "alcohol": 14,
@@ -66,3 +66,9 @@ GET http://localhost:3001/orderDes/price/1/2 HTTP/1.1
 
 ### // GENERATE 10 RANDOM WINES OFFER
 GET http://localhost:3001/offer/random HTTP/1.1
+
+### // SEARCH ALL VARIETALS
+GET http://localhost:3001/varietal/varietal HTTP/1.1
+
+### // GENERAL ROUTER
+GET http://localhost:3001/home/home HTTP/1.1

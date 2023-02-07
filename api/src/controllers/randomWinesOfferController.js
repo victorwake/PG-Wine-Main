@@ -12,3 +12,5 @@ const randomWinesOffer = async (req, res) => {
 };
 
 module.exports = { randomWinesOffer };
+
+//how to use navigate?

@@ -1,0 +1,61 @@
+.card-container-light{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 330px);
+  grid-gap: 35px;
+  justify-content: center;
+  transition-duration: 01s;
+  background-color: rgb(224, 224, 224);
+}
+
+.card-light{
+  width: 310px;
+  height: 350px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 01s;
+  box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
+  
+  background-color: rgb(224, 224, 224);
+}
+
+.card-light:hover{
+  transition-duration: 1s;
+  box-shadow: -5px -5px 10px rgba(94, 104, 121, 0.486), 5px 3px 8px rgba(255, 255, 255, 0.582);
+}
+
+.img-card-light{
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.name-card-light{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 8px;
+  color: rgb(0, 0, 0);
+}
+
+.type-wine-card-light{
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.winery-card-light{
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.price-card-light{
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 5px;
+  color: rgb(0, 0, 0);
+}
