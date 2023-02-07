@@ -187,6 +187,17 @@ export const postWines = (payload) => {
 export const POST_WINES = 'POST_WINES';
 /*----------------------------------------------*/
 
+export const updateWine = (id, payload) => {
+    return async function() {
+        const updateWine = await axios.put(`http://localhost:3001/wines/${id}`, payload);
+        return updateWine;
+    }
+};
+
+export const UPDATE_WINE = 'UPDATE_WINE';
+
+/*----------------------------------------------*/
+
 export function getVarietal() {
     return async function(dispatch) {
         var json = await axios.get('http://localhost:3001/varietal');

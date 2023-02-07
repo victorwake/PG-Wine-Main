@@ -14,7 +14,8 @@ import {
     GET_BY_NAME,
     GET_BY_RANGE_PRICE,
     GET_VARIETAL,
-    POST_WINES
+    POST_WINES,
+    UPDATE_WINE
 
 } from '../actions/index.js';
 
@@ -114,6 +115,10 @@ const rootReducer = (state = initialState, action) => {
                 varietal: action.payload
             }
         case POST_WINES:
+            return {
+                ...state,
+            }
+        case UPDATE_WINE:
             return {
                 ...state,
             }

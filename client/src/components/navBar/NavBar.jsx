@@ -15,12 +15,12 @@ export const NavBar = () => {
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <Link to="/home" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Home</a>
+          <a class="nav-link active" aria-current="page">Inicio</a>
           </Link>
         </li>
         <li class="nav-item">
           <Link to="/create" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Create</a>
+          <a class="nav-link active" aria-current="page">Crear</a>
           </Link>
         </li>
         <li class="nav-item dropdown">
