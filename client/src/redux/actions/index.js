@@ -175,3 +175,26 @@ export const getPriceRange = (min, max) => {
     }
 };
 export const GET_BY_RANGE_PRICE = 'GET_BY_RANGE_PRICE';
+/*----------------------------------------------*/
+
+export const postWines = (payload) => {
+    return async function() {
+        const newWine = await axios.post('http://localhost:3001/wines', payload);
+        return newWine;
+    }
+};
+
+export const POST_WINES = 'POST_WINES';
+/*----------------------------------------------*/
+
+export function getVarietal() {
+    return async function(dispatch) {
+        var json = await axios.get('http://localhost:3001/varietal');
+        return dispatch({
+            type: GET_VARIETAL,
+            payload: json.data
+        })
+    }
+};
+
+export const GET_VARIETAL = 'GET_VARIETAL';
