@@ -1,47 +1,48 @@
 import './searchBar.css';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { getWineName, getWinery } from '../../redux/actions';
+import React, {useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import { getWinesByName} from '../../redux/actions';
 
+export const SearchBar = () =>  {
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
+  
 
-export const SearchBar = () => {
-    const dispatch = useDispatch();
-    const [input, setInput]=useState('')
+  function handleInputChange(e) {
+    e.preventDefault();
+    setName(e.target.value);
+    console.log(name)
+  }
 
-
-
-function handleImputChange(e){
-    e.preventDefault()
-    setInput(e.target.value)
-}
-
-function handleSubmit(e){
-    e.preventDefault()
-    if(!input){ alert('No encontramos nada con ese Nombre')}
-    else{
-    try{
-        if (input){dispatch(getWinery(input))}
-        if (input){dispatch(getWineName(input))}
-    }catch(error){
-        return error
-    }}
-    setInput('')
-}
-function handleSelectWinery(e){
-    setInput({
-        ...input,
-        winery: [...input.winery, e.target.value], //lo que ya había mas lo nuevo
-    })
-}
-
+  function handleSumit(e) {
+    e.preventDefault();
+    var search = document.getElementById('search').value;
+    if(search.length === 0) {
+      alert('Ingresa algunos caracteres para buscar');
+      return;
+    }   
+    dispatch(getWinesByName(name)) 
+    // dispatch(getWineType(type))
+  }
+   
+  useEffect(() => {
+    dispatch(getWinesByName(name));
+  }, [dispatch, name]);
     return (
-        <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>handleImputChange(e)}/>
-            <button className="btn btn-outline-success" type="submit" onClick={(e)=> handleSubmit(e)}>Buscar</button>
-            
-        </form>
-  
-  
- 
-  )
-}
+    <div>
+      <input
+        id="search"
+        className="search-input" 
+        type="text"
+        placeholder="Busca un vino..."
+        onChange={(e) => handleInputChange(e)} 
+        // onChange={(e) => handleInputChangeType(e)}
+      />
+      <button      
+      className="btn-search"
+      type="submit"
+      onClick={(e) => handleSumit(e)}
+      >Buscar</button>
+    </div>
+  );
+};

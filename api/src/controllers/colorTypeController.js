@@ -1,10 +1,10 @@
 const { Wine } = require("../db.js");
 
-const getColourType = async (req, res) => {
+const getColorType = async (req, res) => {
   let type = req.params.type;
   let wines = await Wine.findAll();
   let wineType = await wines.some((el) =>
-    el.colour_type.toLowerCase().includes(type.toLowerCase())
+    el.color_type.toLowerCase().includes(type.toLowerCase())
   );
 
   if (!wineType) {
@@ -13,7 +13,7 @@ const getColourType = async (req, res) => {
     });
   } else {
     let wineTypeFind = await wines.filter(
-      (el) => el.colour_type.toLowerCase() === type.toLowerCase()
+      (el) => el.color_type.toLowerCase() === type.toLowerCase()
     );
 
     try {
@@ -31,4 +31,4 @@ const getColourType = async (req, res) => {
   }
 };
 
-module.exports = { getColourType };
+module.exports = { getColorType };

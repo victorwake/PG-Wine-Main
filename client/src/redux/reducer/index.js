@@ -1,28 +1,34 @@
 import {
-    THEME_CHANGE, 
-    THEME_LIGHT, 
+    THEME_CHANGE,
+    THEME_LIGHT,
     THEME_DARK,
     GET_WINES,
     GET_WINE_TYPE,
     GET_WINE_DETAIL,
-    GET_VARIETAL,
-    GET_WINERY,
-    GET_WINE_NAME,
-    GET_COLOUR_TYPE
+    CLEAN_DETAIL,
+    CURRENT_PAGE,
+    NAME_ORDER,
+    RESET_PAGE,
+    PRICE_ORDER,
+    CLEAN_ALL_FILTERS,
+    GET_BY_NAME,
+    GET_BY_RANGE_PRICE
+
 } from '../actions/index.js';
 
 const initialState = {
     theme: 'light',
     wines: [],
-    winType: [],
-    wineDetail: [],
-    varietal:[],
-    winery:[]
-
+    wineType: [],
+    wineDetail: {},
+    currentPage: 1,
+    nameOrder: '',
+    useFilter: false,
+    price: ''
 }
 
 const rootReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case THEME_CHANGE:
             return {
                 ...state,
@@ -46,38 +52,62 @@ const rootReducer = (state = initialState, action) => {
         case GET_WINE_TYPE:
             return {
                 ...state,
-                winType: action.payload
+                wineType: action.payload
             };
         case GET_WINE_DETAIL:
             return {
                 ...state,
                 wineDetail: action.payload
             };
-            case GET_VARIETAL:
-                return {
-                    ...state,
-                    varietal: action.payload
-                };
-                case GET_WINERY:
-                    return {
-                        ...state,
-                        winery: action.payload
-                    };
-                    case GET_COLOUR_TYPE:
+        case CLEAN_DETAIL:
             return {
                 ...state,
-                colourType: action.payload
+                wineDetail: action.payload
+            };
+        case NAME_ORDER:
+            return {
+                ...state,
+                nameOrder: action.payload
             }
-            case GET_WINE_NAME:
-                return {
-                    ...state,
-                    colourType: action.payload
-                }
-
-
+        case CURRENT_PAGE:
+            return {
+                ...state,
+                currentPage: action.payload
+            }
+            ///////////////////////////////    
+        case CLEAN_ALL_FILTERS:
+            return {
+                ...state,
+                currentPage: 1,
+                useFilter: false,
+                typeFilter: '',
+                nameOrder: '',
+                price: '', // Faltaba setear el precio 
+            }
+        case RESET_PAGE:
+            return {
+                ...state,
+                currentPage: action.payload
+            }
+        case PRICE_ORDER:
+            return {
+                ...state,
+                price: action.payload
+            }
+        case GET_BY_NAME:
+            return {
+                ...state,
+                wines: action.payload
+            }
+        case GET_BY_RANGE_PRICE:
+            return {
+                ...state,
+                wineType: action.payload,
+                price: ''
+            }
         default:
             return state;
     }
-} 
+}
 
 export default rootReducer;

@@ -5,7 +5,7 @@ import Logo from "../landingPage/Logo.mp4"
 
 export const LandingPage = () => {
     return (
-
+        <body className="fondo">
         <div className="landing-page">
       <Link to={"/home"}>
             <button className="button">Dionisio Wines</button>
@@ -28,5 +28,6 @@ export const LandingPage = () => {
         </video>
        
                </div>
+               </body>
     );
 }

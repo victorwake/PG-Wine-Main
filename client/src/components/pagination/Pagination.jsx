@@ -1,39 +1,51 @@
-import React from 'react';
-import './pagination.css'
+import React from "react";
+import "./pagination.css";
+import { useSelector, useDispatch } from "react-redux";
+import { changeCurrentPage } from "../../redux/actions";
 
+export const Pagination = ({ wines, winesPerPage }) => {
+    const clase= useSelector(store => store.theme);
+    const dispatch = useDispatch();
+    const currentPage = useSelector(state => state.currentPage)
 
+    const pageNumber = [];
 
-
-export default function Pagination({winesPerPage, allWines, pagination, currentPage}) {
-    const pageNumbers = [] //declaro arreglo vacio
-
-    for (let i = 1; i <=Math.ceil(allWines/winesPerPage); i++) { //todos los perros dividido perros por pagina
-        pageNumbers.push(i)  //pusheo en el arreglo
-       
+    for(let i = 1; i <= Math.ceil(wines / winesPerPage); i++) { 
+        pageNumber.push(i)
     }
-   
+
+    const handlePage = num => {
+        if (currentPage !== num) dispatch(changeCurrentPage(num))
+    }
+
+    const handlePreviousPage = () => {
+        if(currentPage > 1) {
+            dispatch(changeCurrentPage(currentPage - 1))
+        }
+    }
+
+    const handleNextPage = () => {
+        if(currentPage < pageNumber.length) {
+            dispatch(changeCurrentPage(currentPage + 1))
+        }
+    }
+
     return (
-     
-        //     <nav className ={ "nav-container"}>
-        //     <ul className= {'pagination'}>  
-        //     {pageNumbers.map(number => (
-                     
-        //              <button onclick={()=> pagination(number)} key={number} className={"pagination-"+(currentPage === number ? 'active': '')}>
-        //              <span>{number}</span>
-        //    </button>            
-        //         )) }
-        //       </ul>
-        //     </nav>
-  
-    // )
-
-    <nav>
-    <div className='pagination_container'> 
-        { pageNumbers && pageNumbers.map((number, i) => (
-             <button key={i} onClick={() => pagination(number)} className={'pagination'+ (currentPage === number ? '-active' : '')}  >{number} </button>
-        ))}
-    </div>
-
-</nav>
-    )
-}
+        <div className={"container-pagination-" + clase} >
+        <nav className={"nav-container-" + clase}>
+        
+            <ul className={"pagination-" + clase}>
+            <li className={"page-iten-" + clase} onClick={handlePreviousPage}>◄</li>
+                {
+                pageNumber?.map(num => 
+                    <li className={"page-iten-" + clase + (currentPage === num  ? '-active' : '')} key={num} onClick={() =>handlePage(num)}>
+                        <span>{num}</span>
+                    </li>
+                )}
+                <li className={"page-iten-" + clase} onClick={handleNextPage}>►</li>
+            </ul>
+            
+        </nav>
+        </div>
+    );
+};

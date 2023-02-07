@@ -1,16 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Wire+One&display=swap");
 
-*{
-margin: 0;
-padding: 0;
-}
+
 body{
 font-family: 'Open Sans', sans-serif;
 }
-header{
-background-color: #74723d;
-height: 316px;
-}
+
 
 
 .winedetail {
@@ -38,27 +32,13 @@ margin-left: 420px;
 border-color: black;
 border-radius: 3px;
 }
-.button_detail{
-    display: flex;
-    color:rgb(105, 103, 103);
-    background-color: transparent;
-    border-radius: 10px;
-    width: 150px;
-    height: 48px;
-    margin-left: 560px;
-    margin-top: 15px;
-    padding-left: 30px;
-    text-align: center;
-    font-weight: 1000;
-    font-size: x-large;
-    border-color: rgb(5, 5, 5) ;
-}
+
 .imagen{
 width:400px;
 height: 400px;
-margin-left: 365px;
-padding-left: 150px;
-border-radius: 10px;
+margin-left: 450px;
+margin-top: 50px;
+border:10px;
 border-color: black;
 border-radius: 3px;
 

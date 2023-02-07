@@ -1,47 +1,50 @@
-.pagination_container{
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 16px;
-    margin-bottom: 2rem;
-    color:transparent;
-    
+/* Modo light end */
+.container-pagination-light {
+    /* display: flex;
+    justify-content: center; */
+    height: 100%;
+    width: 100%;
+    background-color: rgb(224, 224, 224);
+}
+
+.pagination-light {
+    /* display: inline-block; */
+    margin-top: 10px;
 }
 
 
-.pagination{
-    margin-left: -10px;
-    background-color: transparent;
-    outline: none;
-    border: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 16px;
-    margin-bottom: 2rem; 
-    color:transparent
-
-}
-.pagination-active{
-    background-color: transparent;
-    outline: none;
-    border: 15px;
-    font-weight: bold;
-    color: transparent;
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 16px;
-    margin-bottom: 2rem; 
+.nav-container-light {
+    height: 8vh;
+    width: 100vw;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
 }
 
-
- .pagination:hover{
-    color: rgb(49, 49, 49); 
-} 
-.paginationactual{
-    background-color: black;
-    color: azure;
+.page-iten-light {
+    display: inline;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 3px;
+    transition-duration: 01s;
+    border: 2px solid rgb(15, 15, 15);
+    background-color: rgb(224, 224, 224);
 }
+
+.page-iten-light-active {
+    display: inline;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 3px;
+    transition-duration: 01s;
+    border: 2px solid rgb(15, 15, 15);
+    background-color: rgb(194, 194, 194);
+    box-shadow: -3px -2px 6px rgba(0, 0, 0, 0.555), 3px 2px 4px rgb(255, 255, 255);
+}
+
+.page-iten-light:hover {
+    cursor: pointer;
+}
+
+/* Modo light fin */
+
+ /* --------------------------------------------------------- */

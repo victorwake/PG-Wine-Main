@@ -1,22 +1,22 @@
 import './card.css';
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
- export default function Card({image, name, varietal , winery,price, id}) {
-    console.log(id)
-        return (
-            <div>
-                  <Link to={`/winedetail/${id}`  }> 
-                <img className='card_image' src={image} alt='img not found'/>
-                 </Link> 
-                <h3><b>Nombre:</b> {name}</h3>
-            <h5><b>Varietal:</b> {varietal}</h5>
-            <h5><b>Bodega:</b> {winery}</h5>
-            <h5><b>Precio:</b> ${price}</h5>   
 
-            </div>
-        )
 
+export const Card = ({ image, name, color_type, varietal , winery, price, id }) => {//se lo paso por props
+    const clase = useSelector(store => store.theme);
+    return (
+        <div className={"card-container-" + clase}>
+            
+                <div className={"card-" + clase}>
+                    <div className={"img-card-" + clase}><img height="200px" className={"img-" + clase} src={image} alt = {name} /></div>
+                    <div><h2 className={"name-card-" + clase} >Vino {color_type} {name}</h2></div>
+                    <div><h4 className={"type-wine-card-" + clase}>{varietal} </h4></div>
+                    <div><h4 className={"winery-card-" + clase}>{winery}</h4></div>
+                    <div><h4 className={"price-card-" + clase}>{price} $</h4></div>
+                </div>
+        </div>
+    );
     }
-
