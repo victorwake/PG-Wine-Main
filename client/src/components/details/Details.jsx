@@ -24,18 +24,26 @@ export const Details = () => {
     }, [dispatch, id])
 
     return (
-        <fragment className={'conteiner-card-details-found-' + clase}>
+        <div className={'conteiner-card-details-found-' + clase}>
             
             <div className={'conteiner-card-details-' + clase}>
             <Link style={{color: 'inherit',  textDecoration: 'inherit'}} to="/home">
                 <button className={'button-back-' + clase}>Back</button>
             </Link>
+
+            <Link to = {'/create/' + id}>
+                <button 
+                    className={'button-back-' + clase}
+                    >Update
+                </button>
+            </Link>
+
             <div className='card-details-'>
             
 
-            <fragment className={'details-img-' + clase}>
+            <div className={'details-img-' + clase}>
                 <img height="600px" className={'image-details-' + clase} src={wineDetail.image} alt={wineDetail.name} />
-            </fragment>
+            </div>
             <div className={'details-info-' + clase}>
                 <h1><b>Vino {wineDetail.colour_type}</b> {wineDetail.name}</h1>
                 <h2><b>Variedad:</b> {wineDetail.varietal}</h2>
@@ -51,7 +59,7 @@ export const Details = () => {
             </div>
             </div>
             </div>
-        </fragment>
+        </div>
     );
 
 }

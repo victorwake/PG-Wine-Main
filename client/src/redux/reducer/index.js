@@ -13,7 +13,8 @@ import {
     CLEAN_ALL_FILTERS,
     GET_BY_NAME,
     GET_VARIETAL,
-    POST_WINES
+    POST_WINES,
+    UPDATE_WINE
 
 } from '../actions/index.js';
 
@@ -109,6 +110,10 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
             }  
+        case UPDATE_WINE:
+            return {
+                ...state,
+            }
         default:
             return state;
     }

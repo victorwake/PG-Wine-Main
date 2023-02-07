@@ -2,21 +2,52 @@ import React, {useState, useEffect} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './create.css';
-import {getWines, getVarietal, postWines } from '../../redux/actions';
+import {getWines, getVarietal, postWines, updateWine } from '../../redux/actions';
 //import { postWine } from '../../helpers/postWine';
 import {formControl} from '../../helpers/formControl'
+import { useParams } from "react-router-dom";
+
 
 export const Create = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [err, setErr]= useState({});
     const varietal= useSelector((state) => state.varietal)
+    
+    const {id} = useParams();
+    const wineDetail = useSelector((state) => state.wineDetail);
+
+
     //const color_type= useSelector((state) => state.color_type)
+
+    setTimeout(() => {
+        if(Object.entries(wineDetail).length !== 0){
+            updateInputs();
+        }
+      }, "0100")
+
+      const updateInputs = () => {  
+          setInput({
+            name: wineDetail.name,
+            varietal: wineDetail.varietal,
+            color_type: wineDetail.color_type,
+            winery: wineDetail.winery,
+            price: wineDetail.price,
+            alcohol: wineDetail.alcohol,
+            volume: wineDetail.volume,
+            image: wineDetail.image,
+            year: wineDetail.year,
+            province: wineDetail.province,
+            region: wineDetail.region,
+            url: wineDetail.url,
+            description: wineDetail.description,
+          })
+      }
 
     //Form
     const[input, setInput]= useState({
         name: '',
-        varietal: [],
+        varietal: '',
         color_type: '',
         winery: '',
         price: '',
@@ -52,7 +83,7 @@ export const Create = () => {
     function handleVarietal(e){
         setInput({
                ...input,
-               varietal: [...input.varietal, e.target.value]
+               varietal: e.target.value
             })
     }
 
@@ -89,14 +120,36 @@ export const Create = () => {
                 region:'',
                 url:'',
                 description:'',
-                stock: 1,
+                stock: 0,
             })
             navigate('/home')    
         };
         const disabled = Object.keys(err).length
 
 
-        //const sortedVarietal = varietal.sort((a, b) => a.name.localeCompare(b.name));
+        const handleSubmitUpdate = (e) => {
+            dispatch(updateWine(id, input));
+            alert('Wine modified sucessfully!!')
+            setInput({
+                name: '',
+                varietal: '',
+                color_type: '',
+                winery: '',
+                price: '',
+                alcohol: '',
+                volume:'',
+                image:'',
+                year: '',
+                province:'',
+                region:'',
+                url:'',
+                description:'',
+                stock: 0,
+            })
+            dispatch(getWines());
+            navigate('/home')    
+        };
+
 
         return(
             <div className='create'>
@@ -247,8 +300,13 @@ export const Create = () => {
                 </div>
     
                     <div>
-                            <button disabled={disabled} className='submit' type='submit'>CREATE</button>
-                        
+                            <button disabled={disabled} className = {!id ? 'submit' : 'hide'} type='submit'>CREATE</button>
+                            <button 
+                                disabled={disabled}
+                                onClick={handleSubmitUpdate}
+                                className = {id ? 'submit' : 'hide'}
+                                >Update
+                            </button>
                     </div>
                     </form>
     

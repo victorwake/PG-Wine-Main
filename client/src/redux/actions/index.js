@@ -70,7 +70,7 @@ export const GET_WINE_TYPE = 'GET_WINE_TYPE';
 /*----------------------------------------------*/
 
 export const getWineDetail = id => {
-    return dispatch => axios(`http://localhost:3001/details/${id}`)
+    return dispatch => axios(`http://localhost:3001/details/details/${id}`)
     .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data}))
     .catch(err => console.log(err));
 };
@@ -123,6 +123,15 @@ export const getPrice = payload => {
 export const PRICE_ORDER = 'PRICE_ORDER';
 
 /*------------------------------------------------*/
+export const updateWine = (id, payload) => {
+  return async function ()  {
+    const updateWine = await axios.put(`http://localhost:3001/wines/${id}`,payload);
+    return updateWine;
+  }
+};
+
+export const UPDATE_WINE = 'UPDATE_WINE';
+
 export const postWines = (payload) => {
   return async function ()  {
     const newWine = await axios.post('http://localhost:3001/wines',payload);
@@ -161,6 +170,7 @@ export const changeNameOrder = payload => {
 };
 export const NAME_ORDER = 'NAME_ORDER';
 /*----------------------------------------------*/
+
 
 export const getWinesByName = (name) => {
     return async (dispatch) => {

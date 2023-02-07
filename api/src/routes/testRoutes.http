@@ -7,7 +7,7 @@ GET http://localhost:3001/Valle HTTP/1.1
 
 
 ### // SEARCH A WINE BY ID
-GET http://localhost:3001/wines/df1f82f2-f601-47ad-9958-8cb1a9d81b02 HTTP/1.1
+GET http://localhost:3001/wines/26e9d424-9817-4634-906d-c999b41ff3fb HTTP/1.1
 
 
 ### // CREATE A WINE 
@@ -16,7 +16,7 @@ Content-Type: application/json
 
 {
   "name": "Marian",
-  "varietal": ["Blend"],
+  "varietal": "Blend",
   "color_type": "White",
   "winery": "Argento",
   "price": 2000,
@@ -72,3 +72,6 @@ GET http://localhost:3001/varietal/varietal HTTP/1.1
 
 ### // GENERAL ROUTER
 GET http://localhost:3001/home/home HTTP/1.1
+
+### // GET DETAIL WINE BY ID
+GET http://localhost:3001/details/details/e8857429-2042-4c5f-b0aa-cf1c2ace46e2 HTTP/1.1

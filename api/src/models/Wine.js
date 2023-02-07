@@ -97,9 +97,11 @@ sequelize.define('wine', {
   },
 
   varietal: {
-    type: DataTypes.ARRAY(DataTypes.JSONB),
+    type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: [],
+/*     type: DataTypes.ARRAY(DataTypes.JSONB),
+    allowNull: false,
+    defaultValue: [], */
     validate: {
       notNull:{
         args: true,

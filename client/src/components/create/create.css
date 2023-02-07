@@ -1,3 +1,7 @@
 .create{
   background-color: antiquewhite;
 }
+
+.hide { 
+  display: none;
+}
