@@ -37,8 +37,7 @@ export const Home = () => {
             <NavBarWineType />
             <h2 className={"sale-type-h2-" + clase}>Ofertas al 10%</h2>
             <div  className={"card-container-home-" + clase} >
-            <div>
-                <div id="carouselExampleIndicators" class="carousel slide">
+                {/* <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -46,15 +45,15 @@ export const Home = () => {
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        {/* <img src="..." class="d-block w-100" alt="..."/> */}
+                        <img src="..." class="d-block w-100" alt="..."/>
                         <h5>Promo 1</h5>
                         </div>
                         <div class="carousel-item">
-                        {/* <img src="..." class="d-block w-100" alt="..."/> */}
+                        <img src="..." class="d-block w-100" alt="..."/>
                         <h5>Promo 2</h5>
                         </div>
                         <div class="carousel-item active">
-                        {/* <img src="..." class="d-block w-100" alt="..."/> */}
+                        <img src="..." class="d-block w-100" alt="..."/>
                         <h5>Promo 3</h5>
                         </div>
                     </div>
@@ -66,22 +65,20 @@ export const Home = () => {
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </div>
-            </div>
-
-            {/* {discountedWines?.map((w => (
-                    <Fragment key={w.id}>
-                        <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                        <Card
-                            name={w.name}
-                            varietal={w.varietal}
-                            image= {w.image} 
-                            winery={w.winery}
-                            price= {w.price}
-                            />
-                        </Link>
-                    </Fragment>
-                )))}   */}
+                </div> */}
+                {discountedWines?.map((w => (
+                        <Fragment key={w.id}>
+                            <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                            <Card
+                                name={w.name}
+                                varietal={w.varietal}
+                                image= {w.image} 
+                                winery={w.winery}
+                                price= {w.price}
+                                />
+                            </Link>
+                        </Fragment>
+                )))}  
             </div>
         </div>
     )

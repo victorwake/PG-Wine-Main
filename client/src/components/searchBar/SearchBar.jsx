@@ -1,11 +1,14 @@
 import './searchBar.css';
 import React, {useState, useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {getWinesByName} from '../../redux/actions';
+
 
 export const SearchBar = () =>  {
   const dispatch = useDispatch();
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
+  const wines = useSelector(state => state.winetype)
+
 
   function handleInputChange(e) {
     e.preventDefault();
@@ -15,18 +18,20 @@ export const SearchBar = () =>  {
  
   function handleSumit(e) {
     e.preventDefault();
-    
-    var search = document.getElementById('search').value;
-    if(search.length === 0) {
-      alert('Ingresa algunos caracteres para buscar');
-      return;
-    }   
-    dispatch(getWinesByName(name))
+    if(!name){ alert('receta no encontrada')}
+    else{
+    try{
+        dispatch(getWinesByName(name))
+    }catch(error){
+        return error
+    }}
+    setName('')
   }
    
   useEffect(() => {
     dispatch(getWinesByName(name));
   }, [dispatch, name]);
+
     return (
     <div>
       <input

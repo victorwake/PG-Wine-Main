@@ -3,7 +3,6 @@ const generalRouter = require('./generalRouter.js');
 const varietalRouter = require('./varietalRouter.js');
 const detailRouter = require('./detailRouter.js');
 const colorTypeRouter = require('./colorTypeRouter.js');
-// const orderByPriceAscRouter = require('./orderByPriceAscRouter');
 const orderByPriceAscRouter = require('./orderByPriceAscRouter')
 
 const login = require('./userLogin.js')

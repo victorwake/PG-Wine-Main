@@ -1,7 +1,7 @@
-const winesJson  = require('../data/winesDb.json');
+const winesJson = require('../data/winesDb.json');
 const { Wine } = require('../db.js');
 
-const insertWine = async () => {
+const insertWine = async() => {
     winesJson.forEach(winesApi => {
         Wine.create({
             name: winesApi.name,
@@ -10,7 +10,6 @@ const insertWine = async () => {
             winery: winesApi.winery,
             price: winesApi.price,
             image: winesApi.image,
-            price: winesApi.price,
             stock: winesApi.stock,
             year: winesApi.year,
             stock: winesApi.stock,
@@ -22,7 +21,7 @@ const insertWine = async () => {
             description: winesApi.description,
         });
     });
-    console.log('wines loaded in the db');  
+    console.log('wines loaded in the db');
 }
 
-module.exports = {insertWine}
+module.exports = { insertWine }
