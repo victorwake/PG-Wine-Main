@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router = Router();
 const { randomWinesOffer } = require('../controllers/randomWinesOfferController.js')
 
-router.get('/offer/random', randomWinesOffer)
+router.get('/offer', randomWinesOffer)
 
 
 module.exports = router;

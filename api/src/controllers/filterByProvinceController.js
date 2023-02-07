@@ -1,7 +1,7 @@
 const { Wine } = require('../db');
 
 const filterWinesByProvince = async (req, res) => {
-    const province = req.params.province;
+    const province = req.query.province;
     const allWines = await Wine.findAll();
   
     if(province) {

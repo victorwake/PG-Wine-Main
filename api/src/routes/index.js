@@ -29,9 +29,9 @@ const detailRouter = require('./detailRouter.js');
 const colorTypeRouter = require('./colorTypeRouter.js');
 const login = require('./userLogin.js');
 
-router.use('/home/home', generalRouter);
-router.use('/varietal/varietal', varietalRouter);
-router.use('/details/details', detailRouter);
+router.use('/home', generalRouter);
+router.use('/varietal', varietalRouter);
+router.use('/details', detailRouter);
 router.use('/vinos', colorTypeRouter);
 router.use('/auth', login);
 

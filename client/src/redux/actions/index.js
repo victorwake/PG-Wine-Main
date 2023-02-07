@@ -40,7 +40,7 @@ export const THEME_DARK = 'THEME_DARK';
 export const getWines = () => {
     return async (dispatch) => {
         try {
-            const response = await axios.get('http://localhost:3001/home/home');
+            const response = await axios.get('http://localhost:3001/home');
             dispatch({
                 type: GET_WINES,
                 payload: response.data
@@ -70,7 +70,7 @@ export const GET_WINE_TYPE = 'GET_WINE_TYPE';
 /*----------------------------------------------*/
 
 export const getWineDetail = id => {
-    return dispatch => axios(`http://localhost:3001/details/details/${id}`)
+    return dispatch => axios(`http://localhost:3001/details/${id}`)
     .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data}))
     .catch(err => console.log(err));
 };
@@ -144,7 +144,7 @@ export const POST_WINES = 'POST_WINES';
 
 export function getVarietal(){
     return async function(dispatch) {
-        var json = await axios.get('http://localhost:3001/varietal/varietal');
+        var json = await axios.get('http://localhost:3001/varietal');
         return dispatch({
             type: 'GET_VARIETAL',
             payload: json.data

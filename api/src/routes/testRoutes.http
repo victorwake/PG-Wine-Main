@@ -1,9 +1,9 @@
 ### // GET ALL PROVINCES
-GET http://localhost:3001/provinces HTTP/1.1
+GET http://localhost:3001/wine/provinces HTTP/1.1
 
 
 ### // FILTER WINES BY PROVINCE
-GET http://localhost:3001/Valle HTTP/1.1
+GET http://localhost:3001/wines?province=Valle HTTP/1.1
 
 
 ### // SEARCH A WINE BY ID
@@ -19,7 +19,7 @@ Content-Type: application/json
   "varietal": "Blend",
   "color_type": "White",
   "winery": "Argento",
-  "price": 2000,
+  "price": 6,
   "alcohol": 14,
   "volume": 600,
   "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64887_default_medium.jpeg",
@@ -44,7 +44,7 @@ Content-Type: application/json
   "varietal": "Blend",
   "color_type": "White",
   "winery": "Argento",
-  "price": 127,
+  "price": 6,
   "alcohol": 14,
   "volume": 600,
   "image": "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64887_default_medium.jpeg",
@@ -57,21 +57,24 @@ Content-Type: application/json
 }
 
 ### // ORDER WINES BY PRICE ASCENDING /MIN/MAX
-GET http://localhost:3001/orderAsc/price/0/2 HTTP/1.1
+GET http://localhost:3001/wine?orderBy=Price&orderType=Asc&minPrice=4&maxPrice=6 HTTP/1.1
 
 
 ### // ORDER WINES BY PRICE DESCENDING /MIN/MAX
-GET http://localhost:3001/orderDes/price/1/2 HTTP/1.1
+GET http://localhost:3001/win?orderBy=Price&orderType=Des&minPrice=4&maxPrice=6 HTTP/1.1
 
 
 ### // GENERATE 10 RANDOM WINES OFFER
-GET http://localhost:3001/offer/random HTTP/1.1
+GET http://localhost:3001/offer HTTP/1.1
+
 
 ### // SEARCH ALL VARIETALS
-GET http://localhost:3001/varietal/varietal HTTP/1.1
+GET http://localhost:3001/varietal HTTP/1.1
 
-### // GENERAL ROUTER
-GET http://localhost:3001/home/home HTTP/1.1
 
-### // GET DETAIL WINE BY ID
-GET http://localhost:3001/details/details/e8857429-2042-4c5f-b0aa-cf1c2ace46e2 HTTP/1.1
+### // GET ALL WINES
+GET http://localhost:3001/home HTTP/1.1
+
+
+### // GET WINE DETAIL BY ID
+GET http://localhost:3001/details/16d88046-e06d-47c2-a586-687eca7e3a89 HTTP/1.1

@@ -18,6 +18,11 @@ export const NavBar = () => {
           <a class="nav-link active" aria-current="page">Home</a>
           </Link>
         </li>
+        <li class="nav-item">
+          <Link to="/create" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Create</a>
+          </Link>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Vinos

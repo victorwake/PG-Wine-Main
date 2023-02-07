@@ -2,23 +2,25 @@ const { Wine } = require('../db');
 
 const orderByPriceDes = async (req, res) => {
   const allWines = await Wine.findAll();
-  let min = req.params.min;
-  let max = req.params.max;
+  const orderBy = req.query.orderBy;
+  const orderType = req.query.orderType;
+  let minPrice = req.query.minPrice;
+  let maxPrice = req.query.maxPrice;
 
-  if(min < 0 || max < 0) {
+  if(minPrice < 0 || maxPrice < 0) {
     res.status(500).send('Numerous negatives are not allowed');
-  } if(!min) {
-      min = 0;
-    } if(!max || max === 0) {
-        max = 10000;
-      } else if(min > max) {
-          let copiaMin = min;
-          min = max;
-          max = copiaMin;
+  } if(!minPrice) {
+      minPrice = 0;
+    } if(!maxPrice || maxPrice === 0) {
+        maxPrice = 10000;
+      } else if(minPrice > maxPrice) {
+          let copiaMinPrice = minPrice;
+          minPrice = maxPrice;
+          maxPrice = copiaMinPrice;
         } 
   
-  if(min >= 0 && max >= 0) {
-    const filterWines = allWines.filter(el => el.price >= min && el.price <= max)
+  if(minPrice >= 0 && maxPrice >= 0 && orderBy === 'Price' && orderType === 'Des') {
+    const filterWines = allWines.filter(el => el.price >= minPrice && el.price <= maxPrice)
     const descendingOrder = filterWines.sort(function (a, b) {
       if (a.price > b.price) {
         return -1;

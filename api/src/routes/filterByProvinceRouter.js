@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router = Router();
 const { filterWinesByProvince } = require('../controllers/filterByProvinceController')
 
-router.get('/:province', filterWinesByProvince)
+router.get('/wines', filterWinesByProvince)
 
 
 module.exports = router;
