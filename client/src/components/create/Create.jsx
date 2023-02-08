@@ -75,7 +75,7 @@ export const Create = () => {
             dispatch(postWines(input))
             alert('Vino cargado correctamente!')
         }
-        navigate('/home')
+        navigate('/admin')
     }, [id, input])
 
     const disabled = Object.keys(err).length
@@ -83,7 +83,7 @@ export const Create = () => {
 
     return (
         <div className='create'>
-            <Link as={Link} to='/home'>
+            <Link as={Link} to='/admin'>
                 <button className='backButton'>Home</button>
             </Link>
             <div>
