@@ -1,7 +1,9 @@
 import './searchBar.css';
 import React, {useState, useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {getWinesByName} from '../../redux/actions';
+import { getWines } from '../../redux/actions';
+import { useSelector } from 'react-redux';
 
 
 export const SearchBar = () =>  {
@@ -32,6 +34,7 @@ export const SearchBar = () =>  {
     // }catch(err){
     //     alert(err.msg);
     // }}
+
   }
 
   useEffect(() => {
@@ -40,18 +43,21 @@ export const SearchBar = () =>  {
 
     return (
     <div>
+     <form class="d-flex" role="search">
       <input
         id="search"
-        className="search-input" 
-        type="text"
-        placeholder="Busca un vino..."
+        className="form-control me-2" 
+        aria-label="Search"
+        type="search"
+        placeholder="Busca por nombre..."
         onChange={(e) => handleInputChange(e)}
       />
       <button      
-      className="btn-search"
+      className="btn btn-outline-success"
       type="submit"
       onClick={(e) => handleSumit(e)}
       >Buscar</button>
+      </form>
     </div>
   );
 
