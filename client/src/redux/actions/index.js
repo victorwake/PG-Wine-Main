@@ -209,3 +209,5 @@ export function getVarietal() {
 };
 
 export const GET_VARIETAL = 'GET_VARIETAL';
+
+/*----------------------------------------------*/

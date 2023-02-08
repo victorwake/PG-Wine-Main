@@ -20,7 +20,7 @@ const getDbWines = async (req, res, next) => {
     else {
       res.status(200).send(wines);
     }
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({ error: err.msg });
   }
 };
