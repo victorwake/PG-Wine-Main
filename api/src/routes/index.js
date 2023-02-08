@@ -6,7 +6,7 @@ const colorTypeRouter = require('./colorTypeRouter.js');
 const orderByPriceAscRouter = require('./orderByPriceAscRouter')
 const createWineRouter = require('./createWineRouter');
 const updateWineRouter = require('./updateWineRouter');
-
+const usuariosRouter = require('./usuariosRouter');
 const login = require('./userLogin.js')
 
 
@@ -21,6 +21,7 @@ router.use('/auth', login);
 router.use('/', orderByPriceAscRouter);
 router.use('/', createWineRouter);
 router.use('/', updateWineRouter);
+router.use('/usuarios', usuariosRouter)
 
 
 module.exports = router;
