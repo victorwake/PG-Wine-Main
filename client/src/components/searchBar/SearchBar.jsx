@@ -8,28 +8,34 @@ import { getWines } from '../../redux/actions';
 export const SearchBar = () =>  {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
-  
+  const wines = useSelector(state => state.wines)
+
+
   function handleInputChange(e) {
-    e.preventDefault();    
-    if (e.target.value.length === 0) {
-      dispatch(getWines());
-    } else {
-      setName(e.target.value);
-    }
-    console.log(name)
+    e.preventDefault();
+    setName(e.target.value);
+    // console.log(name)
   }
  
-  function handleSumit(e) {
-    e.preventDefault();  
-    var search = document.getElementById('search').value;
-    if(search.length === 0) {
-      alert('Ingresa algunos caracteres para buscar');
-      dispatch(getWines())
-    } else {
-        dispatch(getWinesByName(name))
-      }
+  const handleSumit = (e) => {
+    e.preventDefault();
+    setName('');
+    if(name){
+      dispatch(getWinesByName(name))
+    }else{
+      setName('')
+      alert('Debe ingresar un nombre de vino o bodega')
+    }
+    // if(!name){ alert('Debe ingresar un nombre de vino o bodega')}
+    // else{
+    // try{
+    //     dispatch(getWinesByName(name))
+    // }catch(err){
+    //     alert(err.msg);
+    // }}
+
   }
-   
+
   useEffect(() => {
     dispatch(getWinesByName(name));
   }, [dispatch]);
