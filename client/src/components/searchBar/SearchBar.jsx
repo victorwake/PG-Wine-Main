@@ -1,64 +1,63 @@
-import './searchBar.css';
-import React, {useState, useEffect} from 'react';
-import {useDispatch} from 'react-redux';
-import {getWinesByName} from '../../redux/actions';
-import { getWines } from '../../redux/actions';
+import "./searchBar.css";
+import React, { useState, useEffect } from "react";
+import { useDispatch} from "react-redux";
+import { getWinesByName, getWines } from "../../redux/actions";
 
-
-export const SearchBar = () =>  {
+export const SearchBar = () => {
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
-  const wines = useSelector(state => state.wines)
-
+  const [name, setName] = useState("");
 
   function handleInputChange(e) {
     e.preventDefault();
-    setName(e.target.value);
-    // console.log(name)
-  }
- 
-  const handleSumit = (e) => {
-    e.preventDefault();
-    setName('');
-    if(name){
-      dispatch(getWinesByName(name))
-    }else{
-      setName('')
-      alert('Debe ingresar un nombre de vino o bodega')
+    if (e.target.value.length === 0) {
+      dispatch(getWines());
+    } else {
+      setName(e.target.value);
     }
-    // if(!name){ alert('Debe ingresar un nombre de vino o bodega')}
-    // else{
-    // try{
-    //     dispatch(getWinesByName(name))
-    // }catch(err){
-    //     alert(err.msg);
-    // }}
+    console.log(name);
+  }
 
+  function handleSumit(e) {
+    e.preventDefault();
+    var search = document.getElementById("search").value;
+    if (search.length === 0) {
+      alert("Ingresa algunos caracteres para buscar");
+      dispatch(getWines());
+    }
+    try {
+      if (dispatch(getWinesByName(name)).isEmptyObject()) {
+        alert("No se encuentra nada");       
+      }  else {
+        dispatch(getWinesByName(name));
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
     dispatch(getWinesByName(name));
   }, [dispatch]);
 
-    return (
+  return (
     <div>
-     <form class="d-flex" role="search">
-      <input
-        id="search"
-        className="form-control me-2" 
-        aria-label="Search"
-        type="search"
-        placeholder="Busca por nombre..."
-        onChange={(e) => handleInputChange(e)}
-      />
-      <button      
-      className="btn btn-outline-success"
-      type="submit"
-      onClick={(e) => handleSumit(e)}
-      >Buscar</button>
+      <form class="d-flex" role="search">
+        <input
+          id="search"
+          className="form-control me-2"
+          aria-label="Search"
+          type="search"
+          placeholder="Busca por nombre..."
+          onChange={(e) => handleInputChange(e)}
+        />
+        <button
+          className="btn btn-outline-success"
+          type="submit"
+          onClick={(e) => handleSumit(e)}
+        >
+          Buscar
+        </button>
       </form>
     </div>
   );
-
-  
 };
