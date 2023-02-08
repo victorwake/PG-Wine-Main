@@ -16,7 +16,7 @@ const { validarJWT } = require('../../src/middlewares/validarJWT');
 
 const router = Router();
 
-router.use('/home',  [validarJWT], generalRouter);
+router.use('/home', generalRouter);
 router.use('/varietal', varietalRouter);
 router.use('/details', detailRouter);
 router.use('/vinos', colorTypeRouter);
