@@ -1,6 +1,17 @@
-.fondo{
-    background-image: url("./banner2.4693c59b3ffc7621cc80.jpg")!important;
-   }
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Wire+One&display=swap");
+
+*{
+margin: 0;
+padding: 0;
+}
+body{
+font-family: 'Open Sans', sans-serif;
+}
+header{
+background-color: #74723d;
+height: 316px;
+}
+
 
 .winedetail {
     border-radius: 10px;
@@ -9,10 +20,10 @@
     height:270px;
     background-color: transparent;
     opacity: 0.9;
-    margin-top: 0px;
     padding-top: 0px;
     color: rgb(150, 150, 151);
     border-color: rgb(196, 198, 69) ;
+
 }
 .imagedetail {
 display: flex;
@@ -21,9 +32,11 @@ padding-right: 80px;
 padding-top: 15px;
 font-size: 50px;
 color: rgb(86, 86, 86);
-
+padding: auto;
 padding-left: -600px;
 margin-left: 420px;
+border-color: black;
+border-radius: 3px;
 }
 .button_detail{
     display: flex;
@@ -39,4 +52,92 @@ margin-left: 420px;
     font-weight: 1000;
     font-size: x-large;
     border-color: rgb(5, 5, 5) ;
+}
+.imagen{
+width:400px;
+height: 400px;
+margin-left: 365px;
+padding-left: 150px;
+border-radius: 10px;
+border-color: black;
+border-radius: 3px;
+
+
+
+}
+.nombre{
+   display: flex;
+    font-size:50px;
+    font-family: 'Wire One', sans-serif;
+    margin-left: 70px;
+    margin-top: -300px;
+    
+
+}
+.variedad{
+    display: flex;
+    font-size:40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+.tipo{
+    display: flex;
+    font-size:35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+.bodega{
+    display: flex;
+    font-size:35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px; 
+}
+.origen{
+    display: flex;
+    font-size:35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center; 
+    margin-left: 70px;
+}
+.alcohol{
+    display: flex;
+    font-size:35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+.year{
+    display: flex;
+    font-size:40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center; 
+    margin-left: 70px;
+}
+.price{
+    display: flex;
+    font-size:40px;
+    font-family: 'Wire One', sans-serif;
+    position:fixed;
+    top: 8vw;
+    right: 7vw;
+    font-weight: 700; 
+    margin-left: 30px;
+    border:3px;
+    border-color: blueviolet;
+}
+.cata{
+    display: flex;
+    font-size:40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center; 
+    margin-left: 10px;
+}
+.descripcion{
+    display: flex;
+    font-size:30px;
+    font-family: 'Wire One', sans-serif;
+    margin-left: 10px;
 }

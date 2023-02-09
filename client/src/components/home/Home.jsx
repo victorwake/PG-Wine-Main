@@ -23,11 +23,11 @@ export const Home = () => {
      },[]);        
 
     return (
-        <div className='home'>
+        <div className='home-container-light'>
             <div className='home_nav'>
                 <NavBar/>
             </div>
-            <div className='home_data'>
+            <div className='card-container-home-light'>
                 {allWines.map(e => {
                     return(
                         <Link to={`/winedetail/${e.id}`} key={e.id}>
@@ -44,8 +44,5 @@ export const Home = () => {
                         )})}
             </div>
         </div>
-
-
-       
     )
 }

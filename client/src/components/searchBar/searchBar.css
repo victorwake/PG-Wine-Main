@@ -1,0 +1,14 @@
+.btn {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn:hover {
+    border-color: rgb(1, 9, 6);
+    background-color: #4d4c4c;
+    color: rgb(10, 11, 12);
+}
+
+.search-input{
+    border: 1px solid rgb(17, 17, 17);
+}
