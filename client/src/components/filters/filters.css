@@ -11,7 +11,7 @@
 
 .filter-container-light{
     overflow: hidden;
-    padding-top: 8px;
+    padding-top: 25px;
     transition-duration: 01s;
     background-color: rgb(224, 224, 224);
 }
