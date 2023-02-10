@@ -28,10 +28,8 @@ export const Login = () => {
           email: "",
           password: "",
         });      
-         
           navigate("/home");
- 
-           
+          
 };
 
 // useEffect(() => {

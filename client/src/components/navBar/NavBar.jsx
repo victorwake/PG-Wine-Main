@@ -7,6 +7,11 @@ import Profile from "../profile/Profile";
 
 export const NavBar = () => {
 
+  const borrar = () => {
+    localStorage.clear();
+    this.location.reload();
+  };
+
   const tokenRevi = localStorage.getItem('nombre')
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -49,12 +54,12 @@ export const NavBar = () => {
         <li class="nav-item">
           { !tokenRevi? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" aria-current="page">Login</a>
-          </Link>: <Link to="/perfil">Bienvenido, {tokenRevi}</Link>}          
+          </Link>: <Link to="/perfil"><a class="nav-link active" aria-current="page">Bienvenido, {tokenRevi}</a></Link>}          
         </li>
         <li class="nav-item">
         { !tokenRevi? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" aria-current="page">Registrar</a>
-          </Link>: <Link display="none" ></Link>}
+          </Link>: <Link to="/home" onClick={borrar}><a class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
       </ul>
       <SearchBar/>
