@@ -9,7 +9,7 @@ const getColorType = async (req, res) => {
 
   if (!wineType) {
     return res.status(401).json({
-      msg: `Acción no permitida, indica un colour_type que corresponda`,
+      msg: `Acción no permitida, indica un color_type que corresponda`,
     });
   } else {
     let wineTypeFind = await wines.filter(
@@ -22,7 +22,7 @@ const getColorType = async (req, res) => {
         : res
             .status(400)
             .json({
-              msg: "Acción no permitida, indica un colour_type que corresponda",
+              msg: "Acción no permitida, indica un color_type que corresponda",
             });
       console.log(wineTypeFind);
     } catch (err) {

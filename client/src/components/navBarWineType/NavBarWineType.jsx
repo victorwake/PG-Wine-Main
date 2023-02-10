@@ -15,7 +15,7 @@ export const NavBarWineType = () => {
         <div class="card-1 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
-              <div class="title">Tinto</div>
+              <div class="title">Tintos</div>
               <div class="subtitle">Dionisio Wines</div>
             </div>
           </fragment>
@@ -28,7 +28,7 @@ export const NavBarWineType = () => {
         <div class="card-2 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
-              <div class="title">Blanco</div>
+              <div class="title">Blancos</div>
               <div class="subtitle">Dionisio Wines</div>
             </div>
           </fragment>
@@ -41,7 +41,7 @@ export const NavBarWineType = () => {
         <div class="card-3 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
-              <div class="title">Rosado</div>
+              <div class="title">Rosados</div>
               <div class="subtitle">Dionisio Wines</div>
             </div>
           </fragment>
@@ -54,7 +54,7 @@ export const NavBarWineType = () => {
         <div class="card-4 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
-              <span class="title">Espumante</span>
+              <span class="title">Espumantes</span>
               <span class="subtitle">Dionisio Wines</span>
             </div>
           </fragment>

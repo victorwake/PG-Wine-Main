@@ -15,14 +15,14 @@ export const NavBar = () => {
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <Link to="/home" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Home</a>
+          <a class="nav-link active" aria-current="page">Inicio</a>
           </Link>
         </li>
         <li class="nav-item">
           <Link to="/create" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Create</a>
+          <a class="nav-link active" aria-current="page">Crear</a>
           </Link>
-        </li>
+          </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Vinos
@@ -40,10 +40,15 @@ export const NavBar = () => {
           <Link to={"/vinos/" + "espumante"}  style={{ color: "inherit", textDecoration: "inherit" }}>
               <li><p class="dropdown-item" >Espumantes</p></li>
           </Link>
+        
           </ul>
+         
         </li>
       </ul>
       <SearchBar/>
+      <button><Link to="/carrito" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Carrito</a>
+          </Link></button>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>

@@ -49,3 +49,4 @@ export const Pagination = ({ wines, winesPerPage }) => {
         </div>
     );
 };
+

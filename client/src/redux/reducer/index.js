@@ -12,7 +12,10 @@ import {
     PRICE_ORDER,
     CLEAN_ALL_FILTERS,
     GET_BY_NAME,
-    GET_BY_RANGE_PRICE
+    GET_BY_RANGE_PRICE,
+    GET_VARIETAL,
+    POST_WINES,
+    UPDATE_WINE
 
 } from '../actions/index.js';
 
@@ -24,7 +27,8 @@ const initialState = {
     currentPage: 1,
     nameOrder: '',
     useFilter: false,
-    price: ''
+    price: '',
+    varietal: [],
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -104,6 +108,19 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 wineType: action.payload,
                 price: ''
+            }
+        case GET_VARIETAL:
+            return {
+                ...state,
+                varietal: action.payload
+            }
+        case POST_WINES:
+            return {
+                ...state,
+            }
+        case UPDATE_WINE:
+            return {
+                ...state,
             }
         default:
             return state;

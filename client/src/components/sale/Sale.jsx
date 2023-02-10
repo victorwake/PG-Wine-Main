@@ -1,4 +1,3 @@
-
 import './sale.css';
 import { NavBar } from '../navBar/NavBar';
 import { Link } from 'react-router-dom';

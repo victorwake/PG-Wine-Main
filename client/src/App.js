@@ -5,7 +5,7 @@ import { Home } from './components/home/Home';
 import { WineType } from './components/wineType/WineType';
 import { Details } from './components/details/Details';
 import { Create } from './components/create/Create';
-
+import {ShoppingCart} from './components/shoppingCart/ShoppingCart'
 function App() {
     return ( 
         < div className = "App" >
@@ -15,6 +15,7 @@ function App() {
                 <Route path = "/vinos/:type" element = { < WineType /> }/> 
                 <Route path = "/details/:id" element = { < Details /> }/> 
                 <Route path = "/create" element = { < Create /> }/> 
+                <Route path = "/carrito" element = { < ShoppingCart /> }/> 
             </Routes> 
         </div>
     );
