@@ -1,22 +1,19 @@
 
-
-.contenedor-register {
+.login-container{
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
-    width: 50%;
-    
+    width: 300px;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.form-register {
+.form-log form {
     display: flex;
     flex-direction: column;
-    
-    justify-content: space-between;
-    position: relative;
+    padding: 20px;
 }
 
-.form-register input {
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid
+.form-log label {
+    margin-top: 20px;
 }

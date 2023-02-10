@@ -229,9 +229,25 @@ export function registerUser (payload) {
    export function loginUser (payload) {
   
     return async function (dispatch) {
-      const auth = await axios.post('http://localhost:3001/auth', payload)
-      console.log(auth)
-      return auth;
+        try {
+            let auth = await axios.post('http://localhost:3001/auth', payload)
+             console.warn(auth.request.status);
+             console.warn(auth.data.usuario.userName);             
+            if(auth.request.status === 200) {
+                let usuarioLogueado = auth.data.usuario.idUser
+                let userName = auth.data.usuario.firstName
+                alert( `Hola ${userName}, Te haz logueado de manera correcta`)
+                console.log('Login OK!!!')
+                localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
+                localStorage.setItem('x-token', JSON.stringify(auth.data.token));
+                localStorage.setItem('nombre', JSON.stringify(userName));
+                localStorage.setItem('apellido', JSON.stringify(auth.data.usuario.lastName));
+            }
+        } catch (err) {   
+            console.log(err.response.data.msg)         
+            alert(JSON.stringify(err.response.data.msg))
+        }
+      
     }
    }
 

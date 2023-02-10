@@ -43,10 +43,12 @@ export const Register = () => {
     }
 
      return (
-    <div className="contenedor-register">
-      <form className="form-register" onSubmit={handleSubmit}>
+    <div className="login-container">
+      <div><h1 className="h2">Registro de usuario</h1></div>    
+      <form className="form-log" onSubmit={handleSubmit}>
         <label>Nombre de usuario:
-        <input 
+        <input
+          className="form-control me-2"
           type="text" 
           name="userName" 
           value={inputs.usererName} 
@@ -54,7 +56,8 @@ export const Register = () => {
         />
         </label>
         <label>Email:
-          <input 
+          <input
+            className="form-control me-2"
             type="email" 
             name="email" 
             value={inputs.email} 
@@ -62,7 +65,8 @@ export const Register = () => {
           />
           </label>
           <label>Nombre:
-        <input 
+        <input
+          className="form-control me-2"
           type="text" 
           name="firstName" 
           value={inputs.firstName} 
@@ -70,7 +74,8 @@ export const Register = () => {
         />
         </label>
         <label>Apellido:
-        <input 
+        <input
+          className="form-control me-2"
           type="text" 
           name="lastName" 
           value={inputs.lastName} 
@@ -78,14 +83,17 @@ export const Register = () => {
         />
         </label>
         <label>Password:
-        <input 
+        <input
+          className="form-control me-2"
           type="password" 
           name="password" 
           value={inputs.password} 
           onChange={(e) => handleChange(e)}
         />       
         </label>
-        <input type="submit" />
+        <label>
+        <input className="btn btn-outline-success" type="submit" />
+        </label>
       </form>
       </div>
     )

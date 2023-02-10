@@ -1,6 +1,6 @@
 import "./login.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../redux/actions";
@@ -26,9 +26,18 @@ export const Login = () => {
          setInputs({
           email: "",
           password: "",
-        });
-        navigate("/home");
+        });      
+         
+          navigate("/home");
+ 
+           
 };
+
+// useEffect(() => {
+//   dispatch(loginUser)
+// }, [dispatch])
+
+
   return (
     <div className="login-container">
       <div><h1 className="h2">Login</h1></div>      
@@ -36,6 +45,7 @@ export const Login = () => {
         <label>
           Email:
           <input
+            required
             className="form-control me-2"
             type="email"
             name="email"
@@ -46,6 +56,7 @@ export const Login = () => {
         <label>
           Password:
           <input
+            required
             className="form-control me-2"
             type="password"
             name="password"
@@ -53,7 +64,9 @@ export const Login = () => {
             onChange={(e) => handleChange(e)}
           />
         </label>
+        <label>
         <input type="submit" className="btn btn-outline-success"/>
+        </label>
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
 
 .login-container{
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -7,12 +8,12 @@
     margin: 0 auto;
 }
 
-form {
+.form-log form {
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
 
-label {
+.form-log label {
     margin-top: 20px;
 }

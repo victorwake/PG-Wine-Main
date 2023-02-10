@@ -6,6 +6,8 @@ import  LoginButton  from '../login/LoginBtn';
 import Profile from "../profile/Profile";
 
 export const NavBar = () => {
+
+  const tokenRevi = localStorage.getItem('nombre')
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -45,18 +47,16 @@ export const NavBar = () => {
           </ul>
         </li>
         <li class="nav-item">
-          <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
+          { !tokenRevi? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" aria-current="page">Login</a>
-          </Link>
+          </Link>: <Link to="/perfil">Bienvenido, {tokenRevi}</Link>}          
         </li>
         <li class="nav-item">
-          <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
+        { !tokenRevi? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" aria-current="page">Registrar</a>
-          </Link>
+          </Link>: <Link display="none" ></Link>}
         </li>
       </ul>
-      <Profile />
-      <LoginButton />
       <SearchBar/>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
