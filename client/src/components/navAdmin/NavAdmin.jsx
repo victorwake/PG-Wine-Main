@@ -1,4 +1,6 @@
 import './navAdmin.css'
+import { SearchBar } from '../searchBar/SearchBar' 
+
 
 export const NavAdmin = () =>{
 
@@ -40,23 +42,19 @@ export const NavAdmin = () =>{
                                 Vinos
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <button class="dropdown-item">Crear</button>
+                                    <a class="dropdown-item" href='/admin/create' >Crear</a>
                                     <button class="dropdown-item">Editar</button>    
                                 </ul>
                             </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/home">Volver a Inicio</a>
-                                </li>
+                                </li> 
                         </ul>
-                        {/* <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                        */}
                     </div>
                 </div>
             </div>
         </nav>
+   
     </div>
     )
 }
