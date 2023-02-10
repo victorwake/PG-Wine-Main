@@ -1,4 +1,3 @@
-
 const { Router } = require('express');
 const router = Router();
 const { getColorType } = require('../controllers/colorTypeController.js')

@@ -82,3 +82,35 @@
     font-weight: bold;
 
 }
+
+.cloudinary-button{
+    color: rgb(34, 34, 34);
+    background-color: rgba(223, 217, 217, 0.582);
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 25px;
+    margin: 5px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 2px rgb(231, 218, 218);
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgb(56, 56, 56);
+    margin-top: 25px;
+    margin-right: 18px;
+}
+
+.imagePreview {
+margin: 2rem 0 2rem 2rem;
+padding: 2rem;
+border: 1px solid rgb(183, 183, 183);
+max-width: 300px;
+width: 100%;
+display:inline-block;
+align-items: center;
+justify-content: center;
+padding: 2rem;
+color: rgb(78, 78, 78);
+}
+.img {
+  max-width: 100%;
+}

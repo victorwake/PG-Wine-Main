@@ -20,20 +20,15 @@ const insertVarietal = async () => {
         {name: 'Tannat'},
         {name: 'Semillón'},
         {name: 'Grenache'},
-        {name: 'Pinot Grigio'},
+        {name: 'Pinot grigio'},
         {name: 'Blend'},
-        {name: 'Dulce'},
-        {name: 'Extra Brut'},
-        {name: 'Pink'},
+        {name: 'dulce'},
+        {name: 'Extra brut'},
+        {name: 'rose'},
     ]
     await Varietal.bulkCreate(typeOfVarietal);
     console.log('varietal loaded in the db');  
 };
-
-
-module.exports = {
-    insertVarietal
-}
 
 
 module.exports = {

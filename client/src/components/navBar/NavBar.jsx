@@ -15,7 +15,17 @@ export const NavBar = () => {
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <Link to="/home" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Home</a>
+          <a class="nav-link active" aria-current="page">Inicio</a>
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Login</a>
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link to="/admin" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Administrar</a>
           </Link>
         </li>
         <li class="nav-item dropdown">
@@ -38,6 +48,8 @@ export const NavBar = () => {
           </ul>
         </li>
       </ul>
+     
+
       <SearchBar/>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

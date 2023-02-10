@@ -22,7 +22,7 @@
  
  body {
    line-height:1;
-   background-color: rgb(254, 254, 254);
+   background-color: white
  }
  
  article,aside,details,figcaption,figure,
@@ -52,7 +52,7 @@
    background:transparent;
  }
  
- /* change colors to suit your needs */
+ /* change colours to suit your needs */
  
  ins {
    background-color:#ff9;
@@ -60,7 +60,7 @@
    text-decoration:none;
  }
  
- /* change colors to suit your needs */
+ /* change colours to suit your needs */
  
  mark {
    background-color:#ff9;
@@ -83,7 +83,7 @@
    border-spacing:0;
  }
  
- /* change border color to suit your needs */
+ /* change border colour to suit your needs */
  hr {
    display:block;
    height:1px;
