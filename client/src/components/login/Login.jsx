@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../redux/actions";
+import { NavBar } from '../navBar/NavBar';
 
 export const Login = () => {
   const [inputs, setInputs] = useState({
@@ -39,7 +40,9 @@ export const Login = () => {
 
 
   return (
-    <div className="login-container">
+    <div>
+    <NavBar/>
+     <div className="login-container">      
       <div><h1 className="h2">Login</h1></div>      
       <form className="form-log" onSubmit={handleSubmit}>
         <label>
@@ -68,6 +71,7 @@ export const Login = () => {
         <input type="submit" className="btn btn-outline-success"/>
         </label>
       </form>
+    </div>
     </div>
   );
 };

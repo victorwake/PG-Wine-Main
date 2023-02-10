@@ -4,6 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
 import LogoutButton from "../login/LogoutBtn";
 import { Link } from "react-router-dom";
+import { NavBar } from '../navBar/NavBar';
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -24,6 +25,7 @@ const Profile = () => {
     //   </div>
     // )
     <div>
+      <NavBar/>
       {nombreLocal ? (
         <div className="contenedor-profile">
           <div><h1>Este es tu perfil</h1> </div>
@@ -32,7 +34,9 @@ const Profile = () => {
           <div><Link to="/home">Sigue Navegando</Link></div>
         </div>
       ) : (
-        <p>Si llegaste aquí y no es nada, debes loguearte <Link to="/login">Login</Link></p>
+        <div className="contenedor-profile">
+        <p>Si llegaste aquí y no ves nada, debes loguearte <Link to="/login">Login</Link></p>
+        </div>
       )}
     </div>
   );

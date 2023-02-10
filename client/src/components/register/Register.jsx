@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from '../../redux/actions';
+import { NavBar } from '../navBar/NavBar';
 
 export const Register = () => {
 
@@ -39,15 +40,18 @@ export const Register = () => {
       password: "",
       rol: "USER_ROL"
     });    
-    navigate("/perfil");
+    navigate("/login");
     }
 
      return (
-    <div className="login-container">
+      <div>
+      <NavBar/>
+    <div className="login-container">      
       <div><h1 className="h2">Registro de usuario</h1></div>    
       <form className="form-log" onSubmit={handleSubmit}>
         <label>Nombre de usuario:
         <input
+         required
           className="form-control me-2"
           type="text" 
           name="userName" 
@@ -57,6 +61,7 @@ export const Register = () => {
         </label>
         <label>Email:
           <input
+          required
             className="form-control me-2"
             type="email" 
             name="email" 
@@ -66,6 +71,7 @@ export const Register = () => {
           </label>
           <label>Nombre:
         <input
+        required
           className="form-control me-2"
           type="text" 
           name="firstName" 
@@ -75,6 +81,7 @@ export const Register = () => {
         </label>
         <label>Apellido:
         <input
+        required
           className="form-control me-2"
           type="text" 
           name="lastName" 
@@ -84,6 +91,7 @@ export const Register = () => {
         </label>
         <label>Password:
         <input
+        required
           className="form-control me-2"
           type="password" 
           name="password" 
@@ -95,6 +103,7 @@ export const Register = () => {
         <input className="btn btn-outline-success" type="submit" />
         </label>
       </form>
+      </div>
       </div>
     )
 
