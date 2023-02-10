@@ -15,7 +15,9 @@ import {
     GET_BY_RANGE_PRICE,
     GET_VARIETAL,
     POST_WINES,
-    UPDATE_WINE
+    UPDATE_WINE,
+    POST_REGISTER,
+    POST_AUTH
 
 } from '../actions/index.js';
 
@@ -119,6 +121,14 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
             }
         case UPDATE_WINE:
+            return {
+                ...state,
+            }
+        case POST_REGISTER:
+            return {
+                ...state,
+            }
+        case POST_AUTH:
             return {
                 ...state,
             }

@@ -211,3 +211,28 @@ export function getVarietal() {
 export const GET_VARIETAL = 'GET_VARIETAL';
 
 /*----------------------------------------------*/
+
+export function registerUser (payload) {
+  
+    return async function (dispatch) {
+      const register = await axios.post('http://localhost:3001/usuarios/crear', payload)
+      console.log(register)
+      return register;
+    }
+   }
+
+   
+   export const POST_REGISTER = 'POST_REGISTER';
+
+   /*----------------------------------------------*/
+
+   export function loginUser (payload) {
+  
+    return async function (dispatch) {
+      const auth = await axios.post('http://localhost:3001/auth', payload)
+      console.log(auth)
+      return auth;
+    }
+   }
+
+   export const POST_AUTH = 'POST_AUTH';

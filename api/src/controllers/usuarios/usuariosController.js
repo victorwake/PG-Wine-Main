@@ -3,6 +3,8 @@ const {
 } = require("../../db.js");
 const bcryptjs = require('bcryptjs');
 
+const { generarJWT } = require('../../helpers/generar-jwt');
+
 const usuariosPost = async (req, res) => {
 
     const {

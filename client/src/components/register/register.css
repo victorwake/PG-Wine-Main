@@ -1,0 +1,22 @@
+
+
+.contenedor-register {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+}
+
+.form-register {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    position: relative;
+}
+
+.form-register input {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid
+}

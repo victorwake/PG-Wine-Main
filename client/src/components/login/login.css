@@ -1,0 +1,18 @@
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+label {
+    margin-top: 20px;
+}

@@ -2,6 +2,8 @@ import "./navBar.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import { SearchBar } from '../searchBar/SearchBar';
+import  LoginButton  from '../login/LoginBtn';
+import Profile from "../profile/Profile";
 
 export const NavBar = () => {
   return (
@@ -39,10 +41,22 @@ export const NavBar = () => {
           </Link>
           <Link to={"/vinos/" + "espumante"}  style={{ color: "inherit", textDecoration: "inherit" }}>
               <li><p class="dropdown-item" >Espumantes</p></li>
-          </Link>
+          </Link>         
           </ul>
         </li>
+        <li class="nav-item">
+          <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Login</a>
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Registrar</a>
+          </Link>
+        </li>
       </ul>
+      <Profile />
+      <LoginButton />
       <SearchBar/>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
