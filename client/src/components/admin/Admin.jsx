@@ -6,7 +6,7 @@ export const Admin=()=>{
 
 
   return (
-    <div>
+    <div className="admin-container">
       <NavAdmin/>
     </div>
   )

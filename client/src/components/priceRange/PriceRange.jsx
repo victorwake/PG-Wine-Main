@@ -1,6 +1,7 @@
 import './priceRange.css'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, Fragment } from 'react'
 import { useSelector } from 'react-redux'
+import { Filters } from '../filters/Filters';
 
 export const PriceRange = ({ onChangePriceRange, defaultPriceRange }) => {
     const clase = useSelector(state => state.theme)
