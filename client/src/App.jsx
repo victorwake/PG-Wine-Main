@@ -5,9 +5,9 @@ import { Home } from './components/home/Home';
 import { WineType } from './components/wineType/WineType';
 import { Details } from './components/details/Details';
 import { Create } from './components/create/Create';
-import { Register } from './components/register/Register';
+import  Register from './components/register/Register';
 import Profile from './components/profile/Profile';
-import { Login } from './components/login/Login';
+import  Login  from './components/login/Login';
 
 function App() {
     return (

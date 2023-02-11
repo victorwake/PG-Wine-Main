@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { combineReducers } from "redux";
-import auth from "./auth";
+import {auth} from "./auth";
 import message from "./message";
 
 /*Cambio de tema*/
