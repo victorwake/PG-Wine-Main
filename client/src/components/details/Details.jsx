@@ -35,7 +35,7 @@ export const Details = () => {
                 <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
             </div>
             <div className={'details-info-' + clase}>
-                <h1 className='nombre'><b>Vino {wineDetail.colour_type}</b> {wineDetail.name}</h1>
+                <h1 className='nombre'><b>Vino {wineDetail.color_type}</b> {wineDetail.name}</h1>
                 <h2 className='variedad'><b>Variedad:</b> {wineDetail.varietal}</h2>
                 <p className='tipo'><b>Tipo:</b> {wineDetail.color_type}</p>
                 <p  className='bodega'><b>Bodega:</b> {wineDetail.winery}</p>

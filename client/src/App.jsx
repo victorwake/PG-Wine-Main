@@ -6,7 +6,7 @@ import { WineType } from './components/wineType/WineType';
 import { Details } from './components/details/Details';
 import { Create } from './components/create/Create';
 import { Login } from './components/login/Login';
-// import { Admin } from './components/admin/Admin';
+import { Admin } from './components/admin/Admin';
 
 function App() {
     return (
@@ -16,10 +16,10 @@ function App() {
                 <Route path="/home" element={< Home />} />
                 <Route path="/vinos/:type" element={<WineType />} />
                 <Route path="/details/:id" element={<Details />} />
-                <Route path="/create/:id" element={<Create />} />
-                <Route path="/create" element={<Create />} />
+                <Route path="/admin/create/:id" element={<Create />} />
+                <Route path="/admin/create" element={<Create />} />
                 <Route path="/login" element={<Login/>}/>
-                {/* <Route path="/admin" element={<Admin/>}/> */}
+                <Route path="/admin" element={<Admin/>}/>
             </Routes>
         </div>
     );

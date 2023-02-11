@@ -6,52 +6,45 @@ import {getWinesByName} from '../../redux/actions';
 
 export const SearchBar = () =>  {
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
-  const wines = useSelector(state => state.wines)
+  const [input, setInput] = useState('');
 
 
   function handleInputChange(e) {
     e.preventDefault();
-    setName(e.target.value);
+    setInput(e.target.value);
     // console.log(name)
   }
  
-  const handleSumit = (e) => {
+  function handleSumit(e) {
     e.preventDefault();
-    setName('');
-    if(name){
-      dispatch(getWinesByName(name))
+    setInput('');
+    if(input){
+      dispatch(getWinesByName(input))
     }else{
-      setName('')
+      setInput('')
       alert('Debe ingresar un nombre de vino o bodega')
-    }
-    // if(!name){ alert('Debe ingresar un nombre de vino o bodega')}
-    // else{
-    // try{
-    //     dispatch(getWinesByName(name))
-    // }catch(err){
-    //     alert(err.msg);
-    // }}
+    }    
   }
-
-  useEffect(() => {
-    dispatch(getWinesByName(name));
-  }, [dispatch]);
+   
+  // useEffect(() => {
+  //   dispatch(getWinesByName(input));
+  // }, [dispatch]);
 
     return (
     <div>
-      <input
-        id="search"
-        className="search-input" 
-        type="text"
-        placeholder="Busca un vino..."
-        onChange={(e) => handleInputChange(e)}
-      />
-      <button      
-      className="btn-search"
-      type="submit"
-      onClick={(e) => handleSumit(e)}
-      >Buscar</button>
+      {/* <label for="exampleDataList" class="form-label">Datalist example</label> */}
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..."/>
+<datalist id="datalistOptions">
+  <option value="San Francisco"/>
+  <option value="New York"/>
+  <option value="Seattle"/>
+  <option value="Los Angeles"/>
+  <option value="Chicago"/>
+</datalist>
+       {/* <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" onChange={(e) => handleInputChange(e)}/>
+        <button class="btn btn-outline-success " type="submit" onClick={(e) => handleSumit(e)}><i class="bi bi-search"></i></button>
+      </form> */}
     </div>
   );
 

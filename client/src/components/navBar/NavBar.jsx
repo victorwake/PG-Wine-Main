@@ -19,8 +19,13 @@ export const NavBar = () => {
           </Link>
         </li>
         <li class="nav-item">
-          <Link to="/create" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Crear</a>
+          <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Login</a>
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link to="/admin" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Administrar</a>
           </Link>
         </li>
         <li class="nav-item dropdown">
