@@ -20,10 +20,10 @@ export const Home = () => {
 
     const shuffledWines = _.shuffle(allWines);
     const tenRandomWines = shuffledWines.slice(0, 10);
-    const discountedWines = tenRandomWines.map((w) => ({
-        ...w,
-        price: w.price * 0.9,
-    }));
+    // const discountedWines = tenRandomWines.map((w) => ({
+    //     ...w,
+    //     price: w.price * 0.9,
+    // }));
     
     //Lo usariamos cuando tengamos los filtros, se cambiaria el allWines.slide por este
 
@@ -41,7 +41,7 @@ export const Home = () => {
             <h2 className={"sale-type-h2-" + clase}>Destacados</h2>
             <div  className={"card-container-home-" + clase} >
             
-                {discountedWines?.map((w => (
+                {tenRandomWines?.map((w => (
                     <Fragment key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
                             <Card
