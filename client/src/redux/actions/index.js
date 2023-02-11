@@ -211,3 +211,9 @@ export function getVarietal() {
 export const GET_VARIETAL = 'GET_VARIETAL';
 
 /*----------------------------------------------*/
+
+export const saveImage = (urlCloudinary) => ({
+  type: SAVE_IMAGE,
+  urlCloudinary,
+});
+export const SAVE_IMAGE = 'SAVE_IMAGE';

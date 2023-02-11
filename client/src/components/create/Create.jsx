@@ -3,11 +3,12 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './create.css';
 import { getWineDetail, getVarietal, postWines, updateWine } from '../../redux/actions';
-
+import { Cloudinary } from '../cloudinary/Cloudinary';
 import { formControl } from '../../helpers/formControl'
 
 
 export const Create = () => {
+    const urlCloudinary = useSelector(state => state.urlCloudinary)
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [err, setErr] = useState({});
@@ -58,6 +59,13 @@ export const Create = () => {
                 [e.target.name]: e.target.value
             }
         ))
+
+        if (!urlCloudinary.length === 0) {
+            setInput(prevInput => ({
+                ...prevInput,
+              image: e.target.value // actualizar la URL global para la imagen
+            }));
+        }
 
         setErr(formControl({
             ...input,
@@ -168,24 +176,7 @@ export const Create = () => {
                         {err.description && <span className='err'> {err.description}</span>}
                     </div>
 
-                    {/* <div>
-                            <label className='label'>Imagen del producto</label>
-                            <input type= 'text' value={input.image}name='image' onChange={(e) => handleChange(e)}></input>
-                            {err.image && <span className='err'> {err.image}</span>}
-                        </div> */}
-                    <div>
-                        <input className='input'
-                            placeholder='Image'
-                            type='img'
-                            value={input.image}
-                            name='image'
-                            alt='not found'
-                            onChange={(e) => handleChange(e)}
-                        />
-                        {err.image && (
-                            <p className='err'>{err.image}</p>
-                        )}
-                    </div>
+                    <Cloudinary />
                     <div>
                         <button disabled={disabled} className={'submit'}>{id ? 'ACTUALIZAR' : 'CREAR'}</button>
                     </div>
