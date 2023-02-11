@@ -1,4 +1,7 @@
 import axios from 'axios';
+import { combineReducers } from "redux";
+import auth from "./auth";
+import message from "./message";
 
 /*Cambio de tema*/
 export const themeChange = (theme) => {
@@ -252,3 +255,10 @@ export function registerUser (payload) {
    }
 
    export const POST_AUTH = 'POST_AUTH';
+
+   /*--------------------------------*/
+
+   export default combineReducers({
+    auth,
+    message,
+  });
