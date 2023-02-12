@@ -1,15 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './create.css';
 import { getWineDetail, getVarietal, postWines, updateWine } from '../../redux/actions';
-import { Cloudinary } from '../cloudinary/Cloudinary';
+
 import { formControl } from '../../helpers/formControl'
-import { NavAdmin } from '../navAdmin/NavAdmin';
 
 
 export const Create = () => {
-    const urlCloudinary = useSelector(state => state.urlCloudinary)
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [err, setErr] = useState({});
@@ -27,7 +25,7 @@ export const Create = () => {
         region: '',
         url: '',
         description: '',
-        stock: ''
+        stock: 1
     });
 
     const varietal = useSelector(state => state.varietal)
@@ -53,17 +51,6 @@ export const Create = () => {
         }
     }, [wineDetail, id])
 
-    useEffect(() => {
-        if (urlCloudinary) {
-            setInput((prevInput) => (
-                {
-                    ...prevInput,
-                    image: urlCloudinary
-                }
-            ))
-        }
-    }, [urlCloudinary])
-
     const handleChange = useCallback((e) => {
         setInput((prevInput) => (
             {
@@ -88,113 +75,107 @@ export const Create = () => {
             dispatch(postWines(input))
             alert('Vino cargado correctamente!')
         }
-        navigate('/admin')
+        navigate('/home')
     }, [id, input])
 
-    const disabled = Object.keys(err).length || !input.name
+    const disabled = Object.keys(err).length
 
 
     return (
-        <div className="container-admin">
         <div className='create'>
-            <NavAdmin/>
+            <Link as={Link} to='/home'>
+                <button className='backButton'>Home</button>
+            </Link>
             <div>
                 <form className='form' onSubmit={(e) => handleSubmit(e)}>
-                    <h2 className='title-create'>Cargá tu vino</h2>
-                    <div class="row">
-                    <div class="six columns">
+                    <h2 className='title'>Cargá tu vino</h2>
                     <div>
                         <label className='label'>Nombre</label>
-                        <input class="u-full-width"  type='text' value={input.name} name='name' onChange={(e) => handleChange(e)} />
-                        {err.name && (<span className='err'> {err.name}</span>)}
+                        <input className='input' type='text' value={input.name} name='name' onChange={(e) => handleChange(e)} />
+                        {err.name && <span className='err'> {err.name}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Varietal</label>
-                        <select class="u-full-width" id='varietal' name='varietal' value={input.varietal} onChange={(e) => handleChange(e)}>
+                        <select id='varietal' name='varietal' value={input.varietal} onChange={(e) => handleChange(e)}>
                             <option value="value" disabled="" hidden="" defaultValue=""> Varietal... </option>
                             {varietal.map(v => (
                                 <option key={v.id} value={v.name}>{v.name}</option>
                             ))}
                         </select>
-                        {err.varietal && (<span className='err'> {err.varietal}</span>)}
+                        {err.varietal && <span className='err'> {err.varietal}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Color</label>
-                        <input class="u-full-width" type='text' value={input.color_type} name='color_type' onChange={(e) => handleChange(e)}></input>
-                        {err.color_type && (<span className='err'> {err.color_type}</span>)}
+                        <input type='text' value={input.color_type} name='color_type' onChange={(e) => handleChange(e)}></input>
+                        {err.color_type && <span className='err'> {err.color_type}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Graduación alcohólica</label>
-                        <input class="u-full-width" type='float' value={input.alcohol} name='alcohol' onChange={(e) => handleChange(e)} />
-                        {err.alcohol && (<span className='err'> {err.alcohol}</span>)}
+                        <input type='float' value={input.alcohol} name='alcohol' onChange={(e) => handleChange(e)} />
+                        {err.alcohol && <span className='err'> {err.alcohol}</span>}
 
                     </div>
 
                     <div>
                         <label className='label'>Bodega</label>
-                        <input class="u-full-width" type='text' value={input.winery} name='winery' onChange={(e) => handleChange(e)} ></input>
-                        {err.winery && (<span className='err'> {err.winery}</span>)}
+                        <input type='text' value={input.winery} name='winery' onChange={(e) => handleChange(e)} ></input>
+                        {err.winery && <span className='err'> {err.winery}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Precio</label>
-                        <input class="u-full-width" type='float' value={input.price} name='price' onChange={(e) => handleChange(e)} ></input>
-                        {err.price && (<span className='err'> {err.price}</span>)}
+                        <input type='float' value={input.price} name='price' onChange={(e) => handleChange(e)} ></input>
+                        {err.price && <span className='err'> {err.price}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Volumen</label>
-                        <input class="u-full-width" type='number' value={input.volume} name='volume' onChange={(e) => handleChange(e)}></input>
-                        {err.volume && (<span className='err'> {err.volume}</span>)}
-                    </div>
-
-                    <div>
-                        <label className='label'>Stock</label>
-                        <input class="u-full-width" type='number' value={input.stock} name='stock' onChange={(e) => handleChange(e)}></input>
-                        {err.stock && (<span className='err'> {err.stock}</span>)}
+                        <input type='number' value={input.volume} name='volume' onChange={(e) => handleChange(e)}></input>
+                        {err.volume && <span className='err'> {err.volume}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Año de elaboración</label>
-                        <input class="u-full-width" type='number' value={input.year} name='year' onChange={(e) => handleChange(e)}></input>
-                        {err.year && (<span className='err'> {err.year}</span>)}
+                        <input type='number' value={input.year} name='year' onChange={(e) => handleChange(e)}></input>
+                        {err.year && <span className='err'> {err.year}</span>}
                     </div>
 
 
                     <div>
                         <label className='label'>Provincia</label>
-                        <input class="u-full-width" type='text' value={input.province} name='province' onChange={(e) => handleChange(e)}></input>
-                        {err.province && (<span className='err'> {err.province}</span>)}
+                        <input type='text' value={input.province} name='province' onChange={(e) => handleChange(e)}></input>
+                        {err.province && <span className='err'> {err.province}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Región de origen</label>
-                        <input class="u-full-width" type='text' value={input.region} name='region' onChange={(e) => handleChange(e)}></input>
-                        {err.region && (<span className='err'> {err.region}</span>)}
+                        <input type='text' value={input.region} name='region' onChange={(e) => handleChange(e)}></input>
+                        {err.region && <span className='err'> {err.region}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Página de la bodega</label>
-                        <input class="u-full-width" type='text' value={input.url} name='url' onChange={(e) => handleChange(e)} ></input>
-                        {err.url && (<span className='err'> {err.url}</span>)}
+                        <input type='text' value={input.url} name='url' onChange={(e) => handleChange(e)} ></input>
+                        {err.url && <span className='err'> {err.url}</span>}
                     </div>
 
                     <div>
                         <label className='label'>Descripción</label>
-                        <textarea type='text' class="u-full-width"  value={input.description} name='description' onChange={(e) => handleChange(e)}></textarea>
-                        {err.description && (<span className='err'> {err.description}</span>)}
-                    </div>
-                    </div>
+                        <input type='text' value={input.description} name='description' onChange={(e) => handleChange(e)}></input>
+                        {err.description && <span className='err'> {err.description}</span>}
                     </div>
 
+                    {/* <div>
+                            <label className='label'>Imagen del producto</label>
+                            <input type= 'text' value={input.image}name='image' onChange={(e) => handleChange(e)}></input>
+                            {err.image && <span className='err'> {err.image}</span>}
+                        </div> */}
                     <div>
-                    <Cloudinary  />
-                    <div >
-                        <input class="u-full-width"
-                            placeholder='Muestra si se cargo la Url de la imagen'
+                        <input className='input'
+                            placeholder='Image'
                             type='img'
                             value={input.image}
                             name='image'
@@ -205,12 +186,12 @@ export const Create = () => {
                             <p className='err'>{err.image}</p>
                         )}
                     </div>
+                    <div>
                         <button disabled={disabled} className={'submit'}>{id ? 'ACTUALIZAR' : 'CREAR'}</button>
                     </div>
                 </form>
 
             </div>
-        </div>
         </div>
     )
 }

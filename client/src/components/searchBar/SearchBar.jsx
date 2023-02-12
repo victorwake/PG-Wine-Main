@@ -1,52 +1,63 @@
-import './searchBar.css';
-import React, {useState, useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {getWinesByName} from '../../redux/actions';
+import "./searchBar.css";
+import React, { useState, useEffect } from "react";
+import { useDispatch} from "react-redux";
+import { getWinesByName, getWines } from "../../redux/actions";
 
-
-export const SearchBar = () =>  {
+export const SearchBar = () => {
   const dispatch = useDispatch();
-  const [input, setInput] = useState('');
-
+  const [name, setName] = useState("");
 
   function handleInputChange(e) {
     e.preventDefault();
-    setInput(e.target.value);
-    // console.log(name)
+    if (e.target.value.length === 0) {
+      dispatch(getWines());
+    } else {
+      setName(e.target.value);
+    }
+    console.log(name);
   }
- 
+
   function handleSumit(e) {
     e.preventDefault();
-    setInput('');
-    if(input){
-      dispatch(getWinesByName(input))
-    }else{
-      setInput('')
-      alert('Debe ingresar un nombre de vino o bodega')
-    }    
+    var search = document.getElementById("search").value;
+    if (search.length === 0) {
+      alert("Ingresa algunos caracteres para buscar");
+      dispatch(getWines());
+    }
+    try {
+      if (dispatch(getWinesByName(name)).isEmptyObject()) {
+        alert("No se encuentra nada");       
+      }  else {
+        dispatch(getWinesByName(name));
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
-   
-  // useEffect(() => {
-  //   dispatch(getWinesByName(input));
-  // }, [dispatch]);
 
-    return (
+  useEffect(() => {
+    dispatch(getWinesByName(name));
+  }, [dispatch]);
+
+  return (
     <div>
-      {/* <label for="exampleDataList" class="form-label">Datalist example</label> */}
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..."/>
-<datalist id="datalistOptions">
-  <option value="San Francisco"/>
-  <option value="New York"/>
-  <option value="Seattle"/>
-  <option value="Los Angeles"/>
-  <option value="Chicago"/>
-</datalist>
-       {/* <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" onChange={(e) => handleInputChange(e)}/>
-        <button class="btn btn-outline-success " type="submit" onClick={(e) => handleSumit(e)}><i class="bi bi-search"></i></button>
-      </form> */}
+      <form class="d-flex" role="search">
+        <input
+          id="search"
+          className="form-control me-2"
+          aria-label="Search"
+          type="search"
+          placeholder="Busca por nombre..."
+          onChange={(e) => handleInputChange(e)}
+        />
+        <button
+          className="btn btn-outline-success"
+          type="submit"
+          onClick={(e) => handleSumit(e)}
+        >
+          Buscar
+        </button>
+      </form>
     </div>
   );
-
-  
 };

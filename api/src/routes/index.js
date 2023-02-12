@@ -13,6 +13,7 @@ const rutaRestringida = require('./rutaRestringida')
 const { validarJWT } = require('../../src/middlewares/validarJWT');
 
 
+
 const router = Router();
 
 router.use('/home', generalRouter);
@@ -24,7 +25,7 @@ router.use('/', orderByPriceAscRouter);
 router.use('/', createWineRouter);
 router.use('/', updateWineRouter);
 router.use('/usuarios', usuariosRouter);
-router.use('/rutarestringida', [validarJWT], rutaRestringida)
+router.use('/rutarestringida',[validarJWT], rutaRestringida)
 
 
 module.exports = router;

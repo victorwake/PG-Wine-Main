@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 export const NavBarWineType = () => {
 
+  const clase = useSelector((state) => state.clase);
+
   return (
     <div class="cards-wrapper">
     <Fragment >
