@@ -15,7 +15,8 @@ import {
     GET_BY_RANGE_PRICE,
     GET_VARIETAL,
     POST_WINES,
-    UPDATE_WINE
+    UPDATE_WINE,
+    SAVE_IMAGE,
 
 } from '../actions/index.js';
 
@@ -29,6 +30,7 @@ const initialState = {
     useFilter: false,
     price: '',
     varietal: [],
+    urlCloudinary: '',
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -122,6 +124,11 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
             }
+            case SAVE_IMAGE:
+                return {
+                ...state,
+                urlCloudinary: action.urlCloudinary,
+            };    
         default:
             return state;
     }

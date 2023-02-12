@@ -29,7 +29,7 @@ export const NavBar = () => {
           </Link>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Vinos
           </a>
           <ul class="dropdown-menu">
@@ -48,8 +48,6 @@ export const NavBar = () => {
           </ul>
         </li>
       </ul>
-     
-
       <SearchBar/>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

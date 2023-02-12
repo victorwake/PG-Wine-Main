@@ -1,11 +1,14 @@
 .wine-container-light{
     height: 100vh;
-    padding-top: 8px;
     transition-duration: 01s;
     background-color: rgb(224, 224, 224);
     
 }
 
+.container-filtros{
+    margin: 20px;
+    margin-top: 50px;
+}
 
 .card-container-wine-light{
     display: grid;
