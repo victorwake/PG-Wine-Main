@@ -188,12 +188,18 @@ const rootReducer = (state = initialState, action) => {
           ...state,
           isLoggedIn: false,
           usuario: null,
-        };
-        case SET_MESSAGE:
-        return {...state, message: action.payload };
+          };
+          case SET_MESSAGE:
+              return {
+                  ...state,
+                  message: action.payload
+              };
 
-       case CLEAR_MESSAGE:
-        return {...state, message: "" };
+          case CLEAR_MESSAGE:
+              return {
+                  ...state,
+                  message: ""
+              };
         default:
             return state;
     }

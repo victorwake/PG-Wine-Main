@@ -8,6 +8,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import { login } from "../../redux/actions/auth";
+import { setMessage, clearMessage } from "../../redux/actions/message";
 import { NavBar } from "../navBar/NavBar";
 
 const required = (value) => {
@@ -47,7 +48,6 @@ const Login = (props) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
     setLoading(true);
 
     form.current.validateAll();
@@ -61,15 +61,16 @@ const Login = (props) => {
         .catch(() => {
           setLoading(false);
         });
-    } else {
+        } else {
       setLoading(false);
-    }
+      
+      }
   };
 
   if (isLoggedIn) {
     return <Navigate to="/perfil" />;
   }
-
+  
   return (
     <div className="login-container">
       <NavBar />

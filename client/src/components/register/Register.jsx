@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './register.css';
 
@@ -7,6 +7,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import { Navigate } from 'react-router-dom';
+import { setMessage, clearMessage } from "../../redux/actions/message";
 
 import { register } from "../../redux/actions/auth";
 import { NavBar } from "../navBar/NavBar";
@@ -55,7 +56,6 @@ const Register = () => {
   const form = useRef();
   const checkBtn = useRef();
 
-  const [userName, setUsername] = useState("");
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
@@ -73,11 +73,6 @@ const Register = () => {
   const onChangelastName = (e) => {
     const lastName = e.target.value;
     setlastName(lastName);
-  };
-
-  const onChangeUsername = (e) => {
-    const username = e.target.value;
-    setUsername(username);
   };
 
   const onChangeEmail = (e) => {
@@ -98,15 +93,16 @@ const Register = () => {
     form.current.validateAll();
 
     if (checkBtn.current.context._errors.length === 0) {
-      dispatch(register(userName, email, firstName, lastName, password))
+      dispatch(register(email, firstName, lastName, password))
         .then(() => {
-          setSuccessful(true);
+          setSuccessful(true);          
         })
         .catch(() => {
           setSuccessful(false);
         });
+        
     }
-  };
+  };  
 
   if (isLoggedIn) {
     return <Navigate to="/perfil" />;
@@ -121,19 +117,7 @@ const Register = () => {
         <Form onSubmit={handleRegister} ref={form}>
           {!successful && (
             <div>
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <Input
-                  type="text"
-                  className="form-control"
-                  name="username"
-                  value={userName}
-                  onChange={onChangeUsername}
-                  validations={[required, vusername]}
-                />
-              </div>
-
-              <div className="form-group">
+               <div className="form-group">
                 <label htmlFor="firstName">Nombre</label>
                 <Input
                   type="text"

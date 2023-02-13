@@ -23,7 +23,7 @@ const Profile = () => {
       <header className="jumbotron">
         <h1> Datos de tu cuenta</h1>
         <h3>
-         Perfil de <strong>{currentUser.usuario.userName}</strong>
+         Perfil de <strong>{currentUser.usuario.firstName}</strong>
         </h3>
       </header>
       <p>

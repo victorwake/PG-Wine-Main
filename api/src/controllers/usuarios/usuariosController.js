@@ -8,7 +8,6 @@ const { generarJWT } = require('../../helpers/generar-jwt');
 const usuariosPost = async (req, res, next) => {
 
     const {
-        userName,
         email,
         firstName,
         lastName,
@@ -26,7 +25,6 @@ const usuariosPost = async (req, res, next) => {
         });
     }
     const usuario = await User.create({
-        userName: userName,
         email: email,
         firstName: firstName,
         lastName: lastName,
@@ -42,7 +40,7 @@ const usuariosPost = async (req, res, next) => {
     // Guardar en BD
     await usuario.save();
 
-    res.json({
+     res.json({
         usuario,
         msg: "Nuevo usuario registrado con éxito"
     });
