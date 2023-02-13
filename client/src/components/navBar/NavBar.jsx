@@ -30,7 +30,7 @@ export const NavBar = () => {
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Vinos
+            Dropdown
           </a>
           <ul class="dropdown-menu">
           <Link to={"/vinos/" + "tinto"}  style={{ color: "inherit", textDecoration: "inherit" }}>
@@ -48,10 +48,7 @@ export const NavBar = () => {
           </ul>
         </li>
       </ul>
-     
-
-      <SearchBar/>
-      {/* <form class="d-flex" role="search">
+      <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> */}

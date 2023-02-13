@@ -4,31 +4,15 @@ import {
     THEME_DARK,
     GET_WINES,
     GET_WINE_TYPE,
-    GET_WINE_DETAIL,
-    CLEAN_DETAIL,
-    CURRENT_PAGE,
-    NAME_ORDER,
-    RESET_PAGE,
-    PRICE_ORDER,
-    CLEAN_ALL_FILTERS,
-    GET_BY_NAME,
-    GET_BY_RANGE_PRICE,
-    GET_VARIETAL,
-    POST_WINES,
-    UPDATE_WINE
+    GET_WINE_DETAIL
 
 } from '../actions/index.js';
 
 const initialState = {
     theme: 'light',
     wines: [],
-    wineType: [],
-    wineDetail: {},
-    currentPage: 1,
-    nameOrder: '',
-    useFilter: false,
-    price: '',
-    varietal: [],
+    winType: [],
+    wineDetail: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -63,65 +47,7 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 wineDetail: action.payload
             };
-        case CLEAN_DETAIL:
-            return {
-                ...state,
-                wineDetail: action.payload
-            };
-        case NAME_ORDER:
-            return {
-                ...state,
-                nameOrder: action.payload
-            }
-        case CURRENT_PAGE:
-            return {
-                ...state,
-                currentPage: action.payload
-            }
-            ///////////////////////////////    
-        case CLEAN_ALL_FILTERS:
-            return {
-                ...state,
-                currentPage: 1,
-                useFilter: false,
-                typeFilter: '',
-                nameOrder: '',
-                price: '', // Faltaba setear el precio 
-            }
-        case RESET_PAGE:
-            return {
-                ...state,
-                currentPage: action.payload
-            }
-        case PRICE_ORDER:
-            return {
-                ...state,
-                price: action.payload
-            }
-        case GET_BY_NAME:
-            return {
-                ...state,
-                wines: action.payload
-            }
-        case GET_BY_RANGE_PRICE:
-            return {
-                ...state,
-                wineType: action.payload,
-                price: ''
-            }
-        case GET_VARIETAL:
-            return {
-                ...state,
-                varietal: action.payload
-            }
-        case POST_WINES:
-            return {
-                ...state,
-            }
-        case UPDATE_WINE:
-            return {
-                ...state,
-            }
+        
         default:
             return state;
     }
