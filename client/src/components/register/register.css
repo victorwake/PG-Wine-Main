@@ -4,6 +4,29 @@
     flex-direction: column;   
     align-items: center;
     margin: 0 auto;
+    height: 150vh;
+    background-color: #290808;    
+}
+.card {
+    padding: 30px;
+    margin-top: 30px;
+    width: 400px;
+    background-color: rgb(117, 38, 38);
+}
+.card-container {
+    align-items: center;
+ 
+}
+
+div.img-registro {  
+     height: 100px;
+     width: 100px;
+     background-repeat: no-repeat;
+     background-position: 50%;
+     border-radius: 50%;
+     background-size: 100% auto;
+     background-image: url(//ssl.gstatic.com/accounts/ui/avatar_2x.png);
+     justify-content: center;
 }
 
 .form-log form {

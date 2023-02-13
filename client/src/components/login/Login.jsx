@@ -74,11 +74,8 @@ const Login = (props) => {
     <div className="login-container">
       <NavBar />
       <div className="card card-container">
-        <img
-          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-          alt="profile-img"
-          className="profile-img-card"
-        />
+        <div className="img-registro">
+        </div>
 
         <Form onSubmit={handleLogin} ref={form}>
           <div className="form-group">
@@ -106,7 +103,7 @@ const Login = (props) => {
           </div>
 
           <div className="form-group">
-            <button className="btn btn-primary btn-block" disabled={loading}>
+            <button className="btn btn-secondary btn-block" disabled={loading}>
               {loading && (
                 <span className="spinner-border spinner-border-sm"></span>
               )}
