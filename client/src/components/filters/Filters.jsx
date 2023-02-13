@@ -36,12 +36,12 @@ export const Filters = () => {
 
             <div className={"filter-box-" + clase}>
 
-                <h5 className={'h5-' + clase}>order by:</h5>
-                <select value= {nameOrder} onChange={handleNameOrder} className={"select-filter-" + clase}>
+                <h5 className={'h5-' + clase}>Filtrar por:</h5>
+                {/* <select value= {nameOrder} onChange={handleNameOrder} className={"select-filter-" + clase}>
                     <option value= '' disabled>Name</option>
                     <option value= 'asc'>A - Z</option>
                     <option value= 'desc'>Z - A</option>
-                </select>
+                </select> */}
 
                 <select value= {price} onChange={handlePriceOrder} className={"select-filter-" + clase}>
                     <option value= '' disabled>Precios</option>

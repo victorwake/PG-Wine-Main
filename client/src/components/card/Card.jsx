@@ -16,13 +16,7 @@ export const Card = ({ image, name, color_type, varietal , winery, price, id }) 
                     <div><h4 className={"type-wine-card-" + clase}>{varietal} </h4></div>
                     <div><h4 className={"winery-card-" + clase}>{winery}</h4></div>
                     <div><h4 className={"price-card-" + clase}>{price} $</h4></div>
-                    <Link to = '/cart/'>
-                <button 
-                    className={'button-back-' + clase}
-                    >Comprar
-                </button>
-             </Link>
-               </div>
+                </div>
         </div>
     );
     }

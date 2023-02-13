@@ -15,32 +15,9 @@ import {
     GET_BY_RANGE_PRICE,
     GET_VARIETAL,
     POST_WINES,
-    UPDATE_WINE,
-    POST_REGISTER,
-    POST_AUTH
+    UPDATE_WINE
 
 } from '../actions/index.js';
-
-/*--------AUTH---------*/
-
-import {
-    REGISTER_SUCCESS,
-    REGISTER_FAIL,
-    LOGIN_SUCCESS,
-    LOGIN_FAIL,
-    LOGOUT,
-  } from "../actions/type";
-  
-  /*--------MESSAGE---*/
-import { SET_MESSAGE, CLEAR_MESSAGE } from "../actions/type";
-
-  const usuario = JSON.parse(localStorage.getItem("usuario"));
-  
-  const initialStateUsuario = usuario
-    ? { isLoggedIn: true, usuario }
-    : { isLoggedIn: false, usuario: null };
-
-
 
 const initialState = {
     theme: 'light',
@@ -52,13 +29,9 @@ const initialState = {
     useFilter: false,
     price: '',
     varietal: [],
-    initialStateUsuario: initialStateUsuario,
-    message: {}
 }
 
 const rootReducer = (state = initialState, action) => {
-   
-  
     switch (action.type) {
         case THEME_CHANGE:
             return {
@@ -149,52 +122,9 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
             }
-        case POST_REGISTER:
-            return {
-                ...state,
-            }
-        case POST_AUTH:
-            return {
-                ...state,
-            }
-        case REGISTER_SUCCESS:
-        return {
-          ...state,
-          isLoggedIn: false,
-        };
-      case REGISTER_FAIL:
-        return {
-          ...state,
-          isLoggedIn: false,
-        };
-      case LOGIN_SUCCESS:
-        return {
-          ...state,
-          isLoggedIn: true,
-          usuario: action.payload.usuario,
-        };
-      case LOGIN_FAIL:
-        return {
-          ...state,
-          isLoggedIn: false,
-          usuario: null,
-        };
-      case LOGOUT:
-        return {
-          ...state,
-          isLoggedIn: false,
-          usuario: null,
-        };
-        case SET_MESSAGE:
-      return { message: action.payload };
-
-    case CLEAR_MESSAGE:
-      return { message: "" };
-
         default:
             return state;
     }
 }
 
 export default rootReducer;
-

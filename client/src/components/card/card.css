@@ -27,13 +27,6 @@
     transition-duration: 1s;
     box-shadow: -5px -5px 10px rgba(94, 104, 121, 0.486), 5px 3px 8px rgba(255, 255, 255, 0.582);
 }
-.button-back-{
-    height: 100px;
-    width: 100px;
-    border-radius: 10px;
-    border-color: black;
-    background-color: coral;
-}
 
 .img-card-light{
     height: auto;

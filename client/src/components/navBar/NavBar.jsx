@@ -2,17 +2,8 @@ import "./navBar.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import { SearchBar } from '../searchBar/SearchBar';
-import  LoginButton  from '../login/LoginBtn';
-import Profile from "../profile/Profile";
 
 export const NavBar = () => {
-
-  const borrar = () => {
-    localStorage.clear();
-    this.location.reload();
-  };
-
-  const tokenRevi = localStorage.getItem('nombre')
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -28,8 +19,13 @@ export const NavBar = () => {
           </Link>
         </li>
         <li class="nav-item">
-          <Link to="/create" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Crear</a>
+          <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Login</a>
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link to="/admin" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Administrar</a>
           </Link>
         </li>
         <li class="nav-item dropdown">
@@ -48,21 +44,12 @@ export const NavBar = () => {
           </Link>
           <Link to={"/vinos/" + "espumante"}  style={{ color: "inherit", textDecoration: "inherit" }}>
               <li><p class="dropdown-item" >Espumantes</p></li>
-          </Link>         
+          </Link>
           </ul>
         </li>
-        <li class="nav-item">
-          { !tokenRevi? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Login</a>
-          </Link>: <Link to="/perfil"><a class="nav-link active" aria-current="page">Bienvenido, {tokenRevi}</a></Link>}          
-        </li>
-        <li class="nav-item">
-        { !tokenRevi? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Registrar</a>
-          </Link>: <Link to="/home" onClick={borrar}><a class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
-        </li>
       </ul>
-      <Link className="carrito" to={"/carrito"}>🛒</Link>
+     
+
       <SearchBar/>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

@@ -1,5 +1,4 @@
 import './shoppingCart.css';
 
-const ShoppingCart = () => {
- }
-export default ShoppingCart;
+export const ShoppingCart = () => {
+}

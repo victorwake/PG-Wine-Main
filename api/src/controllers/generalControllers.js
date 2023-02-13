@@ -8,14 +8,11 @@ const getDbWines = async (req, res, next) => {
       let wineName = await wines.filter((el) =>
         el.name.toLowerCase().includes(name.toLowerCase())
       );
-      let wineWinery = await wines.filter((el) =>
-        el.winery.toLowerCase().includes(name.toLowerCase())
-        );
-      wineName.length || wineWinery.length ? res.status(200).send(wineName) : next;
+      wineName.length ? res.status(200).send(wineName) : res.status(400).json({msg: "No se encuentra ningún vino con este nombre"});
     } else {
       res.status(200).send(wines);
     }
-  } catch (err) {
+  } catch (error) {
     res.status(400).json({ error: err.msg });
   }
 };

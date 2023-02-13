@@ -30,7 +30,6 @@ export const Details = () => {
                     >Update
                 </button>
             </Link>
-           
        
             <div className={'details-img-' + clase}>
                 <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
