@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 /*Cambio de tema*/
 export const themeChange = (theme) => {
     if (theme === 'light') {
@@ -211,3 +212,46 @@ export function getVarietal() {
 export const GET_VARIETAL = 'GET_VARIETAL';
 
 /*----------------------------------------------*/
+
+// export function registerUser (payload) {
+  
+//     return async function (dispatch) {
+//       const register = await axios.post('http://localhost:3001/usuarios/crear', payload)
+//       console.log(register)
+//       return register;
+//     }
+//    }
+
+   
+//    export const POST_REGISTER = 'POST_REGISTER';
+
+//    /*----------------------------------------------*/
+
+//    export function loginUser (payload) {
+  
+//     return async function (dispatch) {
+//         try {
+//             let auth = await axios.post('http://localhost:3001/auth', payload)
+//              console.warn(auth.request.status);
+//              console.warn(auth.data.usuario.userName);             
+//             if(auth.request.status === 200) {
+//                 let usuarioLogueado = auth.data.usuario.idUser
+//                 let userName = auth.data.usuario.firstName
+//                 alert( `Hola ${userName}, Te haz logueado de manera correcta`)
+//                 console.log('Login OK!!!')
+//                 localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
+//                 localStorage.setItem('x-token', JSON.stringify(auth.data.token));
+//                 localStorage.setItem('nombre', JSON.stringify(userName));
+//                 localStorage.setItem('apellido', JSON.stringify(auth.data.usuario.lastName));
+//             }
+//         } catch (err) {   
+//             console.log(err.response.data.msg)         
+//             alert(JSON.stringify(err.response.data.msg))
+//         }
+      
+//     }
+//    }
+
+//    export const POST_AUTH = 'POST_AUTH';
+
+   /*--------------------------------*/

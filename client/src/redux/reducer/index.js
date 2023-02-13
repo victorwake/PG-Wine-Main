@@ -19,6 +19,20 @@ import {
 
 } from '../actions/index.js';
 
+/*--------AUTH---------*/
+
+import {
+    REGISTER_SUCCESS,
+    REGISTER_FAIL,
+    LOGIN_SUCCESS,
+    LOGIN_FAIL,
+    LOGOUT,
+  } from "../actions/type.js";
+  
+  /*--------MESSAGE---*/
+import { SET_MESSAGE, CLEAR_MESSAGE } from "../actions/type.js";
+
+  
 const initialState = {
     theme: 'light',
     wines: [],
@@ -29,9 +43,24 @@ const initialState = {
     useFilter: false,
     price: '',
     varietal: [],
+    message: "",
+    isLoggedIn: false,
+    usuario: null
 }
 
+const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+if (usuario) {
+    initialState.isLoggedIn = true;
+    initialState.usuario = usuario
+} else {
+    initialState.isLoggedIn = false;
+    initialState.usuario = null;
+}
+  
 const rootReducer = (state = initialState, action) => {
+   
+  
     switch (action.type) {
         case THEME_CHANGE:
             return {
@@ -121,10 +150,49 @@ const rootReducer = (state = initialState, action) => {
         case UPDATE_WINE:
             return {
                 ...state,
-            }
+            }        
+        case REGISTER_SUCCESS:
+        return {
+          ...state,
+          isLoggedIn: false,
+        };
+      case REGISTER_FAIL:
+        return {
+          ...state,
+          isLoggedIn: false,
+        };
+      case LOGIN_SUCCESS:
+        return {
+          ...state,
+          isLoggedIn: true,
+          usuario: action.payload.usuario,
+        };
+      case LOGIN_FAIL:
+        return {
+          ...state,
+          isLoggedIn: false,
+          usuario: null,
+        };
+      case LOGOUT:
+        return {
+          ...state,
+          isLoggedIn: false,
+          usuario: null,
+          };
+          case SET_MESSAGE:
+              return {
+                  ...state,
+                  message: action.payload
+              };
+          case CLEAR_MESSAGE:
+              return {
+                  ...state,
+                  message: ""
+              };
         default:
             return state;
     }
 }
 
 export default rootReducer;
+

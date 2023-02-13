@@ -1,29 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Wire+One&display=swap");
-
-body{
-    background-color: rgb(224, 224, 224);
+body {
+    font-family: 'Open Sans', sans-serif;
 }
+
 .winedetail {
     border-radius: 10px;
     border: rgb(0, 0, 0) 3px solid;
     width: 330px;
-    
     height: 270px;
     background-color: transparent;
     opacity: 0.9;
-   
-    padding-left:250px;
- 
-   
-
+    padding-top: 0px;
+    color: rgb(150, 150, 151);
+    border-color: rgb(196, 198, 69);
 }
-.button-back-{
-    border: 1px solid #1E679A;
-   width: 280px;
-   
-   
 
-}
 .imagedetail {
     display: flex;
     margin-left: 570px;
@@ -34,7 +25,7 @@ body{
     padding: auto;
     padding-left: -600px;
     margin-left: 420px;
-    border-color: black solid;
+    border-color: black;
     border-radius: 3px;
 }
 
@@ -46,16 +37,14 @@ body{
     border: 10px;
     border-color: black;
     border-radius: 3px;
-
 }
 
 .nombre {
     display: flex;
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Wire One', sans-serif;
     margin-left: 70px;
     margin-top: -300px;
-
 }
 
 .variedad {
@@ -129,7 +118,7 @@ body{
 
 .descripcion {
     display: flex;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Wire One', sans-serif;
     margin-left: 10px;
 }

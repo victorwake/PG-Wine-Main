@@ -2,9 +2,18 @@ import "./navBar.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import { SearchBar } from '../searchBar/SearchBar';
+import { useSelector } from "react-redux";
 
 export const NavBar = () => {
-  return (
+
+  const borrar = () => {
+    localStorage.clear();
+    this.location.reload();
+  };
+
+  const currentUser  = useSelector((state) => state.usuario);
+
+    return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <h1 class="navbar-brand">Dionisio Wines</h1>
@@ -22,7 +31,7 @@ export const NavBar = () => {
           <Link to="/create" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" aria-current="page">Crear</a>
           </Link>
-          </li>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Vinos
@@ -39,16 +48,21 @@ export const NavBar = () => {
           </Link>
           <Link to={"/vinos/" + "espumante"}  style={{ color: "inherit", textDecoration: "inherit" }}>
               <li><p class="dropdown-item" >Espumantes</p></li>
-          </Link>
-        
+          </Link>         
           </ul>
-         
+        </li>
+        <li class="nav-item">
+          { !currentUser? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Login</a>
+          </Link>: <Link to="/perfil"><a class="nav-link active" aria-current="page">Bienvenido, {currentUser.usuario.firstName}</a></Link>}          
+        </li>
+        <li class="nav-item">
+        { !currentUser? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" aria-current="page">Registrar</a>
+          </Link>: <Link to="/home" onClick={borrar}><a class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
       </ul>
       <SearchBar/>
-      <button><Link to="/carrito" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" aria-current="page">Carrito</a>
-          </Link></button>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>

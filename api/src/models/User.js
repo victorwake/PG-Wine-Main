@@ -9,15 +9,6 @@ module.exports = (sequelize) => {
             primaryKey: true,
             allowNull: false,
         },
-        userName: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-              notNull: {
-                msg: 'Nombre de usuario es obligatorio'
-              }
-            }
-        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -85,7 +76,7 @@ module.exports = (sequelize) => {
             defaultValue: false,
         },
         rol: {
-            type: DataTypes.ENUM(['ADMIN_ROLE', 'USER_ROLE', 'GUEST_ROLE']),
+            type: DataTypes.ENUM('ADMIN_ROLE', 'USER_ROLE', 'GUEST_ROLE'),
             allowNull: false,
             defaultValue: 'GUEST_ROLE',
             validate: {
