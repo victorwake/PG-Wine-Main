@@ -5,7 +5,7 @@ const bcryptjs = require('bcryptjs');
 
 const { generarJWT } = require('../../helpers/generar-jwt');
 
-const usuariosPost = async (req, res) => {
+const usuariosPost = async (req, res, next) => {
 
     const {
         userName,
@@ -17,7 +17,14 @@ const usuariosPost = async (req, res) => {
         password
     } = req.body;
 
+    const searchUserDb = await User.findOne({where: {email: email}})
+    
     try {
+        if (searchUserDb) {
+            return res.status(400).json({
+                msg: 'Email ya está siendo utilizado. Intenta nuevamente con otro email.'
+        });
+    }
     const usuario = await User.create({
         userName: userName,
         email: email,
@@ -42,7 +49,7 @@ const usuariosPost = async (req, res) => {
     console.log(usuario)
 
 } catch (error) {
-        console.log(error)
+        return res.send(error)
 
     }
 }

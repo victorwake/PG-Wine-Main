@@ -27,8 +27,8 @@ import {
         const message =
           (error.response &&
             error.response.data &&
-            error.response.data.message) ||
-          error.message ||
+            error.response.data.msg) ||
+          error.msg ||
           error.toString();
   
         dispatch({

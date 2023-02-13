@@ -190,8 +190,7 @@ const Register = () => {
           {message && (
             <div className="form-group">
               <div className={ successful ? "alert alert-success" : "alert alert-danger" } role="alert">
-                {message} <br />
-                <p> Logueate con tu nueva cuenta <a href="/login ">aquí</a></p>
+                {message}           
               </div>
             </div>
           )}
