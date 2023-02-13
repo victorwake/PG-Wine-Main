@@ -36,7 +36,8 @@ const usuariosPost = async (req, res) => {
     await usuario.save();
 
     res.json({
-        usuario
+        usuario,
+        msg: "Nuevo usuario registrado con éxito"
     });
     console.log(usuario)
 

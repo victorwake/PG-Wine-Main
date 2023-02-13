@@ -18,7 +18,7 @@ import {
   
         dispatch({
           type: SET_MESSAGE,
-          payload: response.data,
+          payload: response.data.msg
         });
   
         return Promise.resolve();
@@ -27,8 +27,8 @@ import {
         const message =
           (error.response &&
             error.response.data &&
-            error.response.data.msg) ||
-          error.msg ||
+            error.response.data.message) ||
+          error.message ||
           error.toString();
   
         dispatch({
@@ -50,9 +50,9 @@ import {
       (data) => {
         dispatch({
           type: LOGIN_SUCCESS,
-          payload: { usuario: data },
+          payload: { usuario: data.usuario },
         });
-  
+         
         return Promise.resolve();
       },
       (error) => {

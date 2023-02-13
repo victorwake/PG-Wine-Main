@@ -2,8 +2,7 @@ import "./navBar.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import { SearchBar } from '../searchBar/SearchBar';
-import  LoginButton  from '../login/LoginBtn';
-import Profile from "../profile/Profile";
+import { useSelector } from "react-redux";
 
 export const NavBar = () => {
 
@@ -12,8 +11,9 @@ export const NavBar = () => {
     this.location.reload();
   };
 
-  const tokenRevi = localStorage.getItem('nombre')
-  return (
+  const currentUser  = useSelector((state) => state.usuario);
+
+    return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <h1 class="navbar-brand">Dionisio Wines</h1>
@@ -52,12 +52,12 @@ export const NavBar = () => {
           </ul>
         </li>
         <li class="nav-item">
-          { !tokenRevi? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
+          { !currentUser? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" aria-current="page">Login</a>
-          </Link>: <Link to="/perfil"><a class="nav-link active" aria-current="page">Bienvenido, {tokenRevi}</a></Link>}          
+          </Link>: <Link to="/perfil"><a class="nav-link active" aria-current="page">Bienvenido, {currentUser.usuario.firstName}</a></Link>}          
         </li>
         <li class="nav-item">
-        { !tokenRevi? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
+        { !currentUser? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" aria-current="page">Registrar</a>
           </Link>: <Link to="/home" onClick={borrar}><a class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>

@@ -29,19 +29,12 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT,
-  } from "../actions/type";
+  } from "../actions/type.js";
   
   /*--------MESSAGE---*/
-import { SET_MESSAGE, CLEAR_MESSAGE } from "../actions/type";
+import { SET_MESSAGE, CLEAR_MESSAGE } from "../actions/type.js";
 
-  const usuario = JSON.parse(localStorage.getItem("usuario"));
   
-  const initialStateUsuario = usuario
-    ? { isLoggedIn: true, usuario }
-    : { isLoggedIn: false, usuario: null };
-
-
-
 const initialState = {
     theme: 'light',
     wines: [],
@@ -52,10 +45,21 @@ const initialState = {
     useFilter: false,
     price: '',
     varietal: [],
-    initialStateUsuario: initialStateUsuario,
-    message: {}
+    message: "",
+    isLoggedIn: false,
+    usuario: null
 }
 
+const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+if (usuario) {
+    initialState.isLoggedIn = true;
+    initialState.usuario = usuario
+} else {
+    initialState.isLoggedIn = false;
+    initialState.usuario = null;
+}
+  
 const rootReducer = (state = initialState, action) => {
    
   
@@ -186,11 +190,10 @@ const rootReducer = (state = initialState, action) => {
           usuario: null,
         };
         case SET_MESSAGE:
-      return { message: action.payload };
+        return {...state, message: action.payload };
 
-    case CLEAR_MESSAGE:
-      return { message: "" };
-
+       case CLEAR_MESSAGE:
+        return {...state, message: "" };
         default:
             return state;
     }
