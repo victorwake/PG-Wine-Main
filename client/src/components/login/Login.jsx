@@ -1,14 +1,14 @@
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate  } from 'react-router-dom';
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+import { clearMessage } from "../../redux/actions/message";
 
 import { login } from "../../redux/actions/auth";
-import { setMessage, clearMessage } from "../../redux/actions/message";
 import { NavBar } from "../navBar/NavBar";
 
 const required = (value) => {
@@ -62,15 +62,20 @@ const Login = (props) => {
           setLoading(false);
         });
         } else {
-      setLoading(false);
+      setLoading(true);
       
       }
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(clearMessage(message));
+  }, "2000")
+  },[dispatch, message])
+
   if (isLoggedIn) {
     return <Navigate to="/perfil" />;
   }
-  
   return (
     <div className="login-container">
       <NavBar />

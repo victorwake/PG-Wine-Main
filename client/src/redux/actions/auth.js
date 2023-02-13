@@ -5,6 +5,7 @@ import {
     LOGIN_FAIL,
     LOGOUT,
     SET_MESSAGE,
+    CLEAR_MESSAGE
   } from "./type";
   
   import AuthService from "../../services/auth.service";
@@ -19,7 +20,7 @@ import {
         dispatch({
           type: SET_MESSAGE,
           payload: response.data.msg
-        });
+        });      
   
         return Promise.resolve();
       },

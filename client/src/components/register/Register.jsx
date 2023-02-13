@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './register.css';
 
@@ -6,9 +6,8 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
-import { Navigate } from 'react-router-dom';
-import { setMessage, clearMessage } from "../../redux/actions/message";
-
+import { Navigate, useNavigate } from 'react-router-dom';
+import { clearMessage } from "../../redux/actions/message";
 import { register } from "../../redux/actions/auth";
 import { NavBar } from "../navBar/NavBar";
 
@@ -53,6 +52,7 @@ const vpassword = (value) => {
 };
 
 const Register = () => {
+  
   const form = useRef();
   const checkBtn = useRef();
 
@@ -95,19 +95,24 @@ const Register = () => {
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(register(email, firstName, lastName, password))
         .then(() => {
-          setSuccessful(true);          
+          setSuccessful(true);                       
         })
         .catch(() => {
           setSuccessful(false);
-        });
-        
+        });       
     }
-  };  
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(clearMessage(message));
+  }, "2000")
+  },[dispatch, message])
 
   if (isLoggedIn) {
     return <Navigate to="/perfil" />;
   }
-
+ 
   return (
     <div className="login-container">
       <NavBar/>
