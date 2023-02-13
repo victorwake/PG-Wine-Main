@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Wire+One&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans&display=swap');
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .winedetail {
     border-radius: 10px;
-    border: rgb(0, 0, 0) 3px solid;
+    border: rgb(110, 17, 17) 3px solid;
     width: 330px;
     height: 270px;
     background-color: transparent;
@@ -13,6 +14,10 @@ body {
     padding-top: 0px;
     color: rgb(150, 150, 151);
     border-color: rgb(196, 198, 69);
+}
+.details-img{
+background: rgb(240,128,128);
+background: linear-gradient(221deg, rgba(240,128,128,1) 0%, rgba(255,218,185,1) 100%);
 }
 
 .imagedetail {
@@ -38,61 +43,42 @@ body {
     border-color: black;
     border-radius: 3px;
 }
+.line{
+    width: auto;
+    height: 12px;
+    background-color: black;
+}
 
 .nombre {
-    display: flex;
-    font-size: 50px;
-    font-family: 'Wire One', sans-serif;
-    margin-left: 70px;
-    margin-top: -300px;
+    width: 400px;
+    margin-left: 550px;
+    margin-top: 35px;
+    font-size: 30px;
+    align-content: center;
+    font-style: oblique;
 }
 
 .variedad {
-    display: flex;
-    font-size: 40px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
 }
 
 .tipo {
-    display: flex;
-    font-size: 35px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+   
 }
 
 .bodega {
-    display: flex;
-    font-size: 35px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+   
 }
 
 .origen {
-    display: flex;
-    font-size: 35px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+   
 }
 
 .alcohol {
-    display: flex;
-    font-size: 35px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+ 
 }
 
 .year {
-    display: flex;
-    font-size: 40px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+ 
 }
 
 .price {
@@ -109,16 +95,8 @@ body {
 }
 
 .cata {
-    display: flex;
-    font-size: 40px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 10px;
 }
 
 .descripcion {
-    display: flex;
-    font-size: 30px;
-    font-family: 'Wire One', sans-serif;
-    margin-left: 10px;
+
 }

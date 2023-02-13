@@ -3,10 +3,7 @@ import React, {useState, useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import {getWinesByName} from '../../redux/actions';
 import { getWines } from '../../redux/actions';
-<<<<<<< HEAD
 import { useSelector } from 'react-redux';
-=======
->>>>>>> bbe39b6c070a3ecebeeb49155e2cb145c252c928
 
 
 export const SearchBar = () =>  {

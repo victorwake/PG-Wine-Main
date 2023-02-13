@@ -22,22 +22,24 @@ export const Details = () => {
 
     return (
         
-        <div className={'details-container-' + clase}>
+        <div className={'details-container' + clase}>
             <div><Link to='/home'><button className="buttonBack" >Volver a inicio</button></Link></div>
             <Link to = {'/create/' + id}>
                 <button 
-                    className={'button-back-' + clase}
+                    className={'button-back' + clase}
                     >Update
                 </button>
             </Link>
        
-            <div className={'details-img-' + clase}>
+            <div className={'details-img' + clase}>
+                <h1 className='nombre'> {wineDetail.name}</h1>
+                <hr className='line'/>
                 <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
+                <hr className='line'/>
             </div>
-            <div className={'details-info-' + clase}>
-                <h1 className='nombre'><b>Vino {wineDetail.colour_type}</b> {wineDetail.name}</h1>
+            <div className={'details-info' + clase}>
                 <h2 className='variedad'><b>Variedad:</b> {wineDetail.varietal}</h2>
-                <p className='tipo'><b>Tipo:</b> {wineDetail.colour_type}</p>
+                <p className='tipo'><b>Tipo:</b> {wineDetail.color_type}</p>
                 <p  className='bodega'><b>Bodega:</b> {wineDetail.winery}</p>
                 <p className='origen'><b>UBICACIÓN / ORIGEN</b> {wineDetail.province}, {wineDetail.region}</p>
                 {/* <p><b>Url:</b> {wineDetail.url}</p> */}
