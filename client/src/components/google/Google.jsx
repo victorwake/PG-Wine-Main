@@ -1,26 +1,37 @@
-import React from 'react'
+import { GoogleLogin } from 'react-google-login';
+import { gapi } from 'gapi-script';
+import { useEffect } from 'react';
+
+
 
 export default function Google() {
-    
+    const clientId = '931442579528-v11ccourc3v7m5bc6715t8evbga0minm.apps.googleusercontent.com'
+useEffect(() => {
+   const initClient = () => {
+         gapi.client.init({
+         clientId: clientId,
+         scope: ''
+       });
+    };
+    gapi.load('client:auth2', initClient);
+});
+
+const onSuccess = (res) => {
+    console.log('success:', res);
+};
+const onFailure = (err) => {
+    console.log('failed:', err);
+};
   return (
     <div>
-<div id="g_id_onload"
-     data-client_id="931442579528-v11ccourc3v7m5bc6715t8evbga0minm.apps.googleusercontent.com"
-     data-context="signup"
-     data-ux_mode="popup"
-     data-login_uri="http://localhost:3001"
-     data-auto_select="true"
-     data-itp_support="true">
-</div>
-
-<div class="g_id_signin"
-     data-type="standard"
-     data-shape="pill"
-     data-theme="outline"
-     data-text="signin_with"
-     data-size="large"
-     data-logo_alignment="left">
-</div>
-</div>
+        <GoogleLogin
+      clientId={clientId}
+      buttonText="Sign in with Google"
+      onSuccess={onSuccess}
+      onFailure={onFailure}
+      cookiePolicy={'single_host_origin'}
+      isSignedIn={true}
+  />
+    </div>
   )
 }
