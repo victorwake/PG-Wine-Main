@@ -61,6 +61,7 @@ const Register = () => {
   const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rol, setRol] = useState("USER_ROLE");
   const [successful, setSuccessful] = useState(false);
 
   const  message  = useSelector(state => state.message);
@@ -95,14 +96,14 @@ const Register = () => {
     form.current.validateAll();
 
     if (checkBtn.current.context._errors.length === 0) {
-      dispatch(register(email, firstName, lastName, password))
+      dispatch(register(email, firstName, lastName, password, rol))
         .then(() => {
           setSuccessful(true);                   
         })
         .then(() => {
           setTimeout(() => {
             dispatch(clearMessage(message));
-        }, "1500")
+        }, "2500")
          })
         .catch(() => {
           setSuccessful(false);
