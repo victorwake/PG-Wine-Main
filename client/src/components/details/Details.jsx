@@ -4,7 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
-
+import "./Products.css";
+import buyProducts from './Products';
+import product from './Products'
 
 
 export const Details = () => {
@@ -30,20 +32,24 @@ export const Details = () => {
                     >Update
                 </button>
             </Link>
+           <Link className='seeCarrito' to={"/cart"}>
+          🛒
+        </Link>
        
             <div className={'details-img-' + clase}>
                 <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
             </div>
             <div className={'details-info-' + clase}>
-                <h1 className='nombre'><b>Vino {wineDetail.colour_type}</b> {wineDetail.name}</h1>
-                <h2 className='variedad'><b>Variedad:</b> {wineDetail.varietal}</h2>
-                <p className='tipo'><b>Tipo:</b> {wineDetail.colour_type}</p>
-                <p  className='bodega'><b>Bodega:</b> {wineDetail.winery}</p>
-                <p className='origen'><b>UBICACIÓN / ORIGEN</b> {wineDetail.province}, {wineDetail.region}</p>
+                <h1 className='nombre'><b>Vino :&nbsp;{wineDetail.colour_type}</b> {wineDetail.name}</h1>
+                <h2 className='variedad'><b>Variedad :</b> {wineDetail.varietal}</h2>
+                <p className='tipo'><b>Tipo :</b> {wineDetail.colour_type}</p>
+                <p  className='bodega'><b>Bodega :</b> {wineDetail.winery}</p>
+                {/* <p className='origen'><b>UBICACIÓN / ORIGEN</b> {wineDetail.province}, {wineDetail.region}</p> */}
                 {/* <p><b>Url:</b> {wineDetail.url}</p> */}
                 <p className='alcohol'><b>Alcohol:</b> {wineDetail.alcohol}%</p>
                 <p className='year'><b>Año:</b> {wineDetail.year}</p>
                 <p  className='price'><b>Precio:</b> {wineDetail.price}</p>
+                <button className= "comprar" onClick={() => buyProducts(product)}>Comprar</button>
                 <p className='cata'><b>Nota de cata:</b></p>
                 <p className='descripcion'>{wineDetail.description}</p>
             </div>
