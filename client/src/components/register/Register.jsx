@@ -11,6 +11,7 @@ import { clearMessage } from "../../redux/actions/message";
 import { register } from "../../redux/actions/auth";
 import { NavBar } from "../navBar/NavBar";
 import { useNavigate, Link } from "react-router-dom";
+import Google from "../google/Google";
 
 const required = (value) => {
   if (!value) {

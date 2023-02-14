@@ -5,15 +5,14 @@ const { check } = require('express-validator');
 ///const { validarCampos } = require('../middlewares/validar-campos');
 
 
-const { login } = require('./../controllers/usuarios/userLogin');
+const { googleSignin } = require('../../controllers/usuarios/userLogin');
 
 
 const router = Router();
 
 router.post('/',[
     check('correo', 'El correo es obligatorio').isEmail(),
-    check('password', 'La contraseña es obligatoria').not().isEmpty(),    
-],login );
-
+    check('id_token', 'El id_token es necesario').not().isEmpty(),    
+], googleSignin );
 
 module.exports = router;

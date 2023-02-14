@@ -53,6 +53,11 @@ const usuariosPost = async (req, res, next) => {
 
     }
 }
+
+
+
+
+
 module.exports = {
     usuariosPost
 }
