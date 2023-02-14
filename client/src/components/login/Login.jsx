@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate  } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -62,7 +63,7 @@ const Login = (props) => {
           setLoading(false);
         });
         } else {
-      setLoading(true);
+      setLoading(false);
       
       }
   };
@@ -70,11 +71,11 @@ const Login = (props) => {
   useEffect(() => {
     setTimeout(() => {
       dispatch(clearMessage(message));
-  }, "2000")
+  }, "2500")
   },[dispatch, message])
 
   if (isLoggedIn) {
-    return <Navigate to="/perfil" />;
+    return <Navigate to="/perfil"/>;
   }
   return (
     <div className="login-container">
@@ -115,6 +116,7 @@ const Login = (props) => {
               )}
               <span>Login</span>
             </button>
+            <div><p>Si aún no tienes cuenta, registrate <Link to ="../registrar">aquí</Link></p></div>
           </div>
 
           {message && (

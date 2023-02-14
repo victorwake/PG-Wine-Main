@@ -6,10 +6,11 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { clearMessage } from "../../redux/actions/message";
 import { register } from "../../redux/actions/auth";
 import { NavBar } from "../navBar/NavBar";
+import { useNavigate, Link } from "react-router-dom";
 
 const required = (value) => {
   if (!value) {
@@ -65,7 +66,8 @@ const Register = () => {
   const  message  = useSelector(state => state.message);
   const  isLoggedIn  = useSelector(state => state.isLoggedIn);
   const dispatch = useDispatch();
-
+  let navigate = useNavigate();
+ 
   const onChangefirstName = (e) => {
     const firstName = e.target.value;
     setfirstName(firstName);
@@ -95,21 +97,20 @@ const Register = () => {
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(register(email, firstName, lastName, password))
         .then(() => {
-          setSuccessful(true);                       
+          setSuccessful(true);                   
         })
+        .then(() => {
+          setTimeout(() => {
+            dispatch(clearMessage(message));
+        }, "1500")
+         })
         .catch(() => {
           setSuccessful(false);
         });       
     }
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      dispatch(clearMessage(message));
-  }, "2000")
-  },[dispatch, message])
-
-  if (isLoggedIn) {
+   if (isLoggedIn) {
     return <Navigate to="/perfil" />;
   }
  
@@ -182,10 +183,12 @@ const Register = () => {
                 {message}           
               </div>
             </div>
-          )}
+          )}          
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
+        <div><p>Logueate <Link to ="../login">aquí</Link></p></div>
       </div>
+      
     </div>
   );
 };

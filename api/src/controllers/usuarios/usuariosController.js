@@ -21,7 +21,7 @@ const usuariosPost = async (req, res, next) => {
     try {
         if (searchUserDb) {
             return res.status(400).json({
-                msg: 'Email ya está siendo utilizado. Intenta nuevamente con otro email.'
+                msg: 'Email ya existe.'
         });
     }
     const usuario = await User.create({
@@ -42,7 +42,7 @@ const usuariosPost = async (req, res, next) => {
 
      res.json({
         usuario,
-        msg: "Nuevo usuario registrado con éxito"
+        msg: "Usuario registrado con éxito"
     });
     console.log(usuario)
 

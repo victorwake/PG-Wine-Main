@@ -18,7 +18,7 @@ const login = async(req, res) => {
         const usuario = await User.findOne({ where: { email: email } });
         if ( !usuario ) {
             return res.status(400).json({
-                msg: 'Usuario / Password no son correctos - correo'
+                msg: 'Email no está registrado en Diosinio Wines'
             });
         }
 
@@ -33,7 +33,7 @@ const login = async(req, res) => {
         const validPassword = bcryptjs.compareSync( password, usuario.password );
         if ( !validPassword ) {
             return res.status(400).json({
-                msg: 'Usuario / Password no son correctos - password'
+                msg: 'Password no es correcto'
             });
         }
 
