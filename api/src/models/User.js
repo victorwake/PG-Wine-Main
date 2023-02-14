@@ -76,14 +76,9 @@ module.exports = (sequelize) => {
             defaultValue: false,
         },
         rol: {
-            type: DataTypes.ENUM('ADMIN_ROLE', 'USER_ROLE', 'GUEST_ROLE'),
+            type: DataTypes.ENUM(['ADMIN_ROLE', 'USER_ROLE', 'GUEST_ROLE']),
             allowNull: false,
-            defaultValue: 'GUEST_ROLE',
-            validate: {
-              notNull: {
-                msg: 'El rol es obligatorio'
-              }
-            }
+            
         },
         socketId: {
             type: DataTypes.STRING,

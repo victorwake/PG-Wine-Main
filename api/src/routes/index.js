@@ -9,8 +9,12 @@ const updateWineRouter = require('./updateWineRouter');
 const usuariosRouter = require('./usuariosRouter');
 const login = require('./userLogin')
 const rutaRestringida = require('./rutaRestringida')
+const getAllUsers = require('../routes/usuarios/allUserRouter')
+const getAdmin = require('../routes/usuarios/getAminUsers')
+const getUser = require('../routes/usuarios/getUsers')
 
 const { validarJWT } = require('../../src/middlewares/validarJWT');
+
 
 
 
@@ -25,6 +29,9 @@ router.use('/', orderByPriceAscRouter);
 router.use('/', createWineRouter);
 router.use('/', updateWineRouter);
 router.use('/usuarios', usuariosRouter);
+router.use('/usuarios', getAllUsers);
+router.use('/usuarios', getAdmin);
+router.use('/usuarios', getUser);
 router.use('/rutarestringida',[validarJWT], rutaRestringida)
 
 

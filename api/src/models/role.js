@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
             allowNull: false,
             validate: {
               notNull: {
-                msg: 'El rol es obligatorio'
+                msg: 'El rol es obligatorio en modelo rol'
               }
             }
           }

@@ -13,7 +13,8 @@ const usuariosPost = async (req, res, next) => {
         lastName,
         cellphone,
         profilePic,
-        password
+        password,
+        rol
     } = req.body;
 
     const searchUserDb = await User.findOne({where: {email: email}})
@@ -30,7 +31,8 @@ const usuariosPost = async (req, res, next) => {
         lastName: lastName,
         cellphone: cellphone,
         profilePic: profilePic,
-        password: password
+        password: password,
+        rol: rol
     });
 
     // Encriptar la contraseña
