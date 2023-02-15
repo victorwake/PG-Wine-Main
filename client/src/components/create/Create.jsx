@@ -68,9 +68,30 @@ export const Create = () => {
         setInput((prevInput) => (
             {
                 ...prevInput,
+                [e.target.name]:
+                  typeof e.target.value === "number"
+                    ? e.target.value
+                    : e.target.value.toLowerCase().replace(/\b(\w)/g, s => s.toUpperCase())
+              }
+        ))
+        
+
+        setErr(formControl({
+            ...input,
+            [e.target.name]: e.target.value
+        }))
+
+    }, [input])
+
+
+    const handleChangeNumerico = useCallback((e) => {
+        setInput((prevInput) => (
+            {
+                ...prevInput,
                 [e.target.name]: e.target.value
             }
         ))
+        
 
         setErr(formControl({
             ...input,

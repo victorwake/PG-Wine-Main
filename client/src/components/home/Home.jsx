@@ -42,7 +42,7 @@ export const Home = () => {
             <div  className={"card-container-home-" + clase} >
             
                 {tenRandomWines?.map((w => (
-                    <Fragment key={w.id}>
+                    <fragment key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
                             <Card
                                 name={w.name}
@@ -52,7 +52,7 @@ export const Home = () => {
                                 price= {w.price}
                                 />
                             </Link>
-                        </Fragment>
+                        </fragment>
                 )))}  
             </div>
         </div>

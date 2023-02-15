@@ -5,7 +5,8 @@
     src: url(https://fonts.gstatic.com/s/archivoblack/v17/HTxqL289NzCGg4MzN6KJ7eW6CYyF-w.ttf) format('truetype');
 }
 
-.cards-wrapper {
+/* Modo light end */
+.cards-wrappe-light {
     font: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: relative;
     list-style: none;
@@ -14,8 +15,31 @@
     justify-content: center;
     margin-top: 80px;
     margin-bottom: 80px;
+    transition-duration: 01s;
     background-color: rgb(224, 224, 224);
 }
+
+/* Modo light fin */
+
+ /* --------------------------------------------------------- */
+
+
+/*Modo Dark*/
+
+.cards-wrappe-dark {
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    list-style: none;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    transition-duration: 01s;
+    background-color: #333333;
+}
+
+/* Modo dark fin */
 
 @media screen and (max-width: 888px) {
     .cards-wrapper {

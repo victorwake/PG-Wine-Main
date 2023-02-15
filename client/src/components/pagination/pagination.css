@@ -4,14 +4,9 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    transition-duration: 01s;
     background-color: rgb(224, 224, 224);
 }
-
-.pagination-light {
-    display: inline-block;
-    margin-top: 10px;
-}
-
 
 .nav-container-light {
     height: 8vh;
@@ -55,13 +50,8 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    transition-duration: 01s;
     background-color: #333333;
-}
-
-.pagination-dark {
-    display: inline-block;
-    margin-top: 10px;
-    
 }
 
 .nav-container-dark {
@@ -96,3 +86,8 @@
     cursor: pointer;
 }
 /* Modo dark fin */
+
+.pagination {
+    display: inline-block;
+    margin-top: 10px;
+}

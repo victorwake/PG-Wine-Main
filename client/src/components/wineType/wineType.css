@@ -1,3 +1,4 @@
+/* Modo light end */
 .wine-container-light{
     height: 100vh;
     transition-duration: 01s;
@@ -5,16 +6,12 @@
     
 }
 
-.container-filtros{
-    margin: 20px;
-    margin-top: 50px;
-}
-
 .card-container-wine-light{
     display: grid;
     grid-template-columns: repeat(auto-fill, 330px);
     align-items: center;
     justify-content: center;
+    transition-duration: 01s;
     background-color: rgb(224, 224, 224);
     
 }
@@ -23,20 +20,69 @@
     font-size: 2.5rem;
     font-weight: 600;
     margin: 5px;
-    color: rgb(0, 0, 0);
     font-family: 'Source Sans Pro', sans-serif;
     position: relative;
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition-duration: 01s;
+    color: #333333;
     background-color: rgb(224, 224, 224);
 }
 
-.pagination-container-type-light{
-    /* position: relative; */
+
+/* Modo light fin */
+
+ /* --------------------------------------------------------- */
+
+
+/*Modo Dark*/
+.wine-container-dark{
+    height: 100vh;
+    transition-duration: 01s;
+    background-color: #333333;
+    
+}
+
+.card-container-wine-dark{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    align-items: center;
+    justify-content: center;
+    transition-duration: 01s;
+    background-color: #333333;
+    
+}
+
+.wine-type-h1-dark{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+    background-color: #333333;
+}
+
+
+
+/* Modo dark fin */
+
+
+.container-filtros{
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.pagination-container-type{
     display: flex;
     justify-content: center;
 }
-

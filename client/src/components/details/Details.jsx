@@ -1,9 +1,10 @@
 import './details.css'
-import { getWineDetail } from '../../redux/actions'
+import { getWineDetail, addToCart } from '../../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
+
 
 
 
@@ -13,6 +14,11 @@ export const Details = () => {
     const wineDetail = useSelector((state) => state.wineDetail);
     const clase = useSelector((state) => state.clase);
     const {id} = useParams();
+
+
+    const addCart = (id) => {
+        dispatch(addToCart(id))
+    }
 
     const wineColorType = wineDetail.color_type;
 
@@ -58,6 +64,7 @@ export const Details = () => {
                 <p className='cata'><b>Nota de cata: </b></p>
                 <p className='descripcion'>{wineDetail.description}</p>
             </div>
+            <div className={"button-card-" + clase}><button onClick={() => addCart(id)}>Agregar al carro</button></div>
         </div>
     );
 
