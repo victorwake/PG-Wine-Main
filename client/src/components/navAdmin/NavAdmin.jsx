@@ -43,7 +43,7 @@ export const NavAdmin = () =>{
                                 </a>
                                 <ul class="dropdown-menu">
                                     <a class="dropdown-item" href='/admin/create' >Crear</a>
-                                    <button class="dropdown-item">Editar</button>    
+                                    <a class="dropdown-item" href='/admin/editWines'>Editar</a>    
                                 </ul>
                             </li>
                                 <li class="nav-item">

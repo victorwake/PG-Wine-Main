@@ -7,6 +7,7 @@ import { Details } from './components/details/Details';
 import { Create } from './components/create/Create';
 import { Login } from './components/login/Login';
 import { Admin } from './components/admin/Admin';
+import { EditList } from './components/editList/EditList';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/details/:id" element={<Details />} />
                 <Route path="/admin/create/:id" element={<Create />} />
                 <Route path="/admin/create" element={<Create />} />
+                <Route path="/admin/editWines" element={<EditList/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/admin" element={<Admin/>}/>
             </Routes>
