@@ -8,11 +8,16 @@
     
 }
 
+.h5-light{
+    color: #333333;
+    margin-left: 20px;
+}
+
 /* Modo light end */
 
 .filter-container-light{
     overflow: hidden;
-    padding-top: 8px;
+    padding-top: 15px;
     transition-duration: 01s;
     background-color: rgb(224, 224, 224);
 }
@@ -61,12 +66,6 @@
     box-shadow: -3px -2px 5px rgba(255, 0, 0, 0.384), 3px 2px 5px rgba(253, 99, 99, 0.1);
 }
 
-.footer-home-light{
-    /* position: relative; */
-    left:0px;
-    bottom:0px;
-    width:100%;
-}
 
 .button-light{
     margin: 3.2rem;
@@ -90,10 +89,14 @@
 
 /*Modo Dark*/
 
+.h5-dark{
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+
 .filter-container-dark{
-    
     overflow: hidden;
-    padding-top: 8px;
+    padding-top: 15px;
     transition-duration: 01s;
     background-color: #333333;
     
@@ -108,9 +111,8 @@
 }
 
 .filter-box-dark{
-
-    /* float: left; */
-    padding: 30px;
+    margin: 10px;
+    margin-top: 60px;
     transition-duration: 01s;
     background-color: #333333;
 }
@@ -144,12 +146,6 @@
     box-shadow: -3px -2px 5px rgba(255, 0, 0, 0.2), 3px 2px 5px rgba(253, 99, 99, 0.1);
 }
 
-.footer-home-dark{
-    /* position: relative; */
-    left:0px;
-    bottom:0px;
-    width:100%;
-}
 
 .button-dark{
     margin: 3.2rem;

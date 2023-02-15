@@ -2,8 +2,11 @@ import './priceRange.css'
 import { useState, useCallback, Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import { Filters } from '../filters/Filters';
+import { changeCurrentPage }  from "../../redux/actions";  
+import { useDispatch } from "react-redux";
 
 export const PriceRange = ({ onChangePriceRange, defaultPriceRange }) => {
+    const dispatch = useDispatch()
     const clase = useSelector(state => state.theme)
     const [range, setRange] = useState(defaultPriceRange || [0, 10000000])
 
@@ -15,11 +18,12 @@ export const PriceRange = ({ onChangePriceRange, defaultPriceRange }) => {
 
     const handleClickFilter = useCallback(() => {
         onChangePriceRange(range)
+        dispatch(changeCurrentPage(1));
     })
 
     return (
         <div>
-            <label for="customRange2" class="form-label">Rangos: </label>
+            <label for="customRange2" className={'h5-' + clase}>Rangos: </label>
             <select onChange={(e) => handleChangeRange(e)} className={"select-filter-" + clase}>
                 <option value="0,10000000">Todos</option>
                 <option value="0,10000">$0 - $10.000</option>

@@ -39,11 +39,6 @@ export const NavBar = () => {
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Inicio</a>
           </Link>
         </li>
-        <li class="nav-item">
-          <Link to="/admin" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Administrar</a>
-          </Link>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id={"font-color-" + clase} role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Vinos
@@ -66,12 +61,16 @@ export const NavBar = () => {
         <li class="nav-item">
           { !currentUser? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Login</a>
-          </Link>: <Link to="/perfil"><a class="nav-link active" aria-current="page">Bienvenido, {currentUser.usuario.firstName}</a></Link>}          
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/perfil"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Bienvenido, {currentUser.usuario.firstName}</a></Link>}          
+        </li>
+        <li class="nav-item">
+        { !currentUser? <Link to="/carrito" style={{ color: "inherit", textDecoration: "inherit" }}>
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/admin"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Administrar</a></Link>}
         </li>
         <li class="nav-item">
         { !currentUser? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>
-          </Link>: <Link to="/home" onClick={borrar}><a class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={borrar}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
       </ul>
       <div className={'conteiner-switch-' + clase}>   
