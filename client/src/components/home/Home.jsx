@@ -33,7 +33,7 @@ export const Home = () => {
     return (
         <div className={"home-container-" + clase}>
             <div className='home_nav'>
-                <Nav/>
+                <NavBar />
             </div>
             <NavBarWineType />
             <h2 className={"sale-type-h2-" + clase}>Ofertas al 10%</h2>

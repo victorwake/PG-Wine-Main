@@ -80,7 +80,7 @@ const Login = (props) => {
   }
   return (
     <div>
-    <Nav />
+    <NavBar />
     <div className="login-container">      
       <div className="card card-container">
         <div className="img-registro">

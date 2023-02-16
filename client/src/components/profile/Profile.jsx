@@ -21,7 +21,7 @@ const Profile = () => {
 
   return (
     <div>
-      <Nav />
+      <NavBar />
     <div className="container">
       
       <header className="jumbotron">

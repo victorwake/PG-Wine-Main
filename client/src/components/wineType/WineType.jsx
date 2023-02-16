@@ -43,7 +43,7 @@ export const WineType= () => {
 
     return (
         <div className={"wine-container-" + clase}>
-            <Nav />
+            <NavBar />
             <Filters/>
             <h1 className={"wine-type-h1-" + clase}>Vinos {type}</h1>
             <div className={"pagination-container-type-" + clase} >
