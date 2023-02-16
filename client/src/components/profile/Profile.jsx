@@ -20,14 +20,22 @@ const Profile = () => {
   }, [dispatch]);
 
   return (
-    <div className="container">
+    <div>
       <Nav />
+    <div className="container">
+      
       <header className="jumbotron">
         <h1> Datos de tu cuenta</h1>
         <h3>
          Perfil de <strong>{currentUser.usuario.firstName}</strong>
         </h3>
       </header>
+      {currentUser.usuario.profilePic !== null ?
+      <div>
+      <img id="img-perfil" src={currentUser.usuario.profilePic} alt="profile"></img>
+      </div>:
+      <div className="img-registro"></div>
+      }
       <p>
         <strong>Token:</strong> {currentUser.token.substring(0, 20)} ...{" "}
         {currentUser.token.substr(currentUser.token.length - 20)}
@@ -51,6 +59,7 @@ const Profile = () => {
       <p><a href="/login" className="nav-link" onClick={logOut}>
                 Cerrar sesión
               </a></p>
+    </div>
     </div>
   );
 };

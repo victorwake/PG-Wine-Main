@@ -13,10 +13,11 @@ const googleVerify = async(id_token) => {
 
   const { name: firstName, 
           email: email,
-             family_name: lastName
+          family_name: lastName,
+          picture: profilePic,
             } = ticket.getPayload();
   
-  return { firstName, lastName, email };
+  return { firstName, lastName, email, profilePic  };
 
 }
 
