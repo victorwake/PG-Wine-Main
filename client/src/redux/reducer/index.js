@@ -177,6 +177,7 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         cart: [],
+        totalItems: 0,
       };
     case REGISTER_SUCCESS:
       return {

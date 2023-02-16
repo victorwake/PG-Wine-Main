@@ -5,6 +5,8 @@ import { SearchBar } from '../searchBar/SearchBar';
 import { useSelector } from "react-redux";
 import { themeChange } from '../../redux/actions/';
 import { useDispatch } from "react-redux";
+import { Cart } from '../cart/Cart';
+
 
 export const NavBar = () => {
     const dispatch = useDispatch();
@@ -73,6 +75,7 @@ export const NavBar = () => {
           </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={borrar}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
       </ul>
+      <Cart/>
       <div className={'conteiner-switch-' + clase}>   
                         <input type='checkbox' 
                         className={'input-switch-' + clase}

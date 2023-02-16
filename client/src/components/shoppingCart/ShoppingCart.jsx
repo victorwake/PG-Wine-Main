@@ -2,10 +2,11 @@ import './shoppingCart.css';
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { NavBar } from "../navBar/NavBar";
 
 
 export const ShoppingCart = () => {
-    const products = useSelector((store) => store.products);
+    const totalItems = useSelector((store) => store.totalItems);
     const cart = useSelector((store) => store.cart);
     
     
@@ -15,19 +16,9 @@ export const ShoppingCart = () => {
     const deleteFromCart = () => {}
 
     return (
-        <div className="shopping-cart">
-            <h1>Shopping Cart</h1>
-            <h3>Productos</h3>
-            <article className="box">
-            {products.map((product) => (
-                <div className="product" key={product.id}>
-                    <h4>{product.name}</h4>
-                    <button onClick={() => addToCart(product)}>Add to cart</button>
-                </div>
-            ))}
-            </article>
-            <h3>Carrito</h3>
-            <article className="box"></article>
+        <div >
+            <NavBar />
+            
         </div>
     );
 }
