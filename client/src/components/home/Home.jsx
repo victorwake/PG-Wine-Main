@@ -48,11 +48,10 @@ export const Home = () => {
         <div className={"home-container-" + clase}>
             <div className='home_nav'>
                 <NavBar/>
+             
                 <div class="container">
           
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#openCartModal">
-  Carrito
-</button>
+
 
 <div class="modal" id="openCartModal">
   <div class="modal-dialog">
@@ -66,35 +65,38 @@ export const Home = () => {
         </button>
       </div>
       <div class="modal-body">
-        <table class="table table-image">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Precio</th>
-              <th scope="col">Cant</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-            {cart?.map((w => (
-            <td>
-            <td scope="col" >{w.name}</td>
-            <td scope="col">{w.varietal}</td>
-            <td scope="col">{w.winery}</td>
-            <td scope="col">{w.price}</td>
-            <img src={w.image}  class="img-fluid img-thumbnail" alt="Sheep"/>
-            </td>
-            )))}
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table> 
+  <table class="table table-image">
+    <thead>
+      <tr>
+        <th scope="col">Imagen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Variedad</th>
+        <th scope="col">Bodega</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {cart?.map((item) => (
+        <tr>
+          <td><img src={item.image} class="img-fluid img-thumbnail" alt="Vino"/></td>
+          <td>{item.name}</td>
+          <td>{item.varietal}</td>
+          <td>{item.winery}</td>
+          <td>{item.price}</td>
+          <td>{item.quantity}</td>
+          <td>{item.price * item.quantity}</td>
+        </tr>
+      ))}
+      <tr>
+        <td colspan="7">
+          <button onClick={addToCart}>Agregar elemento</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
         <div class="d-flex justify-content-end">
           {/* <h5>Total: <span class="price text-success">$89</span></h5> */}
         </div>
@@ -136,7 +138,7 @@ export const Home = () => {
                 )))}  
             </div>
         </div>
-        </div>
+
    
 
     )
