@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { Card } from '../card/Card';
 import { Link } from 'react-router-dom';
 import { NavBar } from '../navBar/NavBar';
+import  Nav  from '../navAdmin/Nav';
 import { Filters } from '../filters/Filters';
 import { nameASC, nameDES, priceDES, priceASC } from '../../helpers/sort';
 
@@ -42,7 +43,7 @@ export const WineType= () => {
 
     return (
         <div className={"wine-container-" + clase}>
-            <NavBar/>
+            <Nav />
             <Filters/>
             <h1 className={"wine-type-h1-" + clase}>Vinos {type}</h1>
             <div className={"pagination-container-type-" + clase} >

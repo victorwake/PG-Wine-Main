@@ -3,6 +3,8 @@ import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/actions/auth"
 import { NavBar } from "../navBar/NavBar";
+import  Nav  from '../navAdmin/Nav';
+
 
 const Profile = () => {
   const currentUser  = useSelector((state) => state.usuario);
@@ -19,7 +21,7 @@ const Profile = () => {
 
   return (
     <div className="container">
-      <NavBar />
+      <Nav />
       <header className="jumbotron">
         <h1> Datos de tu cuenta</h1>
         <h3>
@@ -35,12 +37,17 @@ const Profile = () => {
       </p>
       <p>
         <strong>Email:</strong> {currentUser.usuario.email}
-      </p>
-      <strong>Roles:</strong>
-      <ul>
-        {currentUser.roles &&
-          currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-      </ul>
+      </p>      
+      <div>
+        {currentUser.usuario.rol &&
+        <div>
+        <div><strong>Rol:</strong></div>
+        
+          <div> {currentUser.usuario.rol}</div>
+          </div>
+          }
+      
+      </div>
       <p><a href="/login" className="nav-link" onClick={logOut}>
                 Cerrar sesión
               </a></p>

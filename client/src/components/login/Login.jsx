@@ -11,6 +11,7 @@ import { clearMessage } from "../../redux/actions/message";
 
 import { login } from "../../redux/actions/auth";
 import { NavBar } from "../navBar/NavBar";
+import  Nav  from '../navAdmin/Nav';
 import Google from '../google/Google'
 
 const required = (value) => {
@@ -78,8 +79,9 @@ const Login = (props) => {
     return <Navigate to="/perfil"/>;
   }
   return (
-    <div className="login-container">
-      <NavBar />
+    <div>
+    <Nav />
+    <div className="login-container">      
       <div className="card card-container">
         <div className="img-registro">
         </div>
@@ -130,6 +132,7 @@ const Login = (props) => {
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
       </div>
+    </div>
     </div>
   );
 };

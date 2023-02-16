@@ -10,6 +10,7 @@ import { Navigate } from 'react-router-dom';
 import { clearMessage } from "../../redux/actions/message";
 import { register } from "../../redux/actions/auth";
 import { NavBar } from "../navBar/NavBar";
+import  Nav  from '../navAdmin/Nav';
 import { useNavigate, Link } from "react-router-dom";
 import Google from "../google/Google";
 
@@ -117,9 +118,10 @@ const Register = () => {
   }
  
   return (
+    <div>
+    <Nav />
     <div className="login-container">
-      <NavBar/>
-      <div className="card card-container">
+    <div className="card card-container">
       <div className="img-registro">
         </div>
         <Form onSubmit={handleRegister} ref={form}>
@@ -191,6 +193,7 @@ const Register = () => {
         <div><p>Logueate <Link to ="../login">aquí</Link></p></div>
       </div>
       
+    </div>
     </div>
   );
 };

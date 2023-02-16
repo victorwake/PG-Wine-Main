@@ -1,4 +1,5 @@
 import { NavBar } from '../navBar/NavBar';
+import  Nav  from '../navAdmin/Nav';
 import './home.css';
 import { Fragment, useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
@@ -32,7 +33,7 @@ export const Home = () => {
     return (
         <div className={"home-container-" + clase}>
             <div className='home_nav'>
-                <NavBar/>
+                <Nav/>
             </div>
             <NavBarWineType />
             <h2 className={"sale-type-h2-" + clase}>Ofertas al 10%</h2>
