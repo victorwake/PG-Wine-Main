@@ -8,6 +8,7 @@ import { NavBarWineType } from '../navBarWineType/NavBarWineType';
 import { Link } from 'react-router-dom';
 import { Sale } from '../sale/Sale'
 import _ from 'lodash';
+import { FloatCart } from '../shoppingCart/FloatCart';
 
 
 
@@ -17,7 +18,7 @@ export const Home = () => {
     const allWines = useSelector(state=> state.wines)
     const clase= useSelector(store => store.theme);
     const alertVisible = useSelector(state => state.alertVisible);
-    const cart = useSelector(state => state.cart)
+    // const cart = useSelector(state => state.cart)
 
     const shuffledWines = _.shuffle(allWines);
     const tenRandomWines = shuffledWines.slice(0, 8);
@@ -31,82 +32,19 @@ export const Home = () => {
     useEffect(()=>{
         if(!allWines.length)dispatch(getWines())
     },[]);     
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        var openCartModal = document.querySelector('#openCartModal');
-        var cartModal = document.querySelector('#cartModal');
-        
-        openCartModal.addEventListener('click', function() {
-          cartModal.classList.add('show');
-          cartModal.style.display = 'block';
-          document.body.classList.add('modal-open');
-        });
-      });
+
 
 
     return (
         <div className={"home-container-" + clase}>
-            <div className='home_nav'>
-                <NavBar/>
-                <div class="container">
           
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#openCartModal">
-  Carrito
-</button>
-
-<div class="modal" id="openCartModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <h5 class="modal-title" id="exampleModalLabel">
-          Tu carrito de compras
-        </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table class="table table-image">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Precio</th>
-              <th scope="col">Cant</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-            {cart?.map((w => (
-            <td>
-            <td scope="col" >{w.name}</td>
-            <td scope="col">{w.varietal}</td>
-            <td scope="col">{w.winery}</td>
-            <td scope="col">{w.price}</td>
-            <img src={w.image}  class="img-fluid img-thumbnail" alt="Sheep"/>
-            </td>
-            )))}
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table> 
-        <div class="d-flex justify-content-end">
-          {/* <h5>Total: <span class="price text-success">$89</span></h5> */}
-        </div>
-      </div>
-      <div class="modal-footer border-top-0 d-flex justify-content-between">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"/>Cerrar<button/>
+           
+        
+            <div className='home_nav'>
+           
+                <NavBar/>
+                <FloatCart/>
             </div>
-            </div>
-            </div>
-        </div>
-
-        </div>
             <div class="alert alert-primary hide" container position-sticky top-0 role="alert">
             Producto añadido al carrito!
             
@@ -136,7 +74,7 @@ export const Home = () => {
                 )))}  
             </div>
         </div>
-        </div>
+   
    
 
     )

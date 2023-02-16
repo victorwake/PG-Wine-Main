@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { addToCart } from '../../redux/actions';
+import { NavBar } from '../navBar/NavBar';
 
 
 
@@ -22,8 +23,9 @@ export const Details = () => {
     }, [dispatch, id])
 
     return (
-        
+ 
         <div className={'details-container-' + clase}>
+              <NavBar/>
             <div><Link to='/home'><button className="buttonBack" >Volver a inicio</button></Link></div>
             <Link to = {'/create/' + id}>
                 <button 
@@ -31,7 +33,7 @@ export const Details = () => {
                     >Update
                 </button>
             </Link>
-           
+    
        
             <div className={'details-img-' + clase}>
                 <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
@@ -47,9 +49,9 @@ export const Details = () => {
                 <p  className='price'><b>Precio:&nbsp;</b> {wineDetail.price}</p>
                 <p className='cata'><b>Nota de cata:&nbsp;</b></p>
                 <p className='descripcion'>{wineDetail.description}</p>
-                <Link to = {'/carrito/'}>
+                {/* <Link to = {'/carrito/'}>
                 <button onClick={() => addToCart(id)}>Comprar</button>
-                </Link>
+                </Link> */}
             </div>
         </div>
     );

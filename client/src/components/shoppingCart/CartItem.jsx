@@ -4,9 +4,9 @@ import { removeFromCart, removeAllFromCart } from '../../redux/actions'
 
 
 
-const CartItem = ({ data }) => {
+const CartItem = ({ id, name, price, quantity,image }) => {
   const dispatch = useDispatch();
-        let { id, name, price, quantity,image } = data;
+     
     return (
       <div style={{ borderBottom: "thin solid gray" }}>
         <h4>{name}</h4>
