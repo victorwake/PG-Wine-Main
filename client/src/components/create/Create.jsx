@@ -10,6 +10,7 @@ import { NavAdmin } from '../navAdmin/NavAdmin';
 
 export const Create = () => {
     const urlCloudinary = useSelector(state => state.urlCloudinary)
+    const clase= useSelector(store => store.theme);
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [err, setErr] = useState({});
@@ -69,26 +70,9 @@ export const Create = () => {
             {
                 ...prevInput,
                 [e.target.name]:
-                  typeof e.target.value === "number"
-                    ? e.target.value
-                    : e.target.value.toLowerCase().replace(/\b(\w)/g, s => s.toUpperCase())
-              }
-        ))
-        
-
-        setErr(formControl({
-            ...input,
-            [e.target.name]: e.target.value
-        }))
-
-    }, [input])
-
-
-    const handleChangeNumerico = useCallback((e) => {
-        setInput((prevInput) => (
-            {
-                ...prevInput,
-                [e.target.name]: e.target.value
+                    typeof e.target.value === "number"
+                        ? e.target.value
+                        : e.target.value.toLowerCase().replace(/\b(\w)/g, s => s.toUpperCase())
             }
         ))
         
@@ -99,6 +83,24 @@ export const Create = () => {
         }))
 
     }, [input])
+
+    const handleChangeUrl = useCallback((e) => {
+        setInput((prevInput) => (
+            {
+                ...prevInput,
+                [e.target.name]: e.target.value
+            }
+        ))
+
+        setErr(formControl({
+            ...input,
+            [e.target.name]: e.target.value
+        }))
+
+    }, [input])
+
+
+    
 
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
@@ -116,15 +118,18 @@ export const Create = () => {
 
 
     return (
-        <div className="container-admin">
-        <div className='create'>
+        <div >
+        <div >
             <NavAdmin/>
-            <div>
-                <form className='form' onSubmit={(e) => handleSubmit(e)}>
-                    <h2 className='title-create'>Cargá tu vino</h2>
-                    <div class="row">
-                    <div class="six columns">
-                    <div>
+            <div className={"admin-container-" + clase}>
+            <form  onSubmit={(e) => handleSubmit(e)}>
+            <h2 className={"sale-type-h2-" + clase}>Cargá tu vino</h2>
+            <div  className={"card-container-admin-" + clase} >
+            
+                    <fragment className="fragment-create-1" >
+                            
+                            <div>
+                            <div>
                         <label className='label'>Nombre</label>
                         <input class="u-full-width"  type='text' value={input.name} name='name' onChange={(e) => handleChange(e)} />
                         {err.name && (<span className='err'> {err.name}</span>)}
@@ -171,12 +176,21 @@ export const Create = () => {
                         <input class="u-full-width" type='number' value={input.volume} name='volume' onChange={(e) => handleChange(e)}></input>
                         {err.volume && (<span className='err'> {err.volume}</span>)}
                     </div>
-
                     <div>
                         <label className='label'>Stock</label>
                         <input class="u-full-width" type='number' value={input.stock} name='stock' onChange={(e) => handleChange(e)}></input>
                         {err.stock && (<span className='err'> {err.stock}</span>)}
                     </div>
+                            </div>
+                            
+                        </fragment> 
+
+
+                        <fragment className="fragment-create-2" >
+
+                   
+                            <div>
+                    
 
                     <div>
                         <label className='label'>Año de elaboración</label>
@@ -199,7 +213,7 @@ export const Create = () => {
 
                     <div>
                         <label className='label'>Página de la bodega</label>
-                        <input class="u-full-width" type='text' value={input.url} name='url' onChange={(e) => handleChange(e)} ></input>
+                        <input class="u-full-width" type='text' value={input.url} name='url' onChange={(e) => handleChangeUrl(e)} ></input>
                         {err.url && (<span className='err'> {err.url}</span>)}
                     </div>
 
@@ -209,9 +223,10 @@ export const Create = () => {
                         {err.description && (<span className='err'> {err.description}</span>)}
                     </div>
                     </div>
-                    </div>
+                    
 
                     <div>
+                    </div> 
                     <Cloudinary  />
                     <div >
                         <input class="u-full-width"
@@ -226,12 +241,17 @@ export const Create = () => {
                             <p className='err'>{err.image}</p>
                         )}
                     </div>
-                        <button disabled={disabled} className={'submit'}>{id ? 'ACTUALIZAR' : 'CREAR'}</button>
+                    <button disabled={disabled} className={'submit'}>{id ? 'ACTUALIZAR' : 'CREAR'}</button>
+                    </fragment>
+                        
                     </div>
-                </form>
-
+                    </form>
+                            </div>
+                            
             </div>
         </div>
-        </div>
+        
+          
+  
     )
 }
