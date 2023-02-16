@@ -59,8 +59,8 @@ const initialState = {
     message: {},
     quantity: 1,
     cart : [],
-    alertVisible: false
-
+    alertVisible: false,
+    quantity: 1
    
 }
 

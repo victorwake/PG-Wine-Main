@@ -42,7 +42,11 @@ export const Home = () => {
           document.body.classList.add('modal-open');
         });
       });
-
+      function agregarCantidad(index, cantidad) {
+        const newCart = [...cart];
+        newCart[index].quantity += cantidad;
+        setCart(newCart);
+      }
 
     return (
         <div className={"home-container-" + clase}>
@@ -85,14 +89,18 @@ export const Home = () => {
           <td>{item.varietal}</td>
           <td>{item.winery}</td>
           <td>{item.price}</td>
-          <td>{item.quantity}</td>
+          <td>{item.quantity}
+          
+            <button onClick={() => agregarCantidad(item, +1)}>+</button>
+            {item.quantity}
+            <button onClick={() => agregarCantidad(item, -1)}>-</button>
+          </td>
           <td>{item.price * item.quantity}</td>
+         
         </tr>
       ))}
       <tr>
-        <td colspan="7">
-          <button onClick={addToCart}>Agregar elemento</button>
-        </td>
+        
       </tr>
     </tbody>
   </table>
