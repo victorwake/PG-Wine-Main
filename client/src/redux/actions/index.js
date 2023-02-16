@@ -213,45 +213,113 @@ export const GET_VARIETAL = 'GET_VARIETAL';
 
 /*----------------------------------------------*/
 
-// export function registerUser (payload) {
+export function registerUser (payload) {
   
-//     return async function (dispatch) {
-//       const register = await axios.post('http://localhost:3001/usuarios/crear', payload)
-//       console.log(register)
-//       return register;
-//     }
-//    }
+    return async function (dispatch) {
+      const register = await axios.post('http://localhost:3001/usuarios/crear', payload)
+      console.log(register)
+      return register;
+    }
+   }
 
    
-//    export const POST_REGISTER = 'POST_REGISTER';
+   export const POST_REGISTER = 'POST_REGISTER';
 
-//    /*----------------------------------------------*/
+   /*----------------------------------------------*/
 
-//    export function loginUser (payload) {
+   export function loginUser (payload) {
   
-//     return async function (dispatch) {
-//         try {
-//             let auth = await axios.post('http://localhost:3001/auth', payload)
-//              console.warn(auth.request.status);
-//              console.warn(auth.data.usuario.userName);             
-//             if(auth.request.status === 200) {
-//                 let usuarioLogueado = auth.data.usuario.idUser
-//                 let userName = auth.data.usuario.firstName
-//                 alert( `Hola ${userName}, Te haz logueado de manera correcta`)
-//                 console.log('Login OK!!!')
-//                 localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
-//                 localStorage.setItem('x-token', JSON.stringify(auth.data.token));
-//                 localStorage.setItem('nombre', JSON.stringify(userName));
-//                 localStorage.setItem('apellido', JSON.stringify(auth.data.usuario.lastName));
-//             }
-//         } catch (err) {   
-//             console.log(err.response.data.msg)         
-//             alert(JSON.stringify(err.response.data.msg))
-//         }
+    return async function (dispatch) {
+        try {
+            let auth = await axios.post('http://localhost:3001/auth', payload)
+             console.warn(auth.request.status);
+             console.warn(auth.data.usuario.userName);             
+            if(auth.request.status === 200) {
+                let usuarioLogueado = auth.data.usuario.idUser
+                let userName = auth.data.usuario.firstName
+                alert( `Hola ${userName}, Te haz logueado de manera correcta`)
+                console.log('Login OK!!!')
+                localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
+                localStorage.setItem('x-token', JSON.stringify(auth.data.token));
+                localStorage.setItem('nombre', JSON.stringify(userName));
+                localStorage.setItem('apellido', JSON.stringify(auth.data.usuario.lastName));
+            }
+        } catch (err) {   
+            console.log(err.response.data.msg)         
+            alert(JSON.stringify(err.response.data.msg))
+        }
       
-//     }
-//    }
+    }
+   }
 
-//    export const POST_AUTH = 'POST_AUTH';
+   export const POST_AUTH = 'POST_AUTH';
 
    /*--------------------------------*/
+
+   export const addToCart = (id) => {
+       console.log('entro en action');
+       const items = id
+        return dispatch => {
+            dispatch({
+                type: ADD_TO_CART, 
+                payload: id
+            }) 
+        }
+    }
+
+    
+
+    export const ADD_TO_CART = 'ADD_TO_CART';
+
+
+   /*--------------------------------*/
+  
+   
+    // export const delFromCart = (id, all = false) => {
+    //     //console.log(id, all);
+    //     return async(dispatch) => {
+    //     if (all) {
+    //         return dispatch({ type: REMOVE_ALL_FROM_CART, payload: id });
+    //       } else {
+    //         return dispatch({ type: REMOVE_ONE_FROM_CART, payload: id });
+    //       }
+    // }}
+    export const removeFromCart = (id) => {
+        // console.log(id, all);
+        return dispatch => {
+            dispatch ({
+                type: REMOVE_FROM_CART,
+                payload: id
+            })
+        }
+    }
+     export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+
+
+     export const removeAllFromCart = () => {
+        // console.log(id, all);
+        return dispatch => {
+            dispatch ({
+                type: REMOVE_ALL_FROM_CART,
+             
+            })
+        }
+    }
+
+    export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
+
+
+    /*--------------------------------*/
+
+    export const clearCart = () => {
+        //console.log(id);
+        return dispatch => {
+            dispatch({
+                type: CLEAR_CART, 
+            }) 
+        }
+    }
+    export const CLEAR_CART = 'CLEAR_CART';
+
+    
+           

@@ -2,12 +2,13 @@ import { NavBar } from '../navBar/NavBar';
 import './home.css';
 import { Fragment, useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { getWines } from '../../redux/actions';
+import { getWines, addToCart } from '../../redux/actions';
 import { Card }from '../card/Card'
 import { NavBarWineType } from '../navBarWineType/NavBarWineType';
 import { Link } from 'react-router-dom';
 import { Sale } from '../sale/Sale'
 import _ from 'lodash';
+
 
 
 export const Home = () => {
@@ -35,6 +36,7 @@ export const Home = () => {
                 <NavBar/>
             </div>
             <NavBarWineType />
+           
             <h2 className={"sale-type-h2-" + clase}>Ofertas al 10%</h2>
             <div  className={"card-container-home-" + clase} >
                 {/* <div id="carouselExampleIndicators" class="carousel slide">
@@ -76,6 +78,9 @@ export const Home = () => {
                                 winery={w.winery}
                                 price= {w.price}
                                 />
+                                <Link to = {'/carrito'}>
+                                <button className='agregarcart' onClick={() => dispatch(addToCart(w.id))}>Agregar al Carrito</button>
+                            </Link>
                             </Link>
                         </Fragment>
                 )))}  

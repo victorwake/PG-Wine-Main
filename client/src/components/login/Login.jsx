@@ -1,15 +1,13 @@
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate  } from 'react-router-dom';
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-import { clearMessage } from "../../redux/actions/message";
 
 import { login } from "../../redux/actions/auth";
-import { NavBar } from "../navBar/NavBar";
 
 const required = (value) => {
   if (!value) {
@@ -31,8 +29,8 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const  isLoggedIn  = useSelector(state => state.isLoggedIn);
-  const  message  = useSelector(state => state.message);
+  const { isLoggedIn } = useSelector(state => state.auth);
+  const { message } = useSelector(state => state.message);
 
   const dispatch = useDispatch();
 
@@ -48,6 +46,7 @@ const Login = (props) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+
     setLoading(true);
 
     form.current.validateAll();
@@ -61,27 +60,23 @@ const Login = (props) => {
         .catch(() => {
           setLoading(false);
         });
-        } else {
-      setLoading(true);
-      
-      }
+    } else {
+      setLoading(false);
+    }
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      dispatch(clearMessage(message));
-  }, "2000")
-  },[dispatch, message])
 
   if (isLoggedIn) {
     return <Navigate to="/perfil" />;
   }
+
   return (
-    <div className="login-container">
-      <NavBar />
+    <div className="col-md-12">
       <div className="card card-container">
-        <div className="img-registro">
-        </div>
+        <img
+          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+          alt="profile-img"
+          className="profile-img-card"
+        />
 
         <Form onSubmit={handleLogin} ref={form}>
           <div className="form-group">
@@ -109,7 +104,7 @@ const Login = (props) => {
           </div>
 
           <div className="form-group">
-            <button className="btn btn-secondary btn-block" disabled={loading}>
+            <button className="btn btn-primary btn-block" disabled={loading}>
               {loading && (
                 <span className="spinner-border spinner-border-sm"></span>
               )}
@@ -134,3 +129,81 @@ const Login = (props) => {
 export default Login;
 
 /*-----------------------------------------*/
+
+// import "./login.css";
+
+// import { useState, useEffect } from "react";
+// import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
+// import { loginUser } from "../../redux/actions";
+// import { NavBar } from '../navBar/NavBar';
+
+// export const Login = () => {
+//   const [inputs, setInputs] = useState({
+//     email: "",
+//     password: "",
+//   });
+//   const navigate = useNavigate();
+//   const dispatch = useDispatch();
+
+//   const handleChange = (event) => {
+//     const name = event.target.name;
+//     const value = event.target.value;
+//     console.log(name, value);
+//     setInputs((values) => ({ ...values, [name]: value }));
+//   };
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault();       
+//        dispatch(loginUser(inputs));
+//          setInputs({
+//           email: "",
+//           password: "",
+//         });      
+//           navigate("/home");
+          
+// };
+
+// // useEffect(() => {
+// //   dispatch(loginUser)
+// // }, [dispatch])
+
+
+//   return (
+//     <div>
+//     <NavBar/>
+//      <div className="login-container">      
+//       <div><h1 className="h2">Login</h1></div>      
+//       <form className="form-log" onSubmit={handleSubmit}>
+//         <label>
+//           Email:
+//           <input
+//             required
+//             className="form-control me-2"
+//             type="email"
+//             name="email"
+//             value={inputs.email}
+//             onChange={(e) => handleChange(e)}
+//           />
+//         </label>
+//         <label>
+//           Password:
+//           <input
+//             required
+//             className="form-control me-2"
+//             type="password"
+//             name="password"
+//             value={inputs.password}
+//             onChange={(e) => handleChange(e)}
+//           />
+//         </label>
+//         <label>
+//         <input type="submit" className="btn btn-outline-success"/>
+//         </label>
+//       </form>
+//     </div>
+//     </div>
+//   );
+// };
+
+

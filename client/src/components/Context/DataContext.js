@@ -8,7 +8,7 @@ const DataProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios("./winesDb.json").then((res) => setData(res.data));
+    axios("winesDb.json").then((res) => setData(res.data));
   }, []);
 
   return <dataContext.Provider value={{ data, cart, setCart }}>{children}</dataContext.Provider>;

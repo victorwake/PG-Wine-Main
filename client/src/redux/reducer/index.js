@@ -15,24 +15,34 @@ import {
     GET_BY_RANGE_PRICE,
     GET_VARIETAL,
     POST_WINES,
-    UPDATE_WINE
-
-} from '../actions/index.js';
-
-/*--------AUTH---------*/
-
-import {
+    UPDATE_WINE,
+    POST_REGISTER,
+    POST_AUTH,
+    ADD_TO_CART,
+    REMOVE_FROM_CART,
+    REMOVE_ALL_FROM_CART,
+    CLEAR_CART,
     REGISTER_SUCCESS,
     REGISTER_FAIL,
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT,
-  } from "../actions/type.js";
+    SET_MESSAGE, 
+    CLEAR_MESSAGE, 
+    getWines,
   
-  /*--------MESSAGE---*/
-import { SET_MESSAGE, CLEAR_MESSAGE } from "../actions/type.js";
+} from '../actions/index.js';
 
   
+
+  const usuario = JSON.parse(localStorage.getItem("usuario"));
+  
+  const initialStateUsuario = usuario
+    ? { isLoggedIn: true, usuario }
+    : { isLoggedIn: false, usuario: null };
+
+
+
 const initialState = {
     theme: 'light',
     wines: [],
@@ -43,21 +53,16 @@ const initialState = {
     useFilter: false,
     price: '',
     varietal: [],
-    message: "",
-    isLoggedIn: false,
-    usuario: null
+    initialStateUsuario: initialStateUsuario,
+    message: {},
+    quantity: 1,
+    cart : [],
+    totalPrice: 0,
+
+   
 }
 
-const usuario = JSON.parse(localStorage.getItem("usuario"));
 
-if (usuario) {
-    initialState.isLoggedIn = true;
-    initialState.usuario = usuario
-} else {
-    initialState.isLoggedIn = false;
-    initialState.usuario = null;
-}
-  
 const rootReducer = (state = initialState, action) => {
    
   
@@ -88,9 +93,11 @@ const rootReducer = (state = initialState, action) => {
                 wineType: action.payload
             };
         case GET_WINE_DETAIL:
+            console.log("entro al detail")
             return {
                 ...state,
                 wineDetail: action.payload
+                
             };
         case CLEAN_DETAIL:
             return {
@@ -150,48 +157,89 @@ const rootReducer = (state = initialState, action) => {
         case UPDATE_WINE:
             return {
                 ...state,
-            }        
-        case REGISTER_SUCCESS:
-        return {
-          ...state,
-          isLoggedIn: false,
-        };
-      case REGISTER_FAIL:
-        return {
-          ...state,
-          isLoggedIn: false,
-        };
-      case LOGIN_SUCCESS:
-        return {
-          ...state,
-          isLoggedIn: true,
-          usuario: action.payload.usuario,
-        };
-      case LOGIN_FAIL:
-        return {
-          ...state,
-          isLoggedIn: false,
-          usuario: null,
-        };
-      case LOGOUT:
-        return {
-          ...state,
-          isLoggedIn: false,
-          usuario: null,
-          };
-          case SET_MESSAGE:
-              return {
-                  ...state,
-                  message: action.payload
-              };
-          case CLEAR_MESSAGE:
-              return {
-                  ...state,
-                  message: ""
-              };
+            }
+        // case POST_REGISTER:
+        //     return {
+        //         ...state,
+        //     }
+        // case POST_AUTH:
+        //     return {
+        //         ...state,
+        //     }
+        // case REGISTER_SUCCESS:
+        // return {
+        //   ...state,
+        //   isLoggedIn: false,
+        // };
+        // case REGISTER_FAIL:
+        // return {
+        //   ...state,
+        //   isLoggedIn: false,
+        // };
+        // case LOGIN_SUCCESS:
+        // return {
+        //   ...state,
+        //   isLoggedIn: true,
+        //   usuario: action.payload.usuario,
+        // };
+        // case LOGIN_FAIL:
+        // return {
+        //   ...state,
+        //   isLoggedIn: false,
+        //   usuario: null,
+        // };
+        // case LOGOUT:
+        // return {
+        //   ...state,
+        //   isLoggedIn: false,
+        //   usuario: null,
+        // };
+        // case SET_MESSAGE:
+        // return { message: action.payload };
+
+        // case CLEAR_MESSAGE:
+        // return { message: "" };
+
+         ///////////////////////////////////
+
+        case ADD_TO_CART:
+            console.log("entro en reducer")
+            let newItem = state.wines.find( (wine) => wine.id === action.payload)
+            return ({
+                ...state,
+                cart: [...state.cart, newItem]
+            })
+
+        
+        case REMOVE_FROM_CART:
+            console.log("entro al delete")
+            // console.log('Removing item with id: ', action.payload);
+            // console.log('Current cart state: ', state.cart);
+            // let itemToDelete = state.cart.find((item) => item.id === action.payload);
+            // console.log('Item to delete: ', itemToDelete);
+            return ({
+                ...state,
+                cart: state.cart.filter((product) => product.id !== action.payload)}
+            )
+       
+            case REMOVE_ALL_FROM_CART:
+                console.log("entro al deleteALL")
+                // console.log('Removing item with id: ', action.payload);
+                // console.log('Current cart state: ', state.cart);
+                // let itemToDelete = state.cart.find((item) => item.id === action.payload);
+                // console.log('Item to delete: ', itemToDelete);
+                    return ({
+                            cart: state.cart})
+
+            case CLEAR_CART:{
+            return initialState;
+        }
+             
+
         default:
             return state;
-    }
+        }
+   
 }
 
 export default rootReducer;
