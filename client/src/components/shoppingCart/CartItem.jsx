@@ -6,9 +6,9 @@ import './CartItem.css'
 import { NavBar } from "../navBar/NavBar";
 
 
-const CartItem = ({ id, name, price, quantity,image }) => {
+const CartItem = ({ data }) => {
   const dispatch = useDispatch();
-     
+        let { id, name, price, quantity,image } = data;
     return (
       <body>
         <NavBar>
