@@ -16,6 +16,8 @@ export const Home = () => {
     const dispatch = useDispatch();
     const allWines = useSelector(state=> state.wines)
     const clase= useSelector(store => store.theme);
+    const alertVisible = useSelector(state => state.alertVisible);
+    const cart = useSelector(state => state.cart)
 
     const shuffledWines = _.shuffle(allWines);
     const tenRandomWines = shuffledWines.slice(0, 8);
@@ -28,46 +30,93 @@ export const Home = () => {
 
     useEffect(()=>{
         if(!allWines.length)dispatch(getWines())
-    },[]);        
+    },[]);     
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var openCartModal = document.querySelector('#openCartModal');
+        var cartModal = document.querySelector('#cartModal');
+        
+        openCartModal.addEventListener('click', function() {
+          cartModal.classList.add('show');
+          cartModal.style.display = 'block';
+          document.body.classList.add('modal-open');
+        });
+      });
+
 
     return (
         <div className={"home-container-" + clase}>
             <div className='home_nav'>
                 <NavBar/>
+                <div class="container">
+          
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#openCartModal">
+  Carrito
+</button>
+
+<div class="modal" id="openCartModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Tu carrito de compras
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-image">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cant</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            {cart?.map((w => (
+            <td>
+            <td scope="col" >{w.name}</td>
+            <td scope="col">{w.varietal}</td>
+            <td scope="col">{w.winery}</td>
+            <td scope="col">{w.price}</td>
+            <img src={w.image}  class="img-fluid img-thumbnail" alt="Sheep"/>
+            </td>
+            )))}
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table> 
+        <div class="d-flex justify-content-end">
+          {/* <h5>Total: <span class="price text-success">$89</span></h5> */}
+        </div>
+      </div>
+      <div class="modal-footer border-top-0 d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"/>Cerrar<button/>
             </div>
+            </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="alert alert-primary hide" container position-sticky top-0 role="alert">
+            Producto añadido al carrito!
+            
+            </div>
+            {alertVisible && <div className="alert">El vino ha sido agregado al carrito</div>}
             <NavBarWineType />
+   
            
             <h2 className={"sale-type-h2-" + clase}>Ofertas al 10%</h2>
             <div  className={"card-container-home-" + clase} >
-                {/* <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="..."/>
-                        <h5>Promo 1</h5>
-                        </div>
-                        <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="..."/>
-                        <h5>Promo 2</h5>
-                        </div>
-                        <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="..."/>
-                        <h5>Promo 3</h5>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div> */}
                 {discountedWines?.map((w => (
                         <Fragment key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
@@ -78,13 +127,17 @@ export const Home = () => {
                                 winery={w.winery}
                                 price= {w.price}
                                 />
-                                <Link to = {'/carrito'}>
-                                <button onClick={() => dispatch(addToCart(w.id))}>Agregar al Carrito</button>
                             </Link>
-                            </Link>
+                            <div>
+                            <button onClick={() => dispatch(addToCart(w.id))}>Agregar al Carrito</button>
+                            </div>
+                                
                         </Fragment>
                 )))}  
             </div>
         </div>
+        </div>
+   
+
     )
 }

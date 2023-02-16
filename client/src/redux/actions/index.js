@@ -256,20 +256,40 @@ export function registerUser (payload) {
 
    /*--------------------------------*/
 
-   export const addToCart = (id) => {
-       console.log('entro en action');
-       const items = id
-        return dispatch => {
-            dispatch({
-                type: ADD_TO_CART, 
-                payload: id
-            }) 
-        }
+//    export const addToCart = (id) => {
+//        console.log('entro en action');
+//        const items = id
+//         return dispatch => {
+            
+//             dispatch({
+//                 type: ADD_TO_CART, 
+//                 payload: id
+//             }) 
+//         }
+//     }
+export const addToCart = (id) => {
+    console.log('entro en action');
+    const items = id
+    return dispatch => {
+      dispatch({
+        type: ADD_TO_CART, 
+        payload: id
+      });
+      setTimeout(() => {
+        dispatch({
+          type: HIDE_ALERT
+        });
+      }, 2000);
+      dispatch({
+        type: SHOW_ALERT
+      });
     }
-
+  }
     
 
     export const ADD_TO_CART = 'ADD_TO_CART';
+    export const HIDE_ALERT = 'HIDE_ALERT';
+    export const SHOW_ALERT = 'SHOW_ALERT';
 
 
    /*--------------------------------*/

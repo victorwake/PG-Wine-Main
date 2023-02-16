@@ -4,7 +4,7 @@ import { removeFromCart, removeAllFromCart } from '../../redux/actions'
 
 
 
-const CartItem = ({ data, delFromCart }) => {
+const CartItem = ({ data }) => {
   const dispatch = useDispatch();
         let { id, name, price, quantity,image } = data;
     return (
@@ -17,7 +17,6 @@ const CartItem = ({ data, delFromCart }) => {
         <div>
         <button onClick={() => dispatch(removeFromCart(id))}>Eliminar</button>
         </div>
-        
       </div>
     );
   };
