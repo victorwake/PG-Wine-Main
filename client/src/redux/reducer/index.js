@@ -19,6 +19,8 @@ import {
     POST_REGISTER,
     POST_AUTH,
     ADD_TO_CART,
+    HIDE_ALERT,
+    SHOW_ALERT,
     REMOVE_FROM_CART,
     REMOVE_ALL_FROM_CART,
     CLEAR_CART,
@@ -57,7 +59,7 @@ const initialState = {
     message: {},
     quantity: 1,
     cart : [],
-    totalPrice: 0,
+    alertVisible: false
 
    
 }
@@ -158,57 +160,37 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
             }
-        // case POST_REGISTER:
-        //     return {
-        //         ...state,
-        //     }
-        // case POST_AUTH:
-        //     return {
-        //         ...state,
-        //     }
-        // case REGISTER_SUCCESS:
-        // return {
-        //   ...state,
-        //   isLoggedIn: false,
-        // };
-        // case REGISTER_FAIL:
-        // return {
-        //   ...state,
-        //   isLoggedIn: false,
-        // };
-        // case LOGIN_SUCCESS:
-        // return {
-        //   ...state,
-        //   isLoggedIn: true,
-        //   usuario: action.payload.usuario,
-        // };
-        // case LOGIN_FAIL:
-        // return {
-        //   ...state,
-        //   isLoggedIn: false,
-        //   usuario: null,
-        // };
-        // case LOGOUT:
-        // return {
-        //   ...state,
-        //   isLoggedIn: false,
-        //   usuario: null,
-        // };
-        // case SET_MESSAGE:
-        // return { message: action.payload };
 
-        // case CLEAR_MESSAGE:
-        // return { message: "" };
 
          ///////////////////////////////////
 
+        // case ADD_TO_CART:
+        //     console.log("entro en reducer")
+        //     let newItem = state.wines.find( (wine) => wine.id === action.payload)
+        //     return ({
+        //         ...state,
+        //         cart: [...state.cart, newItem]
+          
+        //     } )
+
         case ADD_TO_CART:
-            console.log("entro en reducer")
-            let newItem = state.wines.find( (wine) => wine.id === action.payload)
-            return ({
-                ...state,
-                cart: [...state.cart, newItem]
-            })
+      console.log("entro en reducer");
+      let newItem = state.wines.find(wine => wine.id === action.payload);
+      return {
+        ...state,
+        cart: [...state.cart, newItem],
+        alertVisible: true
+      };
+    case SHOW_ALERT:
+      return {
+        ...state,
+        alertVisible: true
+      };
+    case HIDE_ALERT:
+      return {
+        ...state,
+        alertVisible: false
+      };
 
         
         case REMOVE_FROM_CART:

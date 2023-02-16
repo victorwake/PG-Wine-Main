@@ -29,7 +29,6 @@ const CartItem = ({ data }) => {
         
 
         </div>
-        
       </div>
       </body>
     );
