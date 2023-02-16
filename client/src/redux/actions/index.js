@@ -309,7 +309,7 @@ export const addToCart = (id) => {
         return dispatch => {
             dispatch ({
                 type: REMOVE_FROM_CART,
-                payload: id,
+                payload: id
             })
         }
     }

@@ -6,6 +6,12 @@
     background-color: rgb(224, 224, 224);
     
 }
+.agregarcart{
+    width: 60px;
+    height: 50px;
+    background-color: coral;
+    border-radius: 3px;
+}
 
 
 .card-container-home-light{
@@ -18,7 +24,7 @@
 
 .sale-type-h2-light{
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     margin: 5px;
     color: rgb(0, 0, 0);
     font-family: 'Source Sans Pro', sans-serif;
@@ -29,6 +35,8 @@
     margin-top: 80px;
     margin-bottom: 20px;
     background-color: rgb(224, 224, 224);
+   
+
 }
 
 .alert{
@@ -62,9 +70,13 @@
   }
   
   .price {
-    margin-left: 1rem;
+    margin-left: 0rem;
   }
   
   .modal-footer {
     padding-top: 0rem;
   }
+.modal-body{
+    font-size: 12px;
+    margin-left: -5px;
+}

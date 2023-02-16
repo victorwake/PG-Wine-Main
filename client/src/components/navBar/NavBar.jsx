@@ -62,7 +62,10 @@ export const NavBar = () => {
           </Link>: <Link to="/home" onClick={borrar}><a class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
       </ul>
-      <Link className="carrito" to={"/carrito"}>🛒</Link>
+  
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#openCartModal">
+  Carrito
+</button>
       <SearchBar/>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

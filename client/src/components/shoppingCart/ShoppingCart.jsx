@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector} from "react-redux";
 import { addToCart, removeFromCart, clearCart } from "../../redux/actions";
 import CartItem from "./CartItem";
-
+import { NavBar } from "../navBar/NavBar";
 
 
 
@@ -12,16 +12,19 @@ const ShoppingCart = () => {
 
   
   return (
-    <div>
-      <h2>Carrito de Compras</h2>
+     <div>
+      
+        
+      <h2 className="Tit">Carrito de Compras</h2>
       <article className="box">
-        <button onClick={clearCart}>Limpiar Carrito</button>
+     
         {cart.map((items) => (
           <CartItem data={items}/>
         ))} 
       </article>
     </div>
   );
+
 };
 
 export default ShoppingCart;
