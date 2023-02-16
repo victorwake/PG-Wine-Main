@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-const { User } = require("../../src/db");
+const { User } = require("../db");
 
 const validarJWT = async (req, res, next) => {
   const token = req.header("x-token");

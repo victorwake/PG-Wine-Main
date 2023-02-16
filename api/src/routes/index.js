@@ -10,7 +10,7 @@ const usuariosRouter = require('./usuariosRouter');
 const login = require('./userLogin')
 const rutaRestringida = require('./rutaRestringida')
 
-const { validarJWT } = require('../../src/middlewares/validarJWT');
+const { validarJWT } = require('../middlewares/validarJWT');
 
 
 

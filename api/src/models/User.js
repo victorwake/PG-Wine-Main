@@ -9,6 +9,15 @@ module.exports = (sequelize) => {
             primaryKey: true,
             allowNull: false,
         },
+        userName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+              notNull: {
+                msg: 'Nombre de usuario es obligatorio'
+              }
+            }
+        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
