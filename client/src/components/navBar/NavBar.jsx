@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { SearchBar } from '../searchBar/SearchBar';
 import  LoginButton  from '../login/LoginBtn';
 import Profile from "../profile/Profile";
-import { useSelector } from "react-redux";
-import { FloatCart } from "../shoppingCart/FloatCart";
 
 export const NavBar = () => {
 
@@ -13,19 +11,15 @@ export const NavBar = () => {
     localStorage.clear();
     this.location.reload();
   };
-  
+
   const tokenRevi = localStorage.getItem('nombre')
-
-
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+  <div class="container-fluid">
     <h1 class="navbar-brand">Dionisio Wines</h1>
-     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -68,16 +62,17 @@ export const NavBar = () => {
           </Link>: <Link to="/home" onClick={borrar}><a class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
       </ul>
-      <button type="button"  data-toggle="modal" data-target="#openCartModal">
-    🛒
+  
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#openCartModal">
+  Carrito
 </button>
-      
-          
-      <SearchBar/>    
+      <SearchBar/>
+      {/* <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> */}
     </div>
   </div>
-
 </nav>
-
   );
 };

@@ -8,7 +8,6 @@ import { addToCart } from '../../redux/actions';
 import { NavBar } from '../navBar/NavBar';
 
 
-
 export const Details = () => {
 
     const dispatch = useDispatch();
@@ -23,35 +22,28 @@ export const Details = () => {
     }, [dispatch, id])
 
     return (
- 
+        
         <div className={'details-container-' + clase}>
-              <NavBar/>
-            <div><Link to='/home'><button className="buttonBack" >Volver a inicio</button></Link></div>
-            <Link to = {'/create/' + id}>
-                <button 
-                    className={'button-back-' + clase}
-                    >Update
-                </button>
-            </Link>
-    
+            <NavBar/>
+                    
        
             <div className={'details-img-' + clase}>
                 <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
             </div>
             <div className={'details-info-' + clase}>
                 <h1 className='nombre'>{wineDetail.name}</h1>
-                <h2 className='variedad'><b>Variedad:&nbsp;</b> {wineDetail.varietal}</h2>
-                <p className='tipo'><b>Tipo:&nbsp;</b> {wineDetail.color_type}</p>
-                <p  className='bodega'><b>Bodega:&nbsp;</b> {wineDetail.winery}</p>
-                <p className='origen'><b>UBICACIÓN / ORIGEN:&nbsp;</b> {wineDetail.province}, {wineDetail.region}</p>
+                <h2 className='variedad'><b>&nbsp;</b> {wineDetail.varietal}</h2>
+                <p className='tipo'><b>&nbsp;</b> {wineDetail.color_type}</p>
+                <p  className='bodega'><b>&nbsp;</b> {wineDetail.winery}</p>
+                <p className='origen'><b>&nbsp;</b> {wineDetail.province}, {wineDetail.region}</p>
                 <p className='alcohol'><b>Alcohol:&nbsp;</b> {wineDetail.alcohol}%</p>
                 <p className='year'><b>Año:&nbsp;</b> {wineDetail.year}</p>
                 <p  className='price'><b>Precio:&nbsp;</b> {wineDetail.price}</p>
-                <p className='cata'><b>Nota de cata:&nbsp;</b></p>
+                <p className='cata'><b>&nbsp;</b></p>
                 <p className='descripcion'>{wineDetail.description}</p>
-                {/* <Link to = {'/carrito/'}>
-                <button onClick={() => addToCart(id)}>Comprar</button>
-                </Link> */}
+                <div>
+                            <button onClick={() => dispatch(addToCart(id))}>Agregar al Carrito</button>
+                            </div>
             </div>
         </div>
     );

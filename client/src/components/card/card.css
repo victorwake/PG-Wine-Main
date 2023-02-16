@@ -66,3 +66,9 @@
     margin: 5px;
     color: rgb(0, 0, 0);
 }
+.comprar{
+    width: 100px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: rgb(255, 89, 0);
+}

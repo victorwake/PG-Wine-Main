@@ -31,8 +31,8 @@ import {
     LOGOUT,
     SET_MESSAGE, 
     CLEAR_MESSAGE, 
-    getWines
-
+    getWines,
+  
 } from '../actions/index.js';
 
   
@@ -212,15 +212,11 @@ const rootReducer = (state = initialState, action) => {
                 // console.log('Item to delete: ', itemToDelete);
                     return ({
                             cart: state.cart})
-                            
-                   
-                
 
-
-        case CLEAR_CART:{
-          
+            case CLEAR_CART:{
+            return initialState;
         }
-        
+             
 
         default:
             return state;

@@ -14,6 +14,12 @@ body {
     color: rgb(150, 150, 151);
     border-color: rgb(196, 198, 69);
 }
+.comprar{
+    width: 100px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: rgb(255, 89, 0);
+}
 
 .imagedetail {
     display: flex;
