@@ -61,44 +61,52 @@ const googleSignin = async(req, res) => {
     const { id_token } = req.body;
     
     try {
-        const { email, nombre, apellido } = await googleVerify( id_token );
+        const { firstName, lastName, email } = await googleVerify( id_token );
+        console.log( firstName, lastName, email);
+    
 
-        let usuario = await User.findOne({where: {email: email}})
+       const usuario = await User.findOne({where: {email: email}})
+        console.log(usuario)
+                   
+        try {
+            if ( !usuario ) {
+                // Tengo que crearlo
+                const data = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    password: ":p",
+                    rol: "USER_ROLE",
+                    google: true
+                };
 
-        if ( !usuario ) {
-            // Tengo que crearlo
-            const data = {
-                nombre,
-                apellido,
-                correo,
-                password: ':P',
-                rol: "USER_ROLE",
-                google: true
-            };
-
-            usuario = new User( data );
-            await usuario.save();
-        }
-
-        // Si el usuario en DB
-        if ( usuario.status !== 'active' ) {
-            return res.status(401).json({
-                msg: 'Hable con el administrador, usuario bloqueado'
+                usuario = await User.create( data );
+                await usuario.save();
+            } 
+    
+            // Si el usuario en DB
+            if ( usuario.status !== 'active' ) {
+                return res.status(401).json({
+                    msg: 'Hable con el administrador, usuario bloqueado'
+                });
+            }
+    
+            // Generar el JWT
+            const token = await generarJWT( usuario.idUser );
+            
+            res.json({
+                usuario,
+                token
             });
-        }
-
-        // Generar el JWT
-        const token = await generarJWT( usuario.idUser );
-        
-        res.json({
-            usuario,
-            token
-        });
+            
+        } catch (error) {
+            console.log('Error al crear el usuario de google')
+            
+        }     
         
     } catch (error) {
-
         res.status(400).json({
-            msg: 'Token de Google no es válido'
+            msg: 'Proceso de Token de Google no es válido'
         })
 
     }

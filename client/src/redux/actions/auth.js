@@ -5,7 +5,8 @@ import {
     LOGIN_FAIL,
     LOGOUT,
     SET_MESSAGE,
-    CLEAR_MESSAGE
+    CLEAR_MESSAGE,
+    LOGGIN_SUCCESS_G
   } from "./type";
   
   import AuthService from "../../services/auth.service";
@@ -84,4 +85,12 @@ import {
     dispatch({
       type: LOGOUT,
     });
+  };
+    export const loginG = () => (dispatch) => {
+      return (data)  => {
+        dispatch({
+        type: LOGGIN_SUCCESS_G,
+        payload: { usuario: data},
+        
+      });}
   };

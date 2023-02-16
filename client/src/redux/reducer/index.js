@@ -27,6 +27,7 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT,
+    LOGGIN_SUCCESS_G
   } from "../actions/type.js";
   
   /*--------MESSAGE---*/
@@ -188,6 +189,11 @@ const rootReducer = (state = initialState, action) => {
               return {
                   ...state,
                   message: ""
+              };
+              case LOGGIN_SUCCESS_G:
+              return {
+                isLoggedIn: true,
+                usuario: action.payload.usuario,
               };
         default:
             return state;
