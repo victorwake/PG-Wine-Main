@@ -25,36 +25,32 @@ export const Home = () => {
         ...w,
         price: w.price * 0.9,
     }));
-    
+
     //Lo usariamos cuando tengamos los filtros, se cambiaria el allWines.slide por este
 
     useEffect(()=>{
         if(!allWines.length)dispatch(getWines())
-    },[]);     
-    
+    },[]);
+
     document.addEventListener('DOMContentLoaded', function() {
         var openCartModal = document.querySelector('#openCartModal');
         var cartModal = document.querySelector('#cartModal');
-        
+
         openCartModal.addEventListener('click', function() {
           cartModal.classList.add('show');
           cartModal.style.display = 'block';
           document.body.classList.add('modal-open');
         });
       });
-      function agregarCantidad(index, cantidad) {
-        const newCart = [...cart];
-        newCart[index].quantity += cantidad;
-        setCart(newCart);
-      }
+   
 
     return (
         <div className={"home-container-" + clase}>
             <div className='home_nav'>
                 <NavBar/>
-             
+
                 <div class="container">
-          
+
 
 
 <div class="modal" id="openCartModal">
@@ -74,7 +70,7 @@ export const Home = () => {
       <tr>
         <th scope="col">Imagen</th>
         <th scope="col">Nombre</th>
-        <th scope="col">Variedad</th>
+        {/* <th scope="col">Variedad</th> */}
         <th scope="col">Bodega</th>
         <th scope="col">Precio</th>
         <th scope="col">Cantidad</th>
@@ -87,20 +83,18 @@ export const Home = () => {
           <td><img src={item.image} class="img-fluid img-thumbnail" alt="Vino"/></td>
           <td>{item.name}</td>
           <td>{item.varietal}</td>
-          <td>{item.winery}</td>
-          <td>{item.price}</td>
-          <td>{item.quantity}
-          
-            <button onClick={() => agregarCantidad(item, +1)}>+</button>
-            {item.quantity}
-            <button onClick={() => agregarCantidad(item, -1)}>-</button>
+          {/* <td>{item.winery}</td> */}
+          <td>${item.price}</td>
+          <td>
+            <input type="number" id="id" name="name"
+            min="1" max="10"/>
           </td>
           <td>{item.price * item.quantity}</td>
-         
+
         </tr>
       ))}
       <tr>
-        
+
       </tr>
     </tbody>
   </table>
@@ -119,12 +113,12 @@ export const Home = () => {
         </div>
             <div class="alert alert-primary hide" container position-sticky top-0 role="alert">
             Producto añadido al carrito!
-            
+
             </div>
             {alertVisible && <div className="alert">El vino ha sido agregado al carrito</div>}
             <NavBarWineType />
-   
-           
+
+
             <h2 className={"sale-type-h2-" + clase}>Ofertas al 10%</h2>
             <div  className={"card-container-home-" + clase} >
                 {discountedWines?.map((w => (
@@ -133,7 +127,7 @@ export const Home = () => {
                             <Card
                                 name={w.name}
                                 varietal={w.varietal}
-                                image= {w.image} 
+                                image= {w.image}
                                 winery={w.winery}
                                 price= {w.price}
                                 />
@@ -141,13 +135,13 @@ export const Home = () => {
                             <div>
                             <button onClick={() => dispatch(addToCart(w.id))}>Agregar al Carrito</button>
                             </div>
-                                
+
                         </Fragment>
-                )))}  
+                )))}
             </div>
         </div>
 
-   
+
 
     )
 }

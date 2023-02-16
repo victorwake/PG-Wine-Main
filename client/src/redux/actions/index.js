@@ -291,7 +291,15 @@ export const addToCart = (id) => {
     export const HIDE_ALERT = 'HIDE_ALERT';
     export const SHOW_ALERT = 'SHOW_ALERT';
 
-
+    function updateCart(index, quantity) {
+        return {
+          type: 'UPDATE_CART',
+          payload: {
+            index,
+            quantity,
+          },
+        };
+      }
    /*--------------------------------*/
   
    

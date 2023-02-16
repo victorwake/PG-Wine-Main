@@ -38,7 +38,7 @@ export const Details = () => {
                 <p className='origen'><b>&nbsp;</b> {wineDetail.province}, {wineDetail.region}</p>
                 <p className='alcohol'><b>Alcohol:&nbsp;</b> {wineDetail.alcohol}%</p>
                 <p className='year'><b>Año:&nbsp;</b> {wineDetail.year}</p>
-                <p  className='price'><b>Precio:&nbsp;</b> {wineDetail.price}</p>
+                <p  className='price'><b>Precio:&nbsp;</b> ${wineDetail.price}</p>
                 <p className='cata'><b>&nbsp;</b></p>
                 <p className='descripcion'>{wineDetail.description}</p>
                 <div>
