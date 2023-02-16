@@ -2,7 +2,7 @@ import { NavBar } from '../navBar/NavBar';
 import './home.css';
 import { Fragment, useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { getWines, addToCart } from '../../redux/actions';
+import { getWines, addToCart,removeFromCart } from '../../redux/actions';
 import { Card }from '../card/Card'
 import { NavBarWineType } from '../navBarWineType/NavBarWineType';
 import { Link } from 'react-router-dom';
@@ -75,6 +75,7 @@ export const Home = () => {
         <th scope="col">Precio</th>
         <th scope="col">Cantidad</th>
         <th scope="col">Total</th>
+        <th scope="col">Borrar</th>
       </tr>
     </thead>
     <tbody>
@@ -90,7 +91,7 @@ export const Home = () => {
             min="1" max="10"/>
           </td>
           <td>{item.price * item.quantity}</td>
-
+          <button onClick={() => dispatch(removeFromCart(item.id)) }>X</button>
         </tr>
       ))}
       <tr>
@@ -112,7 +113,7 @@ export const Home = () => {
 
         </div>
             <div class="alert alert-primary hide" container position-sticky top-0 role="alert">
-            Producto añadido al carrito!
+            Producto aÃ±adido al carrito!
 
             </div>
             {alertVisible && <div className="alert">El vino ha sido agregado al carrito</div>}
