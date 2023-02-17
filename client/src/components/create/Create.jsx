@@ -122,7 +122,7 @@ export const Create = () => {
         <div >
             <NavAdmin/>
             <div className={"admin-container-" + clase}>
-            <form  onSubmit={(e) => handleSubmit(e)}>
+            <form onSubmit={(e) => handleSubmit(e)}>
             <h2 className={"sale-type-h2-" + clase}>Cargá tu vino</h2>
             <div  className={"card-container-admin-" + clase} >
             

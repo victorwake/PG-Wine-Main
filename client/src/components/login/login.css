@@ -67,3 +67,8 @@ div.img-registro {
     background-image: url(//ssl.gstatic.com/accounts/ui/avatar_2x.png);
     justify-content: center;
 }
+
+.google-button{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}

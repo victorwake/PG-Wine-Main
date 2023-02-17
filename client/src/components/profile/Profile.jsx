@@ -29,26 +29,35 @@ const Profile = () => {
             Perfil de <strong>{currentUser.usuario.firstName}</strong>
           </h3>
         </header>
-        <p>
-          <strong>Token:</strong> {currentUser.token.substring(0, 20)} ...{" "}
-          {currentUser.token.substr(currentUser.token.length - 20)}
-        </p>
-        <p>
-          <strong>Id:</strong> {currentUser.usuario.idUser}
-        </p>
-        <p>
-          <strong>Email:</strong> {currentUser.usuario.email}
-        </p>
-        <strong>Roles:</strong>
-        <ul>
-          {currentUser.roles &&
-            currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-        </ul>
-        <p>
-          <a href="/login" className="nav-link" onClick={logOut}>
-            Cerrar sesión
-          </a>
-        </p>
+        {currentUser.usuario.profilePic !== null ?
+      <div>
+      <img id="img-perfil" src={currentUser.usuario.profilePic} alt="profile"></img>
+      </div>:
+      <div className="img-registro"></div>
+      }
+      <p>
+        <strong>Token:</strong> {currentUser.token.substring(0, 20)} ...{" "}
+        {currentUser.token.substr(currentUser.token.length - 20)}
+      </p>
+      <p>
+        <strong>Id:</strong> {currentUser.usuario.idUser}
+      </p>
+      <p>
+        <strong>Email:</strong> {currentUser.usuario.email}
+      </p>      
+      <div>
+        {currentUser.usuario.rol &&
+        <div>
+        <div><strong>Rol:</strong></div>
+        
+          <div> {currentUser.usuario.rol}</div>
+          </div>
+          }
+      
+      </div>
+      <p><a href="/login" className="nav-link" onClick={logOut}>
+                Cerrar sesión
+              </a></p>
       </div>
     </div>
   );
