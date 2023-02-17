@@ -10,7 +10,6 @@ const insertExp= async() => {
             kindeOfExp: expApi.kindeOfExp,
             description: expApi.description,
             eventDate: expApi.eventDate,
-            duration: expApi.duration,
             image: expApi.image,
             url: expApi.url,
         });

@@ -10,7 +10,7 @@ const updateWineRouter = require('./updateWineRouter');
 const login = require('./userLogin.js');
 const createExpRouter = require('./createExpRouter');
 const updateExpRouter = require('./updateExpRouter');
-
+const expRouter = require('./expRouter.js');
 
 
 const router = Router();
@@ -25,5 +25,6 @@ router.use('/', createWineRouter);
 router.use('/', updateWineRouter);
 router.use('/experiences', createExpRouter);
 router.use('/experiences', updateExpRouter);
+router.use('/experiences', expRouter);
 
 module.exports = router;

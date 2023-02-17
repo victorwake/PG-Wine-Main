@@ -6,6 +6,7 @@ import { WineType } from './components/wineType/WineType';
 import { Details } from './components/details/Details';
 import { Create } from './components/create/Create';
 
+
 function App() {
     return (
         <div className="App">

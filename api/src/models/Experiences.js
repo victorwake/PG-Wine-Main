@@ -12,7 +12,7 @@ module.exports = (sequelize) => {
             allowNull: false,
         },
         price: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         ubication: {
@@ -20,24 +20,22 @@ module.exports = (sequelize) => {
             allowNull: false,
         },
         kindOfExp:{
-            type: DataTypes.ENUM('Gastronomía', 'Hoteleria', 'Degustaciones', 'Paseos'),
+            type: DataTypes.ARRAY (DataTypes.STRING),
             allowNull: false,
+            defaultValue: ['Gastronomía', 'Hoteleria', 'Degustaciones', 'Paseos', 'Visitas guiadas'],
         },
         description:{
             type: DataTypes.TEXT,
             allowNull: false,
         },
         eventDate:{
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: true,
         },
        image:{
-        type: DataTypes.TEXT,
+        type: DataTypes.ARRAY (DataTypes.JSONB),
         allowNull: true,
-       },
-       duration:{
-        type: DataTypes.INTEGER,
-        allowNull: true,
+        defaultValue:[]
        },
           url: {
             type: DataTypes.TEXT,
@@ -47,3 +45,5 @@ module.exports = (sequelize) => {
         timestamps: false,
     });
 }
+
+
