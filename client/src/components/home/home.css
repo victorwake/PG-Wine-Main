@@ -1,0 +1,82 @@
+
+.home-container-light{
+    height: 100vh;
+    padding-top: 8px;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
+    
+}
+.agregarcart{
+    width: 60px;
+    height: 50px;
+    background-color: coral;
+    border-radius: 3px;
+}
+
+
+.card-container-home-light{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(224, 224, 224);
+}
+
+.sale-type-h2-light{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    background-color: rgb(224, 224, 224);
+   
+
+}
+
+.alert{
+    z-index:80
+}
+
+.hide{
+    display:none
+}
+
+.container {
+    padding: 2rem 0rem;
+  }
+  
+  .table-image thead td,
+  .table-image thead th {
+    border: 0;
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  .table-image td,
+  .table-image th {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .table-image td.qty,
+  .table-image th.qty {
+    max-width: 2rem;
+  }
+  
+  .price {
+    margin-left: 0rem;
+  }
+  
+  .modal-footer {
+    padding-top: 0rem;
+  }
+.modal-body{
+    font-size: 12px;
+    margin-left: -5px;
+}

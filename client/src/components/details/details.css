@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Wire+One&display=swap");
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.winedetail {
+    border-radius: 10px;
+    border: rgb(0, 0, 0) 3px solid;
+    width: 330px;
+    height: 270px;
+    background-color: transparent;
+    opacity: 0.9;
+    padding-top: 0px;
+    color: rgb(150, 150, 151);
+    border-color: rgb(196, 198, 69);
+}
+.comprar{
+    width: 100px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: rgb(255, 89, 0);
+}
+
+.imagedetail {
+    display: flex;
+    margin-left: 570px;
+    padding-right: 80px;
+    padding-top: 15px;
+    font-size: 50px;
+    color: rgb(86, 86, 86);
+    padding: auto;
+    padding-left: -600px;
+    margin-left: 420px;
+    border-color: black;
+    border-radius: 3px;
+}
+
+.imagen {
+    width: 400px;
+    height: 400px;
+    margin-left: 450px;
+    margin-top: 50px;
+    border: 10px;
+    border-color: black;
+    border-radius: 3px;
+}
+
+.nombre {
+    display: flex;
+    font-size: 50px;
+    font-family: 'Wire One', sans-serif;
+    margin-left: 70px;
+    margin-top: -300px;
+}
+
+.variedad {
+    display: flex;
+    font-size: 40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.tipo {
+    display: flex;
+    font-size: 35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.bodega {
+    display: flex;
+    font-size: 35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.origen {
+    display: flex;
+    font-size: 35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.alcohol {
+    display: flex;
+    font-size: 35px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.year {
+    display: flex;
+    font-size: 40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.price {
+    display: flex;
+    font-size: 40px;
+    font-family: 'Wire One', sans-serif;
+    position: fixed;
+    top: 8vw;
+    right: 7vw;
+    font-weight: 700;
+    margin-left: 30px;
+    border: 3px;
+    border-color: blueviolet;
+}
+
+.cata {
+    display: flex;
+    font-size: 40px;
+    font-family: 'Wire One', sans-serif;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.descripcion {
+    display: flex;
+    font-size: 30px;
+    font-family: 'Wire One', sans-serif;
+    margin-left: 10px;
+}
