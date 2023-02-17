@@ -270,11 +270,15 @@ export function registerUser (payload) {
 export const addToCart = (id) => {
     console.log('entro en action');
     const items = id
+    
+    
     return dispatch => {
-      dispatch({
+    
+        dispatch({
         type: ADD_TO_CART, 
         payload: id
-      });
+            
+    });
       setTimeout(() => {
         dispatch({
           type: HIDE_ALERT

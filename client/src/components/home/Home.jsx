@@ -56,7 +56,7 @@ export const Home = () => {
                           price= {w.price}
                           
                           />
-                        <button onClick={() => dispatch(addToCart(w.id)) }>Comprar</button> 
+                        {/* <button onClick={() => dispatch(addToCart(w.id)) }>Comprar</button>  */}
                            
 
                       </Link>

@@ -1,0 +1,15 @@
+.myinput{
+    width: 35px;
+    height: 35px;
+
+}
+.Borrar{
+    width: 40px;
+    height: 25px;
+    background-color: red;
+    border-radius: 3px;
+    color: aliceblue;
+}
+.price-card{
+font-size: 15px;
+}
