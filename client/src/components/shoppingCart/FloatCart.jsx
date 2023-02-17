@@ -9,24 +9,16 @@ export const FloatCart = ({ image, name, color_type, price, id }) => {//se lo pa
   const cart = useSelector(state => state.cart)
 const clase = useSelector(store => store.theme);
 const [quantity, setQuantity] = useState(1);
-const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+const totalPrice = cart.reduce((total, item) => total + (item.price * quantity), 0);
 
+useEffect(() => {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}, [cart]);
 
     const handleQuantityChange = (event) => {
         setQuantity(event.target.value);
     }
-
-    const handleAddToCart = () => {
-        const existingItem = cart.find(item => item.id === id);
-        if (existingItem) {
-            const updatedQuantity = existingItem.quantity + quantity;
-            const updatedTotalPrice = existingItem.price * updatedQuantity;
-            dispatch(updateCartItem(id, updatedQuantity, updatedTotalPrice));
-        } else {
-            const totalPrice = price * quantity;
-            dispatch(addToCart(id, quantity, totalPrice));
-        }
-    }
+  
     const dispatch = useDispatch();
     document.addEventListener('DOMContentLoaded', function() {
     var openCartModal = document.querySelector('#openCartModal');
@@ -59,12 +51,9 @@ return(
       <tr>
         <th scope="col">Imagen</th>
         <th scope="col">Nombre</th>
-        {/* <th scope="col">Variedad</th> */}
-        {/* <th scope="col">Bodega</th> */}
-        <th scope="col">Precio</th>
+         <th scope="col">Precio</th>
         <th scope="col">Cantidad</th>
-        <th scope="col">Total</th>
-        <th scope='col'>Borrar Item</th>
+         <th scope='col'>Borrar Item</th>
         
       </tr>
     </thead>
@@ -73,10 +62,8 @@ return(
         <tr>
           <td><img src={item.image} class="img-fluid img-thumbnail" alt="Vino"/></td>
           <td>{item.name}</td>
-          {/* <td>{item.varietal}</td> */}
-          {/* <td>{item.winery}</td> */}
+      
           <td>${item.price}</td>
-          
           <td>     
             <input
                 className="myinput"
@@ -87,7 +74,7 @@ return(
                 value={item.quantity}
                 onChange={(e) => handleQuantityChange(e, item.id)}
              /></td>                   
-         <td>   <h4 className="price-card-">{item.price * quantity} $</h4></td>
+       
          <td>  <button className="Borrar" onClick={() => dispatch(removeFromCart(item.id)) }>X</button></td>
         {/* <td>  <button onClick={handleAddToCart}>Agregar al Carrito</button></td> */}
                
@@ -97,22 +84,21 @@ return(
 
       </tr>
     </tbody>
+    <div >  <h4 className="price-card">Total:{totalPrice} $</h4></div>
   </table>
 </div>
         <div class="d-flex justify-content-end">
           {/* <h5>Total: <span class="price text-success">$89</span></h5> */}
         </div>
         <div class="modal-footer border-top-0 d-flex justify-content-between">
-      <Link to={'/carrito'}>
-          <button  type="button">Ir al carrito</button>
-      </Link>
-      <Link to={'/Home'}>
-          <button  type="button">Ir a Pagar</button>
-      </Link>
-            </div>
+    
+        
       </div>
+     
       <div class="modal-footer border-top-0 d-flex justify-content-between">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"/>Cerrar<button/>
+     
+        {/* <button type="button" className="btn-secondary" data-dismiss="modal"/>Cerrar<button/> */}
+            </div> 
             </div>
             </div>
             </div>)

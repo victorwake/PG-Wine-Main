@@ -61,9 +61,9 @@ const initialState = {
     cart : [],
     alertVisible: false,
     quantity: 1,
-   cartItems: [],
-   isAddingToCart: false,
-   isRemovingFromCart: false,
+      cartItems: [],
+    isAddingToCart: false,
+    isRemovingFromCart: false,
 }
 
 
@@ -203,9 +203,7 @@ const rootReducer = (state = initialState, action) => {
             // console.log('Item to delete: ', itemToDelete);
             return ({
                 ...state,
-                cart: state.cart.filter((product) => product.id !== action.payload),
-                isRemovingFromCart: false, // actualizar el estado a false
-            }
+                cart: state.cart.filter((product) => product.id !== action.payload)}
             )
             case 'UPDATE_CART_ITEM':
             return {
