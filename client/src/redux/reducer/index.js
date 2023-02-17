@@ -203,6 +203,19 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 cart: state.cart.filter((product) => product.id !== action.payload)}
             )
+            case 'UPDATE_CART_ITEM':
+            return {
+              ...state,
+              cart: state.cart.map((item) =>
+                item.id === action.payload.id
+                  ? {
+                      ...item,
+                      quantity: action.payload.quantity,
+                      totalPrice: action.payload.totalPrice,
+                    }
+                  : item
+              ),
+            };
        
             case REMOVE_ALL_FROM_CART:
                 console.log("entro al deleteALL")
@@ -216,6 +229,7 @@ const rootReducer = (state = initialState, action) => {
             case CLEAR_CART:{
             return initialState;
         }
+        
              
 
         default:
