@@ -3,46 +3,61 @@ const {
 } = require("../../db.js");
 const bcryptjs = require('bcryptjs');
 
-const usuariosPost = async(req, res) => {
+const { generarJWT } = require('../../helpers/generar-jwt');
+
+const usuariosPost = async (req, res, next) => {
 
     const {
-        userName,
         email,
         firstName,
         lastName,
         cellphone,
         profilePic,
-        password
+        password,
+        rol
     } = req.body;
 
+    const searchUserDb = await User.findOne({where: {email: email}})
+    
     try {
-        const usuario = await User.create({
-            userName: userName,
-            email: email,
-            firstName: firstName,
-            lastName: lastName,
-            cellphone: cellphone,
-            profilePic: profilePic,
-            password: password
+        if (searchUserDb) {
+            return res.status(400).json({
+                msg: 'Email ya existe.'
         });
+    }
+    const usuario = await User.create({
+        email: email,
+        firstName: firstName,
+        lastName: lastName,
+        cellphone: cellphone,
+        profilePic: profilePic,
+        password: password,
+        rol: rol
+    });
 
-        // Encriptar la contraseña
-        const salt = bcryptjs.genSaltSync();
-        usuario.password = bcryptjs.hashSync(password, salt);
+    // Encriptar la contraseña
+    const salt = bcryptjs.genSaltSync();
+    usuario.password = bcryptjs.hashSync(password, salt);
 
-        // Guardar en BD
-        await usuario.save();
+    // Guardar en BD
+    await usuario.save();
 
-        res.json({
-            usuario
-        });
-        console.log(usuario)
+     res.json({
+        usuario,
+        msg: "Usuario registrado con éxito"
+    });
+    console.log(usuario)
 
-    } catch (error) {
-        console.log(error)
+} catch (error) {
+        return res.send(error)
 
     }
 }
+
+
+
+
+
 module.exports = {
     usuariosPost
 }

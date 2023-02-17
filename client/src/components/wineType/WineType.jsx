@@ -52,7 +52,7 @@ export const WineType = () => {
             <Filters />
             <PriceRange onChangePriceRange={handleChangePriceRange} defaultPriceRange={defaultPriceRange} />
             <h1 className={"wine-type-h1-" + clase}>Vinos {type}s</h1>
-            <div className={"pagination-container-type-" + clase} >
+            <div className="pagination-container-type" >
                 <Pagination wines={filteredWines.length} winesPerPage={winesPerPage} />
             </div>
 

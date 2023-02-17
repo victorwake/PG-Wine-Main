@@ -5,8 +5,13 @@ import { Link } from "react-router-dom";
 
 
 
+
 export const Card = ({ image, name, color_type, varietal , winery, price, id }) => {//se lo paso por props
     const clase = useSelector(store => store.theme);
+
+    
+
+
     return (
         <div className={"card-container-" + clase}>
             
@@ -19,4 +24,4 @@ export const Card = ({ image, name, color_type, varietal , winery, price, id }) 
                 </div>
         </div>
     );
-    }
+}

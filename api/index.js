@@ -21,6 +21,7 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const { insertVarietal } = require('./src/createDb/varietalCreate.js');
 const { insertWine } = require('./src/createDb/wineCreate.js');
+const { insertRoles } = require('./src/createDb/rolesCreate.js')
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
@@ -28,5 +29,6 @@ conn.sync({ force: true }).then(() => {
         console.log('%s listening at 3001'); // eslint-disable-line no-console
         insertVarietal();
         insertWine();
+        insertRoles();
     });
 });

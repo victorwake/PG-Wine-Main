@@ -1,0 +1,16 @@
+
+.contenedor-profile-light {
+    height: 100vh;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
+}
+
+.box-profile-light {
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 20px;
+    transition-duration: 01s;
+    box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
+    background-color: rgb(224, 224, 224);
+}

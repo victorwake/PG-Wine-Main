@@ -8,7 +8,7 @@ export const NavAdmin = () =>{
     <div>
         <nav class="navbar bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Panel de administrador </a>
+                <a class="navbar-brand" >Panel de administrador </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -43,7 +43,7 @@ export const NavAdmin = () =>{
                                 </a>
                                 <ul class="dropdown-menu">
                                     <a class="dropdown-item" href='/admin/create' >Crear</a>
-                                    <a class="dropdown-item" href='/admin/editWines'>Editar</a>    
+                                    <a class="dropdown-item" href='/admin/editWines'>Editar</a>   
                                 </ul>
                             </li>
                                 <li class="nav-item">

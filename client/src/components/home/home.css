@@ -1,29 +1,73 @@
-    .home-container-light {
+/* Modo light end */
+.home-container-light {
         height: 100vh;
-        padding-top: 8px;
+        padding-top: 1px;
         transition-duration: 01s;
         background-color: rgb(224, 224, 224);
-    }
+}
     
-    .card-container-home-light {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 330px);
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(224, 224, 224);
-    }
+.card-container-home-light {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    align-items: center;
+    justify-content: center;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
+}
     
-    .sale-type-h2-light {
-        font-size: 2.5rem;
-        font-weight: 600;
-        margin: 5px;
-        color: rgb(0, 0, 0);
-        font-family: 'Source Sans Pro', sans-serif;
-        position: relative;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        margin-top: 80px;
-        margin-bottom: 20px;
-        background-color: rgb(224, 224, 224);
-    }
+.sale-type-h2-light {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    transition-duration: 01s;
+    color: #333333;
+    background-color: rgb(224, 224, 224);
+}
+
+/* Modo light fin */
+
+ /* --------------------------------------------------------- */
+
+
+/*Modo Dark*/
+
+.home-container-dark {
+    height: 100vh;
+    padding-top: 1px;
+    transition-duration: 01s;
+    background-color: #333333;
+}
+
+.card-container-home-dark {
+display: grid;
+grid-template-columns: repeat(auto-fill, 330px);
+align-items: center;
+justify-content: center;
+transition-duration: 01s;
+background-color: #333333;
+}
+
+.sale-type-h2-dark {
+font-size: 2.5rem;
+font-weight: 600;
+margin: 5px;
+font-family: 'Source Sans Pro', sans-serif;
+position: relative;
+list-style: none;
+display: flex;
+justify-content: center;
+margin-top: 80px;
+margin-bottom: 20px;
+transition-duration: 01s;
+color: rgb(255, 255, 255);
+background-color: #333333;
+}
+
+/* Modo dark fin */

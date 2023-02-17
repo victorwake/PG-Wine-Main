@@ -209,3 +209,40 @@ export function getVarietal() {
 };
 
 export const GET_VARIETAL = 'GET_VARIETAL';
+
+/*----------------------------------------------*/
+
+export const saveImage = (urlCloudinary) => ({
+    type: SAVE_IMAGE,
+    urlCloudinary,
+});
+export const SAVE_IMAGE = 'SAVE_IMAGE';
+
+/*----------------------------------------------*/
+
+export const addToCart = (payload) => ({
+    type: ADD_TO_CART,
+    payload,
+});
+export const ADD_TO_CART = 'ADD_TO_CART';
+
+/*----------------------------------------------*/
+
+export const removeOneCart = (payload) => ({
+    type: REMOVE_ONE_CART,
+    payload,
+});
+export const REMOVE_ONE_CART = 'REMOVE_ONE_CART';
+
+/*----------------------------------------------*/
+
+
+export const clearCart = () => ({
+    type: CLEAR_CART,
+});
+export const CLEAR_CART = 'CLEAR_CART';
+
+/*----------------------------------------------*/
+
+
+
