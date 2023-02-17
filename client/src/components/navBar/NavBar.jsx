@@ -63,8 +63,8 @@ export const NavBar = () => {
         </li>
       </ul>
   
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#openCartModal">
-  Carrito
+      <button  type="button" class="btn btn-success" data-toggle="modal" data-target="#openCartModal">
+      <i class="bi bi-cart3"></i>
 </button>
       <SearchBar/>
       {/* <form class="d-flex" role="search">

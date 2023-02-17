@@ -1,25 +1,28 @@
 .card-container-light{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 330px);
-    grid-gap: 35px;
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 5px;
     justify-content: center;
-    transition-duration: 01s;
+    padding-left: 10px;
+    transition-duration: 07s;
     background-color: rgb(224, 224, 224);
+    margin-left: -90px;
+   
 }
+
 
 .card-light{
     width: 310px;
     height: 350px;
-    margin: 10px;
+    margin: 0px;
     border-radius: 8px;
     cursor: pointer;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition-duration: 01s;
     box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
-    
     background-color: rgb(224, 224, 224);
 }
 
@@ -27,13 +30,13 @@
     transition-duration: 1s;
     box-shadow: -5px -5px 10px rgba(94, 104, 121, 0.486), 5px 3px 8px rgba(255, 255, 255, 0.582);
 }
-.button-back-{
+/* .button-back-{
     height: 100px;
     width: 100px;
     border-radius: 10px;
     border-color: black;
     background-color: coral;
-}
+} */
 
 .img-card-light{
     height: auto;
@@ -44,7 +47,7 @@
 .name-card-light{
     font-size: 1.2rem;
     font-weight: 600;
-    margin: 8px;
+    margin: 0px;
     color: rgb(0, 0, 0);
 }
 
@@ -66,9 +69,10 @@
     margin: 5px;
     color: rgb(0, 0, 0);
 }
-.comprar{
-    width: 100px;
+.boton{
+    
+    width: 300px;
     height: 50px;
-    border-radius: 3px;
-    background-color: rgb(255, 89, 0);
+    margin-left: 8px;
+    border-radius: 10px;
 }
