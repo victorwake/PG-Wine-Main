@@ -1,4 +1,25 @@
+@font-face {
+    font-family: 'NEXA Bold';
+    src: url('../fonts/Nexa-Trial-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Sansburg';
+    src: url('../fonts/Sansburg.ttf');
+}
+
+@font-face {
+    font-family: 'Franklin';
+    src: url('../fonts/ITCFranklinGothicStd-Med.otf');
+}
+
+.containerData {
+    position: relative;
+    top: 100px;
+}
+
 .imagen {
+    /* border: 2px solid blue; */
     position: relative;
     left: 15%;
     width: 70%;
@@ -12,11 +33,39 @@
     float: left;
 }
 
-.name {
+.name-rosado {
     /* border: 2px solid red; */
+    font-family: 'NEXA Bold';
+    position: relative;
+    width: 40%;
+    color: #bf7c86;
+    left: 30%;
+}
+
+.name-tinto {
+    /* border: 2px solid red; */
+    font-family: 'NEXA Bold';
     position: relative;
     width: 40%;
     color: #56050b;
+    left: 30%;
+}
+
+.name-blanco {
+    /* border: 2px solid red; */
+    font-family: 'NEXA Bold';
+    position: relative;
+    width: 40%;
+    color: #326534;
+    left: 30%;
+}
+
+.name-espumante {
+    /* border: 2px solid red; */
+    font-family: 'NEXA Bold';
+    position: relative;
+    width: 40%;
+    color: #ad8c57;
     left: 30%;
 }
 
@@ -29,12 +78,36 @@
     margin-top: 7%;
 }
 
-.th {
+td {
+    font-family: 'Sansburg';
+}
+
+.th-tinto {
+    font-family: 'Franklin';
     text-align: right;
     color: #56050b;
 }
 
-.btn {
+.th-rosado {
+    font-family: 'Franklin';
+    text-align: right;
+    color: #bf7c86;
+}
+
+.th-blanco {
+    font-family: 'Franklin';
+    text-align: right;
+    color: #326534;
+}
+
+.th-espumante {
+    font-family: 'Franklin';
+    text-align: right;
+    color: #ad8c57;
+}
+
+.addToCart {
+    font-family: 'NEXA Bold';
     border: 1px solid grey;
     border-radius: 15px;
     position: relative;
@@ -42,9 +115,27 @@
     top: 40%;
 }
 
-.price {
-    left: 10%;
+.buttonBack {
+    font-family: 'NEXA Bold';
+    border: 1px solid grey;
+    border-radius: 15px;
     position: relative;
-    left: 81%;
+    left: 2%;
+}
+
+.heart {
+    border: none;
+    left: 79%;
+    position: relative;
+    font-size: 30px;
+    top: 7px;
+}
+
+.price {
+    /* border: 2px solid black; */
+    /* font-family: 'NEXA Bold'; */
+    position: relative;
     top: 30%;
+    left: 82%;
+    width: 200px;
 }
