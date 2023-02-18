@@ -1,0 +1,8 @@
+.col-12{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+    margin-top: 150px;
+    margin-bottom: 20px;
+}

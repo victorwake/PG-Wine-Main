@@ -31,6 +31,9 @@ const body = { id_token: id_token };
       .then((res) => res.json())
       .then((res) => {
         const usuario = res;
+        localStorage.setItem("token", JSON.stringify(usuario.token));
+        document.cookie = `token= ${usuario.token}; max-age=${60*3}; path=/; samesite=strict `
+        console.log(document.cookie)
         console.log(usuario);
         setUsuario(usuario);
       })

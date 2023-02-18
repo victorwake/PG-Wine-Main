@@ -1,7 +1,6 @@
-
-.login-container-dark{
+.login-container-dark {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     align-items: center;
     margin: 0 auto;
     height: 100vh;
@@ -11,7 +10,7 @@
 
 .card-container-login-dark {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     align-items: center;
     padding: 30px;
     margin-top: 180px;
@@ -23,10 +22,9 @@
     box-shadow: -3px -2px 8px rgb(0, 0, 0), 3px 2px 8px rgba(255, 255, 255, 0.267);
 }
 
-
-.login-container-light{
+.login-container-light {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     align-items: center;
     margin: 0 auto;
     height: 100vh;
@@ -36,7 +34,7 @@
 
 .card-container-login-light {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     align-items: center;
     padding: 30px;
     margin-top: 180px;
@@ -48,7 +46,7 @@
     box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
 }
 
-.form-control{
+.form-control {
     width: 100%;
     height: 40px;
     border-radius: 5px;
@@ -57,7 +55,7 @@
     color: rgb(255, 255, 255);
 }
 
-div.img-registro {  
+div.img-registro {
     height: 100px;
     width: 100px;
     background-repeat: no-repeat;
@@ -66,4 +64,9 @@ div.img-registro {
     background-size: 100% auto;
     background-image: url(//ssl.gstatic.com/accounts/ui/avatar_2x.png);
     justify-content: center;
+}
+
+.google-button {
+    margin-top: 15px;
+    margin-bottom: 10px;
 }

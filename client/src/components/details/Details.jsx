@@ -8,8 +8,6 @@ import { NavBar } from '../navBar/NavBar'
 
 
 
-
-
 export const Details = () => {
 
     const dispatch = useDispatch();
@@ -22,7 +20,7 @@ export const Details = () => {
     let colorName = ""
     
     const handleClick = (id) => {
-        dispatch(addToCart(wineDetail.id))
+        // dispatch(addToCart(wineDetail.id))
         console.log(wineDetail.id)
     }
     
@@ -92,5 +90,3 @@ if(!!wineColorType){
     );
 
 }
-
-

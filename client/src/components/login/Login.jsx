@@ -11,6 +11,7 @@ import { clearMessage } from "../../redux/actions/message";
 
 import { login } from "../../redux/actions/auth";
 import { NavBar } from "../navBar/NavBar";
+import Google from '../google/Google'
 
 const required = (value) => {
   if (!value) {
@@ -116,7 +117,11 @@ const Login = (props) => {
                 <span className="spinner-border spinner-border-sm"></span>
               )}
               <span>Login</span>
+              
             </button>
+            <div className="google-button">
+            <Google  />
+            </div>
             <div><p>Si aún no tienes cuenta, registrate <Link to ="../registrar">aquí</Link></p></div>
           </div>
 

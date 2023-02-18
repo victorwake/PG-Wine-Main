@@ -1,15 +1,18 @@
 import "./navBar.css";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useCallback } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { SearchBar } from '../searchBar/SearchBar';
 import { useSelector } from "react-redux";
 import { themeChange } from '../../redux/actions/';
 import { useDispatch } from "react-redux";
 import { Cart } from '../cart/Cart';
+import { clearMessage } from "../../redux/actions/message";
+import { logout } from "../../redux/actions/auth"
 
 
 export const NavBar = () => {
     const dispatch = useDispatch();
+    let location = useLocation();
 
   const borrar = () => {
     localStorage.clear();
@@ -26,6 +29,26 @@ export const NavBar = () => {
 
   const currentUser  = useSelector((state) => state.usuario);
   const clase= useSelector(store => store.theme);
+  const [showAdminBoard, setShowAdminBoard] = useState(false);
+
+  useEffect(() => {
+    if (["/login", "/registrar"].includes(location.pathname)) {
+      dispatch(clearMessage()); // clear message when changing location
+    }
+  }, [dispatch, location]);
+
+  const logOut = useCallback(() => {
+    dispatch(logout());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (currentUser) {
+      setShowAdminBoard(currentUser.usuario.rol.includes("ADMIN_ROLE"));
+    } else {
+      setShowAdminBoard(false);
+    }
+  }, [currentUser]);
+
 
     return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id={"navbar-expand-lg-" + clase}>
@@ -65,10 +88,13 @@ export const NavBar = () => {
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Login</a>
           </Link>: <Link style={{ textDecoration: 'none' }} to="/perfil"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Bienvenido, {currentUser.usuario.firstName}</a></Link>}          
         </li>
+        
+        {showAdminBoard && (
         <li class="nav-item">
-        { !currentUser? <Link to="/carrito" style={{ color: "inherit", textDecoration: "inherit" }}>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/admin"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Administrar</a></Link>}
-        </li>
+        <Link to="/carrito" style={{ color: "inherit", textDecoration: "inherit" }}>
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/admin"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Administrar</a></Link>
+        </li>)}
+
         <li class="nav-item">
         { !currentUser? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>

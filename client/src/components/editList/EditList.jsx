@@ -23,13 +23,13 @@ export const EditList = () =>  {
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Bodega</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Stock</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Suspender</th>
+                <th scope="col">ID</th>
+                <th scope="col">Bodega</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Suspender</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,6 +49,7 @@ export const EditList = () =>  {
                     </Fragment>
                 )))}  
              </tbody>
+      
         </table>
 
     </div>

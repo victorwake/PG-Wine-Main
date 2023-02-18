@@ -54,7 +54,6 @@ export const NavAdmin = () =>{
                 </div>
             </div>
         </nav>
-   
     </div>
     )
 }

@@ -27,6 +27,8 @@ export const Home = () => {
     
     //Lo usariamos cuando tengamos los filtros, se cambiaria el allWines.slide por este
 
+    
+
     useEffect(()=>{
         if(!allWines.length)dispatch(getWines())
     },[]);        
