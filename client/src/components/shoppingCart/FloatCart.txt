@@ -1,0 +1,11 @@
+const handleAddToCart = () => {
+      const existingItem = cart.find(item => item.id === id);
+      if (existingItem) {
+          const updatedQuantity = existingItem.quantity + quantity;
+          const updatedTotalPrice = existingItem.price * updatedQuantity;
+          dispatch(updateCartItem(id, updatedQuantity, updatedTotalPrice));
+      } else {
+          const totalPrice = price * quantity;
+          dispatch(addToCart(id, quantity, totalPrice));
+      }
+  }
