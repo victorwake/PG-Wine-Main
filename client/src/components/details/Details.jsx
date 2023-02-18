@@ -18,9 +18,14 @@ export const Details = () => {
   
     const handleAddToCart = () => {
         setIsAddingToCart(true);
-        dispatch(addToCart(wineDetail.id,wineDetail.name,wineDetail.price,wineDetail.image,wineDetail.quantity));
-    };
+        dispatch(addToCart(wineDetail.id, wineDetail.name, wineDetail.price, wineDetail.image, wineDetail.quantity));
+      
+        setTimeout(() => {
+          setIsAddingToCart(false);
+        }, 10000);
+    }
     console.log(id)
+
     useEffect(() => {
         dispatch(getWineDetail(id))
     }, [dispatch, id])
