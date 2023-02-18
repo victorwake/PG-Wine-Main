@@ -267,39 +267,16 @@ export function registerUser (payload) {
 //             }) 
 //         }
 //     }
-export const addToCart = (id) => {
-    console.log('entro en action');
-    const items = id
-    return dispatch => {
-      dispatch({
-        type: ADD_TO_CART, 
-        payload: id
-      });
-      setTimeout(() => {
-        dispatch({
-          type: HIDE_ALERT
-        });
-      }, 2000);
-      dispatch({
-        type: SHOW_ALERT
-      });
-    }
-  }
+export const addToCart = (id, name, price, image, quantity) => ({
+     type: 'ADD_TO_CART', 
+        payload: {id, name, price, image, quantity} 
+});
     
 
-    export const ADD_TO_CART = 'ADD_TO_CART';
-    export const HIDE_ALERT = 'HIDE_ALERT';
-    export const SHOW_ALERT = 'SHOW_ALERT';
-
-    function updateCart(index, quantity) {
-        return {
-          type: 'UPDATE_CART',
-          payload: {
-            index,
-            quantity,
-          },
-        };
-      }
+export const updateCartItem = (id,name,price,image,quantity ) => ({
+    type: "UPDATE_CART_ITEM",
+    payload: { id, name,  price,image,quantity  }
+  });
    /*--------------------------------*/
   
    
@@ -349,22 +326,4 @@ export const addToCart = (id) => {
     }
     export const CLEAR_CART = 'CLEAR_CART';
 
-    export const updateCartItem = (id, quantity, totalPrice) => {
-        return {
-          type: 'UPDATE_CART_ITEM',
-          payload: {
-            id,
-            quantity,
-            totalPrice,
-          },
-        };
-      };
-           
-
-      export const calculateTotalPriceOfTheCart = () => {
-        return {
-          type: 'CALCULATE_TOTAL_PRICE_OF_THE_CART'
-        };
-      };
-           
-    export const CALCULATE_TOTAL_PRICE_OF_THE_CART = 'CALCULATE_TOTAL_PRICE_OF_THE_CART'
+    

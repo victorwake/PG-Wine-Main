@@ -1,39 +1,39 @@
 import React from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from "react-router-dom";
-import { removeFromCart, addToCart,updateCartItem , calculateTotalPriceOfTheCart} from "../../redux/actions";
+import { removeFromCart, addToCart,updateCartItem } from "../../redux/actions";
 import { Fragment, useState, useEffect } from 'react';
 import './FloatCart.css'
 
-export const FloatCart = ({ image, name, color_type, price, id }) => {//se lo paso por props
+export const FloatCart = ({ image, name, price, id }) => {//se lo paso por props
   const cart = useSelector(state => state.cart)
-  const clase = useSelector(store => store.theme);
-  const [quantity, setQuantity] = useState(1);
-  const totalPrice = cart.reduce((total, item) => total + (item.price * quantity), 0);
+  const [quantities, setQuantities] = useState({});
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    const quantitiesFromLocalStorage = JSON.parse(localStorage.getItem('quantities')) || {};
+    setQuantities(quantitiesFromLocalStorage);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
-  const handleQuantityChange = (event) => {
-      setQuantity(event.target.value);
+  useEffect(() => {
+    localStorage.setItem('quantities', JSON.stringify(quantities));
+  }, [quantities]);
+
+  const handleQuantityChange = (event, itemId) => {
+    const newQuantity = parseInt(event.target.value);
+    setQuantities({...quantities, [itemId]: newQuantity});
+    dispatch(updateCartItem(itemId, newQuantity));
   }
 
+  const total = cart.reduce((acc, item) => {
+    const quantity = quantities[item.id] || item.quantity;
+    return acc + (item.price * quantity);
+  }, 0);
   
-
-  const dispatch = useDispatch();
-  document.addEventListener('DOMContentLoaded', function() {
-  var openCartModal = document.querySelector('#openCartModal');
-  var cartModal = document.querySelector('#cartModal');
-  
-  openCartModal.addEventListener('click', function() {
-    cartModal.classList.add('show');
-    cartModal.style.display = 'block';
-    document.body.classList.add('modal-open');
-  });
-});
-
-
 return(
 
 <div class="modal" id="openCartModal">
@@ -53,61 +53,51 @@ return(
       <tr>
         <th scope="col">Imagen</th>
         <th scope="col">Nombre</th>
-         <th scope="col">Precio</th>
+        <th scope="col">Precio</th>
         <th scope="col">Cantidad</th>
         <th scope="col">Total</th>
         <th scope='col'>Borrar Item</th>
-        
       </tr>
     </thead>
     <tbody>
-    {cart?.map((item) => (
+      {cart?.map((item) => (
         <tr key= {item.id}>
           <td><img src={item.image} class="img-fluid img-thumbnail" alt="Vino"/></td>
           <td>{item.name}</td>
           <td>$ {item.price}</td>
-          <td>{quantity}</td>
-          <td>$ {item.price * quantity}</td>
-          {/* <td>${item.price}</td> */}
-          {/* <td>     
+          <td>     
             <input
                 className="myinput"
                 type="number"
                 id={`quantity-${item.id}`}
                 name={`quantity-${item.id}`}
                 min="1"
-                value={item.quantity}
+                value={quantities[item.id] || item.quantity}
                 onChange={(e) => handleQuantityChange(e, item.id)}
-             /></td>                    */}
-         {/* <td>   <h4 className="price-card-">{item.price * quantity} $</h4></td> */}
-         <td>  <button className="Borrar" onClick={() => dispatch(removeFromCart(item.id)) }>X</button></td>
-        {/* <td>  <button onClick={handleAddToCart}>Agregar al Carrito</button></td> */}       
+             />
+          </td>                  
+          <td>   
+          <h4 className="price-card-">{item.price * (quantities[item.id] || item.quantity)} $</h4>
+          </td>
+          <td>  
+            <button className="Borrar" onClick={() => dispatch(removeFromCart(item.id)) }>X</button>
+          </td>
         </tr>
 ))}
     </tbody>
-    <tfoot>
-          <tr>
-            <td colSpan="2"><strong>Total:</strong></td>
-            <td><strong>$ {totalPrice}</strong></td>
-          </tr>
-        </tfoot>
   </table>
-</div>
-        <div class="d-flex justify-content-end">
-          {/* <h5>Total: <span class="price text-success">$89</span></h5> */}
+  </div>
+          <div className="d-flex justify-content-end">
+            <h5 className="total" >Total: <span class="text-success">${total}</span></h5>
+          </div>
+          <div className="modal-footer border-top-0 d-flex justify-content-between">
+          </div>
+          <div className="modal-footer border-top-0 d-flex justify-content-between">
+          </div>
         </div>
-        <div class="modal-footer border-top-0 d-flex justify-content-between">
-    
-        
       </div>
-     
-      <div class="modal-footer border-top-0 d-flex justify-content-between">
-     
-        {/* <button type="button" className="btn-secondary" data-dismiss="modal"/>Cerrar<button/> */}
-            </div> 
-            </div>
-            </div>
-            </div>)
- }
+    </div>
+  )
+}
  
  export default FloatCart;

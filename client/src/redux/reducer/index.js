@@ -32,7 +32,7 @@ import {
     SET_MESSAGE, 
     CLEAR_MESSAGE, 
     getWines,
-    CALCULATE_TOTAL_PRICE_OF_THE_CART
+   
 } from '../actions/index.js';
 
   
@@ -52,19 +52,18 @@ const initialState = {
     wineDetail: {},
     currentPage: 1,
     nameOrder: '',
+    products:{},
     useFilter: false,
     price: '',
     varietal: [],
     initialStateUsuario: initialStateUsuario,
     message: {},
     quantity: 1,
-    cart : [],
+    cart : JSON.parse(localStorage.getItem('cart')) || [],
     alertVisible: false,
-    quantity: 1,
     cartItems: [],
     isAddingToCart: false,
     isRemovingFromCart: false,
-    totalPriceCart: 0
 }
 
 
@@ -176,25 +175,41 @@ const rootReducer = (state = initialState, action) => {
           
         //     } )
 
-        case ADD_TO_CART:
-      console.log("entro en reducer");
-      let newItem = state.wines.find(wine => wine.id === action.payload);
-      return {
-        ...state,
-        cart: [...state.cart, newItem],
-        alertVisible: true
-      };
-    case SHOW_ALERT:
-      return {
-        ...state,
-        alertVisible: true
-      };
-    case HIDE_ALERT:
-      return {
-        ...state,
-        alertVisible: false
-      };
+    //     case ADD_TO_CART:
+    //   console.log("entro en reducer");
+    //   let newItem = state.wines.find(wine => wine.id === action.payload);
+    //   return {
+    //     ...state,
+    //     cart: [...state.cart, newItem],
+    //     alertVisible: true
+    //   };
+    // case SHOW_ALERT:
+    //   return {
+    //     ...state,
+    //     alertVisible: true
+    //   };
+    // case HIDE_ALERT:
+    //   return {
+    //     ...state,
+    //     alertVisible: false
+    //   };
 
+    case "ADD_TO_CART":
+                return {
+                  ...state,
+                  cart: [
+                    ...state.cart,
+                    {
+                      id: action.payload.id,
+                      name:action.payload.name,
+                      price: action.payload.price,
+                      image: action.payload.image,
+                      
+                      quantity: action.payload.quantity,
+                     
+                    }
+                  ]
+                };
         
         case REMOVE_FROM_CART:
             console.log("entro al delete")
@@ -209,16 +224,17 @@ const rootReducer = (state = initialState, action) => {
             case 'UPDATE_CART_ITEM':
             return {
               ...state,
-              cart: state.cart.map((item) =>
-                item.id === action.payload.id
-                  ? {
+              cart: state.cart.map((item) =>{
+               if (item.id === action.payload.id) {
+                  return {
                       ...item,
                       quantity: action.payload.quantity,
                       totalPrice: action.payload.totalPrice,
                     }
-                  : item
-              ),
-            };
+               }
+                  return item;
+            })
+        };
        
             case REMOVE_ALL_FROM_CART:
                 console.log("entro al deleteALL")
@@ -232,15 +248,7 @@ const rootReducer = (state = initialState, action) => {
             case CLEAR_CART:{
             return initialState;
         };
-        case CALCULATE_TOTAL_PRICE_OF_THE_CART: {
-            return {
-              ...state,
-              totalPriceCart: state.cart.reduce((previousValue, wine) => previousValue + wine.price, 0)
-            }
-          }
-        
-             
-
+     
         default:
             return state;
         }
