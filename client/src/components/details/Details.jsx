@@ -8,16 +8,14 @@ import { addToCart } from '../../redux/actions';
 import FloatCart from '../shoppingCart/FloatCart';
 import { NavBar } from '../navBar/NavBar';
 import { useState } from 'react';
-
-
 export const Details = () => {
-
     const dispatch = useDispatch();
     const wineDetail = useSelector((state) => state.wineDetail);
     const clase = useSelector((state) => state.clase);
     const {id} = useParams();
     const [isAddingToCart, setIsAddingToCart] = useState(false);
-
+    const [isAddingToCartDisabled, setIsAddingToCartDisabled] = useState(false);
+  
     const handleAddToCart = () => {
         setIsAddingToCart(true);
         dispatch(addToCart(wineDetail.id,wineDetail.name,wineDetail.price,wineDetail.image,wineDetail.quantity));
@@ -26,27 +24,19 @@ export const Details = () => {
     useEffect(() => {
         dispatch(getWineDetail(id))
     }, [dispatch, id])
-
-    return (
-        
+    return ( 
         <div className={'details-container-' + clase}>
             <div>
-                <NavBar/>
-                         
+                <NavBar/>              
             <FloatCart />
-           
        </div>
-       
-            <div className={'details-img-' + clase}>
-                <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
-                
+       <div className={'details-img-' + clase}>
+     <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />     
             </div>
             <div className={'details-info-' + clase}>
-           
                 <h1 className='nombre'>{wineDetail.name}</h1>
                 <h2 className='variedad'><b>Variedad:&nbsp;</b> {wineDetail.varietal}</h2>
                 <p className='tipo'><b>Tipo:&nbsp;</b> {wineDetail.color_type}</p>
-               
                 <p  className='bodega'><b>Bodega:&nbsp;</b> {wineDetail.winery}</p>
                 <p className='origen'><b>UBICACIÓN / ORIGEN:&nbsp;</b> {wineDetail.province}, {wineDetail.region}</p>
                 <p className='alcohol'><b>Alcohol:&nbsp;</b> {wineDetail.alcohol}%</p>
@@ -55,11 +45,11 @@ export const Details = () => {
                 <p className='cata'><b>Nota de cata:&nbsp;</b></p>
                 <p className='descripcion'>{wineDetail.description}</p>
                 <button 
-            className='botonagregar' 
-            onClick={handleAddToCart} 
-            disabled={isAddingToCart}
-             >
-            {isAddingToCart ? 'Agregado...' : 'Agregar al Carrito'}
+                 className='botonagregar' 
+                  onClick={handleAddToCart} 
+                 disabled={isAddingToCart }  // <- Agrega isRemovingFromCart
+                    >   
+            {isAddingToCart ? 'Item en Carrito' : 'Agregar al Carrito'}
         </button>
             </div>
         </div>

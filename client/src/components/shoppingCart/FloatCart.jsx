@@ -12,21 +12,26 @@ export const FloatCart = ({ image, name, price, id }) => {
     const quantitiesFromLocalStorage = JSON.parse(localStorage.getItem('quantities')) || {};
     setQuantities(quantitiesFromLocalStorage);
   }, []);
+
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
+
   useEffect(() => {
     localStorage.setItem('quantities', JSON.stringify(quantities));
   }, [quantities]);
+
   const handleQuantityChange = (event, itemId) => {
     const newQuantity = parseInt(event.target.value);
     setQuantities({...quantities, [itemId]: newQuantity});
     dispatch(updateCartItem(itemId, newQuantity));
   }
+
   const total = cart.reduce((acc, item) => {
     const quantity = quantities[item.id] || item.quantity;
     return acc + (item.price * quantity);
   }, 0);
+  
   return (
     <div className="modal" id="openCartModal">
       <div className="modal-dialog">
