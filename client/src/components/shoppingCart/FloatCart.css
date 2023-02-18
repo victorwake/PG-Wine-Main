@@ -15,7 +15,7 @@
     border-radius: 3px;
     color: aliceblue;
 }
-.price-card{
+.price-card-{
 font-size: 15px;
 display: flex;
 }
@@ -24,3 +24,14 @@ display: flex;
    height: 30px; 
    margin-left:-200px
 } */
+.modal-content {
+width: auto; 
+height: auto;   
+}
+
+.total{
+   display: flex;
+    color:green;
+    margin-right: 50px;
+    margin-top: -50px;
+}

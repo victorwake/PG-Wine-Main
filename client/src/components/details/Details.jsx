@@ -20,11 +20,9 @@ export const Details = () => {
 
     const handleAddToCart = () => {
         setIsAddingToCart(true);
-        dispatch(addToCart(wineDetail.id));
+        dispatch(addToCart(wineDetail.id,wineDetail.name,wineDetail.price,wineDetail.image,wineDetail.quantity));
     };
-
     console.log(id)
-
     useEffect(() => {
         dispatch(getWineDetail(id))
     }, [dispatch, id])
@@ -35,7 +33,7 @@ export const Details = () => {
             <div>
                 <NavBar/>
                          
-            <FloatCart/>
+            <FloatCart />
            
        </div>
        
@@ -60,7 +58,7 @@ export const Details = () => {
             className='botonagregar' 
             onClick={handleAddToCart} 
             disabled={isAddingToCart}
-        >
+             >
             {isAddingToCart ? 'Agregado...' : 'Agregar al Carrito'}
         </button>
             </div>
