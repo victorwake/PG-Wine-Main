@@ -1,9 +1,10 @@
 import './details.css'
-import { getWineDetail, addToCart } from '../../redux/actions'
+import { getWineDetail } from '../../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import { addToCart } from '../../redux/reducer/cartSlice';
 
 
 
@@ -14,16 +15,32 @@ export const Details = () => {
     const wineDetail = useSelector((state) => state.wineDetail);
     const clase = useSelector((state) => state.clase);
     const {id} = useParams();
+    const quantity = 1;
 
 
     const addCart = (id) => {
-        dispatch(addToCart(id))
+        dispatch(addToCart(id, quantity, wineDetail.price))
     }
+
 
     const wineColorType = wineDetail.color_type;
 
-    console.log(wineColorType)
-    
+    let colorType = "";
+
+    if(wineColorType=== "Tinto") {
+        colorType = "tinto"
+    } else if (wineColorType === "Blanco") {
+        colorType = "blanco"
+    } else if (wineColorType === "Rosado") {
+        colorType = "rosado"
+    } else if (wineColorType === "Espumante") {
+        colorType = "espumante"
+    } else {
+        colorType = "otro"
+    }
+
+
+
     
 
     useEffect(() => {
@@ -52,7 +69,7 @@ export const Details = () => {
                 <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
             </div>
             <div className={'details-info-' + clase}>
-                <h1 className='nombre'><b>Vino {wineDetail.color_type}</b> {wineDetail.name}</h1>
+                <h1 className={'nombre-' + colorType}><b>Vino {wineDetail.color_type}</b> {wineDetail.name}</h1>
                 <h2 className='variedad'><b>Variedad: </b> {wineDetail.varietal}</h2>
                 <p className='tipo'><b>Tipo: </b> {wineDetail.color_type}</p>
                 <p  className='bodega'><b>Bodega: </b> {wineDetail.winery}</p>
@@ -64,7 +81,7 @@ export const Details = () => {
                 <p className='cata'><b>Nota de cata: </b></p>
                 <p className='descripcion'>{wineDetail.description}</p>
             </div>
-            <div className={"button-card-" + clase}><button onClick={() => addCart(id)}>Agregar al carro</button></div>
+            <div className={"button-card-" + clase}><button onClick={() => addCart(wineDetail.id, quantity, wineDetail.price )}>Agregar al carro</button></div>
         </div>
     );
 

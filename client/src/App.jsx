@@ -12,8 +12,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Admin } from './components/admin/Admin';
 import { ShoppingCart } from './components/shoppingCart/ShoppingCart';
 import { EditList } from './components/editList/EditList';
+import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes';
+import { useSelector } from "react-redux";
+import { useEffect, useState } from 'react';
 
 function App() {
+    const currentUser  = useSelector((state) => state.usuario);
+    const [showAdminBoard, setShowAdminBoard] = useState(true);
+
+    useEffect(() => {
+        if (currentUser) {
+            setShowAdminBoard(currentUser.usuario.rol.includes("ADMIN_ROLE"));
+            } else {
+            setShowAdminBoard(false);
+            }
+    }, [currentUser]);
     return (
         <div className="App">
             <Routes>
@@ -21,13 +34,15 @@ function App() {
                 <Route path="/home" element={< Home />} />
                 <Route path="/vinos/:type" element={<WineType />} />
                 <Route path="/details/:id" element={<Details />} />
-                <Route path="/admin/create/:id" element={<Create />} />
+                <Route element={ <ProtectedRoutes admin={showAdminBoard} /> }>
                 <Route path="/admin/create" element={<Create />} />
+                <Route path="/admin/create/:id" element={<Create />} />
                 <Route path="/admin/editWines" element={<EditList/>}/>
+                <Route path="/admin" element={<Admin />} />
+                </Route>   
                 <Route path="/registrar" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Profile />} />
-                <Route path="/admin" element={<Admin/>}/>
                 <Route path="/shopingcard" element={<ShoppingCart />} />
             </Routes>
         </div>

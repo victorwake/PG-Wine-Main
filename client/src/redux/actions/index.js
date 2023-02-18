@@ -220,27 +220,65 @@ export const SAVE_IMAGE = 'SAVE_IMAGE';
 
 /*----------------------------------------------*/
 
-export const addToCart = (payload) => ({
-    type: ADD_TO_CART,
-    payload,
-});
-export const ADD_TO_CART = 'ADD_TO_CART';
+export const addWineToFavorites = (userId, wineId) => {
+    return async (dispatch) => {
+        try {
+            const response = await fetch(`http://localhost:3001/usuarios/${userId}/favorites/${wineId}`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            }
+            });
+            const data = await response.json();
+            dispatch({ type: ADD_WINE_TO_FAVORITES, payload: data });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+export const ADD_WINE_TO_FAVORITES = 'ADD_WINE_TO_FAVORITES';
 
 /*----------------------------------------------*/
 
-export const removeOneCart = (payload) => ({
-    type: REMOVE_ONE_CART,
+export const removeWineFromFavorites = (userId, wineId) => {
+    return dispatch => axios(`http://localhost:3001/usuarios/${userId}/favorites/${wineId}`)
+        .then(res => dispatch({ type: REMOVE_WINE_FROM_FAVORITES, payload: res.data }))
+        .catch(err => console.log(err));
+};
+    
+export const REMOVE_WINE_FROM_FAVORITES = 'REMOVE_WINE_FROM_FAVORITES';
+
+/*----------------------------------------------*/
+
+export const getWinesFromFavorites = (payload) => ({
+    type: GET_WINES_FROM_FAVORITES,
     payload,
 });
-export const REMOVE_ONE_CART = 'REMOVE_ONE_CART';
+export const GET_WINES_FROM_FAVORITES = 'GET_WINES_FROM_FAVORITES';
+
+/*----------------------------------------------*/
+
+// export const addToCart = (payload) => ({
+//     type: ADD_TO_CART,
+//     payload,
+// });
+// export const ADD_TO_CART = 'ADD_TO_CART';
+
+/*----------------------------------------------*/
+
+// export const removeOneCart = (payload) => ({
+//     type: REMOVE_ONE_CART,
+//     payload,
+// });
+// export const REMOVE_ONE_CART = 'REMOVE_ONE_CART';
 
 /*----------------------------------------------*/
 
 
-export const clearCart = () => ({
-    type: CLEAR_CART,
-});
-export const CLEAR_CART = 'CLEAR_CART';
+// export const clearCart = () => ({
+//     type: CLEAR_CART,
+// });
+// export const CLEAR_CART = 'CLEAR_CART';
 
 /*----------------------------------------------*/
 

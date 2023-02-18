@@ -18,6 +18,15 @@ export const ShoppingCart = () => {
     return (
         <div >
             <NavBar />
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h1>Shopping Cart</h1>
+                        </div>
+                        </div>
+                        </div>
+
+
             
         </div>
     );

@@ -18,9 +18,14 @@ import {
   POST_WINES,
   UPDATE_WINE,
   SAVE_IMAGE,
-  ADD_TO_CART,
-  REMOVE_ONE_CART,
-  CLEAR_CART,
+  ADD_WINE_TO_FAVORITES,
+  REMOVE_WINE_FROM_FAVORITES,
+  GET_WINES_FROM_FAVORITES,
+
+
+  // ADD_TO_CART,
+  // REMOVE_ONE_CART,
+  // CLEAR_CART,
 } from "../actions/index.js";
 
 /*--------AUTH---------*/
@@ -48,12 +53,13 @@ const initialState = {
   price: "",
   varietal: [],
   urlCloudinary: "",
-  productos: [],
-  cart: [],
-  totalItems: 0,
+  // productos: [],
+  // cart: [],
+  // totalItems: 0,
   message: "",
   isLoggedIn: false,
   usuario: null,
+  favorites: [],
 };
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -162,24 +168,24 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         urlCloudinary: action.urlCloudinary,
       };
-    case ADD_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, action.payload],
-        totalItems: state.totalItems + 1,
-      };
-    case REMOVE_ONE_CART:
-      return {
-        ...state,
-        cart: state.cart.filter((e, i) => i !== action.payload.id),
-        totalItems: state.totalItems - 1,
-      };
-    case CLEAR_CART:
-      return {
-        ...state,
-        cart: [],
-        totalItems: 0,
-      };
+    // case ADD_TO_CART:
+    //   return {
+    //     ...state,
+    //     cart: [...state.cart, action.payload],
+    //     totalItems: state.totalItems + 1,
+    //   };
+    // case REMOVE_ONE_CART:
+    //   return {
+    //     ...state,
+    //     cart: state.cart.filter((e, i) => i !== action.payload.id),
+    //     totalItems: state.totalItems - 1,
+    //   };
+    // case CLEAR_CART:
+    //   return {
+    //     ...state,
+    //     cart: [],
+    //     totalItems: 0,
+    //   };
     case REGISTER_SUCCESS:
       return {
         ...state,
@@ -223,6 +229,21 @@ const rootReducer = (state = initialState, action) => {
           isLoggedIn: true,
           usuario: action.payload.usuario,
         };
+    case ADD_WINE_TO_FAVORITES:
+      return {
+        ...state,
+        favorites: [...state.favorites, action.payload],
+      };
+    case REMOVE_WINE_FROM_FAVORITES:
+      return {
+        ...state,
+        favorites: state.favorites.filter((e, i) => i !== action.payload.id),
+      };
+    case GET_WINES_FROM_FAVORITES:
+      return {
+        ...state,
+        favorites: action.payload,
+      };
     default:
       return state;
   }

@@ -122,3 +122,24 @@ body {
     font-family: 'Wire One', sans-serif;
     margin-left: 10px;
 }
+
+
+.nombre-tinto{
+    color: brown;
+}
+
+.nombre-rosado{
+    color: pink;
+}
+
+.nombre-blanco{
+    color: rgb(138, 138, 138);
+}
+
+.nombre-espumante{
+    color: yellow;
+}
+
+.nombre.otro{
+    color: rgb(255, 0, 0);
+}
