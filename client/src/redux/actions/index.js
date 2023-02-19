@@ -269,7 +269,7 @@ export function registerUser (payload) {
 //     }
 export const addToCart = (id, name, price, image, quantity) => ({
      type: 'ADD_TO_CART', 
-        payload: {id, name, price, image, quantity} 
+        payload: {id, name, price, image, quantity: 1} 
 });
     
 

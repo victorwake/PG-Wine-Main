@@ -194,22 +194,46 @@ const rootReducer = (state = initialState, action) => {
     //     alertVisible: false
     //   };
 
-    case "ADD_TO_CART":
-                return {
-                  ...state,
-                  cart: [
-                    ...state.cart,
-                    {
-                      id: action.payload.id,
-                      name:action.payload.name,
-                      price: action.payload.price,
-                      image: action.payload.image,
-                      
-                      quantity: action.payload.quantity,
+    // case "ADD_TO_CART":
+    //             return {
+    //               ...state,
+    //               cart: [
+    //                 ...state.cart,
+    //                 {
+    //                   id: action.payload.id,
+    //                   name:action.payload.name,
+    //                   price: action.payload.price,
+    //                   image: action.payload.image,
+    //                   quantity: action.payload.quantity,
                      
-                    }
-                  ]
-                };
+    //                 }
+    //               ]
+    //             };
+
+    case "ADD_TO_CART":
+  const existingCartItemIndex = state.cart.findIndex(item => item.id === action.payload.id);
+  if (existingCartItemIndex !== -1) {
+    const updatedCart = [...state.cart];
+    updatedCart[existingCartItemIndex].quantity += 1;
+    return {
+      ...state,
+      cart: updatedCart
+    };
+  } else {
+    return {
+      ...state,
+      cart: [
+        ...state.cart,
+        {
+          id: action.payload.id,
+          name: action.payload.name,
+          price: action.payload.price,
+          image: action.payload.image,
+          quantity: action.payload.quantity
+        }
+      ]
+    };
+  }
         
         case REMOVE_FROM_CART:
             console.log("entro al delete")
