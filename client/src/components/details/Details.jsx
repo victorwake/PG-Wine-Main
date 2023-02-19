@@ -1,11 +1,10 @@
 import './details.css'
-import { getWineDetail } from '../../redux/actions'
+import { getWineDetail, addToCart } from '../../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import { addToCart } from '../../redux/reducer/cartSlice';
-
+import { NavBar } from '../navBar/NavBar'
 
 
 
@@ -13,78 +12,81 @@ export const Details = () => {
 
     const dispatch = useDispatch();
     const wineDetail = useSelector((state) => state.wineDetail);
-    const clase = useSelector((state) => state.clase);
+    const clase = useSelector((state) => state.theme);
     const {id} = useParams();
-    const quantity = 1;
-
-
-    const addCart = (id) => {
-        dispatch(addToCart(id, quantity, wineDetail.price))
-    }
-
 
     const wineColorType = wineDetail.color_type;
-
-    let colorType = "";
-
-    if(wineColorType=== "Tinto") {
-        colorType = "tinto"
-    } else if (wineColorType === "Blanco") {
-        colorType = "blanco"
-    } else if (wineColorType === "Rosado") {
-        colorType = "rosado"
-    } else if (wineColorType === "Espumante") {
-        colorType = "espumante"
-    } else {
-        colorType = "otro"
+    let colorType = ""
+    let colorName = ""
+    
+    const handleClick = (id) => {
+        // dispatch(addToCart(wineDetail.id))
+        console.log(wineDetail.id)
+    }
+    
+    let fauvorite = true
+    const handleFav= (e)=>{
+       (fauvorite === true) ? fauvorite = false : fauvorite= true 
+        console.log(fauvorite)
     }
 
-
-
     
+if(!!wineColorType){
+    colorType = wineColorType.toLowerCase()
+    colorName = wineColorType.toUpperCase()}
 
     useEffect(() => {
         dispatch(getWineDetail(id))
     }, [dispatch, id])
 
     return (
-        
-        <div className={'details-container-' + clase}>
+        <div className={"detail-container-" + clase}>
+            <NavBar/>
+        <div className='containerData'>
             <div>
-                {
-                wineColorType === 'Tinto'? <Link to='/vinos/tinto'><button className="buttonBack" >Volver a tintos</button></Link> 
-                : wineColorType === 'Blanco'? <Link to='/vinos/blanco'><button className="buttonBack" >Volver a blancos</button></Link>
-                : wineColorType === 'Rosado'? <Link to='/vinos/rosado'><button className="buttonBack" >Volver a rosados</button></Link>
-                : wineColorType === 'Espumante'? <Link to='/vinos/espumante'><button className="buttonBack" >Volver a espumantes</button></Link>
-                : <Link to='/home'><button className="buttonBack" >Volver a inicio</button></Link>
-                }
+               <Link to={`/vinos/${wineColorType}`}> <button id={"agregar-" + clase} className="buttonBack" ><i class="bi bi-arrow-return-left"></i>  Volver </button></Link>          
             </div>
-            <Link to = {'/create/' + id}>
-                <button 
-                    className={'button-back-' + clase}
-                    >Update
-                </button>
-            </Link>
-            <div className={'details-img-' + clase}>
+            <div className='img'>
                 <img className='imagen' src={wineDetail.image} alt={wineDetail.name} />
             </div>
-            <div className={'details-info-' + clase}>
-                <h1 className={'nombre-' + colorType}><b>Vino {wineDetail.color_type}</b> {wineDetail.name}</h1>
-                <h2 className='variedad'><b>Variedad: </b> {wineDetail.varietal}</h2>
-                <p className='tipo'><b>Tipo: </b> {wineDetail.color_type}</p>
-                <p  className='bodega'><b>Bodega: </b> {wineDetail.winery}</p>
-                <p className='origen'><b>UBICACIÓN / ORIGEN </b> {wineDetail.province}, {wineDetail.region}</p>
-                {/* <p><b>Url:</b> {wineDetail.url}</p> */}
-                <p className='alcohol'><b>Alcohol: </b> {wineDetail.alcohol}%</p>
-                <p className='year'><b>Año: </b> {wineDetail.year}</p>
-                <p  className='price'><b>Precio: </b> {wineDetail.price}</p>
-                <p className='cata'><b>Nota de cata: </b></p>
-                <p className='descripcion'>{wineDetail.description}</p>
+                <div className={"name-" + colorType}>
+                    <h2>{colorName}S - {wineDetail.name}</h2>
+                </div>
+            <div className='tabla'>
+               <table class="table">
+                    <tbody>
+                        <tr>
+                        <th className={"th-"+ colorType}>Variedad</th>
+                        <td id={"td-" + clase}>{wineDetail.varietal}</td>
+                        </tr>
+                        <tr>
+                        <th className={'th-'+ colorType}>Bodega</th>
+                        <td id={"td-" + clase}>{wineDetail.winery}</td>
+                        </tr>
+                        <tr>
+                        <th className={'th-'+ colorType}>Ubicacion</th>
+                        <td id={"td-" + clase}>{wineDetail.province}</td>
+                        </tr>
+                        <tr>
+                        <th className={'th-'+ colorType}>Alcohol</th>
+                        <td id={"td-" + clase}>{wineDetail.alcohol} %</td>
+                        </tr>
+                        <tr>
+                        <th className={'th-'+ colorType}>Año</th>
+                        <td id={"td-" + clase}>{wineDetail.year}</td>
+                        </tr>
+                        <tr>
+                        <th className={'th-'+ colorType}>Nota de cata</th>
+                        <td id={"td-" + clase}>{wineDetail.description}</td>
+                        </tr>
+                    </tbody>
+                </table> 
             </div>
-            <div className={"button-card-" + clase}><button onClick={() => addCart(wineDetail.id, quantity, wineDetail.price )}>Agregar al carro</button></div>
+                <h3 className='price'>$ {wineDetail.price}</h3>
+                <button id={"agregar-" + clase} className='addToCart' onClick={() => handleClick(wineDetail.id)}><i id={"agregar-" + clase} class="bi bi-cart3"></i> Agregar</button>
+                <button className='heart' onClick={(e)=>handleFav(e)}>{!fauvorite ? <i class="bi bi-heart"></i> : <i class="bi bi-heart-fill"></i>}</button>
+        </div>
         </div>
     );
 
 }
-
-
