@@ -1,13 +1,16 @@
 import './card.css';
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+
 
 
 
 
 export const Card = ({ image, name, color_type, varietal , winery, price, id }) => {//se lo paso por props
     const clase = useSelector(store => store.theme);
+    const wines = useSelector(store => store.wines)
+    const dispatch = useDispatch();
 
     
 

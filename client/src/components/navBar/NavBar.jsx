@@ -14,10 +14,10 @@ export const NavBar = () => {
     const dispatch = useDispatch();
     let location = useLocation();
 
-  const borrar = () => {
-    localStorage.clear();
-    this.location.reload();
-  };
+  // const borrar = () => {
+  //   localStorage.clear();
+  //   this.location.reload();
+  // };
 
   const handleTheme = () => {
     if(clase === 'dark') {
@@ -39,6 +39,8 @@ export const NavBar = () => {
 
   const logOut = useCallback(() => {
     dispatch(logout());
+    localStorage.clear();
+    this.location.reload();
   }, [dispatch]);
 
   useEffect(() => {
@@ -49,7 +51,7 @@ export const NavBar = () => {
     }
   }, [currentUser]);
 
-
+  const tokenRevi = localStorage.getItem('nombre')
     return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id={"navbar-expand-lg-" + clase}>
   <div class="container-fluid">
@@ -96,12 +98,13 @@ export const NavBar = () => {
         </li>)}
 
         <li class="nav-item">
-        { !currentUser? <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
+        { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={borrar}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={logOut}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
       </ul>
-      <Cart/>
+      <Cart />
+      
       <div className={'conteiner-switch-' + clase}>   
                         <input type='checkbox' 
                         className={'input-switch-' + clase}

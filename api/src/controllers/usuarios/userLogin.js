@@ -6,6 +6,7 @@ const {
 
 const { generarJWT } = require('../../helpers/generar-jwt');
 const { googleVerify } = require('../../helpers/google-verify');
+const { sendMail } = require('../../helpers/welcome-mail');
 
 
 
@@ -80,10 +81,12 @@ const googleSignin = async(req, res) => {
                     google: true,
                     profilePic: profilePic
                 };
-
+                
+                await sendMail(firstName, lastName, email);
                 usuario = await User.create( data );
                 await usuario.save();
-            } 
+                
+            }
     
             // Si el usuario en DB
             if ( usuario.status !== 'active' ) {

@@ -1,0 +1,37 @@
+.myinput{
+    width: 35px;
+    height: 35px;
+    border-color: black; 
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-style:solid;
+}
+.Borrar{
+    width: 40px;
+    height: 25px;
+    background-color: red;
+    border-radius: 3px;
+    color: aliceblue;
+}
+.price-card-{
+font-size: 15px;
+display: flex;
+}
+/* .btn-secondary{
+   width: 50px;
+   height: 30px; 
+   margin-left:-200px
+} */
+.modal-content {
+width: auto; 
+height: auto;   
+}
+
+.total{
+   display: flex;
+    color:green;
+    margin-right: 50px;
+    margin-top: -50px;
+}

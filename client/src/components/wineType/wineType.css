@@ -86,3 +86,17 @@
     display: flex;
     justify-content: center;
 }
+
+.btn-add{
+    margin-left: 60px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-details{
+    margin-left: 87px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}

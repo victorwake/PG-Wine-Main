@@ -21,6 +21,10 @@ import {
   ADD_WINE_TO_FAVORITES,
   REMOVE_WINE_FROM_FAVORITES,
   GET_WINES_FROM_FAVORITES,
+  ADD_TO_CART,
+  UPDATE_CART_ITEM,
+  REMOVE_FROM_CART,
+  REMOVE_ALL_FROM_CART,
 
 
   // ADD_TO_CART,
@@ -53,13 +57,16 @@ const initialState = {
   price: "",
   varietal: [],
   urlCloudinary: "",
-  // productos: [],
-  // cart: [],
-  // totalItems: 0,
   message: "",
   isLoggedIn: false,
   usuario: null,
   favorites: [],
+  quantity: 1,
+  cart: JSON.parse(localStorage.getItem('cart')) || [],
+  alertVisible: false,
+  cartItems: [],
+  isAddingToCart: false,
+  isRemovingFromCart: false,
 };
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -168,24 +175,6 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         urlCloudinary: action.urlCloudinary,
       };
-    // case ADD_TO_CART:
-    //   return {
-    //     ...state,
-    //     cart: [...state.cart, action.payload],
-    //     totalItems: state.totalItems + 1,
-    //   };
-    // case REMOVE_ONE_CART:
-    //   return {
-    //     ...state,
-    //     cart: state.cart.filter((e, i) => i !== action.payload.id),
-    //     totalItems: state.totalItems - 1,
-    //   };
-    // case CLEAR_CART:
-    //   return {
-    //     ...state,
-    //     cart: [],
-    //     totalItems: 0,
-    //   };
     case REGISTER_SUCCESS:
       return {
         ...state,
@@ -244,6 +233,46 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         favorites: action.payload,
       };
+    case "ADD_TO_CART":
+      return {
+        ...state,
+          cart: [
+            ...state.cart,
+              {
+                id: action.payload.id,
+                name:action.payload.name,
+                varietal: action.payload.varietal,
+                price: action.payload.price,
+                image: action.payload.image,
+                quantity: action.payload.quantity || 1
+                // quantity: action.payload.quantity,
+              }
+          ]
+      };
+      case "UPDATE_CART_ITEM":
+        return {
+          ...state,
+          cart: state.cart.map(item => {
+            if (item.id === action.payload.id) {
+              return {
+                ...item,
+                quantity: action.payload.quantity,
+                totalPrice: action.payload.totalPrice
+              };
+            }
+            return item;
+          })
+        };  
+        case REMOVE_FROM_CART:
+          return ({
+              ...state,
+              cart: state.cart.filter((product) => product.id !== action.payload)}
+          )  
+          case REMOVE_ALL_FROM_CART:
+            return ({
+                ...state,
+                cart: []}
+            )
     default:
       return state;
   }

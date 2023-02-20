@@ -4,6 +4,7 @@ const {
 const bcryptjs = require('bcryptjs');
 
 const { generarJWT } = require('../../helpers/generar-jwt');
+const { sendMail } = require('../../helpers/welcome-mail');
 
 const usuariosPost = async (req, res, next) => {
 
@@ -46,6 +47,8 @@ const usuariosPost = async (req, res, next) => {
         usuario,
         msg: "Usuario registrado con éxito"
     });
+
+    sendMail(firstName, lastName, email);
     console.log(usuario)
 
 } catch (error) {
