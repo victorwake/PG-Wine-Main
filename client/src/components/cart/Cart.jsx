@@ -9,28 +9,33 @@ import { removeFromCart, updateCartItem, removeAllFromCart } from "../../redux/a
 
 export const Cart = () => {
   const clase = useSelector((store) => store.theme);
+  const allWines = useSelector(state=> state.wines)
   const cart = useSelector(state => state.cart);
   const [quantities, setQuantities] = useState({});
   const dispatch = useDispatch();
+  const [showEmptyCartModal, setShowEmptyCartModal] = useState(false);
+
+
+  //prueba para el control de stock de cart, para no vender mas de la cantidad que hay en stock
+  const firstCartItem = cart[0];
+  if (firstCartItem) {
+    const stock = allWines.find(wine => wine.id === firstCartItem.id)?.stock;
+    console.log(stock);
+  }
+
+
+
+
   
-  
+  const handleEmptyCart = () => {
+    if (cart.length === 0) {
+      setShowEmptyCartModal(true);
+    }
+  }
 
-
-  // useEffect(() => {
-  //   const data = {
-  //     cart: cart,
-  //     quantities: quantities
-  //   };
-  //   localStorage.setItem('cart', JSON.stringify(data));
-  // }, [cart, quantities]);
-
-
-
-
-  // const total = cart.reduce((acc, item) => {
-  //   const quantity = quantities[item.id] || item.quantity;
-  //   return acc + (item.price * quantity);
-  // }, 0);
+  const handleCloseEmptyCartModal = () => {
+    setShowEmptyCartModal(false);
+  }
 
 
   const total = Array.isArray(cart) ? cart.reduce((acc, item) => {
@@ -42,6 +47,7 @@ export const Cart = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   
   const handleQuantityChange = (event, itemId) => {
     const newQuantity = parseInt(event.target.value);
@@ -70,10 +76,22 @@ export const Cart = () => {
   return (
     <div className={"cart-container-" + clase}>
       <div>
-        <Button variant="success" onClick={handleShow}>
+        <Button variant="success" onClick={cart.length ? handleShow : handleEmptyCart} >
         <i class="bi bi-cart3"></i>
         </Button>
       </div>
+
+      <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Carrito vacío</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>El carrito está vacío.</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseEmptyCartModal}>
+              Cerrar
+            </Button>
+          </Modal.Footer>
+      </Modal>
 
       <Modal size="xl" dialogClassName="custom-modal-dialog" show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
@@ -114,7 +132,7 @@ export const Cart = () => {
                       <h4 className="total-unidad" >{item.price * (quantities[item.id] || item.quantity)} $</h4>
                     </td>
                     <td>
-                      <button className="Borrar" onClick={() => dispatch(removeFromCart(item.id))}>X</button>
+                      <Button variant="danger" onClick={() => dispatch(removeFromCart(item.id))}>X</Button>
                     </td>
                   </tr>
                 ))}
@@ -128,9 +146,13 @@ export const Cart = () => {
           <Button variant="danger" onClick={handleRemoveAllFromCart}>
             Vaciar carrito
           </Button>
-          <Link to={cart.length ? "/shopingcard" : null}><Button variant="success">
+
+          <Link to="/shopingcard">
+            <Button 
+            variant="success" 
+            >
             Completar la compra
-          </Button>
+            </Button>
           </Link>
         </Modal.Footer>
       </Modal>

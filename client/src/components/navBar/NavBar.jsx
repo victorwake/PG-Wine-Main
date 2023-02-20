@@ -14,10 +14,6 @@ export const NavBar = () => {
     const dispatch = useDispatch();
     let location = useLocation();
 
-  // const borrar = () => {
-  //   localStorage.clear();
-  //   this.location.reload();
-  // };
 
   const handleTheme = () => {
     if(clase === 'dark') {

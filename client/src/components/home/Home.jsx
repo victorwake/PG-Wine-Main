@@ -7,7 +7,6 @@ import {useDispatch, useSelector} from 'react-redux';
 import { getWines } from '../../redux/actions';
 import { Card }from '../card/Card'
 import { Link } from 'react-router-dom';
-import { FloatCart } from '../shoppingCart/FloatCart';
 import _ from 'lodash';
 
 
@@ -36,7 +35,6 @@ export const Home = () => {
         <div className={"home-container-" + clase}>
             <div className='home_nav'>
                 <NavBar/>
-                {/* <FloatCart/> */}
             </div>
             <NavBarWineType />
             <Carousel/>
