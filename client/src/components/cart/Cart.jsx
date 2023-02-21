@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import "./cart.css";
 import { Button, Modal } from 'react-bootstrap';
 import { useState, useEffect } from "react";
-import { removeFromCart, updateCartItem, removeAllFromCart } from "../../redux/actions";
+import { removeFromCart, updateCartItem, removeAllFromCart, payment } from "../../redux/actions";
+import axios from "axios";
+import  CircularJSON  from "circular-json"
 
 
-export const Cart = () => {
+
+export const Cart = (items) => {
   const clase = useSelector((store) => store.theme);
   const allWines = useSelector(state=> state.wines)
   const cart = useSelector(state => state.cart);
@@ -22,9 +25,6 @@ export const Cart = () => {
     const stock = allWines.find(wine => wine.id === firstCartItem.id)?.stock;
     console.log(stock);
   }
-
-
-
 
   
   const handleEmptyCart = () => {
@@ -51,13 +51,22 @@ export const Cart = () => {
   
   const handleQuantityChange = (event, itemId) => {
     const newQuantity = parseInt(event.target.value);
-      setQuantities({...quantities, [itemId]: newQuantity});
-      dispatch(updateCartItem(itemId, newQuantity));
-  }
+    setQuantities(prevQuantities => ({ ...prevQuantities, [itemId]: newQuantity }));
+    dispatch(updateCartItem(itemId, newQuantity));
+  };
 
   const handleRemoveAllFromCart = () => {
     dispatch(removeAllFromCart());
   }
+
+  const cartItem = cart.map(items => ({
+    id: items.id,
+    title: items.name,
+    price: items.price,
+    quantity: quantities[items.id] || items.quantity,
+  }));
+  console.log(cartItem)
+
 
   useEffect(() => {
     const quantitiesFromLocalStorage = JSON.parse(localStorage.getItem('quantities')) || {};
@@ -71,7 +80,6 @@ export const Cart = () => {
   useEffect(() => {
     localStorage.setItem('quantities', JSON.stringify(quantities));
   }, [quantities]);
-
 
   return (
     <div className={"cart-container-" + clase}>
@@ -151,11 +159,23 @@ export const Cart = () => {
             <Button 
             variant="success" 
             >
-            Completar la compra
+            Ir al carrito
             </Button>
           </Link>
+          <Button 
+  variant="success" 
+  onClick={() => {
+    axios.post('http://localhost:3001/procesarmp', cartItem)
+      .then(res => window.location.href = res.data.response.body.init_point);
+  }}
+>
+  Finalizar compra
+</Button>  
         </Modal.Footer>
       </Modal>
     </div>
   );
 }        
+
+
+
