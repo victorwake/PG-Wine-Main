@@ -272,7 +272,7 @@ export const GET_WINES_FROM_FAVORITES = 'GET_WINES_FROM_FAVORITES';
 
 export const addToCart = (id,name, varietal, price,image,quantity) => ({
     type: "ADD_TO_CART",
-    payload: {id,name, varietal,price,image,quantity}
+    payload: { id, name, varietal,  price,image,quantity }
 });
 export const ADD_TO_CART = 'ADD_TO_CART';
 
@@ -280,7 +280,7 @@ export const ADD_TO_CART = 'ADD_TO_CART';
 
 export const updateCartItem = (id,name, varietal, price,image,quantity ) => ({
     type: "UPDATE_CART_ITEM",
-    payload: {id,name,varietal,price,image,quantity}
+    payload: { id, name, varietal,  price,image,quantity  }
 });
 export const UPDATE_CART_ITEM = 'UPDATE_CART_ITEM';
 
@@ -311,3 +311,36 @@ export const removeAllFromCart = () => {
 export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
 
 /*----------------------------------------------*/
+
+export const procesarPago = (payload) => {
+    return (dispatch) => {
+        axios.post('http://localhost:3001/procesarmp', payload)
+        .then((response) => {
+    
+    console.log(response);
+    
+    dispatch(procesarPagoExitoso(response.data));
+  })
+  .catch((error) => {
+   
+    console.log(error);
+
+    dispatch(procesarPagoError(error.message));
+  });
+};
+};
+
+
+const procesarPagoExitoso = (resultado) => {
+    return {
+      type: 'PROCESAR_PAGO_EXITOSO',
+      payload: resultado
+    };
+  };
+  
+  const procesarPagoError = (error) => {
+    return {
+      type: 'PROCESAR_PAGO_ERROR',
+      payload: error
+    };
+  };
