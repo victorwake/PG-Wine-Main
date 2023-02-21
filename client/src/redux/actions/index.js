@@ -220,10 +220,10 @@ export const SAVE_IMAGE = 'SAVE_IMAGE';
 
 /*----------------------------------------------*/
 
-export const addWineToFavorites = (userId, wineId) => {
+export const addWineToFavorites = (idUser, wineId) => {
     return async (dispatch) => {
         try {
-            const response = await fetch(`http://localhost:3001/usuarios/${userId}/favorites/${wineId}`, {
+            const response = await fetch(`http://localhost:3001/usuarios/${idUser}/favorites/${wineId}`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
@@ -240,20 +240,32 @@ export const ADD_WINE_TO_FAVORITES = 'ADD_WINE_TO_FAVORITES';
 
 /*----------------------------------------------*/
 
-export const removeWineFromFavorites = (userId, wineId) => {
-    return dispatch => axios(`http://localhost:3001/usuarios/${userId}/favorites/${wineId}`)
-        .then(res => dispatch({ type: REMOVE_WINE_FROM_FAVORITES, payload: res.data }))
-        .catch(err => console.log(err));
+export const removeWineFromFavorites = (idUser, wineId) => {
+    return async (dispatch) => {
+        try {
+            const response = await fetch(`http://localhost:3001/usuarios/${idUser}/favorites/${wineId}`, {
+            method: 'DELETE',
+            headers: {
+            'Content-Type': 'application/json'
+            }
+            });
+            const data = await response.json();
+            dispatch({ type: REMOVE_WINE_FROM_FAVORITES, payload: data });
+        } catch (error) {
+            console.log(error);
+        }
+    }
 };
     
 export const REMOVE_WINE_FROM_FAVORITES = 'REMOVE_WINE_FROM_FAVORITES';
 
 /*----------------------------------------------*/
 
-export const getWinesFromFavorites = (payload) => ({
-    type: GET_WINES_FROM_FAVORITES,
-    payload,
-});
+export const getWinesFromFavorites = (userId) => {
+    return dispatch => axios(`http://localhost:3001/usuarios/${userId}/favorites`)
+        .then(res => dispatch({ type: GET_WINES_FROM_FAVORITES, payload: res.data }))
+        .catch(err => console.log(err));
+};
 export const GET_WINES_FROM_FAVORITES = 'GET_WINES_FROM_FAVORITES';
 
 /*----------------------------------------------*/

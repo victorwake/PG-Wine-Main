@@ -233,7 +233,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         favorites: action.payload,
       };
-    case "ADD_TO_CART":
+    case ADD_TO_CART:
       return {
         ...state,
           cart: [
@@ -249,7 +249,7 @@ const rootReducer = (state = initialState, action) => {
               }
           ]
       };
-      case "UPDATE_CART_ITEM":
+      case UPDATE_CART_ITEM:
         return {
           ...state,
           cart: state.cart.map(item => {
