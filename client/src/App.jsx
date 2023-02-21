@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Admin } from './components/admin/Admin';
 import { ShoppingCart } from './components/shoppingCart/ShoppingCart';
 import { EditList } from './components/editList/EditList';
+import  RegisterAdmin  from './components/registerAdmin/RegisterAdmin'
 import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes';
 import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
@@ -39,6 +40,8 @@ function App() {
                 <Route path="/admin/create/:id" element={<Create />} />
                 <Route path="/admin/editWines" element={<EditList/>}/>
                 <Route path="/admin" element={<Admin />} />
+                <Route path="/admin/createadmin" element={<RegisterAdmin />} />
+                /admin/createadmin
                 </Route>   
                 <Route path="/registrar" element={<Register />} />
                 <Route path="/login" element={<Login />} />
