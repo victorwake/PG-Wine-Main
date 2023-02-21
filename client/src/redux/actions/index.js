@@ -299,3 +299,43 @@ export const removeAllFromCart = () => {
 export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
 
 /*----------------------------------------------*/
+
+//EXPERIENCIAS
+/*----------------------------------------------*/
+
+export const postExp = (payload) => {
+    return async function() {
+        const newExp = await axios.post('http://localhost:3001/experiences', payload);
+        return newExp;
+    }
+};
+
+export const POST_EXP = 'POST_EXP';
+
+/*----------------------------------------------*/
+export const updateExp = (id, payload) => {
+    return async function() {
+        const updateExp = await axios.put(`http://localhost:3001/experiences/${id}`, payload);
+        return updateExp;
+    }
+};
+
+export const UPDATE_EXP = 'UPDATE_EXP';
+
+/*----------------------------------------------*/
+export const getExp = () => {
+    return async(dispatch) => {
+        try {
+            const response = await axios.get('http://localhost:3001/experiences');
+            dispatch({
+                type: GET_EXP,
+                payload: response.data
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+export const GET_EXP = 'GET_EXP';
+
+/*----------------------------------------------*/

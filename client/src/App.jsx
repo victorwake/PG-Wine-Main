@@ -16,6 +16,7 @@ import  RegisterAdmin  from './components/registerAdmin/RegisterAdmin'
 import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes';
 import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
+import { Experiences} from './components/experiences/expSection/Experiences';
 
 function App() {
     const currentUser  = useSelector((state) => state.usuario);
@@ -43,6 +44,7 @@ function App() {
                 <Route path="/admin/createadmin" element={<RegisterAdmin />} />
                 /admin/createadmin
                 </Route>   
+                <Route path="/experiences" element={<Experiences/>}/>
                 <Route path="/registrar" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Profile />} />

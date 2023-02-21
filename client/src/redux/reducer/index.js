@@ -25,6 +25,9 @@ import {
   UPDATE_CART_ITEM,
   REMOVE_FROM_CART,
   REMOVE_ALL_FROM_CART,
+  POST_EXP,
+  GET_EXP,
+  UPDATE_EXP,
 
 
   // ADD_TO_CART,
@@ -273,6 +276,22 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 cart: []}
             )
+
+    /////EXPERIENCES////
+    case GET_EXP:
+        return {
+          ...state,
+          experiences: action.payload,
+        };
+    case POST_EXP:
+        return {
+          ...state,
+        };
+    case UPDATE_EXP:
+        return {
+          ...state,
+        };
+  
     default:
       return state;
   }
