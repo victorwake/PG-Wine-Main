@@ -12,6 +12,7 @@
     grid-template-columns: repeat(auto-fill, 330px);
     align-items: center;
     justify-content: center;
+    transition-duration: 01s;
     background-color: rgb(224, 224, 224);
     
 }
@@ -20,7 +21,6 @@
     font-size: 2.5rem;
     font-weight: 600;
     margin: 5px;
-    color: rgb(0, 0, 0);
     font-family: 'Source Sans Pro', sans-serif;
     position: relative;
     list-style: none;
@@ -28,6 +28,8 @@
     justify-content: center;
     margin-top: 80px;
     margin-bottom: 80px;
+    transition-duration: 01s;
+    color: rgb(0, 0, 0);
     background-color: rgb(224, 224, 224);
 }
 

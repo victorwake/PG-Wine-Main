@@ -1,244 +1,252 @@
+import { nameASC } from '../../helpers/sort.js';
 import {
-    THEME_CHANGE,
-    THEME_LIGHT,
-    THEME_DARK,
-    GET_WINES,
-    GET_WINE_TYPE,
-    GET_WINE_DETAIL,
-    CLEAN_DETAIL,
-    CURRENT_PAGE,
-    NAME_ORDER,
-    RESET_PAGE,
-    PRICE_ORDER,
-    CLEAN_ALL_FILTERS,
-    GET_BY_NAME,
-    GET_BY_RANGE_PRICE,
-    GET_VARIETAL,
-    POST_WINES,
-    UPDATE_WINE,
-    POST_REGISTER,
-    POST_AUTH,
-    ADD_TO_CART,
-    HIDE_ALERT,
-    SHOW_ALERT,
-    REMOVE_FROM_CART,
-    REMOVE_ALL_FROM_CART,
-    CLEAR_CART,
-    REGISTER_SUCCESS,
-    REGISTER_FAIL,
-    LOGIN_SUCCESS,
-    LOGIN_FAIL,
-    LOGOUT,
-    SET_MESSAGE, 
-    CLEAR_MESSAGE, 
-    getWines,
-  
-} from '../actions/index.js';
-
-  
-
-  const usuario = JSON.parse(localStorage.getItem("usuario"));
-  
-  const initialStateUsuario = usuario
-    ? { isLoggedIn: true, usuario }
-    : { isLoggedIn: false, usuario: null };
+  THEME_CHANGE,
+  THEME_LIGHT,
+  THEME_DARK,
+  GET_WINES,
+  GET_WINE_TYPE,
+  GET_WINE_DETAIL,
+  CLEAN_DETAIL,
+  CURRENT_PAGE,
+  NAME_ORDER,
+  RESET_PAGE,
+  PRICE_ORDER,
+  CLEAN_ALL_FILTERS,
+  GET_BY_NAME,
+  GET_BY_RANGE_PRICE,
+  GET_VARIETAL,
+  POST_WINES,
+  UPDATE_WINE,
+  SAVE_IMAGE,
+  ADD_WINE_TO_FAVORITES,
+  REMOVE_WINE_FROM_FAVORITES,
+  GET_WINES_FROM_FAVORITES,
 
 
+  // ADD_TO_CART,
+  // REMOVE_ONE_CART,
+  // CLEAR_CART,
+} from "../actions/index.js";
+
+/*--------AUTH---------*/
+
+import {
+  REGISTER_SUCCESS,
+  REGISTER_FAIL,
+  LOGIN_SUCCESS,
+  LOGIN_FAIL,
+  LOGOUT,
+  LOGGIN_SUCCESS_G
+} from "../actions/type.js";
+
+/*--------MESSAGE---*/
+import { SET_MESSAGE, CLEAR_MESSAGE } from "../actions/type.js";
 
 const initialState = {
-    theme: 'light',
-    wines: [],
-    wineType: [],
-    wineDetail: {},
-    currentPage: 1,
-    nameOrder: '',
-    useFilter: false,
-    price: '',
-    varietal: [],
-    initialStateUsuario: initialStateUsuario,
-    message: {},
-    quantity: 1,
-    cart : [],
-    alertVisible: false,
-    quantity: 1,
-      cartItems: [],
-    isAddingToCart: false,
-    isRemovingFromCart: false,
-}
+  theme: "light",
+  wines: [],
+  wineType: [],
+  wineDetail: {},
+  currentPage: 1,
+  nameOrder: "",
+  useFilter: false,
+  price: "",
+  varietal: [],
+  urlCloudinary: "",
+  // productos: [],
+  // cart: [],
+  // totalItems: 0,
+  message: "",
+  isLoggedIn: false,
+  usuario: null,
+  favorites: [],
+};
 
+const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+if (usuario) {
+  initialState.isLoggedIn = true;
+  initialState.usuario = usuario;
+} else {
+  initialState.isLoggedIn = false;
+  initialState.usuario = null;
+}
 
 const rootReducer = (state = initialState, action) => {
-   
-  
-    switch (action.type) {
-        case THEME_CHANGE:
-            return {
-                ...state,
-                theme: action.theme
-            };
-        case THEME_LIGHT:
-            return {
-                ...state,
-                theme: 'light'
-            };
-        case THEME_DARK:
-            return {
-                ...state,
-                theme: 'dark'
-            };
-        case GET_WINES:
-            return {
-                ...state,
-                wines: action.payload
-            };
-        case GET_WINE_TYPE:
-            return {
-                ...state,
-                wineType: action.payload
-            };
-        case GET_WINE_DETAIL:
-            console.log("entro al detail")
-            return {
-                ...state,
-                wineDetail: action.payload
-                
-            };
-        case CLEAN_DETAIL:
-            return {
-                ...state,
-                wineDetail: action.payload
-            };
-        case NAME_ORDER:
-            return {
-                ...state,
-                nameOrder: action.payload
-            }
-        case CURRENT_PAGE:
-            return {
-                ...state,
-                currentPage: action.payload
-            }
-            ///////////////////////////////    
-        case CLEAN_ALL_FILTERS:
-            return {
-                ...state,
-                currentPage: 1,
-                useFilter: false,
-                typeFilter: '',
-                nameOrder: '',
-                price: '', // Faltaba setear el precio 
-            }
-        case RESET_PAGE:
-            return {
-                ...state,
-                currentPage: action.payload
-            }
-        case PRICE_ORDER:
-            return {
-                ...state,
-                price: action.payload
-            }
-        case GET_BY_NAME:
-            return {
-                ...state,
-                wines: action.payload
-            }
-        case GET_BY_RANGE_PRICE:
-            return {
-                ...state,
-                wineType: action.payload,
-                price: ''
-            }
-        case GET_VARIETAL:
-            return {
-                ...state,
-                varietal: action.payload
-            }
-        case POST_WINES:
-            return {
-                ...state,
-            }
-        case UPDATE_WINE:
-            return {
-                ...state,
-            }
-
-
-         ///////////////////////////////////
-
-        // case ADD_TO_CART:
-        //     console.log("entro en reducer")
-        //     let newItem = state.wines.find( (wine) => wine.id === action.payload)
-        //     return ({
-        //         ...state,
-        //         cart: [...state.cart, newItem]
-          
-        //     } )
-
-        case ADD_TO_CART:
-      console.log("entro en reducer");
-      let newItem = state.wines.find(wine => wine.id === action.payload);
+  switch (action.type) {
+    case THEME_CHANGE:
       return {
         ...state,
-        cart: [...state.cart, newItem],
-        alertVisible: true
+        theme: action.theme,
       };
-    case SHOW_ALERT:
+    case THEME_LIGHT:
       return {
         ...state,
-        alertVisible: true
+        theme: "light",
       };
-    case HIDE_ALERT:
+    case THEME_DARK:
       return {
         ...state,
-        alertVisible: false
+        theme: "dark",
       };
-
-        
-        case REMOVE_FROM_CART:
-            console.log("entro al delete")
-            // console.log('Removing item with id: ', action.payload);
-            // console.log('Current cart state: ', state.cart);
-            // let itemToDelete = state.cart.find((item) => item.id === action.payload);
-            // console.log('Item to delete: ', itemToDelete);
-            return ({
-                ...state,
-                cart: state.cart.filter((product) => product.id !== action.payload)}
-            )
-            case 'UPDATE_CART_ITEM':
-            return {
-              ...state,
-              cart: state.cart.map((item) =>
-                item.id === action.payload.id
-                  ? {
-                      ...item,
-                      quantity: action.payload.quantity,
-                      totalPrice: action.payload.totalPrice,
-                    }
-                  : item
-              ),
-            };
-       
-            case REMOVE_ALL_FROM_CART:
-                console.log("entro al deleteALL")
-                // console.log('Removing item with id: ', action.payload);
-                // console.log('Current cart state: ', state.cart);
-                // let itemToDelete = state.cart.find((item) => item.id === action.payload);
-                // console.log('Item to delete: ', itemToDelete);
-                    return ({
-                            cart: state.cart})
-
-            case CLEAR_CART:{
-            return initialState;
-        }
-        
-             
-
-        default:
-            return state;
-        }
-   
-}
+    case GET_WINES:
+      return {
+        ...state,
+        wines: action.payload,
+      };
+    case GET_WINE_TYPE:
+      return {
+        ...state,
+        wineType: action.payload,
+      };
+    case GET_WINE_DETAIL:
+      return {
+        ...state,
+        wineDetail: action.payload,
+      };
+    case CLEAN_DETAIL:
+      return {
+        ...state,
+        wineDetail: action.payload,
+      };
+    case NAME_ORDER:
+      return {
+        ...state,
+        nameOrder: action.payload,
+      };
+    case CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.payload,
+      };
+    ///////////////////////////////
+    case CLEAN_ALL_FILTERS:
+      return {
+        ...state,
+        currentPage: 1,
+        useFilter: false,
+        typeFilter: "",
+        nameOrder: "",
+        price: "", // Faltaba setear el precio
+      };
+    case RESET_PAGE:
+      return {
+        ...state,
+        currentPage: action.payload,
+      };
+    case PRICE_ORDER:
+      return {
+        ...state,
+        price: action.payload,
+      };
+    case GET_BY_NAME:
+      return {
+        ...state,
+        wines: action.payload,
+      };
+    case GET_BY_RANGE_PRICE:
+      return {
+        ...state,
+        wineType: action.payload,
+        price: "",
+      };
+    case GET_VARIETAL:
+      return {
+        ...state,
+        varietal: action.payload.sort(nameASC)
+      };
+    case POST_WINES:
+      return {
+        ...state,
+      };
+    case UPDATE_WINE:
+      return {
+        ...state,
+      };
+    case SAVE_IMAGE:
+      return {
+        ...state,
+        urlCloudinary: action.urlCloudinary,
+      };
+    // case ADD_TO_CART:
+    //   return {
+    //     ...state,
+    //     cart: [...state.cart, action.payload],
+    //     totalItems: state.totalItems + 1,
+    //   };
+    // case REMOVE_ONE_CART:
+    //   return {
+    //     ...state,
+    //     cart: state.cart.filter((e, i) => i !== action.payload.id),
+    //     totalItems: state.totalItems - 1,
+    //   };
+    // case CLEAR_CART:
+    //   return {
+    //     ...state,
+    //     cart: [],
+    //     totalItems: 0,
+    //   };
+    case REGISTER_SUCCESS:
+      return {
+        ...state,
+        isLoggedIn: false,
+      };
+    case REGISTER_FAIL:
+      return {
+        ...state,
+        isLoggedIn: false,
+      };
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        isLoggedIn: true,
+        usuario: action.payload.usuario,
+      };
+    case LOGIN_FAIL:
+      return {
+        ...state,
+        isLoggedIn: false,
+        usuario: null,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        isLoggedIn: false,
+        usuario: null,
+      };
+    case SET_MESSAGE:
+      return {
+        ...state,
+        message: action.payload,
+      };
+    case CLEAR_MESSAGE:
+      return {
+        ...state,
+        message: "",
+      };
+    case LOGGIN_SUCCESS_G:
+        return {
+          isLoggedIn: true,
+          usuario: action.payload.usuario,
+        };
+    case ADD_WINE_TO_FAVORITES:
+      return {
+        ...state,
+        favorites: [...state.favorites, action.payload],
+      };
+    case REMOVE_WINE_FROM_FAVORITES:
+      return {
+        ...state,
+        favorites: state.favorites.filter((e, i) => i !== action.payload.id),
+      };
+    case GET_WINES_FROM_FAVORITES:
+      return {
+        ...state,
+        favorites: action.payload,
+      };
+    default:
+      return state;
+  }
+};
 
 export default rootReducer;
-

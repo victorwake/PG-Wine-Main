@@ -34,7 +34,7 @@ export const Pagination = ({ wines, winesPerPage }) => {
         <div className={"container-pagination-" + clase} >
         <nav className={"nav-container-" + clase}>
         
-            <ul className={"pagination-" + clase}>
+            <ul className="pagination-">
             <li className={"page-iten-" + clase} onClick={handlePreviousPage}>◄</li>
                 {
                 pageNumber?.map(num => 

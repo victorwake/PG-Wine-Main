@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Wire+One&display=swap");
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: darkgrey;
 }
 
 .winedetail {
@@ -29,30 +28,23 @@ body {
     border-color: black;
     border-radius: 3px;
 }
-.comprar{
-    width: 80px;
-    height: 50px;
-    margin-left: 850px;
-    border-radius: 20px;
-}
 
 .imagen {
-    width: 300px;
-    height: 700px;
-    margin-left: 950px;
-    margin-top: 60px;
+    width: 200px;
+    
+    margin-left: 450px;
+    margin-top: 50px;
     border: 10px;
     border-color: black;
     border-radius: 3px;
-
 }
 
 .nombre {
     display: flex;
     font-size: 50px;
     font-family: 'Wire One', sans-serif;
-    margin-left: -380px;
-    margin-top: -800px;
+    margin-left: 70px;
+    margin-top: -300px;
 }
 
 .variedad {
@@ -70,12 +62,13 @@ body {
     text-align: center;
     margin-left: 70px;
 }
+
 .bodega {
     display: flex;
     font-size: 35px;
     font-family: 'Wire One', sans-serif;
     text-align: center;
-    margin-left: -380px;
+    margin-left: 70px;
 }
 
 .origen {
@@ -103,20 +96,18 @@ body {
 }
 
 .price {
-    background-color: cornsilk;
     display: flex;
     font-size: 40px;
     font-family: 'Wire One', sans-serif;
     position: fixed;
-    top: 30vw;
-    right: 26vw;
+    top: 8vw;
+    right: 7vw;
     font-weight: 700;
-    
-    padding-bottom: 0px;
-    border-radius: 10px; 
-    height: 50px;
-    padding-top: 8px;
+    margin-left: 30px;
+    border: 3px;
+    border-color: blueviolet;
 }
+
 .cata {
     display: flex;
     font-size: 40px;
@@ -130,20 +121,25 @@ body {
     font-size: 30px;
     font-family: 'Wire One', sans-serif;
     margin-left: 10px;
-    max-width: 600px;
 }
-.seeCarrito{
-    margin-left: 1000px;
-    background-color: rgb(225, 218, 218);
-    border-radius: 40px;
+
+
+.nombre-tinto{
+    color: brown;
 }
-.botonagregar{
-    justify-content: right;
-    border: 3px black thick;
-    border-radius: 3px;
-    background-color: darkgray;
-    margin-left: 850px;
-    width: 150px;
-    height: 70px;
-    align-items: flex-end;
+
+.nombre-rosado{
+    color: pink;
+}
+
+.nombre-blanco{
+    color: rgb(138, 138, 138);
+}
+
+.nombre-espumante{
+    color: yellow;
+}
+
+.nombre.otro{
+    color: rgb(255, 0, 0);
 }

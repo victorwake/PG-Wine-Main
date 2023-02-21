@@ -1,0 +1,43 @@
+.cart-container-light{
+    margin-right: 15px;
+}
+
+.cart-container-dark{
+    margin-right: 15px;
+}
+
+
+/* .container {
+    padding: 2rem 0rem;
+} */
+.table-image thead td, .table-image thead th {
+    border: 0;
+    color: #666;
+    font-size: 0.8rem;
+}
+.table-image td, .table-image th {
+    vertical-align: middle;
+    text-align: center;
+}
+.table-image td.qty, .table-image th.qty {
+    max-width: 2rem;
+}
+.price {
+    margin-left: 1rem;
+}
+.modal-footer {
+    padding-top: 0rem;
+}
+
+.modal-cart{
+    width: 600px;
+    height: 800px;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.custom-modal-dialog {
+    width: 100%;
+    width: 100%;
+    
+}
