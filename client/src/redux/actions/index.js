@@ -311,3 +311,36 @@ export const removeAllFromCart = () => {
 export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
 
 /*----------------------------------------------*/
+
+export const procesarPago = (payload) => {
+    return (dispatch) => {
+        axios.post('http://localhost:3001/procesarmp', payload)
+        .then((response) => {
+    
+    console.log(response);
+    
+    dispatch(procesarPagoExitoso(response.data));
+  })
+  .catch((error) => {
+   
+    console.log(error);
+
+    dispatch(procesarPagoError(error.message));
+  });
+};
+};
+
+
+const procesarPagoExitoso = (resultado) => {
+    return {
+      type: 'PROCESAR_PAGO_EXITOSO',
+      payload: resultado
+    };
+  };
+  
+  const procesarPagoError = (error) => {
+    return {
+      type: 'PROCESAR_PAGO_ERROR',
+      payload: error
+    };
+  };

@@ -4,13 +4,11 @@ import { Link } from "react-router-dom";
 import "./cart.css";
 import { Button, Modal } from 'react-bootstrap';
 import { useState, useEffect } from "react";
-import { removeFromCart, updateCartItem, removeAllFromCart, payment } from "../../redux/actions";
-import axios from "axios";
-import  CircularJSON  from "circular-json"
+import { removeFromCart, updateCartItem, removeAllFromCart } from "../../redux/actions";
+import axios from 'axios';
 
 
-
-export const Cart = (items) => {
+export const Cart = () => {
   const clase = useSelector((store) => store.theme);
   const allWines = useSelector(state=> state.wines)
   const cart = useSelector(state => state.cart);
@@ -18,13 +16,50 @@ export const Cart = (items) => {
   const dispatch = useDispatch();
   const [showEmptyCartModal, setShowEmptyCartModal] = useState(false);
 
+  const cartItems = cart.map(item => ({
+    id: item.id,
+    title: item.name,
+    unit_price: item.price,
+    quantity: quantities[item.id] || item.quantity,
+  }));
+  console.log(cartItems)
 
+
+  const itemsJSON = JSON.stringify(cartItems);
+
+
+
+
+
+
+  const enviarDatos = (cartItems) => {
+    axios.post('http://localhost:3001/procesarmp', itemsJSON, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      // Aquí puedes manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito
+      console.log(response.data);
+    })
+    .catch(error => {
+      // Aquí puedes manejar el error de la solicitud
+      console.error(error);
+    });
+  }
+
+  enviarDatos(cartItems);
+
+  // .then(res => window.location.href = res.data.response.body.init_point);
   //prueba para el control de stock de cart, para no vender mas de la cantidad que hay en stock
   const firstCartItem = cart[0];
   if (firstCartItem) {
     const stock = allWines.find(wine => wine.id === firstCartItem.id)?.stock;
     console.log(stock);
   }
+
+
+
 
   
   const handleEmptyCart = () => {
@@ -51,22 +86,13 @@ export const Cart = (items) => {
   
   const handleQuantityChange = (event, itemId) => {
     const newQuantity = parseInt(event.target.value);
-    setQuantities(prevQuantities => ({ ...prevQuantities, [itemId]: newQuantity }));
-    dispatch(updateCartItem(itemId, newQuantity));
-  };
+      setQuantities({...quantities, [itemId]: newQuantity});
+      dispatch(updateCartItem(itemId, newQuantity));
+  }
 
   const handleRemoveAllFromCart = () => {
     dispatch(removeAllFromCart());
   }
-
-  const cartItem = cart.map(items => ({
-    id: items.id,
-    title: items.name,
-    price: items.price,
-    quantity: quantities[items.id] || items.quantity,
-  }));
-  console.log(cartItem)
-
 
   useEffect(() => {
     const quantitiesFromLocalStorage = JSON.parse(localStorage.getItem('quantities')) || {};
@@ -155,14 +181,15 @@ export const Cart = (items) => {
             Vaciar carrito
           </Button>
 
-          <Link to="/shopingcard">
+
+          <Link to={{ pathname: "/shopingcard", state: { cartItems } }}>
             <Button 
             variant="success" 
             >
-            Ir al carrito
+             Finalizar compra
             </Button>
-          </Link>
-          <Button 
+            </Link>
+          {/* <Button 
   variant="success" 
   onClick={() => {
     axios.post('http://localhost:3001/procesarmp', cartItem)
@@ -170,7 +197,7 @@ export const Cart = (items) => {
   }}
 >
   Finalizar compra
-</Button>  
+</Button>   */}
         </Modal.Footer>
       </Modal>
     </div>
