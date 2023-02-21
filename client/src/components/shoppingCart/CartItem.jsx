@@ -50,12 +50,12 @@ const CartItem = ({ data }) => {
  
       <div style={{ borderBottom: "thin solid gray" }}>
         <div key={item.id}>
-          <div><img height="200px"  className={"img-"} src={item.image} alt={item.name} /></div>
+          <div><img height="150px"  className={"img-"} src={item.image} alt={item.name} /></div>
           <h3>{item.name}</h3>
           <p>Precio: ${item.price}</p>
           <p>Cantidad: {quantities[item.id] || item.quantity}</p>
           <h4 className="total-unidad">
-            {item.price * (quantities[item.id] || item.quantity)} $
+            $ {item.price * (quantities[item.id] || item.quantity)} 
           </h4>
           
           <button className="btn-cart-item" onClick={() => dispatch(removeFromCart(item.id))}>Eliminar</button>

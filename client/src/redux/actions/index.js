@@ -272,7 +272,7 @@ export const GET_WINES_FROM_FAVORITES = 'GET_WINES_FROM_FAVORITES';
 
 export const addToCart = (id,name, varietal, price,image,quantity) => ({
     type: "ADD_TO_CART",
-    payload: { id, name, varietal,  price,image,quantity }
+    payload: {id,name, varietal,price,image,quantity}
 });
 export const ADD_TO_CART = 'ADD_TO_CART';
 
@@ -280,7 +280,7 @@ export const ADD_TO_CART = 'ADD_TO_CART';
 
 export const updateCartItem = (id,name, varietal, price,image,quantity ) => ({
     type: "UPDATE_CART_ITEM",
-    payload: { id, name, varietal,  price,image,quantity  }
+    payload: {id,name,varietal,price,image,quantity}
 });
 export const UPDATE_CART_ITEM = 'UPDATE_CART_ITEM';
 

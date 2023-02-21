@@ -51,10 +51,9 @@ export const Cart = () => {
   
   const handleQuantityChange = (event, itemId) => {
     const newQuantity = parseInt(event.target.value);
-      setQuantities({...quantities, [itemId]: newQuantity});
-      dispatch(updateCartItem(itemId, newQuantity));
-  }
-
+    setQuantities(prevQuantities => ({ ...prevQuantities, [itemId]: newQuantity }));
+    dispatch(updateCartItem(itemId, newQuantity));
+  };
   const handleRemoveAllFromCart = () => {
     dispatch(removeAllFromCart());
   }
@@ -151,7 +150,7 @@ export const Cart = () => {
             <Button 
             variant="success" 
             >
-            Completar la compra
+            Ir al Carrito
             </Button>
           </Link>
         </Modal.Footer>

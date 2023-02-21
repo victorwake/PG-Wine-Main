@@ -35,18 +35,9 @@ export const ShoppingCart = () => {
           <a class="nav-link active" aria-current="page" href="/home">Home</a>
         </li>
         
-        <li class="nav-item dropdown">
-        
        
-        </li>
-        <li class="nav-item">
-        
-        </li>
       </ul>
-      <form class="d-flex" role="search">
-       
-      </form>
-    </div>
+     </div>
   </div>
 </nav>
       <div className="cart">
