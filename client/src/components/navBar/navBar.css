@@ -1,22 +1,203 @@
-.navbar-expand-lg {
+/* Modo light end */
+#navbar-expand-lg-light {
     font-size: 1.2rem;
     font-weight: 400;
     padding: 0.5rem 0;
-    margin-top: 0px !important;
-    transition-duration: 01s;
-    background-color: rgb(224, 224, 224) !important;
     color: #333333;
     position: fixed;
     z-index: 100;
     width: 100%;
-    text-decoration: none !important;
+    margin-top: 0 !important;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224) !important;
 }
-.carrito {
+
+#h1-navbar-light {
+    font-size: 1.5rem;
+    padding-right: 10px;
+    transition-duration: 01s;
+    color: #333333;
+    background-color: rgb(224, 224, 224) !important;
+}
+
+#font-color-light{
+    transition-duration: 01s;
+    color: #333333 !important;
+}
+
+#background-color-light{
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224) !important;
+}
+
+/* Modo light fin */
+
+ /* --------------------------------------------------------- */
+
+
+/*Modo Dark*/
+
+
+#navbar-expand-lg-dark {
+    font-size: 1.2rem ;
+    font-weight: 400;
+    padding: 0.5rem 0;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    margin-top: 0 !important;
+    transition-duration: 01s;
+    background-color: #333333 !important;
+}
+
+#h1-navbar-dark {
+    font-size: 1.5rem;
+    padding-right: 10px;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+    background-color: #333333 !important;
+}
+
+#font-color-dark{
+    transition-duration: 01s;
+    color: rgb(255, 255, 255) !important;
+}
+
+#background-color-dark{
+    transition-duration: 01s;
+    background-color: #333333 !important;
+}
+
+/* Modo dark fin */
+
+.conteiner-switch-light{
     display: flex;
-    font-size: 40px;
-    margin-right: 20px;
-    margin-top: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
+    color: #333333;
+}
+
+.checkbox-light{
+    border: none;
     cursor: pointer;
-    text-decoration: none;
-  
+    text-indent: -9999px;
+    width: 80px;
+    height: 20px;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    transition-duration: 01s;
+    background: rgb(224, 224, 224);
+    background-color: rgb(224, 224, 224);
+    color: #333333;
+    box-shadow: -5px -5px 10px rgba(94, 104, 121, 0.486), 5px 3px 8px rgb(255, 255, 255);
+}
+
+.checkbox-light:active:after {
+    width: 130px;
+}
+
+#label-light:after {
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
+    box-shadow: -5px -5px 8px rgba(94, 104, 121, 0.685), 5px 3px 5px rgb(255, 255, 255);
+}
+
+.conteiner-switch-dark{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    transition-duration: 01s;
+    background-color: #333333;
+    color: #fff;
+}
+
+
+.checkbox-dark{
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 80px;
+    height: 20px;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    transition-duration: 01s;
+    background: #333333;
+    background-color: #333333;
+    color: #fff;
+    box-shadow: -3px -2px 8px rgb(0, 0, 0), 3px 2px 8px rgba(255, 255, 255, 0.267);
+}
+
+.checkbox-dark:active:after {
+    width: 130px;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+}
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+#label-dark:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 16px;
+    height: 16px;
+    /* background: #fff; */
+    border-radius: 90px;
+    transition: 0.5s;
+    transition-duration: 01s;
+    background-color: #333333;
+    box-shadow: -3px -2px 5px rgb(0, 0, 0), 3px 2px 3px rgba(255, 255, 255, 0.212);
+}
+
+#label-light:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    /* background: #fff; */
+    border-radius: 90px;
+    transition: 0.5s;
+}
+
+.input-switch-dark:checked + label {
+    background: #333333;
+}
+
+.input-switch-light:checked + label {
+    background: rgb(224, 224, 224);  
+}
+
+.input-switch-dark:checked + label:after {
+    left: calc(100% - 100px);
+    transform: translateX(10%);
+}
+.input-switch-light:checked + label:after {
+    left: calc(100% - 5px);
+    transition-duration: 01s;
+    transform: translateX(-100%);
+}
+
+
+#cart{
+    margin-right: 15px;
+    
 }

@@ -4,28 +4,36 @@ const {
 const bcryptjs = require('bcryptjs');
 
 const { generarJWT } = require('../../helpers/generar-jwt');
+const { sendMail } = require('../../helpers/welcome-mail');
 
-const usuariosPost = async (req, res) => {
+const usuariosPost = async (req, res, next) => {
 
     const {
-        userName,
         email,
         firstName,
         lastName,
         cellphone,
         profilePic,
-        password
+        password,
+        rol
     } = req.body;
 
+    const searchUserDb = await User.findOne({where: {email: email}})
+    
     try {
+        if (searchUserDb) {
+            return res.status(400).json({
+                msg: 'Email ya existe.'
+        });
+    }
     const usuario = await User.create({
-        userName: userName,
         email: email,
         firstName: firstName,
         lastName: lastName,
         cellphone: cellphone,
         profilePic: profilePic,
-        password: password
+        password: password,
+        rol: rol
     });
 
     // Encriptar la contraseña
@@ -35,16 +43,24 @@ const usuariosPost = async (req, res) => {
     // Guardar en BD
     await usuario.save();
 
-    res.json({
-        usuario
+     res.json({
+        usuario,
+        msg: "Usuario registrado con éxito"
     });
+
+    sendMail(firstName, lastName, email);
     console.log(usuario)
 
 } catch (error) {
-        console.log(error)
+        return res.send(error)
 
     }
 }
+
+
+
+
+
 module.exports = {
     usuariosPost
 }

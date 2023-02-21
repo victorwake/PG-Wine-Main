@@ -1,14 +1,13 @@
-import "./NavBarWineType.css";
-import { useDispatch, useSelector } from "react-redux";
+import "./navBarWineType.css";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const NavBarWineType = () => {
-
-  const clase = useSelector((state) => state.clase);
+  const clase= useSelector(store => store.theme);
 
   return (
-    <div class="cards-wrapper">
+    <div className={"cards-wrappe-" + clase}>
     <Fragment >
       <div class="card-wrapper">
       <Link to={"/vinos/" + "tinto"}  style={{ color: "inherit", textDecoration: "inherit" }}>
