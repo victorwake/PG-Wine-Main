@@ -5,6 +5,7 @@ import "./cart.css";
 import { Button, Modal } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import { removeFromCart, updateCartItem, removeAllFromCart } from "../../redux/actions";
+import axios from 'axios';
 
 
 export const Cart = () => {
@@ -15,7 +16,40 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const [showEmptyCartModal, setShowEmptyCartModal] = useState(false);
 
+  const cartItems = cart.map(item => ({
+    id: item.id,
+    title: item.name,
+    unit_price: item.price,
+    quantity: quantities[item.id] || item.quantity,
+  }));
 
+
+  const itemsJSON = JSON.stringify(cartItems);
+
+
+
+
+
+
+  const enviarDatos = (cartItems) => {
+    axios.post('http://localhost:3001/procesarmp', itemsJSON, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      // Aquí puedes manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito
+      console.log(response.data);
+    })
+    .catch(error => {
+      // Aquí puedes manejar el error de la solicitud
+      console.error(error);
+    });
+  }
+
+  enviarDatos(cartItems);
+
+  // .then(res => window.location.href = res.data.response.body.init_point);
   //prueba para el control de stock de cart, para no vender mas de la cantidad que hay en stock
   const firstCartItem = cart[0];
   if (firstCartItem) {
@@ -146,8 +180,7 @@ export const Cart = () => {
           <Button variant="danger" onClick={handleRemoveAllFromCart}>
             Vaciar carrito
           </Button>
-
-          <Link to="/shopingcard">
+          <Link to={{ pathname: "/shopingcard", state: { cartItems } }}>
             <Button 
             variant="success" 
             >
