@@ -1,40 +1,24 @@
-
-.home-container-light{
-    height: 100vh;
-    padding-top: 8px;
-    transition-duration: 01s;
-    background-color: rgb(224, 224, 224);
+/* Modo light end */
+.home-container-light {
+        height: 100vh;
+        padding-top: 1px;
+        transition-duration: 01s;
+        background-color: rgb(224, 224, 224);
+}
     
-}
-.agregarcart{
-    width: 60px;
-    height: 50px;
-    background-color: coral;
-    border-radius: 3px;
-}
-
-
-.card-container-home-light{
+.card-container-home-light {
     display: grid;
     grid-template-columns: repeat(auto-fill, 330px);
     align-items: center;
     justify-content: center;
+    transition-duration: 01s;
     background-color: rgb(224, 224, 224);
 }
-.boton{
-    width: 100px;
-    height: 50px;
-    border-color: black thick;
-    border: 10px;
-    border-radius: 3px;
-    background-color: darkgray;
-}
-
-.sale-type-h2-light{
+    
+.sale-type-h2-light {
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 5px;
-    color: rgb(0, 0, 0);
     font-family: 'Source Sans Pro', sans-serif;
     position: relative;
     list-style: none;
@@ -42,49 +26,48 @@
     justify-content: center;
     margin-top: 80px;
     margin-bottom: 20px;
+    transition-duration: 01s;
+    color: #333333;
     background-color: rgb(224, 224, 224);
-   
-
 }
 
-.alert{
-    z-index:80
+/* Modo light fin */
+
+ /* --------------------------------------------------------- */
+
+
+/*Modo Dark*/
+
+.home-container-dark {
+    height: 100vh;
+    padding-top: 1px;
+    transition-duration: 01s;
+    background-color: #333333;
 }
 
-.hide{
-    display:none
+.card-container-home-dark {
+display: grid;
+grid-template-columns: repeat(auto-fill, 330px);
+align-items: center;
+justify-content: center;
+transition-duration: 01s;
+background-color: #333333;
 }
 
-.container {
-    padding: 0rem 0rem;
-  }
-  
-  .table-image thead td,
-  .table-image thead th {
-    border: 0;
-    color: #666;
-    font-size: 0.8rem;
-  }
-  
-  .table-image td,
-  .table-image th {
-    vertical-align: middle;
-    text-align: center;
-  }
-  
-  .table-image td.qty,
-  .table-image th.qty {
-    max-width: 2rem;
-  }
-  
-  .price {
-    margin-left: 0rem;
-  }
-  
-  .modal-footer {
-    padding-top: 0rem;
-  }
-.modal-body{
-    font-size: 12px;
-    margin-left: -5px;
+.sale-type-h2-dark {
+font-size: 2.5rem;
+font-weight: 600;
+margin: 5px;
+font-family: 'Source Sans Pro', sans-serif;
+position: relative;
+list-style: none;
+display: flex;
+justify-content: center;
+margin-top: 80px;
+margin-bottom: 20px;
+transition-duration: 01s;
+color: rgb(255, 255, 255);
+background-color: #333333;
 }
+
+/* Modo dark fin */

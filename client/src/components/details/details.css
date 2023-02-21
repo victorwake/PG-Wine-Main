@@ -1,149 +1,174 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=Wire+One&display=swap");
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: darkgrey;
+@font-face {
+    font-family: 'NEXA Bold';
+    src: url('../fonts/Nexa-Trial-Bold.ttf');
 }
 
-.winedetail {
-    border-radius: 10px;
-    border: rgb(0, 0, 0) 3px solid;
-    width: 330px;
-    height: 270px;
-    background-color: transparent;
-    opacity: 0.9;
-    padding-top: 0px;
-    color: rgb(150, 150, 151);
-    border-color: rgb(196, 198, 69);
+@font-face {
+    font-family: 'Sansburg';
+    src: url('../fonts/Sansburg.ttf');
 }
 
-.imagedetail {
-    display: flex;
-    margin-left: 570px;
-    padding-right: 80px;
-    padding-top: 15px;
-    font-size: 50px;
-    color: rgb(86, 86, 86);
-    padding: auto;
-    padding-left: -600px;
-    margin-left: 420px;
-    border-color: black;
-    border-radius: 3px;
+@font-face {
+    font-family: 'Franklin';
+    src: url('../fonts/ITCFranklinGothicStd-Med.otf');
 }
-.comprar{
-    width: 80px;
-    height: 50px;
-    margin-left: 850px;
-    border-radius: 20px;
+
+.containerData {
+    position: relative;
+    top: 100px;
+    
 }
 
 .imagen {
-    width: 300px;
-    height: 700px;
-    margin-left: 950px;
-    margin-top: 60px;
-    border: 10px;
-    border-color: black;
-    border-radius: 3px;
-
+    /* border: 2px solid blue; */
+    position: relative;
+    left: 15%;
+    width: 70%;
+    height: 100%;
 }
 
-.nombre {
-    display: flex;
-    font-size: 50px;
-    font-family: 'Wire One', sans-serif;
-    margin-left: -380px;
-    margin-top: -800px;
+.img {
+    position: absolute;
+    /* border: 2px solid red; */
+    width: 30%;
+    float: left;
 }
 
-.variedad {
-    display: flex;
-    font-size: 40px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+.name-rosado {
+    /* border: 2px solid red; */
+    font-family: 'NEXA Bold';
+    position: relative;
+    width: 40%;
+    color: #bf7c86;
+    left: 30%;
 }
 
-.tipo {
-    display: flex;
-    font-size: 35px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
-}
-.bodega {
-    display: flex;
-    font-size: 35px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: -380px;
+.name-tinto {
+    /* border: 2px solid red; */
+    font-family: 'NEXA Bold';
+    position: relative;
+    width: 40%;
+    color: #56050b;
+    left: 30%;
 }
 
-.origen {
-    display: flex;
-    font-size: 35px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+.name-blanco {
+    /* border: 2px solid red; */
+    font-family: 'NEXA Bold';
+    position: relative;
+    width: 40%;
+    color: #326534;
+    left: 30%;
 }
 
-.alcohol {
-    display: flex;
-    font-size: 35px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+.name-espumante {
+    /* border: 2px solid red; */
+    font-family: 'NEXA Bold';
+    position: relative;
+    width: 40%;
+    color: #ad8c57;
+    left: 30%;
 }
 
-.year {
-    display: flex;
-    font-size: 40px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 70px;
+.tabla {
+    /* border: 2px solid red; */
+    width: 70%;
+    float: right;
+    font-size: 150%;
+    padding-right: 10%;
+    margin-top: 7%;
+}
+
+td {
+    font-family: 'Sansburg';
+}
+
+.th-tinto {
+    font-family: 'Franklin';
+    text-align: right;
+    color: #56050b;
+}
+
+.th-rosado {
+    font-family: 'Franklin';
+    text-align: right;
+    color: #bf7c86;
+}
+
+.th-blanco {
+    font-family: 'Franklin';
+    text-align: right;
+    color: #326534;
+}
+
+.th-espumante {
+    font-family: 'Franklin';
+    text-align: right;
+    color: #ad8c57;
+}
+
+.addToCart {
+    font-family: 'NEXA Bold';
+    border: 1px solid grey;
+    border-radius: 15px;
+    position: relative;
+    left: 80%;
+    top: 40%;
+}
+
+.buttonBack {
+    font-family: 'NEXA Bold';
+    border: 1px solid grey;
+    border-radius: 15px;
+    position: relative;
+    left: 2%;
+}
+
+.heart {
+    border: none;
+    left: 79%;
+    position: relative;
+    font-size: 30px;
+    top: 7px;
 }
 
 .price {
-    background-color: cornsilk;
-    display: flex;
-    font-size: 40px;
-    font-family: 'Wire One', sans-serif;
-    position: fixed;
-    top: 30vw;
-    right: 26vw;
-    font-weight: 700;
-    
-    padding-bottom: 0px;
-    border-radius: 10px; 
-    height: 50px;
-    padding-top: 8px;
-}
-.cata {
-    display: flex;
-    font-size: 40px;
-    font-family: 'Wire One', sans-serif;
-    text-align: center;
-    margin-left: 10px;
+    /* border: 2px solid black; */
+    /* font-family: 'NEXA Bold'; */
+    position: relative;
+    top: 30%;
+    left: 82%;
+    width: 200px;
 }
 
-.descripcion {
-    display: flex;
-    font-size: 30px;
-    font-family: 'Wire One', sans-serif;
-    margin-left: 10px;
-    max-width: 600px;
+.detail-container-light {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition-duration: 01s;
 }
-.seeCarrito{
-    margin-left: 1000px;
-    background-color: rgb(225, 218, 218);
-    border-radius: 40px;
+
+.detail-container-dark {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition-duration: 01s;
+    background-color: #646464;
 }
-.botonagregar{
-    justify-content: right;
-    border: 3px black thick;
-    border-radius: 3px;
-    background-color: darkgray;
-    margin-left: 850px;
-    width: 150px;
-    height: 70px;
-    align-items: flex-end;
+
+#td-dark{
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+}
+
+#agregar-dark{
+    transition-duration: 01s;
+    color: rgb(238, 238, 238);
+    background-color: #585858;
 }

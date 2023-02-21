@@ -10,6 +10,7 @@ export const Cloudinary = () => {
     const [image, setImage] = useState("");
     const [loading, setLoading] = useState(false);
 
+
     const uploadImage = async (e) => {
         const files = e.target.files;
         const data = new FormData();
@@ -31,31 +32,18 @@ export const Cloudinary = () => {
         console.log(file.secure_url);
     };
 
-    // const handleOpenWidget = () => {
-    //     var myWidget = window.cloudinary.createUploadWidget(
-    //         {
-    //         cloudName: 'dsyss1x3l', 
-    //         uploadPreset: 'images'
-    //         }, 
-    //         (error, result) => { 
-    //           if (!error && result && result.event === "success") { 
-    //             setImage((prev) => [...prev, {url: result.info.url, public_id: result.info.public_id}])
-    //             console.log(result.info.url)
-                
-    //           }
-    //         }
-    //         )
-    //     myWidget.open()
-    //     }
-
-
 
     return (
         <div>
         <Container style={{textAlign: "center"}} >
-            <h1>
-                Subiendo imagenes
-            </h1>
+            <div>
+                 {loading ? (
+                    <h3>Loading...</h3>
+                ) : image ? (
+                    <h3>Imagen cargada con exito</h3>
+                ) : null}
+
+            </div>
             <FormGroup>
                 <Input 
                 type="file" 
@@ -66,7 +54,7 @@ export const Cloudinary = () => {
             </FormGroup>
         </Container>
 
-{/* <button type = 'file' id="upload_widget" class="cloudinary-button" onClick={() => handleOpenWidget()}>Subir Imagen del producto</button> */}
+
 
         </div>
     );

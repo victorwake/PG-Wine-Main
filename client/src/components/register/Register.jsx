@@ -1,18 +1,23 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
+import './register.css';
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
-
+import { Navigate } from 'react-router-dom';
+import { clearMessage } from "../../redux/actions/message";
 import { register } from "../../redux/actions/auth";
+import { NavBar } from "../navBar/NavBar";
+import { useNavigate, Link } from "react-router-dom";
+import Google from "../google/Google";
 
 const required = (value) => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
-        This field is required!
+        Campo requerido!
       </div>
     );
   }
@@ -22,46 +27,51 @@ const validEmail = (value) => {
   if (!isEmail(value)) {
     return (
       <div className="alert alert-danger" role="alert">
-        This is not a valid email.
+        Formato no válido.
       </div>
     );
   }
 };
 
 const vusername = (value) => {
-  if (value.length < 3 || value.length > 20) {
+  if (value.length === 0) {
     return (
       <div className="alert alert-danger" role="alert">
-        The username must be between 3 and 20 characters.
+        Debes ingresar tu nombre.
       </div>
     );
   }
 };
 
 const vpassword = (value) => {
-  if (value.length < 6 || value.length > 40) {
+  if (value.length < 6 || value.length > 8) {
     return (
       <div className="alert alert-danger" role="alert">
-        The password must be between 6 and 40 characters.
+        Entre 6 y 8 caracteres.
       </div>
     );
   }
 };
 
 const Register = () => {
+
+  const clase= useSelector(store => store.theme);
+  
   const form = useRef();
   const checkBtn = useRef();
 
-  const [userName, setUsername] = useState("");
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rol, setRol] = useState("USER_ROLE");
   const [successful, setSuccessful] = useState(false);
 
-  const { message } = useSelector(state => state.message);
+  const  message  = useSelector(state => state.message);
+  const  isLoggedIn  = useSelector(state => state.isLoggedIn);
   const dispatch = useDispatch();
-
+  let navigate = useNavigate();
+ 
   const onChangefirstName = (e) => {
     const firstName = e.target.value;
     setfirstName(firstName);
@@ -69,11 +79,6 @@ const Register = () => {
   const onChangelastName = (e) => {
     const lastName = e.target.value;
     setlastName(lastName);
-  };
-
-  const onChangeUsername = (e) => {
-    const username = e.target.value;
-    setUsername(username);
   };
 
   const onChangeEmail = (e) => {
@@ -90,44 +95,38 @@ const Register = () => {
     e.preventDefault();
 
     setSuccessful(false);
-
+    
     form.current.validateAll();
 
     if (checkBtn.current.context._errors.length === 0) {
-      dispatch(register(userName, email, firstName, lastName, password))
+      dispatch(register(email, firstName, lastName, password, rol))
         .then(() => {
-          setSuccessful(true);
+          setSuccessful(true);                   
         })
+        .then(() => {
+          setTimeout(() => {
+            dispatch(clearMessage(message));
+        }, "2500")
+         })
         .catch(() => {
           setSuccessful(false);
-        });
+        });       
     }
   };
 
+   if (isLoggedIn) {
+    return <Navigate to="/perfil" />;
+  }
+ 
   return (
-    <div className="col-md-12">
-      <div className="card card-container">
-        <img
-          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-          alt="profile-img"
-          className="profile-img-card"
-        />
-
+    <div className={"register-container-" + clase}>
+      <NavBar/>
+      <div className={"card-container-register-" + clase}>
+      <div className="img-registro">
+        </div>
         <Form onSubmit={handleRegister} ref={form}>
           {!successful && (
             <div>
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <Input
-                  type="text"
-                  className="form-control"
-                  name="username"
-                  value={userName}
-                  onChange={onChangeUsername}
-                  validations={[required, vusername]}
-                />
-              </div>
-
               <div className="form-group">
                 <label htmlFor="firstName">Nombre</label>
                 <Input
@@ -177,7 +176,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <button className="btn btn-primary btn-block">Sign Up</button>
+                <button className="btn btn-secondary btn-block">Sign Up</button>
               </div>
             </div>
           )}
@@ -185,129 +184,17 @@ const Register = () => {
           {message && (
             <div className="form-group">
               <div className={ successful ? "alert alert-success" : "alert alert-danger" } role="alert">
-                {message}
+                {message}           
               </div>
             </div>
-          )}
+          )}          
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
+        <div className={"logueate-aqui-" + clase}><p>Logueate <Link to ="../login">aquí</Link></p></div>
       </div>
+      
     </div>
   );
 };
 
 export default Register;
-
-
-/*-------------------------*/
-// import './register.css'
-// import { useState } from 'react';
-// import { useDispatch } from "react-redux";
-// import { useNavigate } from "react-router-dom";
-// import { registerUser } from '../../redux/actions';
-// import { NavBar } from '../navBar/NavBar';
-
-// export const Register = () => {
-
-//     const [inputs, setInputs] = useState({
-//         userName: "",
-//         email: "",
-//         firstName: "",
-//         lastName: "",
-//         password: "",
-//         rol: "USER_ROLE"
-//     });
-//     const navigate = useNavigate();
-//   const dispatch = useDispatch();
-    
-
-//     const handleChange = (event) => {
-//       console.log(inputs)
-//       const name = event.target.name;
-//       const value = event.target.value;
-//       console.log(name, value);
-//       setInputs(values => ({...values, [name]: value}))
-//       }
-  
-//     const handleSubmit = (event) => {
-//         console.log(inputs)
-//       event.preventDefault();
-//       dispatch(registerUser(inputs));
-//     alert('Usuario registrado con éxito');
-//     setInputs({
-//       userName: "",
-//       email: "",
-//       firstName: "",
-//       lastName: "",
-//       password: "",
-//       rol: "USER_ROL"
-//     });    
-//     navigate("/login");
-//     }
-
-//      return (
-//       <div>
-//       <NavBar/>
-//     <div className="login-container">      
-//       <div><h1 className="h2">Registro de usuario</h1></div>    
-//       <form className="form-log" onSubmit={handleSubmit}>
-//         <label>Nombre de usuario:
-//         <input
-//          required
-//           className="form-control me-2"
-//           type="text" 
-//           name="userName" 
-//           value={inputs.usererName} 
-//           onChange={(e) => handleChange(e)} 
-//         />
-//         </label>
-//         <label>Email:
-//           <input
-//           required
-//             className="form-control me-2"
-//             type="email" 
-//             name="email" 
-//             value={inputs.email} 
-//             onChange={(e) => handleChange(e)}
-//           />
-//           </label>
-//           <label>Nombre:
-//         <input
-//         required
-//           className="form-control me-2"
-//           type="text" 
-//           name="firstName" 
-//           value={inputs.firstName} 
-//           onChange={(e) => handleChange(e)}
-//         />
-//         </label>
-//         <label>Apellido:
-//         <input
-//         required
-//           className="form-control me-2"
-//           type="text" 
-//           name="lastName" 
-//           value={inputs.lastName} 
-//           onChange={(e) => handleChange(e)}
-//         />
-//         </label>
-//         <label>Password:
-//         <input
-//         required
-//           className="form-control me-2"
-//           type="password" 
-//           name="password" 
-//           value={inputs.password} 
-//           onChange={(e) => handleChange(e)}
-//         />       
-//         </label>
-//         <label>
-//         <input className="btn btn-outline-success" type="submit" />
-//         </label>
-//       </form>
-//       </div>
-//       </div>
-//     )
-
-// }
-

@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 /*Cambio de tema*/
 export const themeChange = (theme) => {
     if (theme === 'light') {
@@ -213,107 +212,102 @@ export const GET_VARIETAL = 'GET_VARIETAL';
 
 /*----------------------------------------------*/
 
-export function registerUser (payload) {
-  
-    return async function (dispatch) {
-      const register = await axios.post('http://localhost:3001/usuarios/crear', payload)
-      console.log(register)
-      return register;
-    }
-   }
-
-   
-   export const POST_REGISTER = 'POST_REGISTER';
-
-   /*----------------------------------------------*/
-
-   export function loginUser (payload) {
-  
-    return async function (dispatch) {
-        try {
-            let auth = await axios.post('http://localhost:3001/auth', payload)
-             console.warn(auth.request.status);
-             console.warn(auth.data.usuario.userName);             
-            if(auth.request.status === 200) {
-                let usuarioLogueado = auth.data.usuario.idUser
-                let userName = auth.data.usuario.firstName
-                alert( `Hola ${userName}, Te haz logueado de manera correcta`)
-                console.log('Login OK!!!')
-                localStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
-                localStorage.setItem('x-token', JSON.stringify(auth.data.token));
-                localStorage.setItem('nombre', JSON.stringify(userName));
-                localStorage.setItem('apellido', JSON.stringify(auth.data.usuario.lastName));
-            }
-        } catch (err) {   
-            console.log(err.response.data.msg)         
-            alert(JSON.stringify(err.response.data.msg))
-        }
-      
-    }
-   }
-
-   export const POST_AUTH = 'POST_AUTH';
-
-   /*--------------------------------*/
-
-export const addToCart = (id,name, price,image,quantity) => ({
-  type: "ADD_TO_CART",
-  payload: { id, name,  price,image,quantity }
+export const saveImage = (urlCloudinary) => ({
+    type: SAVE_IMAGE,
+    urlCloudinary,
 });
-export const updateCartItem = (id,name,price,image,quantity ) => ({
+export const SAVE_IMAGE = 'SAVE_IMAGE';
+
+/*----------------------------------------------*/
+
+export const addWineToFavorites = (idUser, wineId) => {
+    return async (dispatch) => {
+        try {
+            const response = await fetch(`http://localhost:3001/usuarios/${idUser}/favorites/${wineId}`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            }
+            });
+            const data = await response.json();
+            dispatch({ type: ADD_WINE_TO_FAVORITES, payload: data });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+export const ADD_WINE_TO_FAVORITES = 'ADD_WINE_TO_FAVORITES';
+
+/*----------------------------------------------*/
+
+export const removeWineFromFavorites = (idUser, wineId) => {
+    return async (dispatch) => {
+        try {
+            const response = await fetch(`http://localhost:3001/usuarios/${idUser}/favorites/${wineId}`, {
+            method: 'DELETE',
+            headers: {
+            'Content-Type': 'application/json'
+            }
+            });
+            const data = await response.json();
+            dispatch({ type: REMOVE_WINE_FROM_FAVORITES, payload: data });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+    
+export const REMOVE_WINE_FROM_FAVORITES = 'REMOVE_WINE_FROM_FAVORITES';
+
+/*----------------------------------------------*/
+
+export const getWinesFromFavorites = (userId) => {
+    return dispatch => axios(`http://localhost:3001/usuarios/${userId}/favorites`)
+        .then(res => dispatch({ type: GET_WINES_FROM_FAVORITES, payload: res.data }))
+        .catch(err => console.log(err));
+};
+export const GET_WINES_FROM_FAVORITES = 'GET_WINES_FROM_FAVORITES';
+
+/*----------------------------------------------*/
+
+export const addToCart = (id,name, varietal, price,image,quantity) => ({
+    type: "ADD_TO_CART",
+    payload: { id, name, varietal,  price,image,quantity }
+});
+export const ADD_TO_CART = 'ADD_TO_CART';
+
+/*----------------------------------------------*/
+
+export const updateCartItem = (id,name, varietal, price,image,quantity ) => ({
     type: "UPDATE_CART_ITEM",
-    payload: { id, name,  price,image,quantity  }
-  });
-   
+    payload: { id, name, varietal,  price,image,quantity  }
+});
+export const UPDATE_CART_ITEM = 'UPDATE_CART_ITEM';
 
+/*----------------------------------------------*/
 
-      
-   /*--------------------------------*/
-  
-   
-    // export const delFromCart = (id, all = false) => {
-    //     //console.log(id, all);
-    //     return async(dispatch) => {
-    //     if (all) {
-    //         return dispatch({ type: REMOVE_ALL_FROM_CART, payload: id });
-    //       } else {
-    //         return dispatch({ type: REMOVE_ONE_FROM_CART, payload: id });
-    //       }
-    // }}
-    export const removeFromCart = (id) => {
-        // console.log(id, all);
-        return dispatch => {
-            dispatch ({
-                type: REMOVE_FROM_CART,
-                payload: id
-            })
-        }
+export const removeFromCart = (id) => {
+    // console.log(id, all);
+    return dispatch => {
+        dispatch ({
+            type: REMOVE_FROM_CART,
+            payload: id
+        })
     }
-     export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+}
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 
+/*----------------------------------------------*/
 
-     export const removeAllFromCart = () => {
-        // console.log(id, all);
-        return dispatch => {
-            dispatch ({
-                type: REMOVE_ALL_FROM_CART,
-             
-            })
-        }
+export const removeAllFromCart = () => {
+    // console.log(id, all);
+    return dispatch => {
+        dispatch ({
+            type: REMOVE_ALL_FROM_CART,
+        })
     }
+}
 
-    export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
+export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
 
-
-    /*--------------------------------*/
-
-    export const clearCart = () => {
-        //console.log(id);
-        return dispatch => {
-            dispatch({
-                type: CLEAR_CART, 
-            }) 
-        }
-    }
-    export const CLEAR_CART = 'CLEAR_CART';
- 
+/*----------------------------------------------*/

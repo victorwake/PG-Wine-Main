@@ -8,7 +8,7 @@ export const formControl = input => {
     const volRegExp = /^(750|1500|3000)$/;
     const priceRegExp = /^([3-9][0-9]{2}|[1-9][0-9]{3}|[1-9][0-9]{4}|[1-8][0-9]{5}|9[0]{5})$/;
     const bodegaREgExp = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)\.[a-z]{2,5}(:[0-9]{1,5})?(\/.)?$/
-
+    const stockRegex = /^(|[1-9][0-9]*)$/;
     let err = {};
 
     if (!input.name) {
@@ -19,17 +19,13 @@ export const formControl = input => {
 
 
     if (!input.color_type) {
-        err.color_type = 'Ingresar una región'
+        err.color_type = 'Ingrese un tipo de color'
     } else if (!stringPlace.test(input.color_type)) {
-        err.color_type = 'Ingrese una región'
+        err.color_type = 'Ingrese Tinto, Blanco, Rosado o Espumante'
     }
 
-    //  if(input.color_type !== 'Blanco' || 
-    //    input.color_type !== 'Tinto'  || 
-    //    input.color_type !== 'Rosado' ||
-    //    input.color_type !== 'Espumante'
-    // )
 
+    if(!input.varietal.length) err.varietal = 'Debe ingresar al menos un varietal'
 
     if (!input.winery) {
         err.winery = 'Ingrese un nombre válido';
@@ -54,11 +50,7 @@ export const formControl = input => {
     } else if (!volRegExp.test(input.volume)) {
         err.volume = 'Insertar volumenes de 750, 1500 o 3000 cm3'
     }
-    if (!input.varietal) {
-        err.varietal = 'Ingrese un nombre válido';
-    } else if (!stringRegExp.test(input.varietal)) {
-        err.varietal = '';
-    }
+
     if (!input.year) {
         err.year = 'Ingrese el año de elaboración ';
     } else if (!yearRegExp.test(input.year) || input.year > 2023) {
@@ -69,6 +61,12 @@ export const formControl = input => {
         err.province = 'Ingresar una región'
     } else if (!stringPlace.test(input.province)) {
         err.province = 'Ingrese una región'
+    }
+
+    if (!input.stock) {
+        err.stock = 'Ingrese el stock';
+    } else if (!stockRegex.test(input.stock)) {
+        err.stock = 'Ingrese un stock mayor a 0';
     }
     // if(!input.province === 'value') {
     //       err.province = 'Seleccionar una provincia'   
@@ -109,11 +107,11 @@ export const formControl = input => {
         err.url = 'La URL no es válida'
     }
 
-    if (!input.image) {
-        err.image = 'Ingrese la imagen del producto'
-    } else if (!urlRegExp.test(input.image)) {
-        err.image = 'La URL no es válida'
-    }
+    // if (!input.image) {
+    //     err.image = 'Ingrese la imagen del producto'
+    // } else if (!urlRegExp.test(input.image)) {
+    //     err.image = 'La URL no es válida'
+    // }
 
     if (!input.description) {
         err.description = 'Por favor brindar una descripción del vino'
