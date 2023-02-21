@@ -76,7 +76,7 @@ if(!!wineColorType){
                         <td>{wineDetail.year}</td>
                         </tr>
                         <tr>
-                        <th className={'th-'+ colorType}>Nota de cata</th>
+                        <th className={'th-'+ colorType}>Nota <br /> de cata</th>
                         <td>{wineDetail.description}</td>
                         </tr>
                     </tbody>

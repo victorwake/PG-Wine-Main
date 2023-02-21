@@ -91,8 +91,8 @@ export const NavBar = () => {
         
         {showAdminBoard && (
         <li class="nav-item">
-        <Link to="/carrito" style={{ color: "inherit", textDecoration: "inherit" }}>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/admin"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Administrar</a></Link>
+        <Link to="/carrito" style={{ color: "inherit", textDecoration: "inherit" }}></Link>
+        <Link style={{ textDecoration: 'none' }} to="/admin"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Administrar</a></Link>
         </li>)}
 
         <li class="nav-item">
