@@ -1,8 +1,5 @@
 // SDK de Mercado Pago
 const mercadopago = require("mercadopago");
-require('dotenv').config()
-
-
 
 // Agrega credenciales
 mercadopago.configure({
@@ -10,33 +7,43 @@ mercadopago.configure({
 });
 
 const procesarMP = (req, res) => {
-    const items = req.body
+  const items = req.body;
+  
 
+  if (!items || items.length === 0) {
+    // Si no hay productos en el carrito, devuelve un error
+    return res.status(400).json({ error: 'No se encontraron productos en el carrito.' });
+  }
 
 // Crea un objeto de preferencia
 let preference = {
-    items: [{ items
-      // id: items.id,
-      // category_id:'art',
-      // title: items.title,
-      // unit_price: items.price,
-      // description: items.description,
-      // quantity: items.quantity,
-    }],
-    back_urls: {
-        "success": "http://localhost:3001/mpsucess",
-        "failure": "",
-        "pending": "",
-    },
-    auto_return: "approved",
-    binary_mode: true
-  };
+  items: items.map((item) => {
+    return {
+      id: item.id,
+      title: item.title,
+      unit_price: item.unit_price,
+      quantity: item.quantity,
+    };
+  }),
+  back_urls: {
+    success: 'http://localhost:3001/mpsucess',
+    failure: 'http://localhost:3001/feedback',
+    pending: 'http://localhost:3001/feedback',
+  },
+  auto_return: 'approved',
+};
 
-  mercadopago.preferences
-  .create(preference).then((response)=> res.status(200).send({response})
-  .catch(error=>res.status(400).send({error: error.message})))
-}
-
+mercadopago.preferences
+  .create(preference)
+  .then(function (response) {
+    res.json({
+      id: response.body,
+    });
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+};
 module.exports = {
     procesarMP
 }

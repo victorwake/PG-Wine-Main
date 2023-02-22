@@ -256,7 +256,7 @@ const rootReducer = (state = initialState, action) => {
             if (item.id === action.payload.id) {
               return {
                 ...item,
-                quantity: action.payload.quantity,
+                quantity: action.payload.name,
                 totalPrice: action.payload.totalPrice
               };
             }

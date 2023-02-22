@@ -22,7 +22,7 @@ const CartItem = ({ data }) => {
         <h5>
           ${price}.00
         </h5>
-        
+        <h5>cantidad {quantity}</h5>
         <div><img height="200px"  className={"img-"} src={image} alt = {name} /></div>
         <div>
 

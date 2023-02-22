@@ -30,25 +30,23 @@ export const Cart = () => {
 
 
 
-
-
-  const enviarDatos = (cartItems) => {
-    axios.post('http://localhost:3001/procesarmp', itemsJSON, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => {
-      // Aquí puedes manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito
-      console.log(response.data);
-    })
-    .catch(error => {
-      // Aquí puedes manejar el error de la solicitud
-      console.error(error);
-    });
+  const handleClick = (cartItems) => {
+    try{
+      axios.post('http://localhost:3001/procesarmp', itemsJSON, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(res => { window.location.href = res.data.id.init_point
+        // Aquí puedes manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito
+        console.log(res.data);
+      }).catch(error => { console.log(error)})
+    } catch(error) {
+        // Aquí puedes manejar el error de la solicitud
+        console.error(error)
+    }
   }
-
-  enviarDatos(cartItems);
+  
+// console.log(enviarDatos(cartItems))
 
   // .then(res => window.location.href = res.data.response.body.init_point);
   //prueba para el control de stock de cart, para no vender mas de la cantidad que hay en stock
@@ -57,9 +55,6 @@ export const Cart = () => {
     const stock = allWines.find(wine => wine.id === firstCartItem.id)?.stock;
     console.log(stock);
   }
-
-
-
 
   
   const handleEmptyCart = () => {
@@ -106,6 +101,7 @@ export const Cart = () => {
   useEffect(() => {
     localStorage.setItem('quantities', JSON.stringify(quantities));
   }, [quantities]);
+
 
   return (
     <div className={"cart-container-" + clase}>
@@ -180,29 +176,16 @@ export const Cart = () => {
           <Button variant="danger" onClick={handleRemoveAllFromCart}>
             Vaciar carrito
           </Button>
-
-
-          <Link to={{ pathname: "/shopingcard", state: { cartItems } }}>
+        
             <Button 
             variant="success" 
+            onClick={handleClick}
             >
-             Finalizar compra
+            Completar la compra
             </Button>
-            </Link>
-          {/* <Button 
-  variant="success" 
-  onClick={() => {
-    axios.post('http://localhost:3001/procesarmp', cartItem)
-      .then(res => window.location.href = res.data.response.body.init_point);
-  }}
->
-  Finalizar compra
-</Button>   */}
+          
         </Modal.Footer>
       </Modal>
     </div>
   );
 }        
-
-
-
