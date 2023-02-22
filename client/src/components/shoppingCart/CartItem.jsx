@@ -9,10 +9,6 @@ import { useSelector } from "react-redux";
 const CartItem = ({ data }) => {
   const dispatch = useDispatch();
   const cart = useSelector((store) => store.cart);
-  
-
-
-
         let { id, name, price, quantity,image } = data;
     return (
       <div className="cart-item">
@@ -27,13 +23,11 @@ const CartItem = ({ data }) => {
         <div>
 
         <button className="btn-cart-item"onClick={() => dispatch(removeFromCart(id))}>Eliminar</button>
-
         {/* <div className="cart-items">
           {cart.map((item) => (
             <CartItem key={item.id} data={item} />
           ))}
         </div> */}
-
         </div>
       </div>
       </div>

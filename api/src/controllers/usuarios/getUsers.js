@@ -1,5 +1,4 @@
 const { User } = require("../../db");
-
 const getDbUsers = async(req, res, next) => {
     try {
         const userDb = await User.findAll();
@@ -9,7 +8,6 @@ const getDbUsers = async(req, res, next) => {
         res.status(400).json({ error: err.msg });
     }
 };
-
 const getAdmin = async(req, res, next) => {
     try {
         const userDb = await User.findAll();
@@ -32,9 +30,9 @@ const getUser = async(req, res, next) => {
         res.status(400).json({ error: err.msg });
     }
 };
-
 module.exports = {
     getDbUsers,
     getAdmin,
     getUser
-};
+                 };
+

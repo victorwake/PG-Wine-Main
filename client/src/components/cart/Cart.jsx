@@ -16,13 +16,14 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const [showEmptyCartModal, setShowEmptyCartModal] = useState(false);
 
-  
+
   //prueba para el control de stock de cart, para no vender mas de la cantidad que hay en stock
   const firstCartItem = cart[0];
   if (firstCartItem) {
     const stock = allWines.find(wine => wine.id === firstCartItem.id)?.stock;
     console.log(stock);
   }
+
 
 
   const handleEmptyCart = () => {

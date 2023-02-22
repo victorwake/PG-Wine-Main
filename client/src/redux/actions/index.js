@@ -236,6 +236,7 @@ export const SAVE_IMAGE = 'SAVE_IMAGE';
 
 /*----------------------------------------------*/
 
+
 export const addWineToFavorites = (idUser, wineId) => {
     return async(dispatch) => {
         try {
@@ -244,6 +245,7 @@ export const addWineToFavorites = (idUser, wineId) => {
                 headers: {
                     'Content-Type': 'application/json'
                 }
+
             });
             const data = await response.json();
             dispatch({ type: ADD_WINE_TO_FAVORITES, payload: data });
@@ -293,6 +295,7 @@ export const addToCart = (id, name, varietal, price, image, quantity) => ({
 export const ADD_TO_CART = 'ADD_TO_CART';
 
 /*----------------------------------------------*/
+
 
 export const updateCartItem = (id, name, varietal, price, image, quantity) => ({
     type: "UPDATE_CART_ITEM",
@@ -360,7 +363,6 @@ const procesarPagoError = (error) => {
         payload: error
     };
 };
-
 //EXPERIENCIAS
 /*----------------------------------------------*/
 
@@ -398,5 +400,22 @@ export const getExp = () => {
     }
 };
 export const GET_EXP = 'GET_EXP';
+
+/*----------------------------------------------*/
+
+
+export const getExpType = (type) => {
+    return async(dispatch) => {
+        try {
+            const response = await axios.get(`http://localhost:3001/experiencias/${type}`);
+            dispatch({ type: GET_EXP_TYPE, payload: response.data });
+            dispatch(changeCurrentPage(1)); // actualiza el currentPage a 1
+            dispatch(cleanAllFilters()) // resetea los filtros
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+export const GET_EXP_TYPE = 'GET_EXP_TYPE';
 
 /*----------------------------------------------*/

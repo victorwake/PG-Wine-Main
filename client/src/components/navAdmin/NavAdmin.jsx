@@ -35,6 +35,7 @@ export const NavAdmin = () =>{
                                 <a class="nav-link" href="#">Nueva bodegas</a>
                             </li>
                             <li class="nav-item">
+
                                 <a class="nav-link" href="/admin/usuarios">Usuarios</a>
                             </li>
                             <li class="nav-item">

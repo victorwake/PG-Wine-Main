@@ -50,8 +50,6 @@ export const ShoppingCart = () => {
     }
   }, [mpResponse]);
 
-
-
   return (
     <div>
       <NavBar />
