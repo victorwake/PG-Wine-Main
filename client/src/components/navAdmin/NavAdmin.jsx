@@ -35,7 +35,10 @@ export const NavAdmin = () =>{
                                 <a class="nav-link" href="#">Nueva bodegas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href='/admin/usuarios'>Usuarios</a>
+                                <a class="nav-link" href="#">Usuarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href='/admin/createadmin'>Crear admin</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,6 +57,7 @@ export const NavAdmin = () =>{
                 </div>
             </div>
         </nav>
+   
     </div>
     )
 }

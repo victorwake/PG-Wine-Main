@@ -2,13 +2,11 @@ import './home.css';
 import { NavBar } from '../navBar/NavBar';
 import { NavBarWineType } from '../navBarWineType/NavBarWineType';
 import { Carousel } from '../carousel/Carousel';
-import { Fragment, useState, useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getWines } from '../../redux/actions';
 import { Card }from '../card/Card'
 import { Link } from 'react-router-dom';
-
-
 import _ from 'lodash';
 
 
@@ -44,7 +42,7 @@ export const Home = () => {
             <div  className={"card-container-home-" + clase} >
             
                 {tenRandomWines?.map((w => (
-                    <fragment key={w.id}>
+                    <Fragment key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
                             <Card
                                 name={w.name}
@@ -54,7 +52,7 @@ export const Home = () => {
                                 price= {w.price}
                                 />
                             </Link>
-                        </fragment>
+                        </Fragment>
                 )))}  
             </div>
         </div>

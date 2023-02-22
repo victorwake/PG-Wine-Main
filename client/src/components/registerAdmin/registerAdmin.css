@@ -1,15 +1,56 @@
-
-.login-container-dark{
+/* Modo light end */
+.register-container-light{    
     display: flex;
     flex-direction: column;   
     align-items: center;
     margin: 0 auto;
     height: 100vh;
     transition-duration: 01s;
-    background-color: #333333;
+    background-color: rgb(224, 224, 224);
 }
 
-.card-container-login-dark {
+.card-container-register-light {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    padding: 30px;
+    margin-top: 180px;
+    width: 500px;
+    border-radius: 10px;
+    transition-duration: 01s;
+    color: #333333;
+    background-color: rgb(224, 224, 224);
+    box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
+}
+
+.card-container-register-light:hover {
+    box-shadow: -5px -5px 10px rgba(94, 104, 121, 0.486), 5px 3px 8px rgba(255, 255, 255, 0.582);
+}
+
+
+.logueate-aqui-light{
+    margin-top: 10px;
+    transition-duration: 01s;
+    color: #333333;
+}
+
+
+/* Modo light fin */
+
+ /* --------------------------------------------------------- */
+
+/*Modo Dark*/
+.register-container-dark{    
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    transition-duration: 01s;
+    background-color: #333333;   
+}
+
+.card-container-register-dark {
     display: flex;
     flex-direction: column;   
     align-items: center;
@@ -23,30 +64,18 @@
     box-shadow: -3px -2px 8px rgb(0, 0, 0), 3px 2px 8px rgba(255, 255, 255, 0.267);
 }
 
-
-.login-container-light{
-    display: flex;
-    flex-direction: column;   
-    align-items: center;
-    margin: 0 auto;
-    height: 100vh;
-    transition-duration: 01s;
-    background-color: rgb(224, 224, 224);
+.card-container-register-dark:hover {
+    box-shadow: -3px -2px 8px rgb(51, 27, 27), 3px 2px 8px rgba(97, 0, 0, 0.267);
 }
 
-.card-container-login-light {
-    display: flex;
-    flex-direction: column;   
-    align-items: center;
-    padding: 30px;
-    margin-top: 180px;
-    width: 500px;
-    border-radius: 10px;
+.logueate-aqui-dark{
+    margin-top: 10px;
     transition-duration: 01s;
-    color: #333333;
-    background-color: rgb(224, 224, 224);
-    box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
+    color: rgb(255, 255, 255);
 }
+
+
+/* Modo dark fin */
 
 .form-control{
     width: 100%;
@@ -66,9 +95,4 @@ div.img-registro {
     background-size: 100% auto;
     background-image: url(//ssl.gstatic.com/accounts/ui/avatar_2x.png);
     justify-content: center;
-}
-
-.google-button{
-    margin-top: 15px;
-    margin-bottom: 10px;
 }

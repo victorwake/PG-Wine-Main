@@ -1,5 +1,6 @@
+
 .admin-container-light {
-    display: flex;
+    display : flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -9,11 +10,12 @@
 
 .card-container-admin-light {
     height: 100%;
-    display: flex;
-    flex-direction: row;
+    display : flex;
+    flex-direction : row;
     transition-duration: 01s;
     background-color: rgb(224, 224, 224);
 }
+
 
 .fragment-create-1 {
     width: 500px;
@@ -21,14 +23,15 @@
     margin: 20px;
     border-radius: 10px;
     box-shadow: -3px -2px 8px rgba(2, 2, 2, 0.63), 3px 2px 8px rgb(255, 255, 255);
-}
 
+}
 .fragment-create-2 {
     width: 500px;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
     box-shadow: -3px -2px 8px rgba(2, 2, 2, 0.63), 3px 2px 8px rgb(255, 255, 255);
+
 }
 
 .title-create {
@@ -37,13 +40,14 @@
     margin-bottom: 30px;
 }
 
-.label {
+.label{
     margin-bottom: 10px;
 }
 
 .u-full-width {
     margin-bottom: 10px;
 }
+
 
 .err {
     color: red;
@@ -52,12 +56,15 @@
 }
 
 @media screen and (max-width: 968px) {
-    .card-container-admin-light {
+    .card-container-admin-light{
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .admin-container-light {
+    .admin-container-light{
         height: 100%;
     }
 }
+    
+
+

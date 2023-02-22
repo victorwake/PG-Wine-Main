@@ -3,16 +3,7 @@ const { User } = require("../../db");
 const getDbUsers = async(req, res, next) => {
     try {
         const userDb = await User.findAll();
-        const users = [];
-        const obj = {};
-        for (const w of userDb) {
-            (obj.firstName = w.firstName),
-            (obj.lastName = w.lastName),
-            (obj.rol = w.rol),
-            (obj.email = w.email),
-            users.push(obj);
-        }
-        res.status(200).json(users);
+        res.status(200).json(userDb);
 
     } catch (err) {
         res.status(400).json({ error: err.msg });

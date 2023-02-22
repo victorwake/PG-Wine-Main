@@ -21,7 +21,7 @@ const insertWine = async() => {
             description: winesApi.description,
         });
     });
-    // console.log('wines loaded in the db');
+    console.log('wines loaded in the db');
 }
 
 module.exports = { insertWine }

@@ -16,6 +16,7 @@
 .containerData {
     position: relative;
     top: 100px;
+    
 }
 
 .imagen {
@@ -138,4 +139,36 @@ td {
     top: 30%;
     left: 82%;
     width: 200px;
+}
+
+.detail-container-light {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition-duration: 01s;
+}
+
+.detail-container-dark {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition-duration: 01s;
+    background-color: #646464;
+}
+
+#td-dark{
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+}
+
+#agregar-dark{
+    transition-duration: 01s;
+    color: rgb(238, 238, 238);
+    background-color: #585858;
 }

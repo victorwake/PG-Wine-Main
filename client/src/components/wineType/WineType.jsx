@@ -41,9 +41,13 @@ export const WineType = () => {
     }, [])
 
 
+
+
     useEffect(() => {
         dispatch(getWineType(type))
     }, [dispatch, type])
+
+
 
 
     return (
@@ -59,7 +63,7 @@ export const WineType = () => {
             <div className="wine-type">
                 <div className={"card-container-wine-" + clase}>
                     {pageWines?.map((w => (
-                        <Fragment key={w.id}>
+                        <fragment className="fragment" key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                                 <Card
                                     name={w.name}
@@ -67,9 +71,9 @@ export const WineType = () => {
                                     image={w.image}
                                     winery={w.winery}
                                     price={w.price}
-                                />
+                                />                        
                             </Link>
-                        </Fragment>
+                        </fragment>
                     )))}
                 </div>
             </div>

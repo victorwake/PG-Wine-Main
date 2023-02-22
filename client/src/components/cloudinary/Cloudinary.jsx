@@ -10,6 +10,7 @@ export const Cloudinary = () => {
     const [image, setImage] = useState("");
     const [loading, setLoading] = useState(false);
 
+
     const uploadImage = async (e) => {
         const files = e.target.files;
         const data = new FormData();
@@ -52,6 +53,7 @@ export const Cloudinary = () => {
                 />
             </FormGroup>
         </Container>
+
 
 
         </div>
