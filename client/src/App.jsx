@@ -16,8 +16,11 @@ import  RegisterAdmin  from './components/registerAdmin/RegisterAdmin'
 import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes';
 import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { MercadoPago } from "./components/MercadoPago/MercadoPago"
 
+=======
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
 
 function App() {
     const currentUser  = useSelector((state) => state.usuario);
@@ -49,8 +52,11 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Profile />} />
                 <Route path="/shopingcard" element={<ShoppingCart />} />
+<<<<<<< HEAD
                 <Route path="/procesarmp" element={<MercadoPago />} />
                 
+=======
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
             </Routes>
         </div>
     );

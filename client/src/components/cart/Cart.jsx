@@ -5,7 +5,11 @@ import "./cart.css";
 import { Button, Modal } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import { removeFromCart, updateCartItem, removeAllFromCart } from "../../redux/actions";
+<<<<<<< HEAD
 import axios from 'axios';
+=======
+
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
 
 
 export const Cart = () => {
@@ -16,6 +20,7 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const [showEmptyCartModal, setShowEmptyCartModal] = useState(false);
 
+<<<<<<< HEAD
   const cartItems = cart.map(item => ({
     id: item.id,
     title: item.name,
@@ -49,6 +54,9 @@ export const Cart = () => {
 // console.log(enviarDatos(cartItems))
 
   // .then(res => window.location.href = res.data.response.body.init_point);
+=======
+  
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
   //prueba para el control de stock de cart, para no vender mas de la cantidad que hay en stock
   const firstCartItem = cart[0];
   if (firstCartItem) {
@@ -56,7 +64,11 @@ export const Cart = () => {
     console.log(stock);
   }
 
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
   const handleEmptyCart = () => {
     if (cart.length === 0) {
       setShowEmptyCartModal(true);
@@ -85,6 +97,10 @@ export const Cart = () => {
       dispatch(updateCartItem(itemId, newQuantity));
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
   const handleRemoveAllFromCart = () => {
     dispatch(removeAllFromCart());
   }
@@ -141,7 +157,11 @@ export const Cart = () => {
               </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
                 {cart?.map((item) => (
+=======
+            {cart?.map((item) => (
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
                   <tr key={item.id}>
                     <td><img src={item.image}  className="img-fluid img-thumbnail" alt="Vino" /></td>
                     <td>{item.name}</td>
@@ -176,6 +196,7 @@ export const Cart = () => {
           <Button variant="danger" onClick={handleRemoveAllFromCart}>
             Vaciar carrito
           </Button>
+<<<<<<< HEAD
         
             <Button 
             variant="success" 
@@ -184,6 +205,15 @@ export const Cart = () => {
             Completar la compra
             </Button>
           
+=======
+          <Link to="/shopingcard">
+            <Button 
+            variant="success" 
+            >
+            Finalizar la compra
+            </Button>
+          </Link>
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
         </Modal.Footer>
       </Modal>
     </div>

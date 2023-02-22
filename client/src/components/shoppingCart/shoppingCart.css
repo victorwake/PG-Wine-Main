@@ -24,4 +24,30 @@
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
     padding: 20px;
     padding-bottom: 20px;
+<<<<<<< HEAD
+=======
+}
+
+.sale-ok{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-send{
+    width: 280px;
+    margin-top: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(119, 136, 153, 0.116);
+}
+
+.btn-sale{
+    width: 280px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(119, 136, 153, 0.116);
+>>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
 }
