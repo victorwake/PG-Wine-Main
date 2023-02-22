@@ -26,6 +26,9 @@ export const NavAdmin = () =>{
                                 <a class="nav-link" href="#">Publicidades</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#">Experiencias</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">Promociones</a>
                             </li>
                             <li class="nav-item">

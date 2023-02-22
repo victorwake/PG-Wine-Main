@@ -41,7 +41,13 @@ export const Users = () =>  {
                             <td>{u.firstName}</td>
                             <td>{u.lastName}</td>
                             <td>{u.email} </td>
-                            <td>{u.status}</td>
+                            <td>
+                            <select >
+                                <option value={u.status}>{u.status}</option>
+                                <option value="0,10000">banned</option>
+                                <option value="10000,30000">delete</option>
+                            </select>
+                            </td>
                             <td>{u.rol}</td>
                             <td><button><i class="bi bi-slash-square"></i></button></td>
                             <Link to= {'/admin/user/' + u.idUser}>
