@@ -12,26 +12,14 @@
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
-<<<<<<< HEAD
-    "circular-json": "^0.5.9",
     "cloudinary-react": "^1.8.1",
     "jwt-decode": "^3.1.2",
-    "mercadopago": "^1.5.15",
-=======
-    "cloudinary-react": "^1.8.1",
-    "jwt-decode": "^3.1.2",
->>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.2",
-<<<<<<< HEAD
-    "react-scripts": "^5.0.1",
-    "react-sdk-mercadopago": "^1.1.1",
-=======
     "react-scripts": "4.0.3",
->>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
     "react-validation": "^3.0.7",
     "reactstrap": "^9.1.5",
     "redux": "^4.2.0",
