@@ -20,6 +20,7 @@ const sucessMP = require('../routes/mercadoPagoSucess')
 const createExpRouter = require('./createExpRouter');
 const updateExpRouter = require('./updateExpRouter');
 const expRouter = require('./expRouter.js');
+const expTypeRouter = require('./expTypeRouter');
 
 const { validarJWT } = require('../../src/middlewares/validarJWT');
 
@@ -46,5 +47,6 @@ router.use('/rutarestringida',[validarJWT], rutaRestringida)
 router.use('/experiences', createExpRouter);
 router.use('/experiences', updateExpRouter);
 router.use('/experiences', expRouter);
+router.use('/experiencias', expTypeRouter)
 
 module.exports = router;

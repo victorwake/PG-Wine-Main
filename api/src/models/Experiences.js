@@ -20,9 +20,8 @@ module.exports = (sequelize) => {
             allowNull: false,
         },
         kindOfExp:{
-            type: DataTypes.ARRAY (DataTypes.STRING),
+            type: DataTypes.STRING,
             allowNull: false,
-            defaultValue: ['Gastronomía', 'Hoteleria', 'Degustaciones', 'Paseos', 'Visitas guiadas'],
         },
         description:{
             type: DataTypes.TEXT,

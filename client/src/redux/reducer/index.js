@@ -28,6 +28,7 @@ import {
   POST_EXP,
   GET_EXP,
   UPDATE_EXP,
+  GET_EXP_TYPE,
 
 
   // ADD_TO_CART,
@@ -70,6 +71,9 @@ const initialState = {
   cartItems: [],
   isAddingToCart: false,
   isRemovingFromCart: false,
+  experiences: [],
+  expType: [],
+
 };
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -291,7 +295,11 @@ const rootReducer = (state = initialState, action) => {
         return {
           ...state,
         };
-  
+   case GET_EXP_TYPE:
+      return {
+        ...state,
+        expType: action.payload,
+      };
     default:
       return state;
   }
