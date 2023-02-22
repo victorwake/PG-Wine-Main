@@ -70,9 +70,9 @@ export const Details = () => {
         wineDetail.image,
         wineDetail.quantity
       )
-    setTimeout(() => {
+    .setTimeout(() => {
       setIsAddingToCart(false);
-    }, 10000);
+    }, 10000))
   };
 
   if (!!wineColorType) {
