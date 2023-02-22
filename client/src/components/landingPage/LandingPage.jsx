@@ -10,7 +10,7 @@ export const LandingPage = () => {
       <Link to={"/home"}>
             <button className="button">Dionisio Wines</button>
         </Link>
-        <h1 className="titulo">Dionisio Wines</h1>
+        {/* <h1 className="titulo">Dionisio Wines</h1> */}
       <video
          autoPlay 
          loop
@@ -18,7 +18,7 @@ export const LandingPage = () => {
             position: "absolute",
             width: "100%" ,
             height:"100%", 
-            top:"-2vw",
+            top:"0vw",
             objectFit:"cover",
             transform: "(-50%, -50%)",
             zIndex:-1,

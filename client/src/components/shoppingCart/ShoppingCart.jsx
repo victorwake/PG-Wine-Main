@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "../../redux/actions";
-import CartItem from "./CartItem";
-import CartTotal from "./CartTotal";
-import "./cartItem.css";
+import "./shoppingCart.css";
+import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import CartItem from "./CartItem";
@@ -13,15 +10,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 
 export const ShoppingCart = () => {
-  const [quantities, setQuantities] = useState({});
-  const cart = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
-  const clase= useSelector(store => store.theme);
-  useEffect(() => {
-    const quantitiesFromLocalStorage =
-      JSON.parse(localStorage.getItem("quantities")) || {};
-    setQuantities(quantitiesFromLocalStorage);
-  }, []);
+  const cart = useSelector((store) => store.cart);
   const dispatch = useDispatch();
   const [quantities, setQuantities] = useState({});
   const [mpResponse, setMpResponse] = useState(null);
@@ -54,37 +43,21 @@ export const ShoppingCart = () => {
       setIsLoading(false);
     });
   }
-
+  
   useEffect(() => {
     if (mpResponse) {
 
     }
   }, [mpResponse]);
+
   return (
     <div>
-      
-      <div className="Detail">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Dionisio Wines</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/home">Home</a>
-        </li>
-        
-       
-      </ul>
-     </div>
-  </div>
-</nav>
-      <div className="cart">
-        <div className="cart-items">
-          {cart.map((item) => (
-            <CartItem key={item.id} data={item} quantities={quantities} />
+      <NavBar />
+      <div className="container">
+        <h1>Carrito de Compras</h1>
+        <article className="box">
+          {cart.map((items) => (
+            <CartItem data={items} />
           ))}
         </article>
         <div className="sale-ok">
@@ -113,8 +86,3 @@ export const ShoppingCart = () => {
     </div>
   );
 };
-
-
-
-
-
