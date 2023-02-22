@@ -17,10 +17,6 @@ const favoriteRouter = require('../routes/favoriteRouter')
 const procesarMP = require('../routes/mercadoPagoRouter')
 const sucessMP = require('../routes/mercadoPagoSucess')
 
-const createExpRouter = require('./createExpRouter');
-const updateExpRouter = require('./updateExpRouter');
-const expRouter = require('./expRouter.js');
-const expTypeRouter = require('./expTypeRouter');
 const { validarJWT } = require('../../src/middlewares/validarJWT');
 
 const router = Router();
@@ -43,9 +39,5 @@ router.use('/procesarmp', procesarMP);
 router.use('/mpsucess', sucessMP);
 router.use('/rutarestringida',[validarJWT], rutaRestringida)
 
-router.use('/experiences', createExpRouter);
-router.use('/experiences', updateExpRouter);
-router.use('/experiences', expRouter);
-router.use('/experiencias', expTypeRouter)
 
 module.exports = router;

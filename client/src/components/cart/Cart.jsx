@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { removeFromCart, updateCartItem, removeAllFromCart } from "../../redux/actions";
 
 
-
 export const Cart = () => {
   const clase = useSelector((store) => store.theme);
   const allWines = useSelector(state=> state.wines)
@@ -26,6 +25,8 @@ export const Cart = () => {
 
 
 
+
+  
   const handleEmptyCart = () => {
     if (cart.length === 0) {
       setShowEmptyCartModal(true);
@@ -74,9 +75,9 @@ export const Cart = () => {
   return (
     <div className={"cart-container-" + clase}>
       <div>
-        <button className="button-Cart" variant="success" onClick={cart.length ? handleShow : handleEmptyCart} >
+        <Button variant="success" onClick={cart.length ? handleShow : handleEmptyCart} >
         <i class="bi bi-cart3"></i>
-        </button>
+        </Button>
       </div>
 
       <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
@@ -109,7 +110,7 @@ export const Cart = () => {
               </tr>
             </thead>
             <tbody>
-            {cart?.map((item) => (
+                {cart?.map((item) => (
                   <tr key={item.id}>
                     <td><img src={item.image}  className="img-fluid img-thumbnail" alt="Vino" /></td>
                     <td>{item.name}</td>
@@ -144,6 +145,7 @@ export const Cart = () => {
           <Button variant="danger" onClick={handleRemoveAllFromCart}>
             Vaciar carrito
           </Button>
+
           <Link to="/shopingcard">
             <Button 
             variant="success" 
