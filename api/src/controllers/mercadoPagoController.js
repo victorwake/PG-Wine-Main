@@ -32,7 +32,6 @@ let preference = {
   },
   auto_return: 'approved',
 };
-
 mercadopago.preferences
   .create(preference)
   .then(function (response) {

@@ -1,5 +1,6 @@
 import { nameASC } from '../../helpers/sort.js';
 import {
+
   THEME_CHANGE,
   THEME_LIGHT,
   THEME_DARK,
@@ -25,22 +26,27 @@ import {
   UPDATE_CART_ITEM,
   REMOVE_FROM_CART,
   REMOVE_ALL_FROM_CART,
+  POST_EXP,
+  GET_EXP,
+  UPDATE_EXP,
+  GET_EXP_TYPE,
 
 
   // ADD_TO_CART,
   // REMOVE_ONE_CART,
   // CLEAR_CART,
+
 } from "../actions/index.js";
 
 /*--------AUTH---------*/
 
 import {
-  REGISTER_SUCCESS,
-  REGISTER_FAIL,
-  LOGIN_SUCCESS,
-  LOGIN_FAIL,
-  LOGOUT,
-  LOGGIN_SUCCESS_G
+    REGISTER_SUCCESS,
+    REGISTER_FAIL,
+    LOGIN_SUCCESS,
+    LOGIN_FAIL,
+    LOGOUT,
+    LOGGIN_SUCCESS_G
 } from "../actions/type.js";
 
 /*--------MESSAGE---*/
@@ -67,6 +73,9 @@ const initialState = {
   cartItems: [],
   isAddingToCart: false,
   isRemovingFromCart: false,
+  experiences: [],
+  expType: "",
+
 };
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -273,6 +282,26 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 cart: []}
             )
+
+    /////EXPERIENCES////
+    case GET_EXP:
+        return {
+          ...state,
+          experiences: action.payload,
+        };
+    case POST_EXP:
+        return {
+          ...state,
+        };
+    case UPDATE_EXP:
+        return {
+          ...state,
+        };
+   case GET_EXP_TYPE:
+      return {
+        ...state,
+        expType: action.payload,
+      };
     default:
       return state;
   }

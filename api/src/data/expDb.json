@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Degustación, bodega Trapiche Maipú",
+        "price": 25000,
+        "ubication":"https://www.google.com.ar/maps/dir//Bodega+Trapiche,+Nueva+Mayorga+s%2Fn,+5513+Maip%C3%BA,+Mendoza/@-32.9719395,-68.7484127,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x967e0d3de200acb3:0x4b7b3b7fcb547703!2m2!1d-68.7453097!2d-32.9730903",
+        "kindOfExp":"degustación",
+        "eventDate":"00/00/0000",
+        "image": ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/db/38/62/desde-sus-inicios-en.jpg?w=1200&h=1200&s=1", "https://eltriunfodebaco.com.ar/wp-content/uploads/2017/02/Trapiche-1024x683.jpg",
+        "https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/GNTDCM3EHFRTEYRVGQYGINJSMQ.jpg"],
+        "url": "https://trapiche.com.ar/comin/turismo-mendoza/",
+        "description": "Rodeada de un paisaje natural único delineado por sus viñedos y olivares, se encuentra nuestra bodega en Maipú. No sólo es digno de admirar el entorno natural que la rodea, sino también su construcción de estilo renacentista que data del año 1912 y es considerado uno de los íconos de la arquitectura vitivinícola argentina."
+    }
+]
