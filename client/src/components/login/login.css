@@ -1,0 +1,74 @@
+
+.login-container-dark{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    transition-duration: 01s;
+    background-color: #333333;
+}
+
+.card-container-login-dark {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    padding: 30px;
+    margin-top: 180px;
+    width: 500px;
+    border-radius: 10px;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+    background-color: #333333;
+    box-shadow: -3px -2px 8px rgb(0, 0, 0), 3px 2px 8px rgba(255, 255, 255, 0.267);
+}
+
+
+.login-container-light{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
+}
+
+.card-container-login-light {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    padding: 30px;
+    margin-top: 180px;
+    width: 500px;
+    border-radius: 10px;
+    transition-duration: 01s;
+    color: #333333;
+    background-color: rgb(224, 224, 224);
+    box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
+}
+
+.form-control{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+}
+
+div.img-registro {  
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    background-image: url(//ssl.gstatic.com/accounts/ui/avatar_2x.png);
+    justify-content: center;
+}
+
+.google-button{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}

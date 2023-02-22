@@ -1,0 +1,9 @@
+.bg-body-tertiary{
+    background-color: rgb(224, 224, 224) !important;
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.438);
+}
+
+.offcanvas{
+    background-color: rgb(224, 224, 224) !important;
+    font-size: 1.2rem;
+}
