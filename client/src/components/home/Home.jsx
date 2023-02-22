@@ -52,7 +52,7 @@ export const Home = () => {
                                 price= {w.price}
                                 />
                             </Link>
-                        </Fragment>
+                        </fragment>
                 )))}  
             </div>
         </div>

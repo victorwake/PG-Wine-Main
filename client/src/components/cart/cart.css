@@ -13,6 +13,7 @@
 
 .table-image thead td,
 .table-image thead th {
+
     border: 0;
     color: #666;
     font-size: 0.8rem;
@@ -36,6 +37,7 @@
 .modal-footer {
     padding-top: 0rem;
 }
+
 
 .input-cantidad {
     width: 60px;

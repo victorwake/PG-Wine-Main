@@ -70,8 +70,6 @@ export const Details = () => {
         wineDetail.image,
         wineDetail.quantity
       )
-    );
-
     setTimeout(() => {
       setIsAddingToCart(false);
     }, 10000);
