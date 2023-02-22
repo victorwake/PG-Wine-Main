@@ -1,5 +1,6 @@
 import { nameASC } from '../../helpers/sort.js';
 import {
+
   THEME_CHANGE,
   THEME_LIGHT,
   THEME_DARK,
@@ -34,17 +35,18 @@ import {
   // ADD_TO_CART,
   // REMOVE_ONE_CART,
   // CLEAR_CART,
+
 } from "../actions/index.js";
 
 /*--------AUTH---------*/
 
 import {
-  REGISTER_SUCCESS,
-  REGISTER_FAIL,
-  LOGIN_SUCCESS,
-  LOGIN_FAIL,
-  LOGOUT,
-  LOGGIN_SUCCESS_G
+    REGISTER_SUCCESS,
+    REGISTER_FAIL,
+    LOGIN_SUCCESS,
+    LOGIN_FAIL,
+    LOGOUT,
+    LOGGIN_SUCCESS_G
 } from "../actions/type.js";
 
 /*--------MESSAGE---*/
@@ -72,7 +74,7 @@ const initialState = {
   isAddingToCart: false,
   isRemovingFromCart: false,
   experiences: [],
-  expType: [],
+  expType: "",
 
 };
 

@@ -79,6 +79,22 @@ export const GET_WINE_DETAIL = 'GET_WINE_DETAIL';
 
 /*----------------------------------------------*/
 
+export const getUsers = () => {
+    return async(dispatch) => {
+        try {
+            const response = await axios.get('http://localhost:3001/usuarios/all');
+            dispatch({
+                type: GET_USERS,
+                payload: response.data
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+export const GET_USERS = 'GET_USERS';
+/*----------------------------------------------*/
+
 export const cleanWineDetail = payload => {
     return dispatch => {
         dispatch({ type: CLEAN_DETAIL, payload })
@@ -220,14 +236,16 @@ export const SAVE_IMAGE = 'SAVE_IMAGE';
 
 /*----------------------------------------------*/
 
-export const addWineToFavorites = (userId, wineId) => {
-    return async (dispatch) => {
+
+export const addWineToFavorites = (idUser, wineId) => {
+    return async(dispatch) => {
         try {
-            const response = await fetch(`http://localhost:3001/usuarios/${userId}/favorites/${wineId}`, {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json'
-            }
+            const response = await fetch(`http://localhost:3001/usuarios/${idUser}/favorites/${wineId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+
             });
             const data = await response.json();
             dispatch({ type: ADD_WINE_TO_FAVORITES, payload: data });
@@ -240,35 +258,48 @@ export const ADD_WINE_TO_FAVORITES = 'ADD_WINE_TO_FAVORITES';
 
 /*----------------------------------------------*/
 
-export const removeWineFromFavorites = (userId, wineId) => {
-    return dispatch => axios(`http://localhost:3001/usuarios/${userId}/favorites/${wineId}`)
-        .then(res => dispatch({ type: REMOVE_WINE_FROM_FAVORITES, payload: res.data }))
-        .catch(err => console.log(err));
+export const removeWineFromFavorites = (idUser, wineId) => {
+    return async(dispatch) => {
+        try {
+            const response = await fetch(`http://localhost:3001/usuarios/${idUser}/favorites/${wineId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const data = await response.json();
+            dispatch({ type: REMOVE_WINE_FROM_FAVORITES, payload: data });
+        } catch (error) {
+            console.log(error);
+        }
+    }
 };
-    
+
 export const REMOVE_WINE_FROM_FAVORITES = 'REMOVE_WINE_FROM_FAVORITES';
 
 /*----------------------------------------------*/
 
-export const getWinesFromFavorites = (payload) => ({
-    type: GET_WINES_FROM_FAVORITES,
-    payload,
-});
+export const getWinesFromFavorites = (userId) => {
+    return dispatch => axios(`http://localhost:3001/usuarios/${userId}/favorites`)
+        .then(res => dispatch({ type: GET_WINES_FROM_FAVORITES, payload: res.data }))
+        .catch(err => console.log(err));
+};
 export const GET_WINES_FROM_FAVORITES = 'GET_WINES_FROM_FAVORITES';
 
 /*----------------------------------------------*/
 
-export const addToCart = (id,name, varietal, price,image,quantity) => ({
+export const addToCart = (id, name, varietal, price, image, quantity) => ({
     type: "ADD_TO_CART",
-    payload: { id, name, varietal,  price,image,quantity }
+    payload: { id, name, varietal, price, image, quantity }
 });
 export const ADD_TO_CART = 'ADD_TO_CART';
 
 /*----------------------------------------------*/
 
-export const updateCartItem = (id,name, varietal, price,image,quantity ) => ({
+
+export const updateCartItem = (id, name, varietal, price, image, quantity) => ({
     type: "UPDATE_CART_ITEM",
-    payload: { id, name, varietal,  price,image,quantity  }
+    payload: { id, name, varietal, price, image, quantity }
 });
 export const UPDATE_CART_ITEM = 'UPDATE_CART_ITEM';
 
@@ -277,7 +308,7 @@ export const UPDATE_CART_ITEM = 'UPDATE_CART_ITEM';
 export const removeFromCart = (id) => {
     // console.log(id, all);
     return dispatch => {
-        dispatch ({
+        dispatch({
             type: REMOVE_FROM_CART,
             payload: id
         })
@@ -290,7 +321,7 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 export const removeAllFromCart = () => {
     // console.log(id, all);
     return dispatch => {
-        dispatch ({
+        dispatch({
             type: REMOVE_ALL_FROM_CART,
         })
     }
@@ -300,6 +331,38 @@ export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
 
 /*----------------------------------------------*/
 
+export const procesarPago = (payload) => {
+    return (dispatch) => {
+        axios.post('http://localhost:3001/procesarmp', payload)
+            .then((response) => {
+
+                console.log(response);
+
+                dispatch(procesarPagoExitoso(response.data));
+            })
+            .catch((error) => {
+
+                console.log(error);
+
+                dispatch(procesarPagoError(error.message));
+            });
+    };
+};
+
+
+const procesarPagoExitoso = (resultado) => {
+    return {
+        type: 'PROCESAR_PAGO_EXITOSO',
+        payload: resultado
+    };
+};
+
+const procesarPagoError = (error) => {
+    return {
+        type: 'PROCESAR_PAGO_ERROR',
+        payload: error
+    };
+};
 //EXPERIENCIAS
 /*----------------------------------------------*/
 
@@ -354,4 +417,5 @@ export const getExpType = (type) => {
     }
 }
 export const GET_EXP_TYPE = 'GET_EXP_TYPE';
+
 /*----------------------------------------------*/

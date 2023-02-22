@@ -21,7 +21,6 @@ const createExpRouter = require('./createExpRouter');
 const updateExpRouter = require('./updateExpRouter');
 const expRouter = require('./expRouter.js');
 const expTypeRouter = require('./expTypeRouter');
-
 const { validarJWT } = require('../../src/middlewares/validarJWT');
 
 const router = Router();

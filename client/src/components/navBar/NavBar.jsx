@@ -93,10 +93,10 @@ export const NavBar = () => {
           </Link> <Link style={{ textDecoration: 'none' }} to="/admin"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Administrar</a></Link>
         </li>)}
 
-        <li  class="nav-item">
-          <Link to="/experiences" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Experiencias</a>
-          </Link>
+        <li class="nav-item">
+        { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={logOut}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
       </ul>
       <Cart />
