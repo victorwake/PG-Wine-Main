@@ -21,12 +21,16 @@ export const WineType = () => {
     const defaultPriceRange = useMemo(() => [0, 10000000], [])
     const [priceRange, setPriceRange] = useState(defaultPriceRange)
 
+    const hasStock = (wine) => wine.stock > 0;
+
+    const filteWinesStock = wines.filter(hasStock);
+
     // Filter the total list of wines
     const filteredWines = useMemo(() => {
-        return wines
+        return filteWinesStock
             .filter(el => el.price >= priceRange[0] && el.price <= priceRange[1])
             .sort((priceOrder === 'Mayor') ? priceDES : priceASC)
-    }, [wines, priceRange, priceOrder])
+    }, [filteWinesStock, priceRange, priceOrder])
 
     // Keep only the wines of the current page
     const winesPerPage = 15;

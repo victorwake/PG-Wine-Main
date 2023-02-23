@@ -245,7 +245,6 @@ const rootReducer = (state = initialState, action) => {
                 price: action.payload.price,
                 image: action.payload.image,
                 quantity: action.payload.quantity || 1
-                // quantity: action.payload.quantity,
               }
           ]
       };
@@ -256,7 +255,7 @@ const rootReducer = (state = initialState, action) => {
             if (item.id === action.payload.id) {
               return {
                 ...item,
-                quantity: action.payload.quantity,
+                quantity: action.payload.name,
                 totalPrice: action.payload.totalPrice
               };
             }

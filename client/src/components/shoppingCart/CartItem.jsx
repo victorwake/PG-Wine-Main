@@ -1,43 +1,69 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { removeFromCart, removeAllFromCart } from '../../redux/actions'
+import { useDispatch , useSelector} from "react-redux";
+import { removeFromCart} from '../../redux/actions'
 import './cartItem.css'
-import { NavBar } from "../navBar/NavBar";
-import { useSelector } from "react-redux";
 
 
+import React, { useState, useEffect } from "react";
 const CartItem = ({ data }) => {
+  const [quantities, setQuantities] = useState({});
+  const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
-  const cart = useSelector((store) => store.cart);
+  const [item, setItem] = useState(null);
+  const [setTotal] = useState(0);
+
+  const total = Array.isArray(cart) ? cart.reduce((acc, item) => {
+    const quantity = quantities[item.id] || item.quantity;
+    return acc + (item.price * quantity);
+  }, 0) : 0;
+
+  useEffect(() => {
+    const localStorageItems = JSON.parse(localStorage.getItem("cart")) || [];
+    const filteredItems = localStorageItems.filter(item => item.id === data.id);
+    setItem(filteredItems.length ? filteredItems[0] : null);
+  }, [data.id]);
   
+  const handleTotal = () => {
+    let sum = 0;
+    cart.forEach((item) => {
+      const quantity = localStorage.getItem("quantities")
+        ? JSON.parse(localStorage.getItem("quantities"))[item.id] || item.quantity
+        : item.quantity;
+      sum += item.price * quantity;
+    });
+    setTotal(sum);
+  };
 
 
 
-        let { id, name, price, quantity,image } = data;
-    return (
-      <div className="cart-item">
-          <div style={{ borderBottom: "thin solid gray" }}>
+  useEffect(() => {
+    const quantitiesFromLocalStorage = JSON.parse(localStorage.getItem('quantities')) || {};
+    setQuantities(quantitiesFromLocalStorage);
+  }, []);
 
-        <h4 >{name}</h4>
-        <h5>
-          ${price}.00
-        </h5>
-        <h5>cantidad {quantity}</h5>
-        <div><img height="200px"  className={"img-"} src={image} alt = {name} /></div>
-        <div>
+  if (!item) {
+    return null;
+  }
 
-        <button className="btn-cart-item"onClick={() => dispatch(removeFromCart(id))}>Eliminar</button>
+  return (
 
-        {/* <div className="cart-items">
-          {cart.map((item) => (
-            <CartItem key={item.id} data={item} />
-          ))}
-        </div> */}
-
+  <div className="cart-item">
+ 
+      <div style={{ borderBottom: "thin solid gray" }}>
+        <div key={item.id}>
+          <div><img height="150px"  className={"img-"} src={item.image} alt={item.name} /></div>
+          <h3>{item.name}</h3>
+          <p>Precio: ${item.price}</p>
+          <p>Cantidad: {quantities[item.id] || item.quantity}</p>
+          <h4 className="total-unidad">
+            $ {item.price * (quantities[item.id] || item.quantity)} 
+          </h4>
+          
+          <button className="btn-cart-item" onClick={() => dispatch(removeFromCart(item.id))}>Eliminar</button>
+          
         </div>
       </div>
-      </div>
-    );
-  };
-  
-  export default CartItem;
+    
+    </div>
+  );
+};
+export default CartItem;

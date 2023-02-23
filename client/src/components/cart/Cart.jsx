@@ -49,9 +49,9 @@ export const Cart = () => {
   
   const handleQuantityChange = (event, itemId) => {
     const newQuantity = parseInt(event.target.value);
-      setQuantities({...quantities, [itemId]: newQuantity});
-      dispatch(updateCartItem(itemId, newQuantity));
-  }
+    setQuantities(prevQuantities => ({ ...prevQuantities, [itemId]: newQuantity }));
+    dispatch(updateCartItem(itemId, newQuantity));
+  };
 
 
   const handleRemoveAllFromCart = () => {

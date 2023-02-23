@@ -4,14 +4,12 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import CartItem from "./CartItem";
-import { removeFromCart, clearCart } from "../../redux/actions";
-import { useDispatch } from "react-redux";
+import CartTotal from "./CartTotal";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
 export const ShoppingCart = () => {
   const cart = useSelector((store) => store.cart);
-  const dispatch = useDispatch();
   const [quantities, setQuantities] = useState({});
   const [mpResponse, setMpResponse] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -50,6 +48,12 @@ export const ShoppingCart = () => {
     }
   }, [mpResponse]);
 
+  useEffect(() => {
+    const quantitiesFromLocalStorage =
+      JSON.parse(localStorage.getItem("quantities")) || {};
+    setQuantities(quantitiesFromLocalStorage);
+  }, []);
+
 
 
   return (
@@ -58,10 +62,11 @@ export const ShoppingCart = () => {
       <div className="container">
         <h1>Carrito de Compras</h1>
         <article className="box">
-          {cart.map((items) => (
-            <CartItem data={items} />
+        {cart.map((item) => (
+            <CartItem key={item.id} data={item} quantities={quantities} />
           ))}
         </article>
+        <CartTotal cartItems={cart} quantities={quantities} />
         <div className="sale-ok">
         {!mpResponse &&(
             <>
