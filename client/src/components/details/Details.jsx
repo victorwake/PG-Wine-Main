@@ -159,6 +159,7 @@ export const Details = () => {
           </table>
         </div>
         <h3 className="price">$ {wineDetail.price}</h3>
+       
         <button
           id={"agregar-" + clase}
           className="addToCart"
