@@ -338,7 +338,8 @@ export const procesarPagoExitoso = (resultado) => {
     };
   };
 
-  export const PROCESAR_PAGO_EXITOSO = 'PROCESAR_PAGO_EXITOSO',
+  export const PROCESAR_PAGO_EXITOSO = 'PROCESAR_PAGO_EXITOSO'
+  
   
   export const procesarPagoError = (error) => {
     return {

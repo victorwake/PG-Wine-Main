@@ -69,7 +69,7 @@ const initialState = {
   cartItems: [],
   isAddingToCart: false,
   isRemovingFromCart: false,
-  transactionResult: {}
+  transactionResult: [] 
 };
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));

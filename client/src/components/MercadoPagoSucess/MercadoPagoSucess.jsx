@@ -9,7 +9,7 @@ import { procesarPagoExitoso } from "../../redux/actions";
 
 export const MercadoPagoSucess = () => {
   const currentUser = useSelector((state) => state.usuario);
-  const pagoExitoso = useSelector((stae) => state.transactionResult)
+  const pagoExitoso = useSelector((state) => state.transactionResult)
   const clase = useSelector((store) => store.theme);
   const [searchParams, setSearchParams] = useSearchParams();
   const paymentId = searchParams.get("payment_id")
@@ -19,7 +19,7 @@ export const MercadoPagoSucess = () => {
   useEffect( () =>{ 
     dispatch(procesarPagoExitoso(paymentId))
 
-  }, [procesarPagoExitoso])
+  }, [dispatch, paymentId])
 
 
     return (
