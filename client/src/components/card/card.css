@@ -9,8 +9,7 @@
 }
 
 .card-light{
-    width: 310px;
-    height: 350px;
+
     margin: 10px;
     border-radius: 8px;
     cursor: pointer;
@@ -19,7 +18,7 @@
     justify-content: center;
     align-items: center;
     transition-duration: 01s;
-    box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
+    box-shadow: -3px -2px 8px rgba(255, 255, 255, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
     background-color: rgb(224, 224, 224);
 }
 

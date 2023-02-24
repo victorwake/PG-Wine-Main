@@ -1,11 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { removeFromCart, removeAllFromCart } from '../../redux/actions'
-<<<<<<< HEAD
 import './CartItem.css'
-=======
-import './cartItem.css'
->>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
 import { NavBar } from "../navBar/NavBar";
 import { useSelector } from "react-redux";
 
@@ -21,8 +17,9 @@ const CartItem = ({ data }) => {
     return (
       <div className="cart-item">
           <div style={{ borderBottom: "thin solid gray" }}>
-
+        <th>
         <h4 >{name}</h4>
+        </th>
         <h5>
           ${price}.00
         </h5>

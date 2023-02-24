@@ -49,7 +49,7 @@ export const Home = () => {
                                 varietal={w.varietal}
                                 image= {w.image} 
                                 winery={w.winery}
-                                price= {w.price}
+                                price= {`$${w.price}`}
                                 />
                             </Link>
                         </Fragment>

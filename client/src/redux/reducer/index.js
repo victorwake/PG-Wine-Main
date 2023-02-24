@@ -256,11 +256,7 @@ const rootReducer = (state = initialState, action) => {
             if (item.id === action.payload.id) {
               return {
                 ...item,
-<<<<<<< HEAD
                 quantity: action.payload.name,
-=======
-                quantity: action.payload.quantity,
->>>>>>> b91e6ee3998c2479c46f4bc7d25fea2c648efd08
                 totalPrice: action.payload.totalPrice
               };
             }
