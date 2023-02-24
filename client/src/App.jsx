@@ -16,7 +16,7 @@ import  RegisterAdmin  from './components/registerAdmin/RegisterAdmin'
 import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes';
 import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
-
+import TermsAndConditions from './components/home/TermsAndConditions';
 function App() {
     const currentUser  = useSelector((state) => state.usuario);
     const [showAdminBoard, setShowAdminBoard] = useState(true);
@@ -47,6 +47,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Profile />} />
                 <Route path="/shopingcard" element={<ShoppingCart />} />
+                <Route path="/terminos" element={<TermsAndConditions />} />
             </Routes>
         </div>
     );
