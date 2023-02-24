@@ -1,6 +1,6 @@
 import { useDispatch , useSelector} from "react-redux";
 import { removeFromCart} from '../../redux/actions'
-import './CartItem.css'
+import './cartItem.css'
 import { NavBar } from "../navBar/NavBar";
 import { Footer } from "../footer/Footer";
 import React, { useState, useEffect } from "react";
