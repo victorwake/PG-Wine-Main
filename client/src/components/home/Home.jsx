@@ -17,7 +17,7 @@ export const Home = () => {
     const clase= useSelector(store => store.theme);
 
     const shuffledWines = _.shuffle(allWines);
-    const tenRandomWines = shuffledWines.slice(0, 10);
+    const tenRandomWines = shuffledWines.slice(0, 8);
     // const discountedWines = tenRandomWines.map((w) => ({
     //     ...w,
     //     price: w.price * 0.9,
