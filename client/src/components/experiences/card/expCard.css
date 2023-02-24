@@ -1,0 +1,140 @@
+/* Modo light end */
+.card-container-exp-light{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    grid-gap: 35px;
+    justify-content: center;
+    transition-duration: 01s;
+    background-color: rgb(224, 224, 224);
+}
+
+.card-exp-light{
+    width: 310px;
+    height: 350px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 01s;
+    box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
+    background-color: rgb(224, 224, 224);
+}
+
+.card-light:hover{
+    transition-duration: 1s;
+    box-shadow: -5px -5px 10px rgba(94, 104, 121, 0.486), 5px 3px 8px rgba(255, 255, 255, 0.582);
+}
+
+.img-card-exp-light{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.name-card-exp-light{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 8px;
+    transition-duration: 01s;
+    color: rgb(0, 0, 0);
+}
+
+.type-exp-card-light{
+    font-size: 1rem;
+    font-weight: 400;
+    transition-duration: 01s;
+    color: rgb(0, 0, 0);
+}
+
+.url-card-light{
+    font-size: 1rem;
+    font-weight: 400;
+    transition-duration: 01s;
+    color: rgb(0, 0, 0);
+}
+
+.price-card-light{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5px;
+    transition-duration: 01s;
+    color: rgb(0, 0, 0);
+}
+
+/* Modo light fin */
+
+ /* --------------------------------------------------------- */
+
+
+/*Modo Dark*/
+
+
+.card-container-exp-dark{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    grid-gap: 35px;
+    justify-content: center;
+    transition-duration: 01s;
+    background-color: #333333;
+}
+
+.card-exp-dark{
+    width: 310px;
+    height: 350px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 01s;
+    box-shadow: -3px -2px 8px rgb(0, 0, 0), 3px 2px 8px rgba(255, 255, 255, 0.267);
+    background-color: #333333;
+}
+
+.card-exp-dark:hover{
+    transition-duration: 1s;
+    box-shadow: -3px -2px 8px rgb(51, 27, 27), 3px 2px 8px rgba(97, 0, 0, 0.267);
+}
+
+.img-card-exp-dark{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.name-card-exp-dark{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 8px;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+}
+
+.type-exp-card-dark{
+    font-size: 1rem;
+    font-weight: 400;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+}
+
+.url-card-dark{
+    font-size: 1rem;
+    font-weight: 400;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+}
+
+.price-card-dark{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5px;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+}
+
+/* Modo dark fin */

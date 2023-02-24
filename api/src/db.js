@@ -47,9 +47,6 @@ Varietal.belongsToMany(Wine, { through: 'wine_varietal' });
 User.belongsToMany(Wine, { through: 'user_wine' });
 Wine.belongsToMany(User, { through: 'user_wine' });
 
-User.belongsToMany(Wine, {through: 'user_wine'});
-Wine.belongsToMany(User, {through: 'user_wine'});
-
 Experiences.belongsToMany(User, {through: 'users_exp'});
 User.belongsToMany(Experiences, {through: 'users_exp'});
 module.exports = {

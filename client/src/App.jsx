@@ -18,6 +18,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
 import { Users } from './components/UserList/userList';
 import { Experiences} from './components/experiences/expSection/Experiences';
+import {ExpDetails} from './components/experiences/details/ExpDetails'
 
 function App() {
     const currentUser  = useSelector((state) => state.usuario);
@@ -47,6 +48,7 @@ function App() {
                 /admin/createadmin
                 </Route>   
                 <Route path="/experiences" element={<Experiences/>}/>
+                <Route path="/expDetails" element={<ExpDetails/>}/>
                 <Route path="/registrar" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Profile />} />
