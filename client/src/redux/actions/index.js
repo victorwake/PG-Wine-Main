@@ -331,16 +331,20 @@ export const procesarPago = (payload) => {
 };
 
 
-const procesarPagoExitoso = (resultado) => {
+export const procesarPagoExitoso = (resultado) => {
     return {
       type: 'PROCESAR_PAGO_EXITOSO',
       payload: resultado
     };
   };
+
+  export const PROCESAR_PAGO_EXITOSO = 'PROCESAR_PAGO_EXITOSO',
   
-  const procesarPagoError = (error) => {
+  export const procesarPagoError = (error) => {
     return {
       type: 'PROCESAR_PAGO_ERROR',
       payload: error
     };
   };
+
+  export const PROCESAR_PAGO_ERROR = 'PROCESAR_PAGO_ERROR'
