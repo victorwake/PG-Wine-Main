@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../redux/actions";
 import CartItem from "./CartItem";
 import CartTotal from "./CartTotal";
-import "../shoppingCart/cartItem.css";
+import "../shoppingCart/CartItem.css";
 import { Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import { SearchBar } from "../searchBar/SearchBar";
