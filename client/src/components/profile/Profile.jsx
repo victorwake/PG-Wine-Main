@@ -1,14 +1,32 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, Fragment } from "react";
 import { Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/actions/auth";
 import { NavBar } from "../navBar/NavBar";
 import "./profile.css";
+import { Link } from 'react-router-dom';
+import {
+  getWineDetail,
+  addToCart,
+  addWineToFavorites,
+  removeWineFromFavorites,
+  getWinesFromFavorites,
+} from "../../redux/actions";
+import { Card }from '../card/Card'
 
 const Profile = () => {
   const currentUser = useSelector((state) => state.usuario);
   const clase = useSelector((store) => store.theme);
   const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites);
+
+  useEffect(() => {
+    dispatch(getWinesFromFavorites(currentUser.usuario.idUser));
+  }, [dispatch]);
+
+
+
+
 
   if (!currentUser) {
     return <Navigate to="/login" />;
@@ -58,6 +76,23 @@ const Profile = () => {
       <p><a href="/login" className="nav-link" onClick={logOut}>
                 Cerrar sesión
               </a></p>
+      </div>
+      <div  className={"card-container-home-" + clase} >
+        
+      {favorites.length > 0 && favorites.map((w => ((
+        <Fragment key={w.id}>
+        <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+        <Card  
+        name={w.name}
+        varietal={w.varietal}
+        image= {w.image} 
+        winery={w.winery}
+        price= {w.price} 
+        />
+         </Link>
+        </Fragment>
+      ))))}
+      
       </div>
     </div>
   );

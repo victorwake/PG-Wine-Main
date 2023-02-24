@@ -13,7 +13,12 @@ const addWineToFavorites = async (req, res) => {
         return res.status(404).json({ message: 'Usuario o vino no encontrado' });
     }
 
-    await user.addWine(wine);
+    await Favorite.findOrCreate({
+        where: {
+            userId: userId,
+            wineId: wineId,
+        },
+    });
 
     return res.status(200).json({ message: 'Vino agregado a favorites' });
     } catch (error) {
@@ -23,41 +28,61 @@ const addWineToFavorites = async (req, res) => {
 
 const removeWineFromFavorites = async (req, res) => {
     const userId = req.params.userId;
-    const wineId = req.params.wineId;
-    
-    try {
-        const user = await User.findByPk(userId);
-        const wine = await Wine.findByPk(wineId);
+  const wineId = req.params.wineId;
 
-        if (!user||!wine) {
-            return res.status(401).json({ msg: `Usuario o vino no encontrado`, });
-        }
-        await user.removeWine(wine);
+  try {
+    const favorite = await Favorite.findOne({
+      where: {
+        userId: userId,
+        wineId: wineId
+      }
+    });
 
-        return res.status(200).json({ msg: 'Vino eliminado de favoritos' });
-        } catch (err) {
-        return res.status(400).json({ err: err.message });
-        }
+    if (!favorite) {
+      return res.status(404).json({ message: 'Favorito no encontrado' });
+    }
+
+    await favorite.destroy();
+
+    return res.status(200).json({ message: 'Vino eliminado de favoritos' });
+  } catch (error) {
+    return res.status(500).json({ message: 'Error inesperado' });
+  }
 }
 
-const getFavorites = async (req, res) => {
-    const { userId } = req.params;
+const getFavoriteWines = async (req, res) => {
+    
+
+    const userId = req.params.userId;
     try {
         const user = await User.findByPk(userId);
         if (!user) {
             return res.status(401).json({ msg: `El usuario no existe`, });
         }
-        const favorites = await user.getWines();
-        return res.status(200).json(favorites);
+        const favorites = await Favorite.findAll({
+            where: {
+                userId: userId,
+            },
+            include: Wine.id,
+        });
+
+        const respuesta = await Promise.all(favorites.map(async (favorite) => {
+            const wine = await Wine.findByPk(favorite.wineId);
+            return wine;
+        }));
+
+        return res.status(200).json(respuesta);
         } catch (err) {
         return res.status(400).json({ err: err.message });
         }
 }
 
+
+
 module.exports = { 
     addWineToFavorites, 
     removeWineFromFavorites, 
-    getFavorites 
+    getFavoriteWines 
 };
 
 

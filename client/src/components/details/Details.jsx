@@ -45,15 +45,20 @@ export const Details = () => {
       dispatch(addWineToFavorites(idUser, id)).then(() => setIsFavorite(true));
     }
   };
-  
 
   useEffect(() => {
     if (currentUser) {
       dispatch(getWinesFromFavorites(idUser)).then(() => {
-        setIsFavorite(favorites.some((f) => f.user_wine.wineId === id));
+        const wine = favorites.find((wine) => wine.id === id);
+        if (wine) {
+          setIsFavorite(true);
+        }
       });
     }
-  }, [dispatch]);
+  }, [dispatch, currentUser]);
+
+  
+
 
   const wineColorType = wineDetail.color_type;
   let colorType = "";
