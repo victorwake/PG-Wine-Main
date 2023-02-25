@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { removeFromCart, removeAllFromCart } from '../../redux/actions'
-import './cartItem.css'
+import './CartItem.css'
 import { NavBar } from "../navBar/NavBar";
 import { useSelector } from "react-redux";
 
