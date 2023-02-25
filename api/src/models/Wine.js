@@ -73,6 +73,11 @@ module.exports = (sequelize) => {
 
 
         },
+        promotion: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        }
     }, {
         timestamps: false,
     });

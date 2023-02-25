@@ -1,65 +1,38 @@
+import { NavAdmin } from '../navAdmin/NavAdmin'
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { getUsers } from '../../redux/actions'
+import { UserRow } from './userRow'
 
-import {NavAdmin} from '../navAdmin/NavAdmin'
-import { useDispatch, useSelector } from 'react-redux';
-import { Fragment, useEffect } from 'react';
-import { getUsers} from '../../redux/actions';
-import { Link } from 'react-router-dom';
+export const UserList = () => {
+  const dispatch = useDispatch()
+  const usuarios = useSelector(state => state.users)
 
+  useEffect(() => {
+    if (!usuarios.length) dispatch(getUsers())
+  }, [dispatch, usuarios.length])
 
-export const Users = () =>  {
-    const users = useSelector (state => state.users)
-    const dispatch = useDispatch()
-
-
-
-    useEffect(()=>{
-        if(!users.length)dispatch(getUsers())
-    },[]);  
-
-    return(
-        <div>
-        <NavAdmin/>
-            
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">Email</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Rol</th>
-                <th scope="col">Suspender</th>
-                <th scope="col">Detalle</th>
-                </tr>
-            </thead>
-            <tbody>
-                  {users?.map((u=> (
-                    <Fragment key={u.id}>
-                          <tr>
-                            <th scope="row">{u.idUser}</th>
-                            <td>{u.firstName}</td>
-                            <td>{u.lastName}</td>
-                            <td>{u.email} </td>
-                            <td>
-                            <select >
-                                <option value={u.status}>{u.status}</option>
-                                <option value="0,10000">banned</option>
-                                <option value="10000,30000">delete</option>
-                            </select>
-                            </td>
-                            <td>{u.rol}</td>
-                            <td><button><i class="bi bi-slash-square"></i></button></td>
-                            <Link to= {'/admin/user/' + u.idUser}>
-                                <td><button><i class="bi bi-pencil-square"></i></button></td>
-                            </Link>
-                            </tr>
-                    </Fragment>
-                )))}  
-             </tbody>
-      
-        </table>
-
+  return (
+    <div>
+      <NavAdmin />
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Email</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Rol</th>
+            <th scope="col">Aplicar Cambios</th>
+          </tr>
+        </thead>
+        <tbody>
+          {usuarios?.map(u => (
+            <UserRow user={u} />
+          ))}
+        </tbody>
+      </table>
     </div>
-    )
+  )
 }
