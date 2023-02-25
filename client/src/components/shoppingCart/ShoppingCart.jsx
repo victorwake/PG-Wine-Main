@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import axios from "axios";
-import CartItem from "./CartItem";
+import CartItem from "./cartItem";
 import { addToCart, removeFromCart, clearCart, updateCartItem  } from "../../redux/actions";
 import { useState, useEffect, Fragment } from "react";
 import {useDispatch, useSelector} from 'react-redux';
