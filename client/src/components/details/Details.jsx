@@ -170,6 +170,12 @@ export const Details = () => {
             {itemInCart ? "Item en Carrito" : "Agregar al Carrito"}
           </i>
         </button>
+        <button 
+        className="heart" 
+        variant="success"
+        onClick={handleFavorite}>
+          {(!currentUser ? (<i className="bi bi-heart"></i>) : !isFavorite ? (<i className="bi bi-heart"></i>) : (<i className="bi bi-heart-fill"></i>) )}
+        </button>
         <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
           <Modal.Header closeButton>
           </Modal.Header>
@@ -180,12 +186,7 @@ export const Details = () => {
             </Button>
           </Modal.Footer>
       </Modal>
-        <button 
-        className="heart" 
-        variant="success"
-        onClick={handleFavorite}>
-          {(!currentUser ? (<i className="bi bi-heart"></i>) : !isFavorite ? (<i className="bi bi-heart"></i>) : (<i className="bi bi-heart-fill"></i>) )}
-        </button>
+  
       </div>
     </div>
   );

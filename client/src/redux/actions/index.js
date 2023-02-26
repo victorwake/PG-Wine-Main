@@ -238,6 +238,7 @@ export const addWineToFavorites = (idUser, wineId) => {
 };
 export const ADD_WINE_TO_FAVORITES = 'ADD_WINE_TO_FAVORITES';
 
+
 /*----------------------------------------------*/
 
 export const removeWineFromFavorites = (idUser, wineId) => {

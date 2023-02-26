@@ -136,5 +136,14 @@
     transition-duration: 01s;
     color: rgb(255, 255, 255);
 }
-
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .addToCartContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: -230px;
+  }
 /* Modo dark fin */

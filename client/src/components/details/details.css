@@ -172,3 +172,6 @@ td {
     color: rgb(238, 238, 238);
     background-color: #585858;
 }
+.addToCart{
+    z-index: 1000;
+}

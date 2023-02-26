@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { removeFromCart, updateCartItem, removeAllFromCart } from "../../redux/actions";
 
 
-
 export const Cart = () => {
   const clase = useSelector((store) => store.theme);
   const allWines = useSelector(state=> state.wines)
@@ -16,7 +15,7 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const [showEmptyCartModal, setShowEmptyCartModal] = useState(false);
 
-  
+
   //prueba para el control de stock de cart, para no vender mas de la cantidad que hay en stock
   const firstCartItem = cart[0];
   if (firstCartItem) {
@@ -25,6 +24,9 @@ export const Cart = () => {
   }
 
 
+
+
+  
   const handleEmptyCart = () => {
     if (cart.length === 0) {
       setShowEmptyCartModal(true);
@@ -52,8 +54,6 @@ export const Cart = () => {
     setQuantities(prevQuantities => ({ ...prevQuantities, [itemId]: newQuantity }));
     dispatch(updateCartItem(itemId, newQuantity));
   };
-
-
   const handleRemoveAllFromCart = () => {
     dispatch(removeAllFromCart());
   }
@@ -110,7 +110,7 @@ export const Cart = () => {
               </tr>
             </thead>
             <tbody>
-            {cart?.map((item) => (
+                {cart?.map((item) => (
                   <tr key={item.id}>
                     <td><img src={item.image}  className="img-fluid img-thumbnail" alt="Vino" /></td>
                     <td>{item.name}</td>
@@ -145,11 +145,12 @@ export const Cart = () => {
           <Button variant="danger" onClick={handleRemoveAllFromCart}>
             Vaciar carrito
           </Button>
+
           <Link to="/shopingcard">
             <Button 
             variant="success" 
             >
-            Finalizar la compra
+            Ir al Carrito
             </Button>
           </Link>
         </Modal.Footer>
