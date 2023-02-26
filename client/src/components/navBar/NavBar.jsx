@@ -84,7 +84,7 @@ export const NavBar = () => {
         <li class="nav-item">
           { !currentUser? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Login</a>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/perfil"><a id={"font-color-" + clase} class="nav-link active" aria-current="page"><div class="dropdown">
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/user/perfil"><a id={"font-color-" + clase} class="nav-link active" aria-current="page"><div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
   Bienvenido/a, {currentUser.usuario.firstName}
   </button>

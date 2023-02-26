@@ -239,12 +239,6 @@ export const addWineToFavorites = (idUser, wineId) => {
 export const ADD_WINE_TO_FAVORITES = 'ADD_WINE_TO_FAVORITES';
 
 
-export const updateProfile = (updatedProfile) => {
-  return {
-    type: UPDATE_PROFILE,
-    payload: updatedProfile,
-  };
-};
 /*----------------------------------------------*/
 
 export const removeWineFromFavorites = (idUser, wineId) => {

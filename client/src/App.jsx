@@ -45,7 +45,7 @@ function App() {
                 </Route>   
                 <Route path="/registrar" element={<Register />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/perfil" element={<Profile />} />
+                <Route path="/user/perfil" element={<Profile />} />
                 <Route path="/shopingcard" element={<ShoppingCart />} />
                 <Route path="/terminos" element={<TermsAndConditions />} />
             </Routes>
