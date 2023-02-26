@@ -12,12 +12,16 @@ import { getWines } from '../../redux/actions';
 import { Card }from '../card/Card'
 import _ from 'lodash';
 import { Footer } from "../footer/Footer";
+import { setAmmountCart, setItemsCart }  from "../../redux/actions";
 
 
 export const ShoppingCart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((store) => store.cart);
   const clase= useSelector(store => store.theme);
+
+  const totalCar = useSelector ((state) => state.ammountCar)
+  const totalItems = useSelector ((state) => state.cartItems)
 
   const [shippingCost, setShippingCost] = useState(0);
 
@@ -40,6 +44,8 @@ export const ShoppingCart = () => {
     return total;
   };
 
+  const totalAmmount = calculateTotal();
+
   // Función para calcular el costo de envío
   const calculateShippingCost = () => {
     if (calculateTotal() < 15000) {
@@ -61,6 +67,8 @@ export const ShoppingCart = () => {
   const itemsJSON = JSON.stringify(cartItems);
 
   const handleClick = (cartItems) => {
+    localStorage.setItem('AmmountCart', JSON.stringify(totalCar));
+    localStorage.setItem('ItemsCart', JSON.stringify(totalItems));
     try{
       axios.post('http://localhost:3001/procesarmp', itemsJSON, {
         headers: {
@@ -85,6 +93,13 @@ export const ShoppingCart = () => {
   useEffect(() => {
     calculateShippingCost();
   }, [cart]);
+
+
+
+  useEffect ( () => {
+    dispatch(setAmmountCart(totalAmmount))
+    dispatch( setItemsCart (cart))
+  },[dispatch, totalAmmount])
 
 
 return (
