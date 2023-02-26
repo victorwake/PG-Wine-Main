@@ -34,7 +34,7 @@ const sendMail = async(buyerName,
            <div>Haz comprado exitosamente en Dionisio Wines</div>
            <div>Estos son tus datos de tu compra:</div>
            <div><ul>
-           <li>Id de pago en mercado pago $${payment_id}</li>
+           <li>Id de pago en mercado pago ${payment_id}</li>
            <li>El monto total de tu compra fue $${ammount}</li>
            <li>Datos de envio: ${shipping_address}</li>
            <li>Email: ${order_email}</li>
