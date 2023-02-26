@@ -8,7 +8,7 @@ import { getWines } from '../../redux/actions';
 import { Card }from '../card/Card'
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
-import { Footer } from '../footer/Footer';
+import {Footer} from '../footer/Footer'
 
 export const Home = () => {
 
@@ -55,7 +55,7 @@ export const Home = () => {
                         </Fragment>
                 )))}  
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
