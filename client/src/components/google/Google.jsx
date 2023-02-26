@@ -48,7 +48,7 @@ if (usuario) {
     })
         promise.then(() => {     
         window.location.reload();   
-        navigate("/user/perfil");
+        navigate("/perfil");
        
     
     }).catch(console.warn);

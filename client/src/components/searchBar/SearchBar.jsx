@@ -1,52 +1,81 @@
 import './searchBar.css';
-import React, {useState, useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {getWinesByName} from '../../redux/actions';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getWinesByName, getWines } from '../../redux/actions';
 
-
-export const SearchBar = () =>  {
+export const SearchBar = () => {
   const dispatch = useDispatch();
   const [input, setInput] = useState('');
+  const [image, setImage] = useState('');
+  const [price, setPrice] = useState('');
+  const [searchBy, setSearchBy] = useState('name'); // nombre de vino por defecto
+  const wines = useSelector(state => state.wines);
 
+  useEffect(() => {
+    if (wines.length > 0) {
+      setImage(wines[0].image);
+      setPrice(wines[0].price);
+    } else {
+      setImage('');
+      setPrice('');
+    }
+  }, [wines]);
 
   function handleInputChange(e) {
-    e.preventDefault();
     setInput(e.target.value);
-    // console.log(name)
   }
- 
-  function handleSumit(e) {
-    e.preventDefault();
-    setInput('');
-    if(input){
-      dispatch(getWinesByName(input))
-    }else{
-      setInput('')
-      alert('Debe ingresar un nombre de vino o bodega')
-    }    
-  }
-   
-  // useEffect(() => {
-  //   dispatch(getWinesByName(input));
-  // }, [dispatch]);
 
-    return (
-    <div>
-      {/* <label for="exampleDataList" class="form-label">Datalist example</label> */}
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..."/>
-<datalist id="datalistOptions">
-  <option value="San Francisco"/>
-  <option value="New York"/>
-  <option value="Seattle"/>
-  <option value="Los Angeles"/>
-  <option value="Chicago"/>
-</datalist>
-       {/* <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" onChange={(e) => handleInputChange(e)}/>
-        <button class="btn btn-outline-success " type="submit" onClick={(e) => handleSumit(e)}><i class="bi bi-search"></i></button>
-      </form> */}
+  function handleSearchByChange(e) {
+    setSearchBy(e.target.value);
+  }
+
+  function handleSearchSubmit(e) {
+    e.preventDefault();
+    if (input) {
+      dispatch(getWinesByName(input, searchBy));
+    } else {
+      alert('Debe ingresar un nombre de vino o bodega');
+    }
+  }
+
+  function handleFilterClear() {
+    setInput('');
+    setSearchBy('name');
+    dispatch(getWines());
+  }
+
+  return (
+    <div className="align-items-center">
+      {/* {image && <img src={image} alt="Vino" width="50" height="50" className="me-2" />} */}
+      {/* {price && <p className="me-2">${price}</p>} */}
+      <form className="d-flex" role="search" onSubmit={handleSearchSubmit}>
+        <input
+          className="form-control"
+          type="search"
+          placeholder="Buscar"
+          aria-label="Buscar"
+          value={input}
+          onChange={handleInputChange}
+          list="datalistOptions"
+        />
+        <select className="form-select" value={searchBy} onChange={handleSearchByChange}>
+          <option value="name">Nombre de vino</option>
+          <option value="winery">Bodega</option>
+        </select>
+        <button className="btn-outline-success" type="submit">
+          <i className="bi bi-search"></i>
+        </button>
+        <button className="btn btn-secondary" type="button" onClick={handleFilterClear}>
+          Limpiar filtro
+        </button>
+        <datalist id="datalistOptions">
+          {wines.map((w) => (
+            <option key={w.id} value={w[searchBy]}>
+              {w[searchBy]}
+            </option>
+          ))}
+        </datalist>
+      </form>
     </div>
   );
-
-  
 };

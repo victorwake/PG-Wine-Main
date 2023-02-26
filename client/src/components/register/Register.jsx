@@ -115,7 +115,7 @@ const Register = () => {
   };
 
    if (isLoggedIn) {
-    return <Navigate to="/user/perfil" />;
+    return <Navigate to="/perfil" />;
   }
  
   return (
