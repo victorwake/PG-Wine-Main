@@ -1,6 +1,6 @@
 import './mercadoPagoSucess.css';
 import React, {useEffect} from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { NavBar } from "../navBar/NavBar";
 import { procesarPagoExitoso } from "../../redux/actions";
@@ -17,6 +17,7 @@ export const MercadoPagoSucess = () => {
   const paymentId = searchParams.get("payment_id");
   const status = searchParams.get("status");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   
 
   useEffect( () =>{ 
@@ -28,9 +29,10 @@ export const MercadoPagoSucess = () => {
     shipping_address: currentUser.usuario.street,
     order_email: currentUser.usuario.email,
     order_status:status
-    }))
+    }));
+    navigate("/perfil")
 
-  }, [dispatch])
+  }, [dispatch, navigate])
 
 
     return (
@@ -51,9 +53,6 @@ export const MercadoPagoSucess = () => {
             <h3>
                Monto total de la compra: <strong>$ </strong>{pagoExitoso.ammount}.
             </h3>
-               <h3>
-               Ver órdenes
-               </h3>
           </header>
         </div>
       </div>

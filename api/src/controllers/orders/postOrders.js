@@ -1,4 +1,5 @@
 const { Order, User } = require("../../db.js");
+const { sendMail } = require('../../helpers/compra-sucess-mail');
 
 const postOrder = async (req, res) => {
   const {
@@ -13,11 +14,12 @@ const postOrder = async (req, res) => {
 
   try {
     const buyer = await User.findOne({ where: {idUser: idUser}})
-    console.log(buyer)
+    const buyerName = buyer.firstName;
+    const payId = await Order.findOne({ where: {payment_id: payment_id}})
 
-  if (!buyer) {
-    res.status(401).json({ msg: 'Usuario no registrado en la base de datos'})
-  }
+  if (!buyer || payId) {
+    res.status(401).json({ msg: 'Existe un problema con la solicitud'})
+  } 
 
   const order = await Order.create({
     payment_id: payment_id,
@@ -31,8 +33,14 @@ const postOrder = async (req, res) => {
   await order.save();
   await buyer.addOrder(order)
   res.status(200).json(order);
+  
+  await sendMail(buyerName,
+    payment_id,
+    ammount,
+    shipping_address,
+    items,
+    order_email);
 
-    
   } catch (error) {
     console.log(error);
     
