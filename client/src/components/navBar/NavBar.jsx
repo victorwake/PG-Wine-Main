@@ -89,14 +89,14 @@ export const NavBar = () => {
   Bienvenido/a, {currentUser.usuario.firstName}
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/user/perfil"><i class="bi bi-person-circle"></i> Mi Perfil</a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-bag"></i> Mis Compras</a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-heart"></i> Mis Favoritos</a></li>
-    <li class="nav-item">
+  <li><Link className="dropdown-item" to="/user/perfil"><i className="bi bi-person-circle"></i> Mi Perfil</Link></li>
+  <li><Link className="dropdown-item" to="/user/orders"><i class="bi bi-bag"></i> Mis Compras</Link></li>
+  <li><Link className="dropdown-item" to="/user/favoritos"><i class="bi bi-heart"></i> Mis Favoritos</Link></li>
+  <li class="nav-item">
         { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>
           </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={logOut}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
-        </li>
+    </li>
   </ul>
 </div></a>         </Link>}          
         </li>
