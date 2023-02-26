@@ -76,7 +76,9 @@ export const Cart = () => {
     <div className={"cart-container-" + clase}>
       <div>
         <Button variant="success" onClick={cart.length ? handleShow : handleEmptyCart} >
-        <i class="bi bi-cart3"></i>
+        <i class="bi bi-cart3">
+        <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">{cart.length > 0 && cart.length}</span>
+        </i>
         </Button>
       </div>
 
