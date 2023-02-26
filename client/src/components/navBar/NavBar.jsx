@@ -84,8 +84,24 @@ export const NavBar = () => {
         <li class="nav-item">
           { !currentUser? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Login</a>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/perfil"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Bienvenido, {currentUser.usuario.firstName}</a></Link>}          
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/perfil"><a id={"font-color-" + clase} class="nav-link active" aria-current="page"><div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Bienvenido/a, {currentUser.usuario.firstName}
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/user/perfil"><i class="bi bi-person-circle"></i> Mi Perfil</a></li>
+    <li><a class="dropdown-item" href="#"><i class="bi bi-bag"></i> Mis Compras</a></li>
+    <li><a class="dropdown-item" href="#"><i class="bi bi-heart"></i> Mis Favoritos</a></li>
+    <li class="nav-item">
+        { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={logOut}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
         </li>
+  </ul>
+</div></a>         </Link>}          
+        </li>
+
+
         
         {showAdminBoard && (
         <li class="nav-item">
@@ -93,11 +109,7 @@ export const NavBar = () => {
           </Link> <Link style={{ textDecoration: 'none' }} to="/admin"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Administrar</a></Link>
         </li>)}
 
-        <li class="nav-item">
-        { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={logOut}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
-        </li>
+   
       </ul>
       <Cart />
       
