@@ -26,7 +26,10 @@ import {
   REMOVE_FROM_CART,
   REMOVE_ALL_FROM_CART,
   PROCESAR_PAGO_EXITOSO,
-  PROCESAR_PAGO_ERROR
+  PROCESAR_PAGO_ERROR,
+  SET_CART_AMMOUNT,
+  SET_CART_ITEMS,
+  REMOVE_ALL_FROM_TRANSACTION
 
 
   // ADD_TO_CART,
@@ -69,7 +72,8 @@ const initialState = {
   cartItems: [],
   isAddingToCart: false,
   isRemovingFromCart: false,
-  transactionResult: [] 
+  ammountCar:0,
+  transactionResult: {}
 };
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -276,19 +280,31 @@ const rootReducer = (state = initialState, action) => {
                 cart: []}
             )
             case PROCESAR_PAGO_EXITOSO:
-              return {
+              return ({
                 ...state,
-                cartItems: [],
-                transactionResult:action.payload
-
-              }
+                transactionResult:action.payload,
+                cart: []
+              })
+              case SET_CART_AMMOUNT:
+                return ({
+                  ...state,
+                  ammountCar: action.payload
+                })
+                case SET_CART_ITEMS:
+                  return ({
+                    ...state,
+                    cartItems: action.payload
+                  })
               case PROCESAR_PAGO_ERROR:
               return {
                 ...state,
                 transactionResult:action.payload,
-
-
               }
+              case REMOVE_ALL_FROM_TRANSACTION:
+                return {
+                  ...state,
+                  transactionResult: {}
+                }
     default:
       return state;
   }

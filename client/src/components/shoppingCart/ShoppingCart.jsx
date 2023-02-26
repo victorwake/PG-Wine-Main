@@ -1,12 +1,13 @@
 import "./shoppingCart.css";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import CartItem from "./CartItem";
 import CartTotal from "./CartTotal";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import { removeAllTransaction } from "../../redux/actions";
 
 export const ShoppingCart = () => {
   const cart = useSelector((store) => store.cart);
@@ -14,6 +15,9 @@ export const ShoppingCart = () => {
   const [mpResponse, setMpResponse] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const currentUser  = useSelector((state) => state.usuario);
+  const totalCar = useSelector ((state) => state.ammountCar)
+  const totalItems = useSelector ((state) => state.cartItems)
+  const dispatch = useDispatch();
 
   const cartItems = cart.map(item => ({
     id: item.id,
@@ -25,6 +29,8 @@ export const ShoppingCart = () => {
   const itemsJSON = JSON.stringify(cartItems);
 
   const enviarDatos = (cartItems) => {
+    localStorage.setItem('AmmountCart', JSON.stringify(totalCar));
+    localStorage.setItem('ItemsCart', JSON.stringify(totalItems));
     setIsLoading(true);
     axios.post('http://localhost:3001/procesarmp', itemsJSON, {
       headers: {
@@ -53,6 +59,10 @@ export const ShoppingCart = () => {
       JSON.parse(localStorage.getItem("quantities")) || {};
     setQuantities(quantitiesFromLocalStorage);
   }, []);
+
+  useEffect ( () => {
+    dispatch(removeAllTransaction())
+  }, [removeAllTransaction])
 
 
 
