@@ -7,6 +7,7 @@ import { Details } from './components/details/Details';
 import { Create } from './components/create/Create';
 import  Register from './components/register/Register';
 import Profile from './components/profile/Profile';
+import Orders from './components/profile/Orders'
 import  Login  from './components/login/Login';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Admin } from './components/admin/Admin';
@@ -48,6 +49,7 @@ function App() {
                 <Route path="/registrar" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/user/perfil" element={<Profile />} />
+                <Route path="/user/orders" element={<Orders />} />
                 <Route path="/shoppingcart" element={<ShoppingCart />} />
                 <Route path="/procesarmp" element={<MercadoPago />} />
                 
