@@ -30,7 +30,7 @@ export const MercadoPagoSucess = () => {
     order_email: currentUser.usuario.email,
     order_status:status
     }));
-    navigate("/perfil")
+    navigate("/user/perfil")
 
   }, [dispatch, navigate])
 
