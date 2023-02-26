@@ -1,8 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import './termsandconditions.css'
 function TermsAndConditions() {
   return (
     <div className='terminos-container'>
+        <Link to="/home">
+            <Button stylr='background:transparent'
+            variant="success" 
+            >
+            Volver al inicio
+            </Button>
+          </Link>
     <h1>Términos y Condiciones</h1>
     <p>En Dionisio Wines nos tomamos muy en serio la privacidad y seguridad de nuestros usuarios. Por favor, lea detenidamente los siguientes términos y condiciones antes de utilizar nuestros servicios:</p>
     <ol>
