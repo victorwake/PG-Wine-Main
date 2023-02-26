@@ -20,6 +20,8 @@ const removeStock = require('../routes/stockRouter')
 const addStock = require('../routes/stockRouter')
 const postOrders = require('../routes/orders/postOrderRouter')
 const getOrderByUser = require('../routes/orders/getOrdersByUser')
+const postOrders = require('../routes/orders/postOrderRouter')
+const getOrderByUser = require('../routes/orders/getOrdersByUser')
 
 const { validarJWT } = require('../../src/middlewares/validarJWT');
 

@@ -17,8 +17,10 @@ import  RegisterAdmin  from './components/registerAdmin/RegisterAdmin'
 import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes';
 import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
-import TermsAndConditions from './components/home/TermsAndConditions';
-import { MercadoPagoSucess } from './components/MercadoPagoSucess/MercadoPagoSucess';
+import { MercadoPago } from "./components/MercadoPago/MercadoPago"
+import { UserList } from './components/UserList/userList'
+import { OrderList } from './components/OrderList/OrderList.jsx'
+
 
 function App() {
     const currentUser  = useSelector((state) => state.usuario);
@@ -44,13 +46,18 @@ function App() {
                 <Route path="/admin/editWines" element={<EditList/>}/>
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/admin/createadmin" element={<RegisterAdmin />} />
+                <Route path="/admin/usuarios" element={<UserList />} />
+                <Route path="/admin/ordenes" element={<OrderList />} />
+
+                /admin/createadmin
                 </Route>   
                 <Route path="/registrar" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/user/perfil" element={<Profile />} />
-                <Route path="/shopingcard" element={<ShoppingCart />} />
-                <Route path="/pagoexitoso" element={<MercadoPagoSucess />} />
-                <Route path="/terminos" element={<TermsAndConditions />} />
+                <Route path="/user/ordenes" element={<Orders />} />
+                <Route path="/shoppingcart" element={<ShoppingCart />} />
+                <Route path="/procesarmp" element={<MercadoPago />} />
+                
             </Routes>
         </div>
     );

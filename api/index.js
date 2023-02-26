@@ -21,8 +21,8 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 // const { insertVarietal } = require('./src/createDb/varietalCreate.js');
 // const { insertWine } = require('./src/createDb/wineCreate.js');
-// const { insertRoles } = require('./src/createDb/rolesCreate.js')
-
+// const { insertRoles } = require('./src/createDb/rolesCreate.js');
+// const { insertExp } = require('./src/createDb/experienciasCreate.js');
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
     server.listen(3001, () => {

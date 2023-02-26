@@ -1,17 +1,16 @@
-import './editList.css';
-import {NavAdmin} from '../navAdmin/NavAdmin'
-import { useDispatch, useSelector } from 'react-redux';
-import { Fragment, useEffect } from 'react';
-import { getWines } from '../../redux/actions';
-import { Link } from 'react-router-dom';
-import { nameASC } from '../../helpers/sort.js';
+import './editList.css'
+import { NavAdmin } from '../navAdmin/NavAdmin'
+import { useDispatch, useSelector } from 'react-redux'
+import { Fragment, useEffect } from 'react'
+import { getWines } from '../../redux/actions'
+import { Link } from 'react-router-dom'
+import { nameASC } from '../../helpers/sort.js'
+
+export const EditList = () => {
+  const products = useSelector(state => state.wines)
+  const dispatch = useDispatch()
 
 
-export const EditList = () =>  {
-    const products = useSelector (state => state.wines)
-    const dispatch = useDispatch()
-
-    const sortedProducts = [...products].sort(nameASC);
 
     useEffect(()=>{
         if(!products.length)dispatch(getWines())
@@ -58,5 +57,5 @@ export const EditList = () =>  {
         </table>
 
     </div>
-    )
+  )
 }
