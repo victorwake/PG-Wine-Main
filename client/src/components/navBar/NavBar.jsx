@@ -84,7 +84,18 @@ export const NavBar = () => {
         <li class="nav-item">
           { !currentUser? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Login</a>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/perfil"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Bienvenido, {currentUser.usuario.firstName}</a></Link>}          
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/user/perfil"><a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Bienvenido/a, {currentUser.usuario.firstName}</a><div class="collapse" id="collapseExample">
+        <div class="card card-body">
+        <Link to= "/user/perfil">Mi Perfil</Link>
+        <Link to= "/user/compras">Mis Compras</Link>
+        <Link to= "/user/favoritos">Mis Favoritos</Link>
+        <li class="nav-item">
+        { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
+          <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>
+          </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={logOut}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
+        </li>
+        </div>
+        </div></Link>}          
         </li>
         
         {showAdminBoard && (
@@ -93,11 +104,7 @@ export const NavBar = () => {
           </Link> <Link style={{ textDecoration: 'none' }} to="/admin"><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Administrar</a></Link>
         </li>)}
 
-        <li class="nav-item">
-        { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Registrar</a>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/home" onClick={logOut}><a id={"font-color-" + clase} class="nav-link active" aria-current="page">Cerrar sesion</a></Link>}
-        </li>
+       
       </ul>
       <Cart />
       

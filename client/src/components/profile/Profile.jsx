@@ -22,6 +22,19 @@ const Profile = () => {
   return (
     <div className={"contenedor-profile-" + clase}>
       <NavBar />
+
+  <div className="listProfile">
+  <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Hola, {currentUser.usuario.firstName}
+  </a>
+  <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-person-circle"></i> Mi Perfil</a>
+  <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-bag-heart"></i> Mis Compras</a>
+  <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-heart"></i> Mis favoritos</a>
+</div>
+</div>
+
+
       <div className={"box-profile-" + clase}>
         <header className="jumbotron">
           <h1> Datos de tu cuenta</h1>
@@ -29,6 +42,10 @@ const Profile = () => {
             Perfil de <strong>{currentUser.usuario.firstName}</strong>
           </h3>
         </header>
+
+
+
+
         {currentUser.usuario.profilePic !== null ?
       <div>
       <img id="img-perfil" src={currentUser.usuario.profilePic} alt="profile"></img>
@@ -53,7 +70,7 @@ const Profile = () => {
           <div> {currentUser.usuario.rol}</div>
           </div>
           }
-      
+
       </div>
       <p><a href="/login" className="nav-link" onClick={logOut}>
                 Cerrar sesión

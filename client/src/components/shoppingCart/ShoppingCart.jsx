@@ -124,6 +124,30 @@ return (
             </tr>
             ))}
           </tbody>
+
+  <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+      Dedicatoria para regalos
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div> 
+            <p>Incluí una dedicatoria y tu nombre. Vamos a colocarla dentro de la caja</p>
+        </div>
+        <strong>
+          <textarea style={{borderRadius: 'solid, black'}}></textarea>
+        </strong>
+        <div >
+        <button type="button" style={{color: 'white', background:'rgb(86, 84, 84)'}}>Guardar</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </table>
 
       <table className="shipping-column">
@@ -140,13 +164,16 @@ return (
                   <td>Costo de envío:</td>
                   <td>${shippingCost.toFixed(2)}</td>
                 </tr>
-                <tr>
+                <tr style={{ fontWeight:'bold'}}>
                   <td>Total:</td>
-                  <td>${(calculateTotal() + shippingCost).toFixed(2)}</td>
+                  <td >${(calculateTotal() + shippingCost).toFixed(2)}</td>
                 </tr>
+
+
                 <button
             variant="success" 
             onClick={handleClick}
+            style={{ color: 'green'}}
             >
             Finalizar compra
             </button> 
@@ -162,33 +189,16 @@ return (
       
       <div>
       <div>
-      <i class="bi bi-cash" style={{fontSize: '3em', transform: 'scale(2)'}}></i>
-      </div>
-  
-
-
-      <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" >
-        Las mejores formas de pago
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <div>
-        <strong>
-          <img src='https://ucarecdn.com/148d3226-8dcd-46f3-b736-03f54ea5fa97/-/format/auto/-/preview/3000x3000/-/quality/lighter/20.png'width="90" height="90"/>Mercado Pago 
+        {/* <i class="bi bi-credit-card" style={{ fontSize: '2.7em', transform: 'scale(2)'}} ></i> */}
+      <div>
+      <b style={{fontSize: '1.1em'}}>Paga online con </b>
+      <div>
+          <strong>
+            <img src='https://ucarecdn.com/148d3226-8dcd-46f3-b736-03f54ea5fa97/-/format/auto/-/preview/3000x3000/-/quality/lighter/20.png'width="90" height="90"/>
           </strong> 
           </div>
-          <strong>
-          <img src='https://ucarecdn.com/25309bd4-2308-4028-8e72-c5c0b8029d31/-/format/auto/-/preview/3000x3000/-/quality/lighter/22.png'width="80" height="80"/>Transferencia Bancaria
-          </strong> 
       </div>
-    </div>
-  </div>
-  </div>
-
+      </div>
       </div>
    
       <div style={{  alignItems: 'center' }}>
@@ -212,16 +222,14 @@ return (
       </div>
 
   </div>
-
       <h3 className={"saleshopp-type-h2-" + clase}>Promociones imperdibles</h3>
      <div className={"homeshopp-container-" + clase}>
             <div  className={"cardshopp-container-home-" + clase} >
                 {discountedWines?.map((w => (
                   <Fragment key={w.id}>
                             <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit'}}>
-
                               <div>
-                                <span className="etiquetaProduct">10% DESC</span>
+                                <span className="etiquetaProduct" style={ {fontWeight: 'bold', color:"whitesmoke" }}>10% DESC</span>
                                 <div>
                                 <div style={{ color: 'inherit', textDecoration: 'inherit'}}>
                                 <del>${w.price}</del>
