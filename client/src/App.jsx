@@ -17,6 +17,8 @@ import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes';
 import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
 import TermsAndConditions from './components/home/TermsAndConditions';
+import { MercadoPagoSucess } from './components/MercadoPagoSucess/MercadoPagoSucess';
+
 function App() {
     const currentUser  = useSelector((state) => state.usuario);
     const [showAdminBoard, setShowAdminBoard] = useState(true);
@@ -41,13 +43,11 @@ function App() {
                 <Route path="/admin/editWines" element={<EditList/>}/>
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/admin/createadmin" element={<RegisterAdmin />} />
-                /admin/createadmin
                 </Route>   
                 <Route path="/registrar" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/user/perfil" element={<Profile />} />
                 <Route path="/shopingcard" element={<ShoppingCart />} />
-                <Route path="/terminos" element={<TermsAndConditions />} />
             </Routes>
         </div>
     );

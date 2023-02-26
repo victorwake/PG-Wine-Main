@@ -12,6 +12,12 @@
     background-color: rgb(224, 224, 224) !important;
 }
 
+.navbar-expand-lg{
+    margin-top: -80px !important;
+    background-color: rgb(224, 224, 224) !important;
+
+}
+
 #h1-navbar-light {
     font-size: 1.5rem;
     padding-right: 10px;
