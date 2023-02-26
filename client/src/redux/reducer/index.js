@@ -25,19 +25,20 @@ import {
   UPDATE_CART_ITEM,
   REMOVE_FROM_CART,
   REMOVE_ALL_FROM_CART,
-  PROCESAR_PAGO_EXITOSO,
-  PROCESAR_PAGO_ERROR,
-  SET_CART_AMMOUNT,
-  SET_CART_ITEMS,
-  REMOVE_ALL_FROM_TRANSACTION
-
+  POST_EXP,
+  GET_EXP,
+  UPDATE_EXP,
+  GET_EXP_TYPE,
+  GET_USERS,
+  UPDATE_USER,
+  GET_ORDER_USERS,
 
   // ADD_TO_CART,
   // REMOVE_ONE_CART,
   // CLEAR_CART,
 } from '../actions/index.js'
 
-/*--------AUTH---------*/
+
 
 import {
   REGISTER_SUCCESS,
@@ -48,7 +49,7 @@ import {
   LOGGIN_SUCCESS_G,
 } from '../actions/type.js'
 
-/*--------MESSAGE---*/
+
 import { SET_MESSAGE, CLEAR_MESSAGE } from '../actions/type.js'
 
 const initialState = {
@@ -72,9 +73,11 @@ const initialState = {
   cartItems: [],
   isAddingToCart: false,
   isRemovingFromCart: false,
-  ammountCar:0,
-  transactionResult: {}
-};
+  experiences: [],
+  expType: '',
+  users: [],
+  orders: []
+}
 
 const usuario = JSON.parse(localStorage.getItem('usuario'))
 
@@ -138,7 +141,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         currentPage: action.payload,
       }
-    ///////////////////////////////
+ 
     case CLEAN_ALL_FILTERS:
       return {
         ...state,
@@ -252,71 +255,71 @@ const rootReducer = (state = initialState, action) => {
     case 'ADD_TO_CART':
       return {
         ...state,
-          cart: [
-            ...state.cart,
-              {
-                id: action.payload.id,
-                name:action.payload.name,
-                varietal: action.payload.varietal,
-                price: action.payload.price,
-                image: action.payload.image,
-                quantity: action.payload.quantity || 1
-              }
-          ]
-      };
-      case UPDATE_CART_ITEM:
+        cart: [
+          ...state.cart,
+          {
+            id: action.payload.id,
+            name: action.payload.name,
+            varietal: action.payload.varietal,
+            price: action.payload.price,
+            image: action.payload.image,
+            quantity: action.payload.quantity || 1,
+            // quantity: action.payload.quantity,
+          },
+        ],
+      }
+    case 'UPDATE_CART_ITEM':
+      return {
+        ...state,
+        cart: state.cart.map(item => {
+          if (item.id === action.payload.id) {
+            return {
+              ...item,
+              quantity: action.payload.quantity,
+              totalPrice: action.payload.totalPrice,
+            }
+          }
+          return item
+        }),
+      }
+    case REMOVE_FROM_CART:
+      return {
+        ...state,
+        cart: state.cart.filter(product => product.id !== action.payload),
+      }
+    case REMOVE_ALL_FROM_CART:
+      return {
+        ...state,
+        cart: [],
+      }
+
+ 
+    case GET_EXP:
+      return {
+        ...state,
+        experiences: action.payload,
+      }
+    case POST_EXP:
+      return {
+        ...state,
+      }
+    case UPDATE_EXP:
+      return {
+        ...state,
+      }
+    case GET_EXP_TYPE:
+      return {
+        ...state,
+        expType: action.payload,
+      }
+      case GET_ORDER_USERS:
         return {
           ...state,
-          cart: state.cart.map(item => {
-            if (item.id === action.payload.id) {
-              return {
-                ...item,
-                quantity: action.payload.name,
-                totalPrice: action.payload.totalPrice
-              };
-            }
-            return item;
-          })
-        };  
-        case REMOVE_FROM_CART:
-          return ({
-              ...state,
-              cart: state.cart.filter((product) => product.id !== action.payload)}
-          )  
-          case REMOVE_ALL_FROM_CART:
-            return ({
-                ...state,
-                cart: []}
-            )
-            case PROCESAR_PAGO_EXITOSO:
-              return ({
-                ...state,
-                transactionResult:action.payload,
-                cart: []
-              })
-              case SET_CART_AMMOUNT:
-                return ({
-                  ...state,
-                  ammountCar: action.payload
-                })
-                case SET_CART_ITEMS:
-                  return ({
-                    ...state,
-                    cartItems: action.payload
-                  })
-              case PROCESAR_PAGO_ERROR:
-              return {
-                ...state,
-                transactionResult:action.payload,
-              }
-              case REMOVE_ALL_FROM_TRANSACTION:
-                return {
-                  ...state,
-                  transactionResult: {}
-                }
+          orders: action.payload,
+        }
     default:
       return state
   }
 }
 
-export default rootReducer;
+export default rootReducer
