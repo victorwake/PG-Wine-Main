@@ -48,6 +48,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/user/perfil" element={<Profile />} />
                 <Route path="/shopingcard" element={<ShoppingCart />} />
+                <Route path="/terminos" element={<TermsAndConditions />} />
             </Routes>
         </div>
     );
