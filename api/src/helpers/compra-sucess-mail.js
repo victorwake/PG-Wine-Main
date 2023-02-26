@@ -36,7 +36,6 @@ const sendMail = async(buyerName,
            <div><ul>
            <li>Id de pago en mercado pago $${payment_id}</li>
            <li>El monto total de tu compra fue $${ammount}</li>
-           <li>Tu vinos: ${items}</li>
            <li>Datos de envio: ${shipping_address}</li>
            <li>Email: ${order_email}</li>
            </ul></div>
