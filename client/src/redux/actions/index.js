@@ -95,6 +95,24 @@ export const getUsers = () => {
 export const GET_USERS = 'GET_USERS'
 /*----------------------------------------------*/
 
+export const getOrders = (idUser) => {
+    return async dispatch =>{
+        try { 
+            const response = await axios.get(`http://localhost:3001/orders/orderbyuser/?buyer=${idUser}`)
+            dispatch({
+                type: GET_ORDER_USERS,
+                payload: response.data,
+              })
+            } catch (error) {
+              console.log(error)
+            }
+          }
+        }
+  
+  export const GET_ORDER_USERS = 'GET_ORDER_USERS'
+
+  /*----------------------------------------------*/
+
 export const cleanWineDetail = payload => {
   return dispatch => {
     dispatch({ type: CLEAN_DETAIL, payload })
@@ -420,10 +438,3 @@ export const GET_EXP_TYPE = 'GET_EXP_TYPE'
 
 /*----------------------------------------------*/
 
-export const getOrders = id => {
-    return dispatch =>
-      axios(`http://localhost:3001/orders/orderbyuser/${id}`)
-        .then(res => dispatch({ type: GET_ORDER_USERS, payload: res.data }))
-        .catch(err => console.log(err))
-  }
-  export const GET_ORDER_USERS = 'GET_ORDER_USERS'

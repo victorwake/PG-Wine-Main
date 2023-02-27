@@ -27,11 +27,16 @@ export const OrderList = () => {
             <th scope="col">Aplicar Cambios</th>
           </tr>
         </thead>
-        {/* <tbody>
-          {orders?.map(u => (
-            <UserRow user={u} />
-          ))}
-        </tbody> */}
+        <tbody>
+          {orders.map((order) => (
+          <li key={order.id}>
+            <p>ID de orden: {order.id}</p>
+            <p>Usuario: {order.idUser}</p>
+            <p>Producto: {order.producto}</p>
+            <p>Cantidad: {order.cantidad}</p>
+            <p>Total: {order.total}</p>
+          </li>))}
+        </tbody>
       </table>
     </div>
   )

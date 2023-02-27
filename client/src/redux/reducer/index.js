@@ -116,6 +116,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         users: action.payload,
       }
+      case GET_ORDER_USERS:
+        return {
+          ...state,
+          orders: action.payload,
+        }
     case GET_WINE_TYPE:
       return {
         ...state,
@@ -312,11 +317,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         expType: action.payload,
       }
-      case GET_ORDER_USERS:
-        return {
-          ...state,
-          orders: action.payload,
-        }
+
     default:
       return state
   }
