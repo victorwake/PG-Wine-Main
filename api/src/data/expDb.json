@@ -12,12 +12,12 @@
     },
     {
         "name": "Visita guiada al museo y degustación de vinos Colomé",
-        "price": 6.000,
+        "price": 6000,
      "ubication":"https://www.google.com/maps/d/viewer?mid=1dnaxXxarsYS2NLKt6YzV7wDEo30&hl=es&ll=-25.505048406983946%2C-66.38541579668609&z=15",
         "kindOfExp":"degustación",
         "eventDate":"dd/mm/aaaa",
         "duration":"2 horas",
-        "image": "https://www.bodegacolome.com/wp-content/uploads/2020/03/bodega_about_final.jpg",
+        "image": ["https://www.bodegacolome.com/wp-content/uploads/2020/03/bodega_about_final.jpg"],
         "url": "https://www.bodegacolome.com/turismo/",
         "description": "Escondida en un rincón de los Valles Calchaquíes, Estancia Colomé es uno de los lugares más increíbles de Argentina y alberga la bodega más antigua del país en funcionamiento. El programa incluye: Copa de bienvenida,  cata de tres vinos más representativos de la bodega (Colomé Estate Torrontés, Colomé Estate Malbec, Colomé Autentico Malbec) y visita guiada al museo James Turrel."
 },
@@ -25,12 +25,12 @@
 
 {
         "name": "Experiencia Colomé",
-        "price": 20.600,
+        "price": 20600,
         "ubication":"https://www.google.com/maps/d/viewer?mid=1dnaxXxarsYS2NLKt6YzV7wDEo30&hl=es&ll=-25.505048406983946%2C-66.38541579668609&z=15",
         "kindOfExp":"almuerzo",
         "eventDate":"dd/mm/aaaa",
         "duration":"4 horas",
-        "image": "https://www.bodegacolome.com/wp-content/uploads/2020/06/tourism_experience.jpg",
+        "image": ["https://www.bodegacolome.com/wp-content/uploads/2020/06/tourism_experience.jpg"],
         "url": "https://www.bodegacolome.com/turismo/",
         "description": "Escondida en un rincón de los Valles Calchaquíes, Estancia Colomé es uno de los lugares más increíbles de Argentina y alberga la bodega más antigua del país en funcionamiento. El programa incluye: Copa de bienvenida, cata de tres vinos más representativos de la bodega (Colomé Estate Torrontés, Colomé Estate Malbec, Colomé Autentico Malbec), visita guiada al museo James Turrel, almuerzo de tres pasos en el restaurante de Bodega Colomé."
 }

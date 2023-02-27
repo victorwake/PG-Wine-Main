@@ -25,7 +25,7 @@ export const ExpDetails =() =>{
     kindName = expType.toUpperCase();
   }
 
-  useEffect(() => {
-    dispatch(getExpDetail(id));
-  }, [dispatch, id]);
+  // useEffect(() => {
+  //   dispatch(getExpDetail(id));
+  // }, [dispatch, id]);
 }
