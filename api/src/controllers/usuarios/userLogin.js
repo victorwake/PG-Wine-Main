@@ -81,8 +81,7 @@ const googleSignin = async(req, res) => {
                     google: true,
                     profilePic: profilePic
                 };
-                
-                await sendMail(firstName, lastName, email);
+            
                 usuario = await User.create( data );
                 await usuario.save();
                 
@@ -98,10 +97,12 @@ const googleSignin = async(req, res) => {
             // Generar el JWT
             const token = await generarJWT( usuario.idUser );
             
-            res.json({
+            await res.json({
                 usuario,
                 token
             });
+            
+            await sendMail(firstName, lastName, email);
             
         } catch (error) {
             console.log('Error al crear el usuario de google')
