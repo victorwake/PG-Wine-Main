@@ -1,50 +1,170 @@
-.col-12{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-        
-    margin-top: 150px;
-    margin-bottom: 20px;
-}
-
 .container{
     display: flex;
     flex-direction: column;
     padding-top: 140px;
     padding-bottom: 100px;
+    margin-left: 250px;
+    
 }
 
-.box{
-    display: flex;
+.product-column {
+    width: 60%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 19px;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
+    width: 70%;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
-    padding: 20px;
-    padding-bottom: 20px;
-}
+    box-shadow: 0 0 10px 0 rgba(7, 7, 7, 0.2);
+    padding: 40px;
+ 
+  }
 
-.sale-ok{
+  .shipping-column {
+    padding-left: 50px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-collapse: collapse;
+    border-spacing: 0;
     display: flex;
     flex-direction: column;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 40px;
+}
+
+
+
+
+
+.theadProductos{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: black;
+    border-collapse: collapse;
+}
+
+
+.table{
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+    border-spacing: 0;
+
+}
+
+th, td {
+
+    padding: 20px;
+  }
+
+  td{
+    display: table-cell;
+    vertical-align: inherit;
+  }
+
+
+/* Modo light end */
+.homeshopp-container-light {
+    display: flex; /* Cambiar la visualización a flex */
+    overflow-x:scroll;
+    height: auto;
+    padding-top: 1px;
+    transition-duration: 01s;
+    background-color: transparent;
+  
+  }
+  
+  .cardshopp-container-home-light {
+    display: flex; /* Cambiar la visualización a flex */
     align-items: center;
-    margin-top: 20px;
+    justify-content: flex-start; /* Justificar los elementos al inicio */
+
+    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan */
+    transition-duration: 01s;
+    background-color:transparent;
+    width: max-content; /* Ajustar el ancho del contenedor a su contenido */
+  }
+  
+  .saleshopp-type-h2-light {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
     margin-bottom: 20px;
+    transition-duration: 01s;
+    background-color:transparent;
+   
+  }
+  
+
+/* Modo light fin */
+
+/* --------------------------------------------------------- */
+
+
+/*Modo Dark*/
+
+.homeshopp-container-dark {
+height: 100vh;
+padding-top: 1px;
+transition-duration: 01s;
+background-color:transparent;
+
 }
 
-.btn-send{
-    width: 280px;
-    margin-top: 40px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: rgba(119, 136, 153, 0.116);
+.cardshopp-container-home-dark {
+display: grid;
+grid-template-columns: repeat(auto-fill, 330px);
+align-items: center;
+justify-content: center;
+transition-duration: 01s;
+background-color:transparent
 }
 
-.btn-sale{
-    width: 280px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: rgba(119, 136, 153, 0.116);
+.saleshopp-type-h2-dark {
+font-size: 2.5rem;
+font-weight: 600;
+margin: 5px;
+font-family: 'Source Sans Pro', sans-serif;
+position: relative;
+list-style: none;
+display: flex;
+justify-content: center;
+margin-top: 80px;
+margin-bottom: 20px;
+transition-duration: 01s;
+
+background-color:transparent
+}
+
+/* Modo dark fin */
+
+.cardshopp{
+    box-shadow: white;
+    background-color:transparent;
+    width: 200px;
+    height: 250px;
+}
+
+.etiquetaProduct{
+    background: rgb(13, 108, 241);
+    color: #ffffff;
+    font-size: calc(--base-text-font-size) - (--default-text-font-size) - 14px;
+    font-weight: --text-font-bolder-weight;
+}
+
+.conteinerInfo{
+    display: flex;
+    flex-wrap: nowrap;
+    margin:10px;
+    padding: 10px;
+    justify-content:space-around;
+    gap: 80px
 }

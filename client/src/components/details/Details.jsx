@@ -167,7 +167,7 @@ export const Details = () => {
         >
           <i id={"agregar-" + clase} class="bi bi-cart3">
             {" "}
-            {itemInCart ? "Agregado" : "Agregar"}
+            {itemInCart ? "Item en Carrito" : "Agregar al Carrito"}
           </i>
         </button>
         <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
