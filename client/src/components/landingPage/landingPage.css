@@ -1,53 +1,11 @@
-.fondo {
-    background-color: transparent;
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
-.landing-page {
-    height: 100vw;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: transparent;
-    font-size: 100px;
-    margin-top: -120px;
-    margin-left: 0px;
-    z-index: -2;
+body, html {
+  width:100%;
+  height:100%;
+  background:#ddd;
+  font-family: 'Montserrat', sans-serif;
+  font-size:99px;
+  text-align:center;
 }
-
-.button {
-    color: transparent;
-    background-color: transparent;
-}
-
-#video_background {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 2;
-    overflow: hidden;
-}
-
-#video_pattern {
-    background: transparent;
-    position: fixed;
-    opacity: 0.8;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.button {
-    color: bisque;
-    font-family: 'Wire One', sans-serif;
-    background-color: transparent;
-    font-size: 100PX;
-    font-weight: bold;
-}
+ */

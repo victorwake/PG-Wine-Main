@@ -1,4 +1,4 @@
-
+/* 
 .contenedor-profile-light {
     height: 100vh;
     transition-duration: 01s;
@@ -13,4 +13,205 @@
     transition-duration: 01s;
     box-shadow: -3px -2px 8px rgba(105, 105, 105, 0.322), 3px 2px 8px rgba(0, 0, 0, 0.089);
     background-color: rgb(224, 224, 224);
+} */
+body {
+    height: 100vh;
+}
+.wrapper aside.sidebar {
+    width: 280px;
+    min-width: 280px;
+    background-color: rgb(224, 224, 224);
+    color: #333333;
+    overflow-x: hidden;
+    position: relative;
+}
+.wrapper aside.sidebar.toggled {
+    width: 0;
+    min-width: 0;
+}
+.wrapper aside.sidebar .sidebar-section {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #503b3a;
+}
+
+.wrapper aside.sidebar .sidebar-profile .picture-wrapper {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+.wrapper aside.sidebar .sidebar-profile .profile-details .name {
+    color: #8691a7;
+}
+.wrapper aside.sidebar .sidebar-profile .profile-details .role {
+    color: #5f6a82;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab {
+    border-bottom: 1px solid #3a4150;
+    padding-bottom: 1px;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li {
+    border-right: 1px solid #3a4150;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li:last-child {
+    border-right: none;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li a {
+    color: #545e73;
+    border: none;
+    position: relative;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li a.active {
+    background: #323844;
+    color: #8691a7;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li a.active .nav-alert {
+    border-color: #323844;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li a:hover {
+    color: #8691a7;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li a .nav-alert {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    border: 3px solid #292e38;
+    transform: translateX(2px);
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li a .nav-alert.bg-danger {
+    box-shadow: 0px 0px 4px #ff6161;
+}
+.wrapper aside.sidebar .sidebar-menu ul#nav-tab li a .nav-alert.bg-success {
+    box-shadow: 0px 0px 4px #61ff66;
+}
+.wrapper aside.sidebar .sidebar-menu .tab-header {
+    color: #8691a7;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.wrapper aside.sidebar .sidebar-menu .tab-footer a {
+    color: #8691a7;
+}
+.wrapper aside.sidebar .sidebar-menu .tab-footer a:hover {
+    color: #a4acbc;
+}
+.wrapper aside.sidebar .sidebar-menu #menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.wrapper aside.sidebar .sidebar-menu #menu ul li a {
+    padding: 0.5rem 0.6rem;
+    text-decoration: none;
+    color: #5f6a82;
+}
+.wrapper aside.sidebar .sidebar-menu #menu ul li a i {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #5f6a82;
+    font-size: 0.9rem;
+    border: 1px solid #3a4150;
+    margin-right: 0.5rem;
+}
+.wrapper aside.sidebar .sidebar-menu #menu ul li a .menu-text {
+    font-size: 0.9rem;
+}
+.wrapper aside.sidebar .sidebar-menu #menu ul li a .badge {
+    font-size: 0.6rem;
+}
+.wrapper aside.sidebar .sidebar-menu #menu ul li a:hover {
+    color: #6a7790;
+    background: #2f3541;
+}
+.wrapper aside.sidebar .sidebar-menu #menu ul li a:hover i {
+    color: #8691a7;
+}
+.wrapper aside.sidebar .sidebar-menu #messages ul {
+    list-style-type: none;
+    padding: 0;
+}
+.wrapper aside.sidebar .sidebar-menu #messages ul a .pic {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+.wrapper aside.sidebar .sidebar-menu #messages ul a .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.wrapper aside.sidebar .sidebar-menu #messages ul a .message-content {
+    text-decoration: none;
+}
+.wrapper aside.sidebar .sidebar-menu #messages ul a .message-content .message-title {
+    color: #a4acbc;
+}
+.wrapper aside.sidebar .sidebar-menu #messages ul a .message-content .message-detail {
+    color: #545e73;
+    font-size: 0.9rem;
+}
+.wrapper aside.sidebar .sidebar-menu #messages ul a:hover {
+    background: #2f3541;
+}
+.wrapper aside.sidebar .sidebar-menu #notifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+.wrapper aside.sidebar .sidebar-menu #notifications ul a .icon i {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+.wrapper aside.sidebar .sidebar-menu #notifications ul a .notification-content {
+    text-decoration: none;
+}
+.wrapper aside.sidebar .sidebar-menu #notifications ul a .notification-content .notification-detail {
+    color: #8691a7;
+    font-size: 0.9rem;
+}
+.wrapper aside.sidebar .sidebar-menu #notifications ul a .notification-content .notification-time {
+    color: #545e73;
+    font-size: 0.7rem;
+}
+.wrapper aside.sidebar .sidebar-menu #notifications ul a:hover {
+    background: #2f3541;
+}
+.wrapper aside.sidebar .sidebar-menu #settings ul {
+    list-style-type: none;
+    padding: 0;
+}
+.wrapper aside.sidebar .sidebar-menu #settings ul li a {
+    padding: 0.5rem 0.6rem;
+    text-decoration: none;
+    color: #5f6a82;
+}
+.wrapper aside.sidebar .sidebar-menu #settings ul li a i {
+    color: #6a7790;
+    margin-right: 0.8rem;
+}
+.wrapper aside.sidebar .sidebar-menu #settings ul li a:hover {
+    color: #8691a7;
+}
+
+.wrapper {
+    padding-top: 80px !important;
+    /* padding: 0 1rem; */
+    background-color: rgb(224, 224, 224);
+}
+
+#picture-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
 }

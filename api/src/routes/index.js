@@ -18,6 +18,8 @@ const procesarMP = require('../routes/mercadoPagoRouter')
 const sucessMP = require('../routes/mercadoPagoSucess')
 const removeStock = require('../routes/stockRouter')
 const addStock = require('../routes/stockRouter')
+const addRating = require('../routes/ratingRouter')
+const getRating = require('../routes/ratingRouter')
 
 const { validarJWT } = require('../../src/middlewares/validarJWT');
 
@@ -32,6 +34,8 @@ router.use('/google', google);
 router.use('/', orderByPriceAscRouter);
 router.use('/', createWineRouter);
 router.use('/', updateWineRouter);
+router.use('/', addRating);
+router.use('/', getRating);
 router.use('/usuarios', usuariosRouter);
 router.use('/usuarios', getAllUsers);
 router.use('/usuarios', getAdmin);
