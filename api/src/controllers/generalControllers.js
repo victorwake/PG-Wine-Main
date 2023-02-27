@@ -18,7 +18,12 @@ const getDbWines = async (req, res, next) => {
             ? res.status(200).send(wineWinery)
             : res.status(400).json({ msg: "No hay resultados para tu busqueda" });
         } else {
-            res.status(200).send(wines);
+            res.status(200).send(
+                // { success: true,
+                // count: wines.length,
+                // wines}
+                wines
+            );
         }
     } catch (err) {
         res.status(400).json({ error: err.msg });

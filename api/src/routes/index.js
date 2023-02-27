@@ -14,6 +14,7 @@ const getAdmin = require('./usuarios/getAminUsers')
 const getUser = require('./usuarios/getUsers')
 const google = require('./usuarios/googleSingIn')
 const favoriteRouter = require('./favoriteRouter')
+const reviewRouter = require ('./reviewRouter')
 const procesarMP = require('./mercadoPagoRouter')
 const sucessMP = require('./mercadoPagoSucess')
 
@@ -35,6 +36,7 @@ router.use('/usuarios', getAllUsers);
 router.use('/usuarios', getAdmin);
 router.use('/usuarios', getUser);
 router.use('/usuarios', favoriteRouter);
+router.use('/usuarios', reviewRouter);
 router.use('/procesarmp', procesarMP);
 router.use('/mpsucess', sucessMP);
 router.use('/rutarestringida',[validarJWT], rutaRestringida)

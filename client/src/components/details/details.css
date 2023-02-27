@@ -141,6 +141,13 @@ td {
     width: 200px;
 }
 
+.rating {
+    position: relative;
+    top: 30%;
+    left: 82%;
+    width: 200px;
+}
+
 .detail-container-light {
     height: 100%;
     width: 100%;

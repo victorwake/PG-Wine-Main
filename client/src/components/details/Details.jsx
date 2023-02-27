@@ -12,6 +12,8 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import { Button, Modal } from 'react-bootstrap';
+import Rating from "../rating/Rating";
+
 
 export const Details = () => {
   const clase = useSelector((state) => state.theme);
@@ -54,6 +56,30 @@ export const Details = () => {
       });
     }
   }, [dispatch]);
+
+  // const handleFavorite = () => {
+  //   currentUser ?  handleShow() : handleEmptyCart()
+  //   const newIsFavorite = !isFavorite; // toggle the value of isFavorite
+  //   if (newIsFavorite) {
+  //     dispatch(addWineToFavorites(idUser, id)).then(() => {
+  //       setIsFavorite(true);
+  //       localStorage.setItem(`wine-${id}-isFavorite`, JSON.stringify(true));
+  //     });
+  //   } else {
+  //     dispatch(removeWineFromFavorites(idUser, id)).then(() => {
+  //       setIsFavorite(false);
+  //       localStorage.removeItem(`wine-${id}-isFavorite`);
+  //     });
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   if (isFavorite) {
+  //     localStorage.setItem(`wine-${id}-isFavorite`, JSON.stringify(true));
+  //   } else {
+  //     localStorage.removeItem(`wine-${id}-isFavorite`);
+  //   }
+  // }, [isFavorite]);
 
   const wineColorType = wineDetail.color_type;
   let colorType = "";
@@ -124,9 +150,9 @@ export const Details = () => {
           />
         </div>
         <div className={"name-" + colorType}>
-          <h2>
+          {/* <h2>
             {colorName}S 
-          </h2>
+          </h2> */}
           <h2>
           {wineDetail.name}
           </h2>
@@ -161,6 +187,9 @@ export const Details = () => {
             </tbody>
           </table>
         </div>
+        <div className= 'rating'>
+        <Rating/>
+        </div>
         <h3 className="price">$ {wineDetail.price}</h3>
         <button
           id={"agregar-" + clase}
@@ -170,7 +199,7 @@ export const Details = () => {
         >
           <i id={"agregar-" + clase} class="bi bi-cart3">
             {" "}
-            {itemInCart ? "Item en Carrito" : "Agregar al Carrito"}
+            {itemInCart ? "Item en Carrito" : "Agregar"}
           </i>
         </button>
         <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
