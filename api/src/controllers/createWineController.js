@@ -15,6 +15,9 @@ const createWine = async(req, res) => {
         province,
         region,
         url,
+        rating,
+        numOfReviews,
+        reviews: [],
         description
     } = req.body;
 
@@ -37,6 +40,9 @@ const createWine = async(req, res) => {
             province,
             region,
             url,
+            rating,
+            numOfReviews,
+            reviews: [],
             description
         })
 
