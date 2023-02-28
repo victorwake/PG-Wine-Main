@@ -58,7 +58,7 @@ export const ShoppingCart = () => {
   console.log(cartItems)
 
 
-  const itemsJSON = JSON.stringify(cartItems);
+  const itemsJSON = JSON.stringify(cartItems)
 
   const handleClick = (cartItems) => {
     try{
