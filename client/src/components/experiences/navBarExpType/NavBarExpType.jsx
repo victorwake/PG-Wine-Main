@@ -25,7 +25,7 @@ export const NavBarExpType = () => {
       </div>
 
       <div class="card-wrapper">
-      <Link to={"/experiencias/" + "gastronomia"}  style={{ color: "inherit", textDecoration: "inherit" }}>
+      <Link to={"/experiencias/" + "gastronomía"}  style={{ color: "inherit", textDecoration: "inherit" }}>
         <div class="card-6 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
@@ -51,7 +51,7 @@ export const NavBarExpType = () => {
       </div>
 
       <div class="card-wrapper">
-      <Link to={"/experiencias/" + "degustacion"}  style={{ color: "inherit", textDecoration: "inherit" }}>
+      <Link to={"/experiencias/" + "degustación"}  style={{ color: "inherit", textDecoration: "inherit" }}>
         <div class="card-8 card-object card-object-hf">
           <fragment class="face front">
             <div class="title-wrapper">
