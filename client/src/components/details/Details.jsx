@@ -43,13 +43,24 @@ export const Details = () => {
     }
   }
 
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     dispatch(getWinesFromFavorites(idUser)).then(() => {
+  //       setIsFavorite(favorites.some(f => f.user_wine.wineId === id))
+  //     })
+  //   }
+  // }, [currentUser, dispatch, favorites, id, idUser])
+
   useEffect(() => {
     if (currentUser) {
       dispatch(getWinesFromFavorites(idUser)).then(() => {
-        setIsFavorite(favorites.some(f => f.user_wine.wineId === id))
+        const wine = favorites.find(wine => wine.id === id)
+        if (wine) {
+          setIsFavorite(true)
+        }
       })
     }
-  }, [dispatch])
+  }, [dispatch, currentUser])
 
   const wineColorType = wineDetail.color_type
   let colorType = ''
@@ -65,9 +76,10 @@ export const Details = () => {
         wineDetail.price,
         wineDetail.image,
         wineDetail.quantity,
-      ).setTimeout(() => {
-        setIsAddingToCart(false)
-      }, 10000),
+        // ).setTimeout(() => {
+        //   setIsAddingToCart(false)
+        // }, 10000),
+      ),
     )
   }
 
@@ -151,8 +163,7 @@ export const Details = () => {
           disabled={isAddingToCart || itemInCart}
         >
           <i id={'agregar-' + clase} class="bi bi-cart3">
-            {' '}
-            {itemInCart ? 'Item en Carrito' : 'Agregar al Carrito'}
+            {itemInCart ? 'Agregado' : 'Agregar'}
           </i>
         </button>
         <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
