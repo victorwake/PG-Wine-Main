@@ -55,7 +55,7 @@ export const NavAdmin = () => {
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/admin/ordenes">
+                  <a class="nav-link" href="#">
                     Ordenes
                   </a>
                 </li>

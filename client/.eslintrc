@@ -1,0 +1,9 @@
+{
+    "extends": ["react-app"],
+    "rules": {
+      "prefer-const": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "no-const-assign": "error",
+      "no-console": "warn"
+    }
+  }

@@ -199,8 +199,8 @@ export const POST_WINES = 'POST_WINES'
 
 export const updateWine = (id, payload) => {
   return async function () {
-    const updateWine = await axios.put(`http://localhost:3001/wines/${id}`, payload)
-    return updateWine
+    const updateUser = await axios.put(`http://localhost:3001/wines/${id}`, payload)
+    return updateUser
   }
 }
 
@@ -419,11 +419,3 @@ export const getExpType = type => {
 export const GET_EXP_TYPE = 'GET_EXP_TYPE'
 
 /*----------------------------------------------*/
-
-export const getOrders = id => {
-    return dispatch =>
-      axios(`http://localhost:3001/orders/orderbyuser/${id}`)
-        .then(res => dispatch({ type: GET_ORDER_USERS, payload: res.data }))
-        .catch(err => console.log(err))
-  }
-  export const GET_ORDER_USERS = 'GET_ORDER_USERS'

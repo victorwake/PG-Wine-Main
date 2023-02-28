@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "remimarche.cspell-tech",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+    ]
+}

@@ -13,13 +13,13 @@ const Profile = () => {
   const tokenRevi = localStorage.getItem('nombre')
 
   if (!currentUser) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/login" />
   }
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const logOut = useCallback(() => {
-    dispatch(logout());
-  }, [dispatch]);
+    dispatch(logout())
+  }, [dispatch])
 
   return (
     
@@ -83,7 +83,7 @@ const Profile = () => {
 
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

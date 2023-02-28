@@ -39,7 +39,6 @@ import {
 } from '../actions/index.js'
 
 
-
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
@@ -48,7 +47,6 @@ import {
   LOGOUT,
   LOGGIN_SUCCESS_G,
 } from '../actions/type.js'
-
 
 import { SET_MESSAGE, CLEAR_MESSAGE } from '../actions/type.js'
 
