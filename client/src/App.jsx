@@ -23,8 +23,8 @@ import { OrderList } from './components/OrderList/OrderList.jsx'
 
 
 function App() {
-  const currentUser = useSelector(state => state.usuario)
-  const [showAdminBoard, setShowAdminBoard] = useState(true)
+    const currentUser  = useSelector((state) => state.usuario);
+    const [showAdminBoard, setShowAdminBoard] = useState(true);
 
     useEffect(() => {
         if (currentUser) {
@@ -63,4 +63,4 @@ function App() {
     );
 }
 
-export default App
+export default App;

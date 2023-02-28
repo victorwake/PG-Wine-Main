@@ -15,10 +15,9 @@
     border-radius: 5px;
     
 }
-.footer {
-    
-    position: static;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
+.th{
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}

@@ -5,6 +5,7 @@ import "./cart.css";
 import { Button, Modal } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import { removeFromCart, updateCartItem, removeAllFromCart } from "../../redux/actions";
+import axios from 'axios';
 
 
 export const Cart = () => {
@@ -15,16 +16,45 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const [showEmptyCartModal, setShowEmptyCartModal] = useState(false);
 
+  const cartItems = cart.map(item => ({
+    id: item.id,
+    title: item.name,
+    unit_price: item.price,
+    quantity: quantities[item.id] || item.quantity,
+  }));
+  console.log(cartItems)
 
+
+  const itemsJSON = JSON.stringify(cartItems);
+
+
+
+
+  const handleClick = (cartItems) => {
+    try{
+      axios.post('http://localhost:3001/procesarmp', itemsJSON, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(res => { window.location.href = res.data.id.init_point
+        // Aquí puedes manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito
+        console.log(res.data);
+      }).catch(error => { console.log(error)})
+    } catch(error) {
+        // Aquí puedes manejar el error de la solicitud
+        console.error(error)
+    }
+  }
+  
+// console.log(enviarDatos(cartItems))
+
+  // .then(res => window.location.href = res.data.response.body.init_point);
   //prueba para el control de stock de cart, para no vender mas de la cantidad que hay en stock
   const firstCartItem = cart[0];
   if (firstCartItem) {
     const stock = allWines.find(wine => wine.id === firstCartItem.id)?.stock;
     console.log(stock);
   }
-
-
-
 
   
   const handleEmptyCart = () => {
@@ -51,9 +81,10 @@ export const Cart = () => {
   
   const handleQuantityChange = (event, itemId) => {
     const newQuantity = parseInt(event.target.value);
-    setQuantities(prevQuantities => ({ ...prevQuantities, [itemId]: newQuantity }));
-    dispatch(updateCartItem(itemId, newQuantity));
-  };
+      setQuantities({...quantities, [itemId]: newQuantity});
+      dispatch(updateCartItem(itemId, newQuantity));
+  }
+
   const handleRemoveAllFromCart = () => {
     dispatch(removeAllFromCart());
   }
@@ -146,13 +177,21 @@ export const Cart = () => {
             Vaciar carrito
           </Button>
 
-          <Link to="/shopingcard">
-            <Button 
-            variant="success" 
+          <Link to={'/shoppingcart'}>
+          <Button 
+            variant="success"
             >
-            Ir al Carrito
+            Ir al carrito
             </Button>
           </Link>
+
+            <Button 
+            variant="success" 
+            onClick={handleClick}
+            >
+            Finalizar compra
+            </Button>
+          
         </Modal.Footer>
       </Modal>
     </div>

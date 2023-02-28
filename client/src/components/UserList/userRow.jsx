@@ -35,6 +35,9 @@ export const UserRow = ({ user }) => {
       e.preventDefault()
       setLoading(true)
 
+      console.log(input)
+      console.log(user.idUser)
+
       if (!window.confirm('Esta seguro que desea editar al usuario')) {
         setLoading(false)
         return
@@ -44,7 +47,7 @@ export const UserRow = ({ user }) => {
       setLoading(false)
       setEditMode(false)
     },
-    [distpach, id, input],
+    [distpach, id, input, user.idUser],
   )
 
   return (
@@ -110,7 +113,7 @@ export const UserRow = ({ user }) => {
               </button>
             </>
           ) : (
-            <button onClick={() => setEditMode(true)}>
+            <button onClick={e => setEditMode(true)}>
               <i class="bi bi-pencil-square"></i>
             </button>
           ))}

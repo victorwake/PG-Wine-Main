@@ -13,13 +13,13 @@ const Profile = () => {
   const tokenRevi = localStorage.getItem('nombre')
 
   if (!currentUser) {
-    return <Navigate to="/login" />
+    return <Navigate to="/login" />;
   }
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const logOut = useCallback(() => {
-    dispatch(logout())
-  }, [dispatch])
+    dispatch(logout());
+  }, [dispatch]);
 
   return (
     
@@ -60,17 +60,17 @@ const Profile = () => {
       </div>:
       <div className="img-registro"></div>
       }
-      <p>
+      {/* <p>
         <strong>Token:</strong> {currentUser.token.substring(0, 20)} ...{" "}
         {currentUser.token.substr(currentUser.token.length - 20)}
-      </p>
-      <p>
+      </p> */}
+      {/* <p>
         <strong>Id:</strong> {currentUser.usuario.idUser}
-      </p>
+      </p> */}
       <p>
         <strong>Email:</strong> {currentUser.usuario.email}
       </p>      
-      <div>
+      {/* <div>
         {currentUser.usuario.rol &&
         <div>
         <div><strong>Rol:</strong></div>
@@ -79,11 +79,11 @@ const Profile = () => {
           </div>
           }
       
-      </div>
+      </div> */}
 
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

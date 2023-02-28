@@ -84,9 +84,9 @@ export const NavBar = () => {
         <li class="nav-item">
           { !currentUser? <Link to="/login" style={{ color: "inherit", textDecoration: "inherit" }}>
           <a class="nav-link active" id={"font-color-" + clase} aria-current="page">Login</a>
-          </Link>: <Link style={{ textDecoration: 'none' }} to="/user/perfil"><a id={"font-color-" + clase} class="nav-link active" aria-current="page"><div class="dropdown">
+          </Link>: <Link style={{ textDecoration: 'none' }} ><a id={"font-color-" + clase} class="nav-link active" aria-current="page"><div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
- {currentUser.usuario.firstName}
+  Bienvenido/a, {currentUser.usuario.firstName}
   </button>
   <ul class="dropdown-menu">
   <li><Link className="dropdown-item" to="/user/perfil"><i className="bi bi-person-circle"></i> Mi Perfil</Link></li>
@@ -121,7 +121,7 @@ export const NavBar = () => {
                         </input>
                         <label id={'label-' + clase} htmlFor='switch' className={'checkbox-' + clase}></label>
                 </div>
-      {/* <SearchBar/> */}
+      <SearchBar/>
       {/* <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>

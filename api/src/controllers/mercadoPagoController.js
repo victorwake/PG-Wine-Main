@@ -26,7 +26,7 @@ let preference = {
     };
   }),
   back_urls: {
-    success: 'http://localhost:3000/pagoexitoso',
+    success: 'http://localhost:3001/mpsucess',
     failure: 'http://localhost:3001/feedback',
     pending: 'http://localhost:3001/feedback',
   },

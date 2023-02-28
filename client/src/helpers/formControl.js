@@ -8,7 +8,7 @@ export const formControl = input => {
     const volRegExp = /^(750|1500|3000)$/;
     const priceRegExp = /^([3-9][0-9]{2}|[1-9][0-9]{3}|[1-9][0-9]{4}|[1-8][0-9]{5}|9[0]{5})$/;
     const bodegaREgExp = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)\.[a-z]{2,5}(:[0-9]{1,5})?(\/.)?$/
-    const stockRegex = /^(|[0-9]|[1-9][0-9]*)$/;
+    const stockRegex = /^(|[1-9][0-9]*)$/;
     let err = {};
 
     if (!input.name) {

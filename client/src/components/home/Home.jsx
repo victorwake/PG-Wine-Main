@@ -24,7 +24,7 @@ export const Home = () => {
     // }));
     
     //Lo usariamos cuando tengamos los filtros, se cambiaria el allWines.slide por este
-    
+
     
 
     useEffect(()=>{
@@ -38,7 +38,8 @@ export const Home = () => {
             </div>
             <NavBarWineType />
             <Carousel/>
-            <h2 className={"sale-type-h2-" + clase}>Destacados</h2>
+            <hr></hr>
+            <h2 className={"sale-type-h2-" + clase}><i class="bi bi-star"></i>Destacados<i class="bi bi-star"></i></h2>
             <div  className={"card-container-home-" + clase} >
             
                 {tenRandomWines?.map((w => (
@@ -49,7 +50,7 @@ export const Home = () => {
                                 varietal={w.varietal}
                                 image= {w.image} 
                                 winery={w.winery}
-                                price= {w.price}
+                                price= {`$${w.price}`}
                                 />
                             </Link>
                         </Fragment>

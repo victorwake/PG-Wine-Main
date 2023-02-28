@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Navigate } from "react-router-dom";
@@ -48,7 +47,7 @@ if (usuario) {
     })
         promise.then(() => {     
         window.location.reload();   
-        navigate("/user/perfil");
+        navigate("/perfil");
        
     
     }).catch(console.warn);

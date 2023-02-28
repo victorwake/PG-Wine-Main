@@ -38,6 +38,7 @@ import {
   // CLEAR_CART,
 } from '../actions/index.js'
 
+/*--------AUTH---------*/
 
 import {
   REGISTER_SUCCESS,
@@ -48,6 +49,7 @@ import {
   LOGGIN_SUCCESS_G,
 } from '../actions/type.js'
 
+/*--------MESSAGE---*/
 import { SET_MESSAGE, CLEAR_MESSAGE } from '../actions/type.js'
 
 const initialState = {
@@ -139,7 +141,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         currentPage: action.payload,
       }
- 
+    ///////////////////////////////
     case CLEAN_ALL_FILTERS:
       return {
         ...state,
@@ -291,7 +293,7 @@ const rootReducer = (state = initialState, action) => {
         cart: [],
       }
 
- 
+    /////EXPERIENCES////
     case GET_EXP:
       return {
         ...state,

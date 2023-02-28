@@ -76,7 +76,7 @@ module.exports = (sequelize) => {
             defaultValue: false,
         },
         rol: {
-            type: DataTypes.ENUM(['ADMIN_ROLE', 'USER_ROLE', 'GUEST_ROLE', 'DISPATCHER_ROLE']),
+            type: DataTypes.ENUM(['ADMIN_ROLE', 'USER_ROLE', 'GUEST_ROLE']),
             allowNull: false,
             
         },
@@ -87,26 +87,7 @@ module.exports = (sequelize) => {
         google: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
-        },
-        street: {
-            type: DataTypes.STRING,
-        },
-        number: {
-            type: DataTypes.STRING,
-        },
-        city: {
-            type: DataTypes.STRING,
-        },
-        province: {
-            type: DataTypes.STRING,
-        },
-        country: {
-            type: DataTypes.STRING,
-        },
-        postalCode: {
-            type: DataTypes.STRING,
-        },
-
+        }
     }, {
         timestamps: true
     });

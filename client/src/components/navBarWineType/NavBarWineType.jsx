@@ -1,4 +1,4 @@
-import "../navBarWineType/NavBarWineType.css";
+import "../navBarWineType/navBarWineType.css";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";

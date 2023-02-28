@@ -1,16 +1,3 @@
 .table {
     margin-top: 5%;
 }
-
-.check {
-    background-color: green;
-}
-
-#check {
-    color: white;
-}
-
-.edit {
-    border: none;
-    font-size: 25px;
-}
