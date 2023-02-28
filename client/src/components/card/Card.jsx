@@ -2,12 +2,12 @@ import './card.css';
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+//import RatingStar from '../ratingStar/RatingStar';
 
 
 
 
-
-export const Card = ({ image, name, color_type, varietal , winery, price, id }) => {//se lo paso por props
+export const Card = ({ image, name, color_type, varietal , winery, price, id ,rating, numOfReviews}) => {//se lo paso por props
     const clase = useSelector(store => store.theme);
     const wines = useSelector(store => store.wines)
     const dispatch = useDispatch();
@@ -24,6 +24,7 @@ export const Card = ({ image, name, color_type, varietal , winery, price, id }) 
                     <div><h4 className={"type-wine-card-" + clase}>{varietal} </h4></div>
                     <div><h4 className={"winery-card-" + clase}>{winery}</h4></div>
                     <div><h4 className={"price-card-" + clase}>$ {price}</h4></div>
+                    {/* <RatingStar className={"rating-card-" + clase} glasses={rating} numOfReviews={numOfReviews} /> */}
                 </div>
         </div>
     );

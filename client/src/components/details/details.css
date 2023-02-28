@@ -141,11 +141,21 @@ td {
     width: 200px;
 }
 
+/* .rating {
+    position: relative;
+    left: -9%;
+    width: 200px;
+} */
+
 .rating {
     position: relative;
     top: 30%;
     left: 82%;
     width: 200px;
+}
+
+.rating-review {
+    font-family: 'Sansburg';
 }
 
 .detail-container-light {

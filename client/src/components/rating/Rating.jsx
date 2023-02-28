@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
-import { AiOutlineStar } from 'react-icons/ai';
+// import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
+// import { AiOutlineStar } from 'react-icons/ai';
 import './rating.css';
+import {FaWineGlassAlt,  FaWineGlass} from 'react-icons/fa';
+import { GiWineGlass } from 'react-icons/gi';
 
 function Rating() {
     const [rating, setRating] = useState(null);
@@ -18,10 +20,10 @@ function Rating() {
                     value={ ratingValue} 
                     onClick={() => setRating(ratingValue)}/>
                     
-                    <FaStar 
+                    <FaWineGlass 
                         className= 'star' 
                         color={ ratingValue <= (hover || rating) ? '#ffc107' : '#e4e5e9'} 
-                        size ={25}
+                        size ={30}
                         onMouseEnter={() => setHover(ratingValue)}
                         onMouseLeave={() => setHover(null)}
                         />

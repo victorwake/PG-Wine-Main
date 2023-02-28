@@ -64,6 +64,17 @@
     color: rgb(0, 0, 0);
 }
 
+.rating-card-light{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5px;
+    transition-duration: 01s;
+    color: rgb(0, 0, 0);
+    background-color: yellow; /* Add background color to rating element */
+    padding: 5px 10px; /* Add padding to rating element */
+    border-radius: 5px; /* Add border radius to rating element */
+}
+
 /* Modo light fin */
 
  /* --------------------------------------------------------- */
@@ -137,4 +148,11 @@
     color: rgb(255, 255, 255);
 }
 
+.rating-card-dark{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5px;
+    transition-duration: 01s;
+    color: rgb(255, 255, 255);
+}
 /* Modo dark fin */

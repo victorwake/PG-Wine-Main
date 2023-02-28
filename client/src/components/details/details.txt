@@ -1,0 +1,23 @@
+ // const handleFavorite = () => {
+  //   currentUser ?  handleShow() : handleEmptyCart()
+  //   const newIsFavorite = !isFavorite; // toggle the value of isFavorite
+  //   if (newIsFavorite) {
+  //     dispatch(addWineToFavorites(idUser, id)).then(() => {
+  //       setIsFavorite(true);
+  //       localStorage.setItem(`wine-${id}-isFavorite`, JSON.stringify(true));
+  //     });
+  //   } else {
+  //     dispatch(removeWineFromFavorites(idUser, id)).then(() => {
+  //       setIsFavorite(false);
+  //       localStorage.removeItem(`wine-${id}-isFavorite`);
+  //     });
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   if (isFavorite) {
+  //     localStorage.setItem(`wine-${id}-isFavorite`, JSON.stringify(true));
+  //   } else {
+  //     localStorage.removeItem(`wine-${id}-isFavorite`);
+  //   }
+  // }, [isFavorite]);

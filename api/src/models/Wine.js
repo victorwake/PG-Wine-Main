@@ -13,11 +13,6 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        // varietal: {
-        //   type: DataTypes.ARRAY(DataTypes.JSONB),
-        //   allowNull: false,
-        //   defaultValue: [],
-        // },
         varietal: {
             type: DataTypes.STRING,
 
@@ -71,6 +66,21 @@ module.exports = (sequelize) => {
         description: {
             type: DataTypes.TEXT,
         },
+        rating: {
+            type: DataTypes.FLOAT,
+            allowNull: false,
+            defaultValue: 0
+        },
+        numOfReviews: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0
+        },
+        reviews: {
+            type: DataTypes.JSON,
+            allowNull: false,
+            defaultValue: []
+        }
     }, {
         timestamps: false,
     });

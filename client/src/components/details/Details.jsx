@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import { Button, Modal } from 'react-bootstrap';
 import Rating from "../rating/Rating";
+import RatingStar from "../ratingStar/RatingStar";
 
 
 export const Details = () => {
@@ -57,29 +58,6 @@ export const Details = () => {
     }
   }, [dispatch]);
 
-  // const handleFavorite = () => {
-  //   currentUser ?  handleShow() : handleEmptyCart()
-  //   const newIsFavorite = !isFavorite; // toggle the value of isFavorite
-  //   if (newIsFavorite) {
-  //     dispatch(addWineToFavorites(idUser, id)).then(() => {
-  //       setIsFavorite(true);
-  //       localStorage.setItem(`wine-${id}-isFavorite`, JSON.stringify(true));
-  //     });
-  //   } else {
-  //     dispatch(removeWineFromFavorites(idUser, id)).then(() => {
-  //       setIsFavorite(false);
-  //       localStorage.removeItem(`wine-${id}-isFavorite`);
-  //     });
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (isFavorite) {
-  //     localStorage.setItem(`wine-${id}-isFavorite`, JSON.stringify(true));
-  //   } else {
-  //     localStorage.removeItem(`wine-${id}-isFavorite`);
-  //   }
-  // }, [isFavorite]);
 
   const wineColorType = wineDetail.color_type;
   let colorType = "";
@@ -156,6 +134,9 @@ export const Details = () => {
           <h2>
           {wineDetail.name}
           </h2>
+          {/* <div className= 'rating'>
+        <Rating/>
+        </div> */}
         </div>
         <div className="tabla">
           <table class="table">
@@ -184,6 +165,14 @@ export const Details = () => {
                 <th className={"th-" + colorType}>Nota de cata</th>
                 <td id={"td-" + clase}>{wineDetail.description}</td>
               </tr>
+              <tr>
+                <th className={"th-" + colorType}>Puntaje</th>
+                <RatingStar id={"th-" + clase} className='rating-review' glasses={wineDetail.rating} numOfReviews={wineDetail.numOfReviews}/>
+              </tr>
+              {/* <tr>
+                <th className={"th-" + colorType}>Cantidad reseñas</th>
+                <td id={"td-" + clase}>{wineDetail.numOfReviews}</td>
+              </tr> */}
             </tbody>
           </table>
         </div>
