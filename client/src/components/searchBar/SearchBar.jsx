@@ -10,9 +10,12 @@ export const SearchBar = () => {
 
   function handleInputChange(e) {
     setInput(e.target.value);
-    dispatch(getWinesByName(e.target.value, 'name')); // busca por nombre de vino
-    dispatch(getWinesByName(e.target.value, 'winery')); // busca por bodega
-  }
+    const filteredWines = wines.filter(wine =>
+      wine.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+      wine.winery.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+     dispatch({ type: 'GET_WINES_SUCCESS', payload: filteredWines });
+}
 
   function handleFilterClear() {
     setInput('');
