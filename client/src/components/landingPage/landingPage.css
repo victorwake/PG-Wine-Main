@@ -26,8 +26,8 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    animation: dd2 10s 2;
-    animation-delay: 2s;
+    animation: dd2 15s 2;
+    animation-delay: 1s;
   }
   .d3 {
     position: absolute;
@@ -48,8 +48,8 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-    animation: dd3 10s 2;
-    animation-delay: 2s;
+    animation: dd3 15s 2;
+    animation-delay: 1s;
   }
   .d4 {
     position: absolute;
@@ -65,8 +65,8 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    animation: dd4 10s 2;
-    animation-delay: 2s;
+    animation: dd4 15s 2;
+    animation-delay: 1s;
   }
 
   @keyframes dd12 {
