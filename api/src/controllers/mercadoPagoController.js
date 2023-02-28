@@ -31,6 +31,14 @@ let preference = {
     pending: 'http://localhost:3001/feedback',
   },
   auto_return: 'approved',
+  "payment_methods": {
+    "excluded_payment_types": [
+        {
+            "id": "ticket"
+        }
+    ],
+    "installments": 1
+}
 };
 
 mercadopago.preferences
