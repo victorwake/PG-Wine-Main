@@ -199,8 +199,8 @@ export const POST_WINES = 'POST_WINES'
 
 export const updateWine = (id, payload) => {
   return async function () {
-    const updateWine = await axios.put(`http://localhost:3001/wines/${id}`, payload)
-    return updateWine
+    const updateUser = await axios.put(`http://localhost:3001/wines/${id}`, payload)
+    return updateUser
   }
 }
 

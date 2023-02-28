@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "cSpell.words": [
+     
+    ],
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "debug.javascript.autoAttachFilter": "disabled"
+  }
