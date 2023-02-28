@@ -6,7 +6,6 @@ const getDbUsers = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({ error: err.msg });
   }
-  res.status(200).json(users);
 };
 const getAdmin = async (req, res, next) => {
   try {
