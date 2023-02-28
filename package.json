@@ -1,0 +1,7 @@
+{
+    "dependencies": {
+      "mercadopago": "^1.5.15",
+      "react-router-dom": "^6.0.2",
+      "react-sdk-mercadopago": "^1.1.1"
+    }
+  }

@@ -8,7 +8,7 @@ import { getWines } from '../../redux/actions';
 import { Card }from '../card/Card'
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
-
+import {Footer} from '../footer/Footer'
 
 export const Home = () => {
 
@@ -17,7 +17,7 @@ export const Home = () => {
     const clase= useSelector(store => store.theme);
 
     const shuffledWines = _.shuffle(allWines);
-    const tenRandomWines = shuffledWines.slice(0, 10);
+    const tenRandomWines = shuffledWines.slice(0, 8);
     // const discountedWines = tenRandomWines.map((w) => ({
     //     ...w,
     //     price: w.price * 0.9,
@@ -38,7 +38,8 @@ export const Home = () => {
             </div>
             <NavBarWineType />
             <Carousel/>
-            <h2 className={"sale-type-h2-" + clase}>Destacados</h2>
+            <hr></hr>
+            <h2 className={"sale-type-h2-" + clase}><i class="bi bi-star"></i>Destacados<i class="bi bi-star"></i></h2>
             <div  className={"card-container-home-" + clase} >
             
                 {tenRandomWines?.map((w => (
@@ -49,12 +50,13 @@ export const Home = () => {
                                 varietal={w.varietal}
                                 image= {w.image} 
                                 winery={w.winery}
-                                price= {w.price}
+                                price= {`$${w.price}`}
                                 />
                             </Link>
                         </Fragment>
                 )))}  
             </div>
+            <Footer />
         </div>
     )
 }

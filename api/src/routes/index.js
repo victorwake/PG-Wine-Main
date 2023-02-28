@@ -9,10 +9,12 @@ const updateWineRouter = require("./updateWineRouter");
 const usuariosRouter = require("./usuariosRouter");
 const login = require("./userLogin");
 const rutaRestringida = require("./rutaRestringida");
+const updateUser = require("../routes/usuarios/updateUserRoute");
+const postOrders = require("../routes/orders/postOrderRouter");
+const getOrderByUser = require("../routes/orders/getOrdersByUser");
 const getAllUsers = require("../routes/usuarios/allUserRouter");
 const getAdmin = require("../routes/usuarios/getAminUsers");
 const getUser = require("../routes/usuarios/getUsers");
-const updateUser = require("../routes/usuarios/updateUserRoute"); //
 const google = require("../routes/usuarios/googleSingIn");
 const favoriteRouter = require("../routes/favoriteRouter");
 const procesarMP = require("../routes/mercadoPagoRouter");
@@ -40,8 +42,10 @@ router.use("/usuarios", getAllUsers);
 router.use("/usuarios", getAdmin);
 router.use("/usuarios", getUser);
 router.use("/usuarios", favoriteRouter);
-router.use("/", updateUser);
 router.use("/procesarmp", procesarMP);
+router.use("/", updateUser);
+router.use("/orders", postOrders);
+router.use("/orders", getOrderByUser);
 router.use("/mpsucess", sucessMP);
 router.use("/rutarestringida", [validarJWT], rutaRestringida);
 

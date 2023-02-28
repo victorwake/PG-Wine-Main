@@ -1,4 +1,5 @@
 {
+  
   "name": "api",
   "version": "1.0.0",
   "description": "",
@@ -13,6 +14,9 @@
     "node": ">=12.18.3",
     "npm": ">=6.14.6"
   },
+  "plugins": [
+    ["@babel/plugin-transform-react-jsx", { "throwIfNamespace": false }]
+  ],
   "dependencies": {
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
@@ -29,7 +33,9 @@
     "node-fetch": "^3.3.0",
     "nodemailer": "^6.9.1",
     "pg": "^8.5.1",
+    "react-slick": "^0.29.0",
     "sequelize": "^6.3.5"
+    
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -38,4 +44,5 @@
     "supertest": "^6.0.1",
     "supertest-session": "^4.1.0"
   }
+  
 }

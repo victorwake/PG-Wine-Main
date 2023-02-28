@@ -31,6 +31,7 @@ import {
   GET_EXP_TYPE,
   GET_USERS,
   UPDATE_USER,
+  GET_ORDER_USERS,
 
   // ADD_TO_CART,
   // REMOVE_ONE_CART,
@@ -75,6 +76,7 @@ const initialState = {
   experiences: [],
   expType: '',
   users: [],
+  orders: [],
 }
 
 const usuario = JSON.parse(localStorage.getItem('usuario'))
@@ -309,6 +311,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         expType: action.payload,
+      }
+    case GET_ORDER_USERS:
+      return {
+        ...state,
+        orders: action.payload,
       }
     default:
       return state
