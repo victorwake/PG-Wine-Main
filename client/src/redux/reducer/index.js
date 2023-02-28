@@ -32,6 +32,11 @@ import {
   GET_USERS,
   UPDATE_USER,
   GET_ORDER_USERS,
+  PROCESAR_PAGO_EXITOSO,
+  PROCESAR_PAGO_ERROR,
+  SET_CART_AMMOUNT,
+  SET_CART_ITEMS,
+  REMOVE_ALL_FROM_TRANSACTION,
 
   // ADD_TO_CART,
   // REMOVE_ONE_CART,
@@ -77,6 +82,8 @@ const initialState = {
   expType: '',
   users: [],
   orders: [],
+  ammountCar: 0,
+  transactionResult: {},
 }
 
 const usuario = JSON.parse(localStorage.getItem('usuario'))
@@ -291,6 +298,32 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         cart: [],
+      }
+    case PROCESAR_PAGO_EXITOSO:
+      return {
+        ...state,
+        transactionResult: action.payload,
+        cart: [],
+      }
+    case SET_CART_AMMOUNT:
+      return {
+        ...state,
+        ammountCar: action.payload,
+      }
+    case SET_CART_ITEMS:
+      return {
+        ...state,
+        cartItems: action.payload,
+      }
+    case PROCESAR_PAGO_ERROR:
+      return {
+        ...state,
+        transactionResult: action.payload,
+      }
+    case REMOVE_ALL_FROM_TRANSACTION:
+      return {
+        ...state,
+        transactionResult: {},
       }
 
     /////EXPERIENCES////

@@ -19,6 +19,7 @@ import { MercadoPago } from './components/MercadoPago/MercadoPago'
 import { OrderList } from './components/OrderList/OrderList.jsx'
 import RegisterAdmin from './components/registerAdmin/RegisterAdmin'
 import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes'
+import { MercadoPagoSucess } from './components/MercadoPagoSucess/MercadoPagoSucess'
 import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 
@@ -58,6 +59,7 @@ function App() {
         <Route path="/user/ordenes" element={<Orders />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/procesarmp" element={<MercadoPago />} />
+        <Route path="/pagoexitoso" element={<MercadoPagoSucess />} />
       </Routes>
     </div>
   )

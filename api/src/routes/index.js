@@ -19,7 +19,8 @@ const google = require("../routes/usuarios/googleSingIn");
 const favoriteRouter = require("../routes/favoriteRouter");
 const procesarMP = require("../routes/mercadoPagoRouter");
 const sucessMP = require("../routes/mercadoPagoSucess");
-
+const removeStock = require("../routes/stockRouter");
+const addStock = require("../routes/stockRouter");
 const createExpRouter = require("./createExpRouter");
 const updateExpRouter = require("./updateExpRouter");
 const expRouter = require("./expRouter.js");
@@ -42,6 +43,8 @@ router.use("/usuarios", getAllUsers);
 router.use("/usuarios", getAdmin);
 router.use("/usuarios", getUser);
 router.use("/usuarios", favoriteRouter);
+router.use("/usuarios", removeStock);
+router.use("/usuarios", addStock);
 router.use("/procesarmp", procesarMP);
 router.use("/", updateUser);
 router.use("/orders", postOrders);

@@ -12,11 +12,16 @@ import { getWines } from '../../redux/actions'
 import { Card } from '../card/Card'
 import _ from 'lodash'
 import { Footer } from '../footer/Footer'
+import { setAmmountCart, setItemsCart } from '../../redux/actions'
 
 export const ShoppingCart = () => {
   const dispatch = useDispatch()
   const cart = useSelector(store => store.cart)
   const clase = useSelector(store => store.theme)
+
+  const totalCar = useSelector(state => state.ammountCar)
+  const totalItems = useSelector(state => state.cartItems)
+  const logueado = useSelector(state => state.isLoggedIn)
 
   const [shippingCost, setShippingCost] = useState(0)
 
@@ -38,6 +43,8 @@ export const ShoppingCart = () => {
     return total
   }
 
+  const totalAmmount = calculateTotal()
+
   // Función para calcular el costo de envío
   const calculateShippingCost = () => {
     if (calculateTotal() < 15000) {
@@ -58,24 +65,30 @@ export const ShoppingCart = () => {
   const itemsJSON = JSON.stringify(cartItems)
 
   const handleClick = cartItems => {
-    try {
-      axios
-        .post('http://localhost:3001/procesarmp', itemsJSON, {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
-        .then(res => {
-          window.location.href = res.data.id.init_point
-          // Aquí puedes manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito
-          console.log(res.data)
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    } catch (error) {
-      // Aquí puedes manejar el error de la solicitud
-      console.error(error)
+    if (logueado === true) {
+      localStorage.setItem('AmmountCart', JSON.stringify(totalCar))
+      localStorage.setItem('ItemsCart', JSON.stringify(totalItems))
+      try {
+        axios
+          .post('http://localhost:3001/procesarmp', itemsJSON, {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+          .then(res => {
+            window.location.href = res.data.id.init_point
+            // Aquí puedes manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito
+            console.log(res.data)
+          })
+          .catch(error => {
+            console.log(error)
+          })
+      } catch (error) {
+        // Aquí puedes manejar el error de la solicitud
+        console.error(error)
+      }
+    } else {
+      alert('Debes estar logueado para poder comprar')
     }
   }
 
@@ -88,6 +101,11 @@ export const ShoppingCart = () => {
   useEffect(() => {
     calculateShippingCost()
   }, [cart])
+
+  useEffect(() => {
+    dispatch(setAmmountCart(totalAmmount))
+    dispatch(setItemsCart(cart))
+  }, [dispatch, totalAmmount])
 
   return (
     <div>
