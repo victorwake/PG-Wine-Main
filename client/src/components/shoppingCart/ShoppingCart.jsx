@@ -22,6 +22,7 @@ export const ShoppingCart = () => {
 
   const totalCar = useSelector ((state) => state.ammountCar)
   const totalItems = useSelector ((state) => state.cartItems)
+  const logueado = useSelector( (state) => state.isLoggedIn)
 
   const [shippingCost, setShippingCost] = useState(0);
 
@@ -67,8 +68,9 @@ export const ShoppingCart = () => {
   const itemsJSON = JSON.stringify(cartItems);
 
   const handleClick = (cartItems) => {
-    localStorage.setItem('AmmountCart', JSON.stringify(totalCar));
-    localStorage.setItem('ItemsCart', JSON.stringify(totalItems));
+    if (logueado === true) {
+      localStorage.setItem('AmmountCart', JSON.stringify(totalCar));
+      localStorage.setItem('ItemsCart', JSON.stringify(totalItems));
     try{
       axios.post('http://localhost:3001/procesarmp', itemsJSON, {
         headers: {
@@ -82,6 +84,10 @@ export const ShoppingCart = () => {
         // Aquí puedes manejar el error de la solicitud
         console.error(error)
     }
+      } else {
+        alert('Debes estar logueado para poder comprar')
+      }
+    
   }
 
   const handleQuantityChange = (event, itemId) => {
