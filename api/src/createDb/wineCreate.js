@@ -17,6 +17,9 @@ const insertWine = async() => {
             region: winesApi.region,
             alcohol: winesApi.alcohol,
             volume: winesApi.volume,
+            rating: winesApi.rating,
+            numOfReviews: winesApi.numOfReviews,
+            reviews: winesApi.reviews,
             url: winesApi.url,
             description: winesApi.description,
         });
