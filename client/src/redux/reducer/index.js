@@ -25,6 +25,8 @@ import {
   UPDATE_CART_ITEM,
   REMOVE_FROM_CART,
   REMOVE_ALL_FROM_CART,
+  POST_RATING,
+  GET_RATING,
 
 
   // ADD_TO_CART,
@@ -67,6 +69,7 @@ const initialState = {
   cartItems: [],
   isAddingToCart: false,
   isRemovingFromCart: false,
+  rating: [],
 };
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -272,6 +275,16 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 cart: []}
             )
+            case POST_RATING:
+              return {
+                ...state,
+                rating: [...state.rating, action.payload]
+              };
+              case GET_RATING:
+                return {
+                  ...state,
+                  rating: action.payload,
+                };
     default:
       return state;
   }

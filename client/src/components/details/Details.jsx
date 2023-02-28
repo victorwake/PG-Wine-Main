@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import { Button, Modal } from 'react-bootstrap';
+import { Rating } from "../rating/Rating";
 
 export const Details = () => {
   const clase = useSelector((state) => state.theme);
@@ -127,6 +128,7 @@ export const Details = () => {
             src={wineDetail.image}
             alt={wineDetail.name}
           />
+          <Rating className="rating" />
         </div>
         <div className={"name-" + colorType}>
           <h2>

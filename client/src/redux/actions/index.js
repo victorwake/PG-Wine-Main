@@ -344,3 +344,21 @@ const procesarPagoExitoso = (resultado) => {
       payload: error
     };
   };
+
+/*----------------------------------------------*/
+
+export const postRating = (wineId, payload) => {
+    return dispatch => axios.post(`http://localhost:3001/${wineId}/rating`, { stars: [payload] })
+        .then(res => dispatch({ type: POST_RATING, payload: res.data }))
+        .catch(err => console.log(err));
+};
+export const POST_RATING = 'POST_RATING';
+
+/*----------------------------------------------*/
+
+export const getRating = (wineId) => {
+    return dispatch => axios.get(`http://localhost:3001/${wineId}/rating`)
+        .then(res => dispatch({ type: GET_RATING, payload: res.data }))
+        .catch(err => console.log(err));
+}
+export const GET_RATING = 'GET_RATING';

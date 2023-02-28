@@ -172,3 +172,10 @@ td {
     color: rgb(238, 238, 238);
     background-color: #585858;
 }
+
+.rating{
+    position: relative;
+    top: 30%;
+    left: 35%;
+    width: 200px;
+}
