@@ -31,7 +31,7 @@ import {
   GET_EXP_TYPE,
   GET_USERS,
   UPDATE_USER,
-  GET_ORDER_USERS,
+  GET_ORDER_USERS_SUCCESS,
 
   // ADD_TO_CART,
   // REMOVE_ONE_CART,
@@ -76,7 +76,7 @@ const initialState = {
   experiences: [],
   expType: '',
   users: [],
-  orders: []
+  orderUsers: []
 }
 
 const usuario = JSON.parse(localStorage.getItem('usuario'))
@@ -116,10 +116,10 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         users: action.payload,
       }
-      case GET_ORDER_USERS:
+      case GET_ORDER_USERS_SUCCESS:
         return {
           ...state,
-          orders: action.payload,
+          orderUsers: action.payload,
         }
     case GET_WINE_TYPE:
       return {

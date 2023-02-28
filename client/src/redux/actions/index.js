@@ -96,20 +96,22 @@ export const GET_USERS = 'GET_USERS'
 /*----------------------------------------------*/
 
 export const getOrders = (idUser) => {
-    return async dispatch =>{
-        try { 
-            const response = await axios.get(`http://localhost:3001/orders/orderbyuser/?buyer=${idUser}`)
-            dispatch({
-                type: GET_ORDER_USERS,
-                payload: response.data,
-              })
-            } catch (error) {
-              console.log(error)
-            }
-          }
-        }
+  return async dispatch => {
+    try { 
+      const response = await axios.get(`http://localhost:3001/orders/orderbyuser/?buyer=${idUser}`)
+   
+      dispatch({
+        type: GET_ORDER_USERS_SUCCESS,
+        payload: response.data,
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
   
-  export const GET_ORDER_USERS = 'GET_ORDER_USERS'
+  export const GET_ORDER_USERS_SUCCESS = 'GET_ORDER_USERS_SUCCESS'
 
   /*----------------------------------------------*/
 
@@ -228,8 +230,8 @@ export const UPDATE_WINE = 'UPDATE_WINE'
 
 export const updateUser = (id, payload) => {
   return async function () {
-    const updateWine = await axios.put(`http://localhost:3001/usuarios/${id}`, payload)
-    return updateWine
+    const updateUser = await axios.put(`http://localhost:3001/usuarios/${id}`, payload)
+    return updateUser
   }
 }
 

@@ -3,14 +3,20 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getOrders } from '../../redux/actions'
 
-export const OrderList = () => {
+
+export const OrderList = ({ user }) => {
   const dispatch = useDispatch()
-  const orders = useSelector(state => state.orders)
+  const orders = useSelector(state => state.orderUsers)
+  const idUser = user.idUser
+
 
   useEffect(() => {
     if (!orders.length) dispatch(getOrders())
     console.log(orders)
   }, [dispatch, orders.length])
+  // useEffect(() => {
+  //   dispatch(getOrders(user.idUser))
+  // }, [dispatch, user.idUser])
 
   return (
     <div>
@@ -28,15 +34,16 @@ export const OrderList = () => {
           </tr>
         </thead>
         <tbody>
-          {orders.map((order) => (
-          <li key={order.id}>
-            <p>ID de orden: {order.id}</p>
-            <p>Usuario: {order.idUser}</p>
-            <p>Producto: {order.producto}</p>
-            <p>Cantidad: {order.cantidad}</p>
-            <p>Total: {order.total}</p>
-          </li>))}
-        </tbody>
+  {orders.map(order => (
+    <tr key={order.id}>
+      <td>{order.id}</td>
+      <td>{order.idUser}</td>
+      <td>{order.producto}</td>
+      <td>{order.cantidad}</td>
+      <td>{order.total}</td>
+    </tr>
+  ))}
+</tbody>
       </table>
     </div>
   )
