@@ -38,6 +38,8 @@ router.use("/usuarios", getAllUsers);
 router.use("/usuarios", getAdmin);
 router.use("/usuarios", getUser);
 router.use("/usuarios", favoriteRouter);
+router.use("/usuarios", removeStock);
+router.use("/usuarios", addStock);
 router.use("/procesarmp", procesarMP);
 router.use("/", updateUser);
 router.use("/orders", postOrders);

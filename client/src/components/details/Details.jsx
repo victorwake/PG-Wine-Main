@@ -47,6 +47,14 @@ export const Details = () => {
   };
   
 
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     dispatch(getWinesFromFavorites(idUser)).then(() => {
+  //       setIsFavorite(favorites.some(f => f.user_wine.wineId === id))
+  //     })
+  //   }
+  // }, [currentUser, dispatch, favorites, id, idUser])
+
   useEffect(() => {
     if (currentUser) {
       dispatch(getWinesFromFavorites(idUser)).then(() => {

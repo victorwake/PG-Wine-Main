@@ -40,6 +40,8 @@ export const ShoppingCart = () => {
     return total;
   };
 
+  const totalAmmount = calculateTotal()
+
   // Función para calcular el costo de envío
   const calculateShippingCost = () => {
     if (calculateTotal() < 15000) {
