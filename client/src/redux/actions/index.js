@@ -96,20 +96,13 @@ export const GET_USERS = 'GET_USERS'
 /*----------------------------------------------*/
 
 export const getOrders = (idUser) => {
-  return async dispatch => {
-    try { 
-      const response = await axios.get(`http://localhost:3001/orders/orderbyuser/?buyer=${idUser}`)
-   
-      dispatch({
-        type: GET_ORDER_USERS_SUCCESS,
-        payload: response.data,
-      })
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  return dispatch => {
+    axios(`http://localhost:3001/orders/orderbyuser/?buyer=${idUser}`)
+    .then(res => dispatch({ type: GET_ORDER_USERS_SUCCESS, payload: res.data }))
+    .catch(err => console.log(err))  
+    console.log('entro en la action')
 }
-
+}
   
   export const GET_ORDER_USERS_SUCCESS = 'GET_ORDER_USERS_SUCCESS'
 
@@ -371,19 +364,69 @@ export const procesarPago = payload => {
   }
 }
 
-const procesarPagoExitoso = resultado => {
-  return {
-    type: 'PROCESAR_PAGO_EXITOSO',
-    payload: resultado,
-  }
+export const procesarPagoExitoso = (payload) => {
+  return (dispatch) => {
+      axios.post('http://localhost:3001/orders/post', payload)
+          .then((response) => {
+              dispatch({
+                  type: PROCESAR_PAGO_EXITOSO,
+                  payload: response.data
+              });
+              
+          })
+          .catch((error) => {
+              console.log(error);
+          });
+}
+}
+export const PROCESAR_PAGO_EXITOSO = 'PROCESAR_PAGO_EXITOSO'
+
+export const setAmmountCart = (payload) => {
+return dispatch => {
+dispatch ({
+  type: SET_CART_AMMOUNT,
+  payload: payload
+})
 }
 
-const procesarPagoError = error => {
-  return {
-    type: 'PROCESAR_PAGO_ERROR',
-    payload: error,
-  }
 }
+
+export const SET_CART_AMMOUNT = 'SET_CART_AMMOUNT'
+
+export const setItemsCart = (payload) => {
+return dispatch => {
+dispatch ({
+  type: SET_CART_ITEMS,
+  payload: payload
+})
+}
+
+}
+
+export const SET_CART_ITEMS = 'SET_CART_ITEMS'
+
+export const removeAllTransaction = () => {
+// console.log(id, all);
+return dispatch => {
+localStorage.removeItem('AmmountCart');
+localStorage.removeItem('ItemsCar');
+dispatch ({
+  type: REMOVE_ALL_FROM_TRANSACTION,
+})
+}
+}
+
+export const REMOVE_ALL_FROM_TRANSACTION = 'REMOVE_ALL_FROM_TRANSACTION';
+
+
+export const procesarPagoError = (error) => {
+return {
+type: PROCESAR_PAGO_ERROR,
+payload: error
+};
+};
+
+export const PROCESAR_PAGO_ERROR = 'PROCESAR_PAGO_ERROR'
 //EXPERIENCIAS
 /*----------------------------------------------*/
 

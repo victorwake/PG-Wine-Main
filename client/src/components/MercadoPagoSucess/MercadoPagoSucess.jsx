@@ -1,4 +1,4 @@
-import './mercadoPagoSucess.css';
+
 import React, {useEffect} from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -30,8 +30,7 @@ export const MercadoPagoSucess = () => {
     order_email: currentUser.usuario.email,
     order_status:status
     }));
-    console.log(procesarPagoExitoso)
-    navigate("/perfil")
+    navigate("/user/perfil")
 
   }, [dispatch, navigate])
 
@@ -39,23 +38,6 @@ export const MercadoPagoSucess = () => {
     return (
         <div className={"contenedor-profile-" + clase}>
         <NavBar />
-        <div className={"box-profile-" + clase}>
-          <header className="jumbotron">
-            <h1> Datos de tu compra</h1>
-            <h3>
-               <strong>{currentUser.usuario.firstName}</strong>, tu compra fue procesada correctamente.
-            </h3>
-            <h3>
-               Tu id de pago en Mercado Pago es: <strong>{pagoExitoso.payment_id}</strong>.
-            </h3>
-            <h3>
-               Tu dirección de despacho es: <strong>{pagoExitoso.shipping_address}</strong>.
-            </h3>
-            <h3>
-               Monto total de la compra: <strong>$ </strong>{pagoExitoso.ammount}.
-            </h3>
-          </header>
-        </div>
       </div>
     )
 }

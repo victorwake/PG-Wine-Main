@@ -6,17 +6,17 @@ import { getOrders } from '../../redux/actions'
 
 export const OrderList = ({ user }) => {
   const dispatch = useDispatch()
-  const orders = useSelector(state => state.orderUsers)
-  const idUser = user.idUser
+  const orders = useSelector(state => state.orderUsers);
+  // const idUser = user.idUser
 
 
   useEffect(() => {
     if (!orders.length) dispatch(getOrders())
     console.log(orders)
-  }, [dispatch, orders.length])
-  // useEffect(() => {
-  //   dispatch(getOrders(user.idUser))
-  // }, [dispatch, user.idUser])
+  }, [orders])
+  // useEffect((idUser) => {
+  //   if (!orders.length) dispatch(getOrders(idUser))
+  // }, [dispatch, orders.length, idUser])
 
   return (
     <div>
@@ -24,23 +24,24 @@ export const OrderList = ({ user }) => {
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
+            <th scope="col">Id Usuario</th>
+            <th scope="col">Id Pago</th>
+            <th scope="col">Monto Compra</th>
+            <th scope="col">Domicilio de envio</th>
+            <th scope="col">Items Compra</th>
             <th scope="col">Email</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Rol</th>
-            <th scope="col">Aplicar Cambios</th>
+            <th scope="col">Estado Compra</th>
           </tr>
         </thead>
         <tbody>
   {orders.map(order => (
     <tr key={order.id}>
-      <td>{order.id}</td>
       <td>{order.idUser}</td>
-      <td>{order.producto}</td>
-      <td>{order.cantidad}</td>
-      <td>{order.total}</td>
+      <td>{order.payment_id}</td>
+      <td>{order.ammount}</td>
+      <td>{order.shipping_address}</td>
+      <td>{order.order_email}</td>
+      <td>{order.order_status}</td>
     </tr>
   ))}
 </tbody>

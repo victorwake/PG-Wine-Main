@@ -20,6 +20,7 @@ import { useEffect, useState } from 'react';
 import { MercadoPago } from "./components/MercadoPago/MercadoPago"
 import { UserList } from './components/UserList/userList'
 import { OrderList } from './components/OrderList/OrderList.jsx'
+import { MercadoPagoSucess } from './components/MercadoPagoSucess/MercadoPagoSucess.jsx'
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
                 <Route path="/user/ordenes" element={<Orders />} />
                 <Route path="/shoppingcart" element={<ShoppingCart />} />
                 <Route path="/procesarmp" element={<MercadoPago />} />
+                <Route path="/pagoexitoso" element={<MercadoPagoSucess />} />
                 
             </Routes>
         </div>
