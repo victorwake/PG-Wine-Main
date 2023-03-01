@@ -81,7 +81,9 @@ const initialState = {
   experiences: [],
   expType: '',
   users: [],
-  orders: []
+  orders: [],
+  ammountCar: 0,
+  transactionResult: {},
 }
 
 const usuario = JSON.parse(localStorage.getItem('usuario'))
@@ -343,11 +345,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         expType: action.payload,
       }
-      case GET_ORDER_USERS:
-        return {
-          ...state,
-          orders: action.payload,
-        }
+    case GET_ORDER_USERS:
+      return {
+        ...state,
+        orders: action.payload,
+      }
     default:
       return state
   }

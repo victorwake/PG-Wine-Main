@@ -29,7 +29,6 @@ const CartItem = ({ data }) => {
             <CartItem key={item.id} data={item} />
           ))}
         </div> */}
-
         </div>
       </div>
     </div>

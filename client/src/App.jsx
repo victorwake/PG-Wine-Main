@@ -1,24 +1,21 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import { LandingPage } from './components/landingPage/LandingPage';
-import { Home } from './components/home/Home';
-import { WineType } from './components/wineType/WineType';
-import { Details } from './components/details/Details';
-import { Create } from './components/create/Create';
-import  Register from './components/register/Register';
-import Profile from './components/profile/Profile';
-import Orders from './components/profile/Orders'
-import  Login  from './components/login/Login';
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Admin } from './components/admin/Admin';
-import { ShoppingCart } from './components/shoppingCart/ShoppingCart';
-import { EditList } from './components/editList/EditList';
-import  RegisterAdmin  from './components/registerAdmin/RegisterAdmin'
-import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes';
-import { useSelector } from "react-redux";
-import { useEffect, useState } from 'react';
-import { MercadoPago } from "./components/MercadoPago/MercadoPago"
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import { LandingPage } from './components/landingPage/LandingPage'
+import { Home } from './components/home/Home'
+import { WineType } from './components/wineType/WineType'
+import { Details } from './components/details/Details'
+import { Create } from './components/create/Create'
 import { UserList } from './components/UserList/userList'
+import Orders from './components/profile/Orders'
+import Register from './components/register/Register'
+import Profile from './components/profile/Profile'
+import Login from './components/login/Login'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Admin } from './components/admin/Admin'
+import { ShoppingCart } from './components/shoppingCart/ShoppingCart'
+import { EditList } from './components/editList/EditList'
+import { Experiences } from './components/experiences/expSection/Experiences'
+import { MercadoPago } from './components/MercadoPago/MercadoPago'
 import { OrderList } from './components/OrderList/OrderList.jsx'
 import RegisterAdmin from './components/registerAdmin/RegisterAdmin'
 import { ProtectedRoutes } from './components/protectedRoutes/ProtectedRoutes'
@@ -27,8 +24,8 @@ import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 
 function App() {
-    const currentUser  = useSelector((state) => state.usuario);
-    const [showAdminBoard, setShowAdminBoard] = useState(true);
+  const currentUser = useSelector(state => state.usuario)
+  const [showAdminBoard, setShowAdminBoard] = useState(true)
 
   useEffect(() => {
     if (currentUser) {
@@ -68,4 +65,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

@@ -24,6 +24,7 @@ const addWineToFavorites = async (req, res) => {
 const removeWineFromFavorites = async (req, res) => {
     const userId = req.params.userId;
     const wineId = req.params.wineId;
+
     
     try {
         const user = await User.findByPk(userId);
