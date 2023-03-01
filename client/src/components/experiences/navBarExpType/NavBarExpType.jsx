@@ -27,7 +27,7 @@ export const NavBarExpType = () => {
 
         <div class="card-wrapper">
           <Link
-            to={'/experiencias/' + 'blanco'}
+            to={'/experiencias/' + 'gastronomia'}
             style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             <div class="card-6 card-object card-object-hf">
@@ -43,7 +43,7 @@ export const NavBarExpType = () => {
 
         <div class="card-wrapper">
           <Link
-            to={'/experiencias/' + 'rosado'}
+            to={'/experiencias/' + 'visitas guiadas'}
             style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             <div class="card-7 card-object card-object-hf">
@@ -59,7 +59,7 @@ export const NavBarExpType = () => {
 
         <div class="card-wrapper">
           <Link
-            to={'/experiencias/' + 'espumante'}
+            to={'/experiencias/' + 'degustacion'}
             style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
             <div class="card-8 card-object card-object-hf">

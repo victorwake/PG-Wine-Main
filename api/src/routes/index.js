@@ -25,6 +25,8 @@ const createExpRouter = require("./createExpRouter");
 const updateExpRouter = require("./updateExpRouter");
 const expRouter = require("./expRouter.js");
 const expTypeRouter = require("./expTypeRouter");
+const expDetailRouter = require("./expDetailRouter");
+
 const { validarJWT } = require("../../src/middlewares/validarJWT");
 
 const router = Router();
@@ -53,8 +55,8 @@ router.use("/mpsucess", sucessMP);
 router.use("/rutarestringida", [validarJWT], rutaRestringida);
 
 router.use("/experiences", createExpRouter);
-router.use("/experiences", updateExpRouter);
+router.use("/", updateExpRouter);
 router.use("/experiences", expRouter);
 router.use("/experiencias", expTypeRouter);
-
+router.use("/expDetails", expDetailRouter);
 module.exports = router;

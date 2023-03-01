@@ -13,23 +13,19 @@ module.exports = (sequelize) => {
         },
         price: {
             type: DataTypes.INTEGER,
-            allowNull: false,
         },
         ubication: {
             type: DataTypes.TEXT,
-            allowNull: false,
         },
         kindOfExp:{
             type: DataTypes.STRING,
-            allowNull: false,
         },
         description:{
             type: DataTypes.TEXT,
-            allowNull: false,
+    
         },
         eventDate:{
             type: DataTypes.STRING,
-            allowNull: true,
         },
        image:{
         type: DataTypes.ARRAY (DataTypes.JSONB),
@@ -38,8 +34,7 @@ module.exports = (sequelize) => {
        },
           url: {
             type: DataTypes.TEXT,
-            allowNull: false,
-        },
+        }
     },{
         timestamps: false,
     });

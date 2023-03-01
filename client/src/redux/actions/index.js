@@ -407,6 +407,16 @@ export const GET_EXP_TYPE = 'GET_EXP_TYPE'
 
 /*----------------------------------------------*/
 
+export const getExpDetail = id => {
+  return dispatch =>
+    axios(`http://localhost:3001/details/${id}`)
+      .then(res => dispatch({ type: GET_EXP_DETAIL, payload: res.data }))
+      .catch(err => console.log(err))
+}
+export const GET_EXP_DETAIL = 'GET_EXP_DETAIL'
+
+/*----------------------------------------------*/
+
 export const getOrders = id => {
   return dispatch =>
     axios(`http://localhost:3001/orders/orderbyuser/${id}`)

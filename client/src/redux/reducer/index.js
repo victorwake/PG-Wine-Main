@@ -29,6 +29,7 @@ import {
   GET_EXP,
   UPDATE_EXP,
   GET_EXP_TYPE,
+  GET_EXP_DETAIL,
   GET_USERS,
   UPDATE_USER,
   GET_ORDER_USERS,
@@ -79,7 +80,8 @@ const initialState = {
   isAddingToCart: false,
   isRemovingFromCart: false,
   experiences: [],
-  expType: '',
+  expType: [],
+  expDetail: {},
   users: [],
   orders: [],
   ammountCar: 0,
@@ -349,6 +351,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         orders: action.payload,
+      }
+    case GET_EXP_DETAIL:
+      return {
+        ...state,
+        expDetail: action.payload,
       }
     default:
       return state
