@@ -72,9 +72,9 @@ export const Details = () => {
       )
     );
 
-    setTimeout(() => {
-      setIsAddingToCart(false);
-    }, 10000);
+    // setTimeout(() => {
+    //   setIsAddingToCart(false);
+    // }, 10000);
   };
 
   if (!!wineColorType) {
