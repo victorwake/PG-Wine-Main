@@ -39,7 +39,7 @@ export const THEME_DARK = 'THEME_DARK'
 export const getWines = () => {
   return async dispatch => {
     try {
-      const response = await axios.get('https://dionisio-wines.onrender.com/home')
+      const response = await axios.get('http://localhost:3000/home')
       dispatch({
         type: GET_WINES,
         payload: response.data,
