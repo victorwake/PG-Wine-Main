@@ -35,26 +35,6 @@ export const NavAdmin = () => {
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Publicidades
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Experiencias
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Promociones
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Blog
-                  </a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="/admin/ordenes">
                     Ordenes
                   </a>
@@ -68,6 +48,25 @@ export const NavAdmin = () => {
                   <a class="nav-link" href="/admin/createadmin">
                     Crear administrador
                   </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Experiencias
+                  </a>
+                  <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="/admin/experiencias/create">
+                      Crear
+                    </a>
+                    <a class="dropdown-item" href="/admin/experiencias/editExp">
+                      Editar
+                    </a>
+                  </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a

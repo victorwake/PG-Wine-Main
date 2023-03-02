@@ -147,8 +147,7 @@ export const Create = () => {
                       onChange={e => handleChange(e)}
                     >
                       <option value="value" disabled="" hidden="" defaultValue="">
-                        {' '}
-                        Varietal...{' '}
+                        Varietal...
                       </option>
                       {varietal.map(v => (
                         <option key={v.id} value={v.name}>
@@ -293,7 +292,6 @@ export const Create = () => {
                     {err.description && <span className="err"> {err.description}</span>}
                   </div>
                 </div>
-
                 <div></div>
                 <Cloudinary />
                 <div>

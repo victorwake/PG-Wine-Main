@@ -25,6 +25,8 @@ import { useEffect, useState } from 'react'
 import { Users } from './components/UserList/userList'
 import { UserList } from './components/UserList/userList'
 import Orders from './components/profile/Orders'
+import { CreateExp } from './components/experiences/create/CreateExp'
+import { EditExpList } from './components/experiences/create/editExpList'
 
 function App() {
   const currentUser = useSelector(state => state.usuario)
@@ -52,6 +54,9 @@ function App() {
           <Route path="/admin/createadmin" element={<RegisterAdmin />} />
           <Route path="/admin/usuarios" element={<UserList />} />
           <Route path="/admin/ordenes" element={<OrderList />} />
+          <Route path="/admin/experiencias/create" element={<CreateExp />} />
+          <Route path="/admin/experiencias/create/:id" element={<CreateExp />} />
+          <Route path="/admin/experiencias/editExp" element={<EditExpList />} />
           /admin/createadmin
         </Route>
         <Route path="/experiences" element={<Experiences />} />

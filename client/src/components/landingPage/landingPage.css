@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
-* {
+
+/* * {
     margin: 0;
     padding: 0;
     background-color: #2f2f2f;
-}
+} */
 
 .main {
     height: 100vh;
@@ -90,5 +91,11 @@
     0% {}
     50% {
         background-position: Calc(-70vw - 70px) 50%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+    .d3 {
+        font-size: 80px;
     }
 }

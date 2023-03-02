@@ -8,10 +8,12 @@ import { useDispatch } from 'react-redux'
 import { Cart } from '../cart/Cart'
 import { clearMessage } from '../../redux/actions/message'
 import { logout } from '../../redux/actions/auth'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 export const NavBar = () => {
   const dispatch = useDispatch()
   let location = useLocation()
+  let navigate = useNavigate()
 
   const handleTheme = () => {
     if (clase === 'dark') {
@@ -34,7 +36,7 @@ export const NavBar = () => {
   const logOut = useCallback(() => {
     dispatch(logout())
     localStorage.clear()
-    this.location.reload()
+    navigate('/home')
   }, [dispatch])
 
   useEffect(() => {
@@ -209,7 +211,7 @@ export const NavBar = () => {
               </li>
             )}
           </ul>
-          <Cart />
+          {!showAdminBoard && <Cart />}
 
           <div className={'conteiner-switch-' + clase}>
             <input

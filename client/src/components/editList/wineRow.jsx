@@ -1,13 +1,14 @@
 import './editList.css'
 import { Link } from 'react-router-dom'
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { updateWine } from '../../redux/actions'
+import { getUsers, updateWine } from '../../redux/actions'
 import { getWines } from '../../redux/actions'
 
 export const WineRow = ({ wine }) => {
   const dispatch = useDispatch()
   const [input, setInput] = useState({
+    id: wine.id,
     available: wine.available,
     name: wine.name,
     varietal: wine.varietal,
@@ -28,7 +29,6 @@ export const WineRow = ({ wine }) => {
     setInput(newInput)
 
     dispatch(updateWine(wine.id, newInput))
-    dispatch(getWines())
   }, [dispatch, input, wine.id])
 
   const handlePromotion = useCallback(() => {
@@ -39,7 +39,6 @@ export const WineRow = ({ wine }) => {
     setInput(newInput)
 
     dispatch(updateWine(wine.id, newInput))
-    // dispatch(getWines())
   }, [dispatch, input, wine.id])
 
   return (
@@ -50,7 +49,7 @@ export const WineRow = ({ wine }) => {
       <td>$ {wine.price} </td>
       <td>{wine.stock}</td>
       <td>
-        <Link to={'/admin/create/' + wine.idUser}>
+        <Link to={'/admin/create/' + wine.id}>
           <button className="edit">
             <i class="bi bi-pencil-square"></i>
           </button>
