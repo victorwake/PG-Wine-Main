@@ -156,7 +156,7 @@ background-color:transparent
 .etiquetaProduct{
     background: rgb(13, 108, 241);
     color: #ffffff;
-    /* font-size: calc(--base-text-font-size) - (--default-text-font-size) - 14px; */
+    font-size: calc(--base-text-font-size) - (--default-text-font-size) - 14px;
     font-weight: --text-font-bolder-weight;
 }
 
