@@ -1,6 +1,5 @@
- import { useEffect, Fragment, useCallback, useState, useMemo } from 'react';
+ import { useEffect, Fragment } from 'react';
  import './expType.css';
-// import { Pagination } from '../../pagination/Pagination';
  import { useDispatch, useSelector } from 'react-redux';
  import { NavBar } from '../../navBar/NavBar';
  import { Link, useParams } from 'react-router-dom';
@@ -12,23 +11,6 @@ export const ExpType = () => {
      const dispatch = useDispatch();
      const experiences = useSelector(state => state.expType)
      const { type } = useParams();
-
-
-
-    // const filteredExp = useMemo(() => {
-    //     return experiences
-    // }, [experiences])
-    // // Keep only the wines of the current page
-    // const expPerPage = 3;
-    // const pageExp = useMemo(() => {
-    //     const indexLastExp = currentPage * expPerPage;
-    //     const indexFirstExp = indexLastExp - expPerPage;
-    //     return filteredExp.slice(indexFirstExp, indexLastExp)
-    // }, [currentPage, filteredExp, expPerPage])
-
-
-
-
 
     useEffect(() => {
         dispatch(getExpType(type))
