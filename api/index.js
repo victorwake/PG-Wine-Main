@@ -30,8 +30,6 @@ conn.sync({ force: false }).then(() => {
         // insertVarietal();
         // insertWine();
         // insertRoles();
-    //     insertVarietal();
     //     insertWine();
-    //     insertRoles();
     });
 });
