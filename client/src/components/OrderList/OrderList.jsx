@@ -2,18 +2,19 @@ import { NavAdmin } from '../navAdmin/NavAdmin'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getOrders } from '../../redux/actions'
+import { useParams } from 'react-router-dom';
 
 
 export const OrderList = ({ user }) => {
   const dispatch = useDispatch()
   const orders = useSelector(state => state.orderUsers);
-  // const idUser = user.idUser
+  const { idUser } = useParams();
 
 
   useEffect(() => {
-    if (!orders.length) dispatch(getOrders())
-    console.log(orders)
-  }, [orders])
+    dispatch(getOrders(idUser))
+  }, [dispatch, orders])
+  console.log(orders)
   // useEffect((idUser) => {
   //   if (!orders.length) dispatch(getOrders(idUser))
   // }, [dispatch, orders.length, idUser])
@@ -38,8 +39,8 @@ export const OrderList = ({ user }) => {
     <tr key={order.id}>
       <td>{order.idUser}</td>
       <td>{order.payment_id}</td>
-      <td>{order.ammount}</td>
-      <td>{order.shipping_address}</td>
+      {/* <td>{order.ammount}</td>
+      <td>{order.shipping_address}</td> */}
       <td>{order.order_email}</td>
       <td>{order.order_status}</td>
     </tr>

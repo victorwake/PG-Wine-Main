@@ -31,7 +31,8 @@ import {
   GET_EXP_TYPE,
   GET_USERS,
   UPDATE_USER,
-  GET_ORDER_USERS_SUCCESS,
+  GET_ORDEN,
+  GET_ORDERS,
   PROCESAR_PAGO_EXITOSO,
   PROCESAR_PAGO_ERROR,
   SET_CART_AMMOUNT,
@@ -123,12 +124,16 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         users: action.payload,
       }
-      case GET_ORDER_USERS_SUCCESS:
-        console.log('entro en reducer')
-        return {
-          ...state,
-          orderUsers: action.payload.ordenes,
-        };
+      case GET_ORDEN:
+            return {
+                ...state,
+                orderUsers: action.payload
+            }
+        case GET_ORDERS:
+            return {
+                ...state,
+                orderUsers: action.payload
+            }
         
         // ordenesTotales: action.payload.ordenesTotales
         // orderUsers: [

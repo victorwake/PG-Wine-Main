@@ -95,18 +95,40 @@ export const getUsers = () => {
 export const GET_USERS = 'GET_USERS'
 /*----------------------------------------------*/
 
-export const getOrders = (idUser) => {
-  return dispatch => {
-    axios(`http://localhost:3001/orders/orderbyuser/?buyer=${idUser}`)
-    .then(res => dispatch({ type: GET_ORDER_USERS_SUCCESS, payload: res.data }))
-    .catch(err => console.log(err))  
-    console.log('entro en la action')
-}
+export function getOrden(idUser) {
+  return function(dispatch) {
+    console.log('entro en action getOrden')
+    return axios.get(`http://localhost:3001/orders/orderbyuser/?buyer=${idUser}`)
+    .then(res =>
+          dispatch({
+              type: GET_ORDEN,
+              payload: res.data
+          })
+      );
+        
+  };
 }
   
-  export const GET_ORDER_USERS_SUCCESS = 'GET_ORDER_USERS_SUCCESS'
+  export const GET_ORDEN = 'GET_ORDEN'
 
-  /*----------------------------------------------*/
+/*----------------------------------------------*/
+
+export function getOrders(request) {
+  return function(dispatch) {
+      return axios.get(`http://localhost:3001/orders/orderbyuser`)
+      .then(res => 
+          dispatch({
+              type: GET_ORDERS,
+              payload: res.data
+          })
+      );
+        
+  };
+}
+
+export const GET_ORDERS= 'GET_ORDERS'
+
+/*----------------------------------------------*/
 
 export const cleanWineDetail = payload => {
   return dispatch => {
