@@ -1,6 +1,7 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { updateUser } from '../../redux/actions'
+import { getUsers } from '../../redux/actions'
 
 export const UserRow = ({ user }) => {
   const distpach = useDispatch()
@@ -35,9 +36,6 @@ export const UserRow = ({ user }) => {
       e.preventDefault()
       setLoading(true)
 
-      console.log(input)
-      console.log(user.idUser)
-
       if (!window.confirm('Esta seguro que desea editar al usuario')) {
         setLoading(false)
         return
@@ -47,8 +45,11 @@ export const UserRow = ({ user }) => {
       setLoading(false)
       setEditMode(false)
     },
-    [distpach, id, input, user.idUser],
+    [distpach, id, input],
   )
+  useEffect(() => {
+    distpach(getUsers())
+  }, [distpach])
 
   return (
     <tr key={user.idUser}>
@@ -113,7 +114,7 @@ export const UserRow = ({ user }) => {
               </button>
             </>
           ) : (
-            <button onClick={e => setEditMode(true)}>
+            <button onClick={() => setEditMode(true)}>
               <i class="bi bi-pencil-square"></i>
             </button>
           ))}

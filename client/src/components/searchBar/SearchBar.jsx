@@ -1,25 +1,26 @@
-import './searchBar.css';
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getWinesByName, getWines } from '../../redux/actions';
+import './searchBar.css'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getWinesByName, getWines } from '../../redux/actions'
 
 export const SearchBar = () => {
-  const dispatch = useDispatch();
-  const [input, setInput] = useState('');
-  const wines = useSelector(state => state.wines);
+  const dispatch = useDispatch()
+  const [input, setInput] = useState('')
+  const wines = useSelector(state => state.wines)
 
   function handleInputChange(e) {
-    setInput(e.target.value);
-    const filteredWines = wines.filter(wine =>
-      wine.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
-      wine.winery.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-     dispatch({ type: 'GET_WINES_SUCCESS', payload: filteredWines });
-}
+    setInput(e.target.value)
+    const filteredWines = wines.filter(
+      wine =>
+        wine.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        wine.winery.toLowerCase().includes(e.target.value.toLowerCase()),
+    )
+    dispatch({ type: 'GET_WINES_SUCCESS', payload: filteredWines })
+  }
 
   function handleFilterClear() {
-    setInput('');
-    dispatch(getWines());
+    setInput('')
+    dispatch(getWines())
   }
 
   return (
@@ -38,7 +39,7 @@ export const SearchBar = () => {
           Limpiar filtro
         </button> */}
         <datalist id="datalistOptions">
-          {wines.map((w) => (
+          {wines.map(w => (
             <option key={w.id} value={w.name}>
               {w.name}
             </option>
@@ -46,5 +47,5 @@ export const SearchBar = () => {
         </datalist>
       </form>
     </div>
-  );
-};
+  )
+}

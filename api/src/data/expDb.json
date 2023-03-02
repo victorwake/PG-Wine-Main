@@ -1,0 +1,49 @@
+[{
+        "name": "Degustación, bodega Trapiche Maipú",
+        "price": 25000,
+        "ubication": "https://www.google.com.ar/maps/dir//Bodega+Trapiche,+Nueva+Mayorga+s%2Fn,+5513+Maip%C3%BA,+Mendoza/@-32.9719395,-68.7484127,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x967e0d3de200acb3:0x4b7b3b7fcb547703!2m2!1d-68.7453097!2d-32.9730903",
+        "kindOfExp": "degustacion",
+        "eventDate": "00/00/0000",
+        "image": ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/db/38/62/desde-sus-inicios-en.jpg?w=1200&h=1200&s=1", "https://eltriunfodebaco.com.ar/wp-content/uploads/2017/02/Trapiche-1024x683.jpg",
+            "https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/GNTDCM3EHFRTEYRVGQYGINJSMQ.jpg"
+        ],
+        "url": "https://trapiche.com.ar/comin/turismo-mendoza/",
+        "description": "Rodeada de un paisaje natural único delineado por sus viñedos y olivares, se encuentra nuestra bodega en Maipú. No sólo es digno de admirar el entorno natural que la rodea, sino también su construcción de estilo renacentista que data del año 1912 y es considerado uno de los íconos de la arquitectura vitivinícola argentina."
+    },
+    {
+        "name": "Visita guiada al museo y degustación de vinos Colomé",
+        "price": 6000,
+        "ubication": "https://www.google.com/maps/d/viewer?mid=1dnaxXxarsYS2NLKt6YzV7wDEo30&hl=es&ll=-25.505048406983946%2C-66.38541579668609&z=15",
+        "kindOfExp": "degustacion",
+        "eventDate": "dd/mm/aaaa",
+        "duration": "2 horas",
+        "image": ["https://www.bodegacolome.com/wp-content/uploads/2020/03/bodega_about_final.jpg"],
+        "url": "https://www.bodegacolome.com/turismo/",
+        "description": "Escondida en un rincón de los Valles Calchaquíes, Estancia Colomé es uno de los lugares más increíbles de Argentina y alberga la bodega más antigua del país en funcionamiento. El programa incluye: Copa de bienvenida, cata de tres vinos más representativos de la bodega (Colomé Estate Torrontés, Colomé Estate Malbec, Colomé Autentico Malbec), visita guiada al museo James Turrel, almuerzo de tres pasos en el restaurante de Bodega Colomé."
+    },
+
+
+    {
+        "name": "Experiencia Colomé",
+        "price": 20600,
+        "ubication": "https://www.google.com/maps/place/Posada+Salentein/@-33.4934235,-69.2468785,16z/data=!4m10!3m9!1s0x967c25e5f755b37f:0x3a74572b7b2de20c!5m3!1s2023-03-02!4m1!1i2!8m2!3d-33.4940872!4d-69.2428813!16s%2Fg%2F11c3s97qvg",
+        "kindOfExp": "gastronomia",
+        "eventDate": "dd/mm/aaaa",
+        "duration": "1 día",
+        "image": ["https://www.bodegacolome.com/wp-content/uploads/2020/06/tourism_experience.jpg", "https://www.estilodv.com/public/images/guia/3444-bodega-colome.jpg"],
+        "url": "https://www.bodegacolome.com/turismo/",
+        "description": "Escondida en un rincón de los Valles Calchaquíes, Estancia Colomé es uno de los lugares más increíbles de Argentina y alberga la bodega más antigua del país en funcionamiento. El programa incluye: Copa de bienvenida, cata de tres vinos más representativos de la bodega (Colomé Estate Torrontés, Colomé Estate Malbec, Colomé Autentico Malbec), visita guiada al museo James Turrel, almuerzo de tres pasos en el restaurante de Bodega Colomé."
+    },
+    {
+        "name": "Posada Salentein",
+        "price": 52685,
+        "ubication": "https://www.google.com/maps/d/viewer?mid=1dnaxXxarsYS2NLKt6YzV7wDEo30&hl=es&ll=-25.505048406983946%2C-66.38541579668609&z=15",
+        "kindOfExp": "Hoteles",
+        "eventDate": "dd/mm/aaaa",
+        "duration": "4 horas",
+        "image": ["http://www.bodegasalentein.com/imagenes/archivos/2012-03/27.jpg", "http://www.bodegasalentein.com/imagenes/archivos/2013-01/236-sala_numina.jpg", "http://www.bodegasalentein.com/imagenes/archivos/2012-03/2.jpg"],
+        "url": "http://www.bodegasalentein.com/es/posada",
+        "description": "En Valle de Uco, al pie de la Cordillera de Los Andes y a 100 Km de la ciudad de Mendoza capital se encuentra Posada Salentein, un cálido sitio que combina la tradicional arquitectura de las estancias mendocinas con los viñedos de Bodegas Salentein. Nuestro espacio posee 16 confortables habitaciones, distribuidas en tres casas, entre jardines, viñedos, frutales y huertas. Contamos con 8 habitaciones individuales en galería, que se encuentran en Casa Los Racimos; luego 8 habitaciones adicionales, distribuidas en dos casas, Los Sarmientos y Los Zarcillos, en un ambiente más hogareño y tradicional."
+    }
+
+]

@@ -29,9 +29,15 @@ import {
   GET_EXP,
   UPDATE_EXP,
   GET_EXP_TYPE,
+  GET_EXP_DETAIL,
   GET_USERS,
   UPDATE_USER,
   GET_ORDER_USERS,
+  PROCESAR_PAGO_EXITOSO,
+  PROCESAR_PAGO_ERROR,
+  SET_CART_AMMOUNT,
+  SET_CART_ITEMS,
+  REMOVE_ALL_FROM_TRANSACTION,
 
   // ADD_TO_CART,
   // REMOVE_ONE_CART,
@@ -74,9 +80,12 @@ const initialState = {
   isAddingToCart: false,
   isRemovingFromCart: false,
   experiences: [],
-  expType: '',
+  expType: [],
+  expDetail: {},
   users: [],
-  orders: []
+  orders: [],
+  ammountCar: 0,
+  transactionResult: {},
 }
 
 const usuario = JSON.parse(localStorage.getItem('usuario'))
@@ -292,6 +301,32 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         cart: [],
       }
+    case PROCESAR_PAGO_EXITOSO:
+      return {
+        ...state,
+        transactionResult: action.payload,
+        cart: [],
+      }
+    case SET_CART_AMMOUNT:
+      return {
+        ...state,
+        ammountCar: action.payload,
+      }
+    case SET_CART_ITEMS:
+      return {
+        ...state,
+        cartItems: action.payload,
+      }
+    case PROCESAR_PAGO_ERROR:
+      return {
+        ...state,
+        transactionResult: action.payload,
+      }
+    case REMOVE_ALL_FROM_TRANSACTION:
+      return {
+        ...state,
+        transactionResult: {},
+      }
 
     /////EXPERIENCES////
     case GET_EXP:
@@ -312,11 +347,16 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         expType: action.payload,
       }
-      case GET_ORDER_USERS:
-        return {
-          ...state,
-          orders: action.payload,
-        }
+    case GET_ORDER_USERS:
+      return {
+        ...state,
+        orders: action.payload,
+      }
+    case GET_EXP_DETAIL:
+      return {
+        ...state,
+        expDetail: action.payload,
+      }
     default:
       return state
   }

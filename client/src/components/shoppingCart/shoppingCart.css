@@ -1,10 +1,9 @@
-.container{
+.containerShopingCart {
     display: flex;
     flex-direction: column;
     padding-top: 140px;
     padding-bottom: 100px;
     margin-left: 250px;
-    
 }
 
 .product-column {
@@ -17,10 +16,9 @@
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(7, 7, 7, 0.2);
     padding: 40px;
- 
-  }
+}
 
-  .shipping-column {
+.shipping-column {
     padding-left: 50px;
     box-sizing: border-box;
     font-size: 18px;
@@ -30,64 +28,62 @@
     flex-direction: column;
     width: 30%;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     padding: 40px;
 }
 
-
-
-
-
-.theadProductos{
+.theadProductos {
     display: table-header-group;
     vertical-align: middle;
     border-color: black;
     border-collapse: collapse;
 }
 
-
-.table{
+.table {
     border-collapse: collapse;
-    text-align: center;
+    /* text-align: center; */
     font-size: 14px;
     border-spacing: 0;
-
 }
 
-th, td {
-
+.productCartTd,
+.productCartTd {
     padding: 20px;
-  }
+}
 
-  td{
+.productCartTd {
     display: table-cell;
     vertical-align: inherit;
-  }
+}
 
 
 /* Modo light end */
+
 .homeshopp-container-light {
-    display: flex; /* Cambiar la visualización a flex */
-    overflow-x:scroll;
+    display: flex;
+    /* Cambiar la visualización a flex */
+    overflow-x: scroll;
     height: auto;
     padding-top: 1px;
     transition-duration: 01s;
     background-color: transparent;
-  
-  }
-  
-  .cardshopp-container-home-light {
-    display: flex; /* Cambiar la visualización a flex */
-    align-items: center;
-    justify-content: flex-start; /* Justificar los elementos al inicio */
+}
 
-    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan */
+.cardshopp-container-home-light {
+    display: flex;
+    /* Cambiar la visualización a flex */
+    align-items: center;
+    justify-content: flex-start;
+    /* Justificar los elementos al inicio */
+    flex-wrap: nowrap;
+    /* Evitar que los elementos se envuelvan */
     transition-duration: 01s;
-    background-color:transparent;
-    width: max-content; /* Ajustar el ancho del contenedor a su contenido */
-  }
-  
-  .saleshopp-type-h2-light {
+    background-color: transparent;
+    width: max-content;
+    /* Ajustar el ancho del contenedor a su contenido */
+}
+
+.saleshopp-type-h2-light {
     font-size: 2.5rem;
     font-weight: 600;
     margin: 5px;
@@ -99,12 +95,12 @@ th, td {
     margin-top: 80px;
     margin-bottom: 20px;
     transition-duration: 01s;
-    background-color:transparent;
-   
-  }
-  
+    background-color: transparent;
+}
+
 
 /* Modo light fin */
+
 
 /* --------------------------------------------------------- */
 
@@ -112,59 +108,58 @@ th, td {
 /*Modo Dark*/
 
 .homeshopp-container-dark {
-height: 100vh;
-padding-top: 1px;
-transition-duration: 01s;
-background-color:transparent;
-
+    height: 100vh;
+    padding-top: 1px;
+    transition-duration: 01s;
+    background-color: transparent;
 }
 
 .cardshopp-container-home-dark {
-display: grid;
-grid-template-columns: repeat(auto-fill, 330px);
-align-items: center;
-justify-content: center;
-transition-duration: 01s;
-background-color:transparent
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    align-items: center;
+    justify-content: center;
+    transition-duration: 01s;
+    background-color: transparent
 }
 
 .saleshopp-type-h2-dark {
-font-size: 2.5rem;
-font-weight: 600;
-margin: 5px;
-font-family: 'Source Sans Pro', sans-serif;
-position: relative;
-list-style: none;
-display: flex;
-justify-content: center;
-margin-top: 80px;
-margin-bottom: 20px;
-transition-duration: 01s;
-
-background-color:transparent
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    transition-duration: 01s;
+    background-color: transparent
 }
+
 
 /* Modo dark fin */
 
-.cardshopp{
+.cardshopp {
     box-shadow: white;
-    background-color:transparent;
+    background-color: transparent;
     width: 200px;
     height: 250px;
 }
 
-.etiquetaProduct{
+.etiquetaProduct {
     background: rgb(13, 108, 241);
     color: #ffffff;
     font-size: calc(--base-text-font-size) - (--default-text-font-size) - 14px;
     font-weight: --text-font-bolder-weight;
 }
 
-.conteinerInfo{
+.conteinerInfo {
     display: flex;
     flex-wrap: nowrap;
-    margin:10px;
+    margin: 10px;
     padding: 10px;
-    justify-content:space-around;
+    justify-content: space-around;
     gap: 80px
 }

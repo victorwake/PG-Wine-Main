@@ -1,0 +1,7 @@
+.carousel-exp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    left: 8%;
+}
