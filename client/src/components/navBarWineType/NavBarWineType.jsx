@@ -1,7 +1,9 @@
-import './navBarWineType.css'
+
+import './NavBarWineType.css'
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+
 
 export const NavBarWineType = () => {
   const clase = useSelector(store => store.theme)

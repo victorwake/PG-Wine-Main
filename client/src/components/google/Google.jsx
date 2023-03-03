@@ -22,7 +22,7 @@ var id_token = response.credential;
 console.log(id_token, objUser);
 
 const body = { id_token: id_token };
-    fetch("http://localhost:3001/google", {
+    fetch("https://dionisio-wines.onrender.com/google", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),

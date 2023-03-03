@@ -1,4 +1,4 @@
-.container {
+.containerShopingCart {
     display: flex;
     flex-direction: column;
     padding-top: 140px;
@@ -46,12 +46,12 @@
     border-spacing: 0;
 }
 
-th,
-td {
+.productCartTd,
+.productCartTd {
     padding: 20px;
 }
 
-td {
+.productCartTd {
     display: table-cell;
     vertical-align: inherit;
 }
@@ -151,8 +151,8 @@ td {
 .etiquetaProduct {
     background: rgb(13, 108, 241);
     color: #ffffff;
-    font-size: calc(--base-text-font-size) - (--default-text-font-size) - 14px;
-    font-weight: --text-font-bolder-weight;
+    /* font-size: calc(--base-text-font-size) - (--default-text-font-size) - 14px;
+    font-weight: --text-font-bolder-weight; */
 }
 
 .conteinerInfo {

@@ -1,7 +1,13 @@
-  .carousel {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      width: 75%;
-      left: 8%;
-  }
+.carousel {
+    width: 700px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        width: 350px;
+        left: 0;
+    }
+}

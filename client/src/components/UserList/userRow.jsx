@@ -1,6 +1,7 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { updateUser } from '../../redux/actions'
+import { getUsers } from '../../redux/actions'
 
 export const UserRow = ({ user }) => {
   const distpach = useDispatch()
@@ -46,6 +47,9 @@ export const UserRow = ({ user }) => {
     },
     [distpach, id, input],
   )
+  useEffect(() => {
+    distpach(getUsers())
+  }, [distpach])
 
   return (
     <tr key={user.idUser}>

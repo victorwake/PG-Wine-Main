@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-const API_URL = "http://localhost:3001/usuarios/";
+const API_URL = "https://dionisio-wines.onrender.com/usuarios/";
 
 const getPublicContent = () => {
   return axios.get(API_URL + "all");

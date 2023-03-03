@@ -17,6 +17,7 @@ export const Details = () => {
   const clase = useSelector(state => state.theme)
   const wineDetail = useSelector(state => state.wineDetail)
   const currentUser = useSelector(state => state.usuario)
+  const [showAdminBoard, setShowAdminBoard] = useState(false)
   const [isFavorite, setIsFavorite] = useState(false)
   const [showEmptyCartModal, setShowEmptyCartModal] = useState(false)
 
@@ -50,6 +51,14 @@ export const Details = () => {
   //     })
   //   }
   // }, [currentUser, dispatch, favorites, id, idUser])
+
+  useEffect(() => {
+    if (currentUser) {
+      setShowAdminBoard(currentUser.usuario.rol.includes('ADMIN_ROLE'))
+    } else {
+      setShowAdminBoard(false)
+    }
+  }, [currentUser])
 
   useEffect(() => {
     if (currentUser) {
@@ -156,16 +165,19 @@ export const Details = () => {
           </table>
         </div>
         <h3 className="price">$ {wineDetail.price}</h3>
-        <button
-          id={'agregar-' + clase}
-          className="addToCart"
-          onClick={handleAddToCart}
-          disabled={isAddingToCart || itemInCart}
-        >
-          <i id={'agregar-' + clase} class="bi bi-cart3">
-            {itemInCart ? 'Agregado' : 'Agregar'}
-          </i>
-        </button>
+        {!showAdminBoard && (
+          <button
+            id={'agregar-' + clase}
+            className="addToCart"
+            onClick={handleAddToCart}
+            disabled={isAddingToCart || itemInCart}
+          >
+            <i id={'agregar-' + clase} class="bi bi-cart3">
+              {itemInCart ? 'Agregado' : 'Agregar'}
+            </i>
+          </button>
+        )}
+
         <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>Debe loguearce para agregar a favoritos.</Modal.Body>
@@ -175,15 +187,17 @@ export const Details = () => {
             </Button>
           </Modal.Footer>
         </Modal>
-        <button className="heart" variant="success" onClick={handleFavorite}>
-          {!currentUser ? (
-            <i className="bi bi-heart"></i>
-          ) : !isFavorite ? (
-            <i className="bi bi-heart"></i>
-          ) : (
-            <i className="bi bi-heart-fill"></i>
-          )}
-        </button>
+        {!showAdminBoard && (
+          <button className="heart" variant="success" onClick={handleFavorite}>
+            {!currentUser ? (
+              <i className="bi bi-heart"></i>
+            ) : !isFavorite ? (
+              <i className="bi bi-heart"></i>
+            ) : (
+              <i className="bi bi-heart-fill"></i>
+            )}
+          </button>
+        )}
       </div>
     </div>
   )
