@@ -27,7 +27,7 @@ const procesarMP = (req, res) => {
       };
     }),
     back_urls: {
-      success: "http://localhost:3000/pagoexitoso",
+      success: "https://dionisio-wines.onrender.com/pagoexitoso",
       failure: "https://dionisio-wines.onrender.com/feedback",
       pending: "https://dionisio-wines.onrender.com/feedback",
     },

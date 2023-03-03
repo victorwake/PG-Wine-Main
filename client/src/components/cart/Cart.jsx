@@ -166,7 +166,7 @@ export const Cart = () => {
                   </td>
                   <td>
                     <h4 className="total-unidad">
-                      {item.price * (quantities[item.id] || item.quantity)} $
+                      ${item.price * (quantities[item.id] || item.quantity)}
                     </h4>
                   </td>
                   <td>

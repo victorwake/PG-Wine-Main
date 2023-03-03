@@ -29,7 +29,17 @@ export const MercadoPagoSucess = () => {
       }),
     )
     navigate('/perfil')
-  }, [dispatch, navigate])
+  }, [
+    currentUser.usuario.email,
+    currentUser.usuario.idUser,
+    currentUser.usuario.street,
+    dispatch,
+    items,
+    navigate,
+    paymentId,
+    status,
+    total,
+  ])
 
   return (
     <div className={'contenedor-profile-' + clase}>

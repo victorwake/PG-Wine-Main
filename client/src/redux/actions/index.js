@@ -460,15 +460,13 @@ export const GET_EXP_DETAIL = 'GET_EXP_DETAIL'
 /*----------------------------------------------*/
 export function getOrden(idUser) {
   return function (dispatch) {
-    console.log('entro en action getOrden')
-    return axios
-      .get(`https://dionisio-wines.onrender.com/orders/orderbyuser/?buyer=${idUser}`)
-      .then(res =>
-        dispatch({
-          type: GET_ORDEN,
-          payload: res.data,
-        }),
-      )
+    console.log(idUser, 'action')
+    return axios.get(`https://dionisio-wines.onrender.com/orders/orderbyuser/${idUser}`).then(res =>
+      dispatch({
+        type: GET_ORDEN,
+        payload: res.data,
+      }),
+    )
   }
 }
 

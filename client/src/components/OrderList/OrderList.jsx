@@ -10,14 +10,17 @@ export const OrderList = ({ user }) => {
   const orders = useSelector(state => state.orderUsers)
   const { id } = useParams()
 
-  useEffect(() => {
-    dispatch(getOrden(id))
-  }, [])
+  // useEffect(() => {
+  //   dispatch(getOrden(id))
+  // }, [])
 
-  console.log(orders)
-  // useEffect((idUser) => {
-  //   if (!orders.length) dispatch(getOrders(idUser))
-  // }, [dispatch, orders.length, idUser])
+  console.log(orders, id, 'entre')
+  useEffect(
+    idUser => {
+      if (!orders.length) dispatch(getOrden(id))
+    },
+    [dispatch, orders.length, id],
+  )
 
   return (
     <div>

@@ -58,9 +58,6 @@ export const Home = () => {
       <NavBarWineType />
       <Carousel />
       <hr></hr>
-      <h2 className={'sale-type-h2-home-' + clase}>
-        <i class="bi bi-star"></i>Destacados<i class="bi bi-star"></i>
-      </h2>
       <div className={'card-container-home-' + clase}>
         {loading && <Loading />}
         {notFound && <NotFound />}
