@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e9b8963e.css",
+    "main.js": "/static/js/main.9bf8015f.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/Logo.mp4": "/static/media/Logo.9781f8e97805c5872dcf.mp4",
+    "static/media/rosado.jpg": "/static/media/rosado.31cfb53c758067100267.jpg",
+    "static/media/blanco.jpg": "/static/media/blanco.ddf5d9da5aa13fbe55c2.jpg",
+    "static/media/tinto.jpg": "/static/media/tinto.133f52b2e2e30504f422.jpg",
+    "static/media/espumante.jpg": "/static/media/espumante.c1d5aa00d4dbb1189f8e.jpg",
+    "index.html": "/index.html",
+    "static/media/ITCFranklinGothicStd-Med.otf": "/static/media/ITCFranklinGothicStd-Med.31d6cfe0d16ae931b73c.otf",
+    "static/media/Nexa-Trial-Bold.ttf": "/static/media/Nexa-Trial-Bold.31d6cfe0d16ae931b73c.ttf",
+    "static/media/Sansburg.ttf": "/static/media/Sansburg.31d6cfe0d16ae931b73c.ttf",
+    "main.e9b8963e.css.map": "/static/css/main.e9b8963e.css.map",
+    "main.9bf8015f.js.map": "/static/js/main.9bf8015f.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9b8963e.css",
+    "static/js/main.9bf8015f.js"
+  ]
+}
