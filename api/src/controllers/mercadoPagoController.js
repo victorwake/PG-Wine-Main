@@ -28,8 +28,8 @@ const procesarMP = (req, res) => {
     }),
     back_urls: {
       success: "http://localhost:3000/pagoexitoso",
-      failure: "https://dionisio-wines.onrender.com/feedback",
-      pending: "https://dionisio-wines.onrender.com/feedback",
+      failure: "https://dionisiowines-be.onrender.com/feedback",
+      pending: "https://dionisiowines-be.onrender.com/feedback",
     },
     auto_return: "approved",
   };

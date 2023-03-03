@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://dionisio-wines.onrender.com/'
+const API_URL = 'https://dionisiowines-be.onrender.com/'
 
 const register = (email, firstName, lastName, password, rol) => {
   return axios.post(API_URL + 'usuarios/crear', {

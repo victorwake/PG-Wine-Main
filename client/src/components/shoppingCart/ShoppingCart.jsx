@@ -70,7 +70,7 @@ export const ShoppingCart = () => {
       localStorage.setItem('ItemsCart', JSON.stringify(totalItems))
       try {
         axios
-          .post('https://dionisio-wines.onrender.com/procesarmp', itemsJSON, {
+          .post('https://dionisiowines-be.onrender.com/procesarmp', itemsJSON, {
             headers: {
               'Content-Type': 'application/json',
             },

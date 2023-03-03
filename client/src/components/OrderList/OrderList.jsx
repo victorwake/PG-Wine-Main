@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getOrden } from '../../redux/actions'
 import { useParams } from 'react-router-dom'
 import { NavBar } from '../navBar/NavBar'
+import './orderList.css'
 
 export const OrderList = ({ user }) => {
   const dispatch = useDispatch()
@@ -11,7 +12,7 @@ export const OrderList = ({ user }) => {
 
   useEffect(() => {
     dispatch(getOrden(id))
-  }, [dispatch, id])
+  }, [])
 
   console.log(orders)
   // useEffect((idUser) => {
@@ -26,11 +27,11 @@ export const OrderList = ({ user }) => {
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">Id Usuario</th>
+            <th scope="col">Fecha de compra</th>
             <th scope="col">Id Pago</th>
             <th scope="col">Monto Compra</th>
             {/* <th scope="col">Domicilio de envio</th> */}
-            <th scope="col">Items Compra</th>
+            {/* <th scope="col">Items Compra</th> */}
             <th scope="col">Email</th>
             <th scope="col">Estado Compra</th>
           </tr>
@@ -39,11 +40,11 @@ export const OrderList = ({ user }) => {
           {orders.ordenes &&
             orders.ordenes.map(order => (
               <tr key={order.id}>
-                <td>{order.idUser}</td>
+                <td>{new Date (order.createdAt).toDateString()}</td>
                 <td>{order.payment_id}</td>
-                <td>{order.ammount}</td>
+                <td>$ {order.ammount}</td>
                 {/* <td>{order.shipping_address}</td> */}
-                <td>{order.items}</td>
+                {/* <td>{order.items}</td> */}
                 <td>{order.order_email}</td>
                 <td>{order.order_status}</td>
               </tr>
