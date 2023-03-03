@@ -8,8 +8,7 @@ import {
 } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { NavBar } from "../navBar/NavBar";
 import { Button, Modal } from 'react-bootstrap';
 

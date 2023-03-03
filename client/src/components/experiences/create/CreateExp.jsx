@@ -8,7 +8,7 @@ import { formControl } from '../../../helpers/formControl'
 import { NavAdmin } from '../../navAdmin/NavAdmin'
 
 
-export const Create = () => {
+export const CreateExp = () => {
     const urlCloudinary = useSelector(state => state.urlCloudinary)
     const clase= useSelector(store => store.theme);
     const dispatch = useDispatch()
