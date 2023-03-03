@@ -58,7 +58,6 @@ function App() {
           <Route path="/admin/experiencias/create/:id" element={<CreateExp />} />
           <Route path="/admin/experiencias/editExp" element={<EditExpList />} />
           <Route path="/admin/ordenes" element={<AdminOrder />} />
-          /admin/createadmin
         </Route>
         <Route path="/experiences" element={<Experiences />} />
         <Route path="/expDetails/:id" element={<ExpDetails />} />
