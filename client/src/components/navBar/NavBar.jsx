@@ -90,7 +90,7 @@ export const NavBar = () => {
   </button>
   <ul class="dropdown-menu">
   <li><Link className="dropdown-item" to="/user/perfil"><i className="bi bi-person-circle"></i> Mi Perfil</Link></li>
-  <li><Link className="dropdown-item" to="/user/orders"><i class="bi bi-bag"></i> Mis Compras</Link></li>
+  <li><Link className="dropdown-item" to="/user/ordenes" ><i class="bi bi-bag"></i> Mis Compras</Link></li>
   <li><Link className="dropdown-item" to="/user/favoritos"><i class="bi bi-heart"></i> Mis Favoritos</Link></li>
   <li class="nav-item">
         { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>

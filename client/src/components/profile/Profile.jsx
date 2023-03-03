@@ -36,7 +36,7 @@ const Profile = () => {
     Mi Cuenta
   </a>
   <Link style={{ fontSize: '1em', padding: '20px', width:"350px", textAlign:"center"}} class="list-group-item list-group-item-action" to={"/user/perfil"}><i className="bi bi-person-circle"></i> Mi Perfil</Link>
-  <Link style={{ fontSize: '1em', padding: '20px', width:"350px", textAlign:"center"}} class="list-group-item list-group-item-action"to={"/user/orders/"}><i class="bi bi-bag"></i> Mis Compras</Link>
+  <Link style={{ fontSize: '1em', padding: '20px', width:"350px", textAlign:"center"}} class="list-group-item list-group-item-action"to={"/user/ordenes/" +  currentUser.usuario.idUser}><i class="bi bi-bag"></i> Mis Compras</Link>
   <Link style={{ fontSize: '1em', padding: '20px', width:"350px", textAlign:"center" }} class="list-group-item list-group-item-action" to={"/user/favoritos/"}><i class="bi bi-heart"></i> Mis Favoritos</Link>
   <li class="list-group-item list-group-item-action" >
       { !currentUser && !tokenRevi?  <Link to="/registrar" style={{ color: "inherit", textDecoration: "inherit" }}>
