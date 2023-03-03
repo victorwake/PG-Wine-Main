@@ -1,31 +1,38 @@
 import './searchBar.css'
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getWinesByName, getWines } from '../../redux/actions'
+import { getWinesByName, getWines, changeSearchWine, cleanStateByName } from '../../redux/actions'
 
 export const SearchBar = () => {
   const dispatch = useDispatch()
-  const [input, setInput] = useState('')
   const wines = useSelector(state => state.wines)
 
-  function handleInputChange(e) {
+  const [input, setInput] = useState('')
+
+  const handleInputChange = e => {
     setInput(e.target.value)
-    const filteredWines = wines.filter(
-      wine =>
-        wine.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
-        wine.winery.toLowerCase().includes(e.target.value.toLowerCase()),
-    )
-    dispatch({ type: 'GET_WINES_SUCCESS', payload: filteredWines })
   }
 
-  function handleFilterClear() {
+  const handleSubmit = e => {
+    e.preventDefault()
     setInput('')
-    dispatch(getWines())
+    if (input) {
+      // sino despacharia la accion de busqueda sin valor
+      dispatch(getWinesByName(input))
+      dispatch(changeSearchWine(true))
+      dispatch(cleanStateByName([]))
+      // cleanFilters()
+    }
+  }
+
+  const handleClick = () => {
+    dispatch(cleanStateByName([]))
+    dispatch(changeSearchWine(false))
   }
 
   return (
     <div className="align-items-center">
-      <form className="d-flex" role="search">
+      <form onSubmit={handleSubmit} className="d-flex" role="search">
         <input
           className="form-control"
           type="search"

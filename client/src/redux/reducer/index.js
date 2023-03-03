@@ -33,6 +33,7 @@ import {
   GET_USERS,
   UPDATE_USER,
   GET_ORDER_USERS,
+  GET_ORDEN,
   PROCESAR_PAGO_EXITOSO,
   PROCESAR_PAGO_ERROR,
   SET_CART_AMMOUNT,
@@ -83,7 +84,7 @@ const initialState = {
   expType: [],
   expDetail: {},
   users: [],
-  orders: [],
+  orderUsers: [],
   ammountCar: 0,
   transactionResult: {},
 }
@@ -347,10 +348,10 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         expType: action.payload,
       }
-    case GET_ORDER_USERS:
+    case GET_ORDEN:
       return {
         ...state,
-        orders: action.payload,
+        orderUsers: action.payload,
       }
     case GET_EXP_DETAIL:
       return {

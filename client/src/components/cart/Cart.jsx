@@ -21,14 +21,13 @@ export const Cart = () => {
     unit_price: item.price,
     quantity: quantities[item.id] || item.quantity,
   }))
-  console.log(cartItems)
 
   const itemsJSON = JSON.stringify(cartItems)
 
   const handleClick = cartItems => {
     try {
       axios
-        .post('http://localhost:3001/procesarmp', itemsJSON, {
+        .post('https://dionisio-wines.onrender.com/procesarmp', itemsJSON, {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -167,7 +166,7 @@ export const Cart = () => {
                   </td>
                   <td>
                     <h4 className="total-unidad">
-                      {item.price * (quantities[item.id] || item.quantity)} $
+                      ${item.price * (quantities[item.id] || item.quantity)}
                     </h4>
                   </td>
                   <td>

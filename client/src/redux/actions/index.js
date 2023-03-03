@@ -104,6 +104,20 @@ export const CLEAN_DETAIL = 'CLEAN_DETAIL'
 
 /*----------------------------------------------*/
 
+export const changeSearchWine = payload => {
+  return dispatch => {
+    dispatch({ type: SEARCH_WINE, payload })
+  }
+}
+export const SEARCH_WINE = 'SEARCH_WINE'
+/*----------------------------------------------*/
+export const cleanStateByName = payload => {
+  return dispatch => {
+    dispatch({ type: CLEAN_STATE_BY_NAME, payload })
+  }
+}
+export const CLEAN_STATE_BY_NAME = 'CLEAN_STATE_BY_NAME'
+/*----------------------------------------------*/
 export const changeCurrentPage = payload => {
   return dispatch => {
     dispatch({ type: CURRENT_PAGE, payload })
@@ -176,7 +190,7 @@ export const getPriceRange = (min, max) => {
       const response = await axios.get(
         `https://dionisio-wines.onrender.com/orderAsc/price/` + min + `/` + max,
       )
-      // const response = await axios.get(`http://localhost:3001/products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
+      // const response = await axios.get(`https://dionisio-wines.onrender.com//products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
       dispatch({
         type: GET_BY_RANGE_PRICE,
         payload: response.data,
@@ -444,14 +458,20 @@ export const getExpDetail = id => {
 export const GET_EXP_DETAIL = 'GET_EXP_DETAIL'
 
 /*----------------------------------------------*/
-
-export const getOrders = id => {
-  return dispatch =>
-    axios(`https://dionisio-wines.onrender.com/orders/orderbyuser/${id}`)
-      .then(res => dispatch({ type: GET_ORDER_USERS, payload: res.data }))
-      .catch(err => console.log(err))
+export function getOrden(idUser) {
+  return function (dispatch) {
+    console.log(idUser, 'action')
+    return axios.get(`https://dionisio-wines.onrender.com/orders/orderbyuser/${idUser}`).then(res =>
+      dispatch({
+        type: GET_ORDEN,
+        payload: res.data,
+      }),
+    )
+  }
 }
-export const GET_ORDER_USERS = 'GET_ORDER_USERS'
+
+export const GET_ORDEN = 'GET_ORDEN'
+
 export const procesarPagoExitoso = payload => {
   return dispatch => {
     axios

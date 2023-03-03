@@ -18,7 +18,7 @@ export const CreateExp = () => {
     price: '',
     ubication: '',
     kindOfExp: '',
-    image: '',
+    image: [],
     url: '',
     description: '',
     eventDate: '',
@@ -139,6 +139,9 @@ export const CreateExp = () => {
                       value={input.kindOfExp}
                       onChange={e => handleChange(e)}
                     >
+                      <option value="hoteles" disabled="" defaultValue="">
+                        Experiencias
+                      </option>
                       <option value="hoteles" disabled="" defaultValue="">
                         Hoteles
                       </option>

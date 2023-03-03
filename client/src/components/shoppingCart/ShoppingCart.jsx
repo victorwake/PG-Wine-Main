@@ -70,7 +70,7 @@ export const ShoppingCart = () => {
       localStorage.setItem('ItemsCart', JSON.stringify(totalItems))
       try {
         axios
-          .post('http://localhost:3001/procesarmp', itemsJSON, {
+          .post('https://dionisio-wines.onrender.com/procesarmp', itemsJSON, {
             headers: {
               'Content-Type': 'application/json',
             },
@@ -182,35 +182,30 @@ export const ShoppingCart = () => {
               <i class="bi bi-cash" style={{ fontSize: '3em', transform: 'scale(2)' }}></i>
             </div>
 
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                  >
-                    Las mejores formas de pago
-                  </button>
-                </h2>
-                <div
-                  id="collapseOne"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="headingOne"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <div>
-                      <strong>
-                        <img
-                          src="https://ucarecdn.com/148d3226-8dcd-46f3-b736-03f54ea5fa97/-/format/auto/-/preview/3000x3000/-/quality/lighter/20.png"
-                          width="90"
-                          height="90"
-                        />
-                        Mercado Pago
-                      </strong>
-                    </div>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Las mejores formas de pago
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <strong>
+                      <img
+                        src="https://ucarecdn.com/148d3226-8dcd-46f3-b736-03f54ea5fa97/-/format/auto/-/preview/3000x3000/-/quality/lighter/20.png"
+                        width="90"
+                        height="90"
+                      />
+                      Mercado Pago
+                    </strong>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
                     <strong>
                       <img
                         src="https://ucarecdn.com/25309bd4-2308-4028-8e72-c5c0b8029d31/-/format/auto/-/preview/3000x3000/-/quality/lighter/22.png"
@@ -219,9 +214,9 @@ export const ShoppingCart = () => {
                       />
                       Transferencia Bancaria
                     </strong>
-                  </div>
-                </div>
-              </div>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 

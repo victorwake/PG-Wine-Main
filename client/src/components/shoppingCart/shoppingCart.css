@@ -1,4 +1,4 @@
-.containerShopingCart {
+.container {
     display: flex;
     flex-direction: column;
     padding-top: 140px;
@@ -46,12 +46,12 @@
     border-spacing: 0;
 }
 
-.productCartTd,
-.productCartTd {
+th,
+td {
     padding: 20px;
 }
 
-.productCartTd {
+td {
     display: table-cell;
     vertical-align: inherit;
 }

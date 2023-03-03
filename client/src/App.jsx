@@ -27,6 +27,7 @@ import { UserList } from './components/UserList/userList'
 import Orders from './components/profile/Orders'
 import { CreateExp } from './components/experiences/create/CreateExp'
 import { EditExpList } from './components/experiences/create/editExpList'
+import { AdminOrder } from './components/OrderList/adminOrders'
 
 function App() {
   const currentUser = useSelector(state => state.usuario)
@@ -53,10 +54,10 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/createadmin" element={<RegisterAdmin />} />
           <Route path="/admin/usuarios" element={<UserList />} />
-          <Route path="/admin/ordenes" element={<OrderList />} />
           <Route path="/admin/experiencias/create" element={<CreateExp />} />
           <Route path="/admin/experiencias/create/:id" element={<CreateExp />} />
           <Route path="/admin/experiencias/editExp" element={<EditExpList />} />
+          <Route path="/admin/ordenes" element={<AdminOrder />} />
           /admin/createadmin
         </Route>
         <Route path="/experiences" element={<Experiences />} />
@@ -66,7 +67,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/perfil" element={<Profile />} />
         <Route path="/user/perfil" element={<Profile />} />
-        <Route path="/user/ordenes" element={<Orders />} />
+        <Route path="/user/ordenes/:id" element={<OrderList />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/procesarmp" element={<MercadoPago />} />
         <Route path="/pagoexitoso" element={<MercadoPagoSucess />} />

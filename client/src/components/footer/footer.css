@@ -1,41 +1,47 @@
-.footer{
-    background-color: rgb(72, 72, 72) !important;
-    
+.footer {
+    background-color: rgb(72, 72, 72)
 }
-.info{
+
+.info {
     color: white;
     font-size: 15px;
 }
-.NombreFooter{
+
+.NombreFooter {
     font-size: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
-    color:white;
+    color: white;
 }
 
-.MailFooter{
+.MailFooter {
     font-size: 15px;
-    color:white;
+    color: white;
 }
-.Siguenos{
+
+.Siguenos {
     font-size: 20px;
     font-weight: bold;
-    color:white;
+    color: white;
 }
-.list-unstyled{
-   color:white;
+
+.list-unstyled {
+    color: white;
     font-size: 25px;
- 
 }
-.bi-github{
-    color:white
+
+.bi-github {
+    color: white
 }
-.bi-instagram{
-    color:white
+
+.bi-instagram {
+    color: white
 }
-.instagram{
-    color:white
+
+.instagram {
+    color: white
 }
-.terminos{
-    color:white;
+
+.terminos {
+    color: white;
 }
