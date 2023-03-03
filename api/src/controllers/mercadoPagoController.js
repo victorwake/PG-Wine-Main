@@ -26,7 +26,7 @@ let preference = {
     };
   }),
   back_urls: {
-    success: 'http://localhost:3000/pagoexitoso',
+    success: 'https://dionisiowines.onrender.com/pagoexitoso',
     failure: 'http://localhost:3001/feedback',
     pending: 'http://localhost:3001/feedback',
   },
