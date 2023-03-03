@@ -1,0 +1,39 @@
+.no-found-type-dark {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    transition-duration: 01s;
+    color: rgb(224, 224, 224);
+}
+
+.no-found-type-light {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    transition-duration: 01s;
+    color: #333333;
+}
+
+.notfound-type {
+    height: 20vh;
+    padding-top: 1px;
+}
+
+@media screen and (max-width: 700px) {
+    .no-found-type-dark {
+        font-size: 30px;
+        top: 60%;
+    }
+    .no-found-type-light {
+        font-size: 30px;
+        top: 60%;
+    }
+}

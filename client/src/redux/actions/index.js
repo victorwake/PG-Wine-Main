@@ -104,6 +104,20 @@ export const CLEAN_DETAIL = 'CLEAN_DETAIL'
 
 /*----------------------------------------------*/
 
+export const changeSearchWine = payload => {
+  return dispatch => {
+    dispatch({ type: SEARCH_WINE, payload })
+  }
+}
+export const SEARCH_WINE = 'SEARCH_WINE'
+/*----------------------------------------------*/
+export const cleanStateByName = payload => {
+  return dispatch => {
+    dispatch({ type: CLEAN_STATE_BY_NAME, payload })
+  }
+}
+export const CLEAN_STATE_BY_NAME = 'CLEAN_STATE_BY_NAME'
+/*----------------------------------------------*/
 export const changeCurrentPage = payload => {
   return dispatch => {
     dispatch({ type: CURRENT_PAGE, payload })
@@ -176,7 +190,7 @@ export const getPriceRange = (min, max) => {
       const response = await axios.get(
         `https://dionisio-wines.onrender.com/orderAsc/price/` + min + `/` + max,
       )
-      // const response = await axios.get(`http://localhost:3001/products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
+      // const response = await axios.get(`https://dionisio-wines.onrender.com//products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
       dispatch({
         type: GET_BY_RANGE_PRICE,
         payload: response.data,

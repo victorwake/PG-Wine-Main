@@ -21,14 +21,13 @@ export const Cart = () => {
     unit_price: item.price,
     quantity: quantities[item.id] || item.quantity,
   }))
-  console.log('compra: ' + cartItems)
 
   const itemsJSON = JSON.stringify(cartItems)
 
   const handleClick = cartItems => {
     try {
       axios
-        .post('http://localhost:3001/procesarmp', itemsJSON, {
+        .post('https://dionisio-wines.onrender.com/procesarmp', itemsJSON, {
           headers: {
             'Content-Type': 'application/json',
           },

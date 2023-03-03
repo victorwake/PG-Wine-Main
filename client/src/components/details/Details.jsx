@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { NavBar } from '../navBar/NavBar'
 import { Button, Modal } from 'react-bootstrap'
+import RatingStar from '../ratingStar/RatingStar'
 
 export const Details = () => {
   const clase = useSelector(state => state.theme)
@@ -35,14 +36,14 @@ export const Details = () => {
     idUser = currentUser.usuario.idUser
   }
 
-  const handleFavorite = () => {
-    currentUser ? handleShow() : handleEmptyCart()
-    if (isFavorite) {
-      dispatch(removeWineFromFavorites(idUser, id)).then(() => setIsFavorite(false))
-    } else {
-      dispatch(addWineToFavorites(idUser, id)).then(() => setIsFavorite(true))
-    }
-  }
+  // const handleFavorite = () => {
+  //   // currentUser ? handleShow() : handleEmptyCart()
+  //   // if (isFavorite) {
+  //   //   dispatch(removeWineFromFavorites(idUser, id)).then(() => setIsFavorite(false))
+  //   // } else {
+  //   //   dispatch(addWineToFavorites(idUser, id)).then(() => setIsFavorite(true))
+  //   // }
+  // }
 
   // useEffect(() => {
   //   if (currentUser) {
@@ -60,16 +61,16 @@ export const Details = () => {
     }
   }, [currentUser])
 
-  useEffect(() => {
-    if (currentUser) {
-      dispatch(getWinesFromFavorites(idUser)).then(() => {
-        const wine = favorites.find(wine => wine.id === id)
-        if (wine) {
-          setIsFavorite(true)
-        }
-      })
-    }
-  }, [dispatch, currentUser])
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     dispatch(getWinesFromFavorites(idUser)).then(() => {
+  //       const wine = favorites.find(wine => wine.id === id)
+  //       if (wine) {
+  //         setIsFavorite(true)
+  //       }
+  //     })
+  //   }
+  // }, [dispatch, currentUser, idUser, favorites, id])
 
   const wineColorType = wineDetail.color_type
   let colorType = ''
@@ -85,9 +86,6 @@ export const Details = () => {
         wineDetail.price,
         wineDetail.image,
         wineDetail.quantity,
-        // ).setTimeout(() => {
-        //   setIsAddingToCart(false)
-        // }, 10000),
       ),
     )
   }
@@ -161,6 +159,15 @@ export const Details = () => {
                 <th className={'th-' + colorType}>Nota de cata</th>
                 <td id={'td-' + clase}>{wineDetail.description}</td>
               </tr>
+              <tr>
+                <th className={'th-' + colorType}>Puntaje</th>
+                <RatingStar
+                  id={'th-' + clase}
+                  className="rating-review"
+                  glasses={wineDetail.rating}
+                  numOfReviews={wineDetail.numOfReviews}
+                />
+              </tr>
             </tbody>
           </table>
         </div>
@@ -188,7 +195,7 @@ export const Details = () => {
           </Modal.Footer>
         </Modal>
         {!showAdminBoard && (
-          <button className="heart" variant="success" onClick={handleFavorite}>
+          <button className="heart" variant="success" /* onClick={handleFavorite}*/>
             {!currentUser ? (
               <i className="bi bi-heart"></i>
             ) : !isFavorite ? (
