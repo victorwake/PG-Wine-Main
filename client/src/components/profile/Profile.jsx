@@ -42,7 +42,7 @@ const Profile = () => {
           <Link
             style={{ fontSize: '1em', padding: '20px', width: '350px', textAlign: 'center' }}
             class="list-group-item list-group-item-action"
-            to={'/user/orders/'}
+            to={`/user/ordenes/${currentUser.usuario.idUser}`}
           >
             <i class="bi bi-bag"></i> Mis Compras
           </Link>

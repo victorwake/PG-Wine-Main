@@ -39,7 +39,7 @@ export const THEME_DARK = 'THEME_DARK'
 export const getWines = () => {
   return async dispatch => {
     try {
-      const response = await axios.get('http://localhost:3000/home')
+      const response = await axios.get('https://dionisio-wines.onrender.com/home')
       dispatch({
         type: GET_WINES,
         payload: response.data,
@@ -444,14 +444,22 @@ export const getExpDetail = id => {
 export const GET_EXP_DETAIL = 'GET_EXP_DETAIL'
 
 /*----------------------------------------------*/
-
-export const getOrders = id => {
-  return dispatch =>
-    axios(`https://dionisio-wines.onrender.com/orders/orderbyuser/${id}`)
-      .then(res => dispatch({ type: GET_ORDER_USERS, payload: res.data }))
-      .catch(err => console.log(err))
+export function getOrden(idUser) {
+  return function (dispatch) {
+    console.log('entro en action getOrden')
+    return axios
+      .get(`https://dionisio-wines.onrender.com/orders/orderbyuser/?buyer=${idUser}`)
+      .then(res =>
+        dispatch({
+          type: GET_ORDEN,
+          payload: res.data,
+        }),
+      )
+  }
 }
-export const GET_ORDER_USERS = 'GET_ORDER_USERS'
+
+export const GET_ORDEN = 'GET_ORDEN'
+
 export const procesarPagoExitoso = payload => {
   return dispatch => {
     axios

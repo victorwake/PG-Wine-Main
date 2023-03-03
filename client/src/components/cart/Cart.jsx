@@ -21,7 +21,7 @@ export const Cart = () => {
     unit_price: item.price,
     quantity: quantities[item.id] || item.quantity,
   }))
-  console.log(cartItems)
+  console.log('compra: ' + cartItems)
 
   const itemsJSON = JSON.stringify(cartItems)
 

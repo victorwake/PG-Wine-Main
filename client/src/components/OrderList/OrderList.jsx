@@ -1,37 +1,54 @@
-import { NavAdmin } from '../navAdmin/NavAdmin'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getOrders } from '../../redux/actions'
+import { getOrden } from '../../redux/actions'
+import { useParams } from 'react-router-dom'
+import { NavBar } from '../navBar/NavBar'
 
-export const OrderList = () => {
+export const OrderList = ({ user }) => {
   const dispatch = useDispatch()
-  const orders = useSelector(state => state.orders)
+  const orders = useSelector(state => state.orderUsers)
+  const { id } = useParams()
 
   useEffect(() => {
-    if (!orders.length) dispatch(getOrders())
-    console.log(orders)
-  }, [dispatch, orders.length])
+    dispatch(getOrden(id))
+  }, [dispatch, id])
+
+  console.log(orders)
+  // useEffect((idUser) => {
+  //   if (!orders.length) dispatch(getOrders(idUser))
+  // }, [dispatch, orders.length, idUser])
 
   return (
     <div>
-      <NavAdmin />
+      <div className="navOrder">
+        <NavBar />
+      </div>
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
+            <th scope="col">Id Usuario</th>
+            <th scope="col">Id Pago</th>
+            <th scope="col">Monto Compra</th>
+            {/* <th scope="col">Domicilio de envio</th> */}
+            <th scope="col">Items Compra</th>
             <th scope="col">Email</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Rol</th>
-            <th scope="col">Aplicar Cambios</th>
+            <th scope="col">Estado Compra</th>
           </tr>
         </thead>
-        {/* <tbody>
-          {orders?.map(u => (
-            <UserRow user={u} />
-          ))}
-        </tbody> */}
+        <tbody>
+          {orders.ordenes &&
+            orders.ordenes.map(order => (
+              <tr key={order.id}>
+                <td>{order.idUser}</td>
+                <td>{order.payment_id}</td>
+                <td>{order.ammount}</td>
+                {/* <td>{order.shipping_address}</td> */}
+                <td>{order.items}</td>
+                <td>{order.order_email}</td>
+                <td>{order.order_status}</td>
+              </tr>
+            ))}
+        </tbody>
       </table>
     </div>
   )

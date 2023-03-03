@@ -158,7 +158,10 @@ export const NavBar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link className="dropdown-item" to="/user/orders">
+                          <Link
+                            className="dropdown-item"
+                            to={`/user/ordenes/${currentUser.usuario.idUser}`}
+                          >
                             <i class="bi bi-bag"></i> Mis Compras
                           </Link>
                         </li>
