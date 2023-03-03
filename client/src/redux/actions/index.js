@@ -176,7 +176,7 @@ export const getPriceRange = (min, max) => {
       const response = await axios.get(
         `https://dionisio-wines.onrender.com/orderAsc/price/` + min + `/` + max,
       )
-      // const response = await axios.get(`http://localhost:3001/products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
+      // const response = await axios.get(`https://dionisio-wines.onrender.com/products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
       dispatch({
         type: GET_BY_RANGE_PRICE,
         payload: response.data,
