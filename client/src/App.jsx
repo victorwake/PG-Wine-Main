@@ -66,7 +66,7 @@ function App() {
         <Route path="/registrar" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/perfil" element={<Profile />} />
-        <Route path="/user/perfil" element={<Profile />} />
+        {/* <Route path="/user/perfil" element={<Profile />} /> */}
         <Route path="/user/ordenes/:id" element={<OrderList />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/procesarmp" element={<MercadoPago />} />
