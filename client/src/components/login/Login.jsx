@@ -77,7 +77,7 @@ const Login = (props) => {
   },[dispatch, message])
 
   if (isLoggedIn) {
-    return <Navigate to="/perfil"/>;
+    return <Navigate to="/home"/>;
   }
   return (
     <div className={"login-container-" + clase}>
