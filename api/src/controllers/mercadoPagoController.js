@@ -27,9 +27,9 @@ const procesarMP = (req, res) => {
       };
     }),
     back_urls: {
-      success: "https://dionisiowines.netlify.app/pagoexitoso",
-      failure: "https://dionisiowines.netlify.app/shoppingcart",
-      pending: "https://dionisiowines.netlify.app/user/perfil",
+      success: "https://pg-wine.vercel.app/pagoexitoso",
+      failure: "https://pg-wine.vercel.app/shoppingcart",
+      pending: "https://pg-wine.vercel.app/user/perfil",
     },
     auto_return: "approved",
   };
