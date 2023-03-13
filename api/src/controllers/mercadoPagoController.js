@@ -27,9 +27,9 @@ const procesarMP = (req, res) => {
       };
     }),
     back_urls: {
-      success: "https://sweet-crumble-efe703.netlify.app//pagoexitoso",
-      failure: "https://sweet-crumble-efe703.netlify.app//shoppingcart",
-      pending: "https://sweet-crumble-efe703.netlify.app//user/perfil",
+      success: "https://dionisiowines.netlify.app/pagoexitoso",
+      failure: "https://dionisiowines.netlify.app/shoppingcart",
+      pending: "https://dionisiowines.netlify.app/user/perfil",
     },
     auto_return: "approved",
   };
