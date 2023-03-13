@@ -2,7 +2,7 @@ const { Order, User } = require("../../db.js");
 
 const getOrders = async (req, res) => {
 
-    const { buyer } = req.query
+    const { buyer } = req.params
     try {
         const ordenes = await Order.findAll({where: {idUser: buyer}});
         const ordenesTotales = await ordenes.length;
