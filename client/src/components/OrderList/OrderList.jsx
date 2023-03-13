@@ -10,17 +10,14 @@ export const OrderList = ({ user }) => {
   const orders = useSelector(state => state.orderUsers)
   const { id } = useParams()
 
-  // useEffect(() => {
-  //   dispatch(getOrden(id))
-  // }, [])
+  useEffect(() => {
+    dispatch(getOrden(id))
+  }, [])
 
-  console.log(orders, id, 'entre')
-  useEffect(
-    idUser => {
-      if (!orders.length) dispatch(getOrden(id))
-    },
-    [dispatch, orders.length, id],
-  )
+  console.log(orders)
+  // useEffect((idUser) => {
+  //   if (!orders.length) dispatch(getOrders(idUser))
+  // }, [dispatch, orders.length, idUser])
 
   return (
     <div>
@@ -43,7 +40,7 @@ export const OrderList = ({ user }) => {
           {orders.ordenes &&
             orders.ordenes.map(order => (
               <tr key={order.id}>
-                <td>{new Date(order.createdAt).toDateString()}</td>
+                <td>{new Date (order.createdAt).toDateString()}</td>
                 <td>{order.payment_id}</td>
                 <td>$ {order.ammount}</td>
                 {/* <td>{order.shipping_address}</td> */}
