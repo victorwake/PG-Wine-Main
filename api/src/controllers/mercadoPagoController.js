@@ -27,9 +27,9 @@ const procesarMP = (req, res) => {
       };
     }),
     back_urls: {
-      success: "https://dionisio-wines.onrender.com/pagoexitoso",
-      failure: "https://dionisio-wines.onrender.com/feedback",
-      pending: "https://dionisio-wines.onrender.com/feedback",
+      success: "https://dionisiowines.onrender.com/pagoexitoso",
+      failure: "https://dionisiowines.onrender.com/shoppingcart",
+      pending: "https://dionisiowines.onrender.com/user/perfil",
     },
     auto_return: "approved",
   };
