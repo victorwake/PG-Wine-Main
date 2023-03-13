@@ -27,9 +27,9 @@ const procesarMP = (req, res) => {
       };
     }),
     back_urls: {
-      success: "http://localhost:3000/pagoexitoso",
-      failure: "http://localhost:3001/feedback",
-      pending: "http://localhost:3001/feedback",
+      success: "https://dionisiowines.netlify.app/pagoexitoso",
+      failure: "https://dionisiowines.netlify.app/home",
+      pending: "https://dionisiowines.netlify.app/home",
     },
     auto_return: "approved",
   };
