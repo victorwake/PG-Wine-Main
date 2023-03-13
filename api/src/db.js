@@ -49,7 +49,7 @@ Varietal.belongsToMany(Wine, {through: 'wine_varietal'});
 User.belongsToMany(Wine, {through: 'user_wine'});
 Wine.belongsToMany(User, {through: 'user_wine'});
 
-User.hasMany(Order, {foreignKey: 'userIdUser'});
+User.hasMany(Order, {foreignKey: 'idUser'});
 Order.belongsTo(User, {foreignKey: 'idUser'});
 
 module.exports = {
