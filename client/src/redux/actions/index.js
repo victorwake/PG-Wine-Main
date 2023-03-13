@@ -455,7 +455,7 @@ export const GET_EXP_DETAIL = 'GET_EXP_DETAIL'
 export function getOrden(idUser) {
   return function (dispatch) {
     console.log(idUser, 'action')
-    return axios.get(`${process.env.REACT_APP_API_URL}/orders/orderbyuser/${idUser}`).then(res =>
+    return axios.get(`${process.env.REACT_APP_API_URL}/orders/orderbyuser/?buyer=` + idUser).then(res =>
       dispatch({
         type: GET_ORDEN,
         payload: res.data,
