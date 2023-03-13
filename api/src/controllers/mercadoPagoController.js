@@ -26,9 +26,9 @@ let preference = {
     };
   }),
   back_urls: {
-    success: 'http://localhost:3000/pagoexitoso',
-    failure: 'http://localhost:3001/feedback',
-    pending: 'http://localhost:3001/feedback',
+     success: "https://dionisiowines.onrender.com/pagoexitoso",
+     failure: "https://dionisiowines.onrender.com/shoppingcart",
+     pending: "https://dionisiowines.onrender.com/user/perfil",
   },
   auto_return: 'approved',
   "payment_methods": {
