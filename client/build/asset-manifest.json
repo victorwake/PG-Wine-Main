@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4e5fb3ed.chunk.css",
+    "main.js": "/static/js/main.8040ec99.chunk.js",
+    "main.js.map": "/static/js/main.8040ec99.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.03325487.js",
+    "runtime-main.js.map": "/static/js/runtime-main.03325487.js.map",
+    "static/css/2.f26e749f.chunk.css": "/static/css/2.f26e749f.chunk.css",
+    "static/js/2.5a522e34.chunk.js": "/static/js/2.5a522e34.chunk.js",
+    "static/js/2.5a522e34.chunk.js.map": "/static/js/2.5a522e34.chunk.js.map",
+    "static/js/3.7d1ade82.chunk.js": "/static/js/3.7d1ade82.chunk.js",
+    "static/js/3.7d1ade82.chunk.js.map": "/static/js/3.7d1ade82.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.f26e749f.chunk.css.map": "/static/css/2.f26e749f.chunk.css.map",
+    "static/css/main.4e5fb3ed.chunk.css.map": "/static/css/main.4e5fb3ed.chunk.css.map",
+    "static/js/2.5a522e34.chunk.js.LICENSE.txt": "/static/js/2.5a522e34.chunk.js.LICENSE.txt",
+    "static/media/details.css": "/static/media/Sansburg.31d6cfe0.ttf",
+    "static/media/Loading-GIF.88daefd0.gif": "/static/media/Loading-GIF.88daefd0.gif",
+    "static/media/Logo.9781f8e9.mp4": "/static/media/Logo.9781f8e9.mp4",
+    "static/media/navBarWineType.css": "/static/media/tinto.133f52b2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03325487.js",
+    "static/css/2.f26e749f.chunk.css",
+    "static/js/2.5a522e34.chunk.js",
+    "static/css/main.4e5fb3ed.chunk.css",
+    "static/js/main.8040ec99.chunk.js"
+  ]
+}
