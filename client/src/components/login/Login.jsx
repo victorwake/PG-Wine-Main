@@ -58,7 +58,7 @@ const Login = (props) => {
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(login(email, password))
         .then(() => {
-          navigate("/user/perfil");
+          navigate("/home");
           window.location.reload();
         })
         .catch(() => {
@@ -77,7 +77,7 @@ const Login = (props) => {
   },[dispatch, message])
 
   if (isLoggedIn) {
-    return <Navigate to="/user/perfil"/>;
+    return <Navigate to="/home"/>;
   }
   return (
     <div className={"login-container-" + clase}>
