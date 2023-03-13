@@ -39,7 +39,7 @@ export const THEME_DARK = 'THEME_DARK'
 export const getWines = () => {
   return async dispatch => {
     try {
-      const response = await axios.get('https://dionisio-wines.onrender.com/home')
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/home`)
       dispatch({
         type: GET_WINES,
         payload: response.data,
@@ -56,7 +56,7 @@ export const GET_WINES = 'GET_WINES'
 export const getWineType = type => {
   return async dispatch => {
     try {
-      const response = await axios.get(`https://dionisio-wines.onrender.com/vinos/${type}`)
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/vinos/${type}`)
       dispatch({ type: GET_WINE_TYPE, payload: response.data })
       dispatch(changeCurrentPage(1)) // actualiza el currentPage a 1
       dispatch(cleanAllFilters()) // resetea los filtros
@@ -71,7 +71,7 @@ export const GET_WINE_TYPE = 'GET_WINE_TYPE'
 
 export const getWineDetail = id => {
   return dispatch =>
-    axios(`https://dionisio-wines.onrender.com/details/${id}`)
+    axios(`${process.env.REACT_APP_API_URL}/details/${id}`)
       .then(res => dispatch({ type: GET_WINE_DETAIL, payload: res.data }))
       .catch(err => console.log(err))
 }
@@ -82,7 +82,7 @@ export const GET_WINE_DETAIL = 'GET_WINE_DETAIL'
 export const getUsers = () => {
   return async dispatch => {
     try {
-      const response = await axios.get('https://dionisio-wines.onrender.com/usuarios/all')
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/usuarios/all`)
       dispatch({
         type: GET_USERS,
         payload: response.data,
@@ -171,7 +171,7 @@ export const NAME_ORDER = 'NAME_ORDER'
 export const getWinesByName = name => {
   return async dispatch => {
     try {
-      const response = await axios.get('https://dionisio-wines.onrender.com/home/?name=' + name)
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/home/?name=` + name)
       dispatch({
         type: GET_BY_NAME,
         payload: response.data,
@@ -188,9 +188,9 @@ export const getPriceRange = (min, max) => {
   return async dispatch => {
     try {
       const response = await axios.get(
-        `https://dionisio-wines.onrender.com/orderAsc/price/` + min + `/` + max,
+        `${process.env.REACT_APP_API_URL}/orderAsc/price/` + min + `/` + max,
       )
-      // const response = await axios.get(`https://dionisio-wines.onrender.com//products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
+      // const response = await axios.get(`${process.env.REACT_APP_API_URL}//products?order=asc&sorderBy=price&minPrice=${min}&maxPrice=${max}`)
       dispatch({
         type: GET_BY_RANGE_PRICE,
         payload: response.data,
@@ -205,7 +205,7 @@ export const GET_BY_RANGE_PRICE = 'GET_BY_RANGE_PRICE'
 
 export const postWines = payload => {
   return async function () {
-    const newWine = await axios.post('https://dionisio-wines.onrender.com/wines', payload)
+    const newWine = await axios.post(`${process.env.REACT_APP_API_URL}/wines`, payload)
     return newWine
   }
 }
@@ -215,7 +215,7 @@ export const POST_WINES = 'POST_WINES'
 
 export const updateWine = (id, payload) => {
   return async function () {
-    const updateWine = await axios.put(`https://dionisio-wines.onrender.com/wines/${id}`, payload)
+    const updateWine = await axios.put(`${process.env.REACT_APP_API_URL}/wines/${id}`, payload)
     return updateWine
   }
 }
@@ -226,10 +226,7 @@ export const UPDATE_WINE = 'UPDATE_WINE'
 
 export const updateUser = (id, payload) => {
   return async function () {
-    const updateUser = await axios.put(
-      `https://dionisio-wines.onrender.com/usuarios/${id}`,
-      payload,
-    )
+    const updateUser = await axios.put(`${process.env.REACT_APP_API_URL}/usuarios/${id}`, payload)
     return updateUser
   }
 }
@@ -240,7 +237,7 @@ export const UPDATE_USER = 'UPDATE_USER'
 
 export function getVarietal() {
   return async function (dispatch) {
-    var json = await axios.get('https://dionisio-wines.onrender.com/varietal')
+    var json = await axios.get(`${process.env.REACT_APP_API_URL}/varietal`)
     return dispatch({
       type: GET_VARIETAL,
       payload: json.data,
@@ -264,7 +261,7 @@ export const addWineToFavorites = (idUser, wineId) => {
   return async dispatch => {
     try {
       const response = await fetch(
-        `https://dionisio-wines.onrender.com/usuarios/${idUser}/favorites/${wineId}`,
+        `${process.env.REACT_APP_API_URL}/usuarios/${idUser}/favorites/${wineId}`,
         {
           method: 'POST',
           headers: {
@@ -287,7 +284,7 @@ export const removeWineFromFavorites = (idUser, wineId) => {
   return async dispatch => {
     try {
       const response = await fetch(
-        `https://dionisio-wines.onrender.com/usuarios/${idUser}/favorites/${wineId}`,
+        `${process.env.REACT_APP_API_URL}/usuarios/${idUser}/favorites/${wineId}`,
         {
           method: 'DELETE',
           headers: {
@@ -309,7 +306,7 @@ export const REMOVE_WINE_FROM_FAVORITES = 'REMOVE_WINE_FROM_FAVORITES'
 
 export const getWinesFromFavorites = userId => {
   return dispatch =>
-    axios(`https://dionisio-wines.onrender.com/usuarios/${userId}/favorites`)
+    axios(`${process.env.REACT_APP_API_URL}/usuarios/${userId}/favorites`)
       .then(res => dispatch({ type: GET_WINES_FROM_FAVORITES, payload: res.data }))
       .catch(err => console.log(err))
 }
@@ -362,7 +359,7 @@ export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART'
 export const procesarPago = payload => {
   return dispatch => {
     axios
-      .post('https://dionisio-wines.onrender.com/procesarmp', payload)
+      .post(`${process.env.REACT_APP_API_URL}/procesarmp`, payload)
       .then(response => {
         console.log(response)
 
@@ -381,7 +378,7 @@ export const procesarPago = payload => {
 
 export const postExp = payload => {
   return async function () {
-    const newExp = await axios.post('https://dionisio-wines.onrender.com/experiences', payload)
+    const newExp = await axios.post(`${process.env.REACT_APP_API_URL}/experiences`, payload)
     return newExp
   }
 }
@@ -391,10 +388,7 @@ export const POST_EXP = 'POST_EXP'
 /*----------------------------------------------*/
 export const updateExp = (id, payload) => {
   return async function () {
-    const updateExp = await axios.put(
-      `https://dionisio-wines.onrender.com/experiences/${id}`,
-      payload,
-    )
+    const updateExp = await axios.put(`${process.env.REACT_APP_API_URL}/experiences/${id}`, payload)
     return updateExp
   }
 }
@@ -405,7 +399,7 @@ export const UPDATE_EXP = 'UPDATE_EXP'
 export const getExp = () => {
   return async dispatch => {
     try {
-      const response = await axios.get('https://dionisio-wines.onrender.com/experiences')
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/experiences`)
       dispatch({
         type: GET_EXP,
         payload: response.data,
@@ -421,7 +415,7 @@ export const GET_EXP = 'GET_EXP'
 
 export function getAllExp() {
   return async function (dispatch) {
-    var json = await axios.get('https://dionisio-wines.onrender.com/expriences/all')
+    var json = await axios.get(`${process.env.REACT_APP_API_URL}/expriences/all`)
     return dispatch({
       type: GET_ALL_EXP,
       payload: json.data,
@@ -436,7 +430,7 @@ export const GET_ALL_EXP = 'GET_ALL_EXP'
 export const getExpType = type => {
   return async dispatch => {
     try {
-      const response = await axios.get(`https://dionisio-wines.onrender.com/experiencias/${type}`)
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/experiencias/${type}`)
       dispatch({ type: GET_EXP_TYPE, payload: response.data })
       dispatch(changeCurrentPage(1)) // actualiza el currentPage a 1
       dispatch(cleanAllFilters()) // resetea los filtros
@@ -451,7 +445,7 @@ export const GET_EXP_TYPE = 'GET_EXP_TYPE'
 
 export const getExpDetail = id => {
   return dispatch =>
-    axios(`https://dionisio-wines.onrender.com/expDetails/${id}`)
+    axios(`${process.env.REACT_APP_API_URL}/expDetails/${id}`)
       .then(res => dispatch({ type: GET_EXP_DETAIL, payload: res.data }))
       .catch(err => console.log(err))
 }
@@ -461,7 +455,7 @@ export const GET_EXP_DETAIL = 'GET_EXP_DETAIL'
 export function getOrden(idUser) {
   return function (dispatch) {
     console.log(idUser, 'action')
-    return axios.get(`https://dionisio-wines.onrender.com/orders/orderbyuser/${idUser}`).then(res =>
+    return axios.get(`${process.env.REACT_APP_API_URL}/orders/orderbyuser/${idUser}`).then(res =>
       dispatch({
         type: GET_ORDEN,
         payload: res.data,
@@ -475,7 +469,7 @@ export const GET_ORDEN = 'GET_ORDEN'
 export const procesarPagoExitoso = payload => {
   return dispatch => {
     axios
-      .post('https://dionisio-wines.onrender.com/orders/post', payload)
+      .post(`${process.env.REACT_APP_API_URL}/orders/post`, payload)
       .then(response => {
         dispatch({
           type: PROCESAR_PAGO_EXITOSO,

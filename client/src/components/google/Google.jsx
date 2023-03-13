@@ -21,7 +21,7 @@ export default function Google() {
     console.log(id_token, objUser)
 
     const body = { id_token: id_token }
-    fetch('https://dionisio-wines.onrender.com/google', {
+    fetch(`${process.env.REACT_APP_API_URL}/google`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),

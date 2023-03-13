@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://dionisio-wines.onrender.com/'
+const API_URL = process.env.REACT_APP_API_URL
 
 const register = (email, firstName, lastName, password, rol) => {
   return axios.post(API_URL + 'usuarios/crear', {
@@ -31,7 +31,6 @@ const login = (email, password) => {
 const logout = () => {
   localStorage.removeItem('usuario')
 }
-
 
 export default {
   register,

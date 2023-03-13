@@ -27,7 +27,7 @@ export const Cart = () => {
   const handleClick = cartItems => {
     try {
       axios
-        .post('https://dionisio-wines.onrender.com/procesarmp', itemsJSON, {
+        .post(`${process.env.REACT_APP_API_URL}/procesarmp`, itemsJSON, {
           headers: {
             'Content-Type': 'application/json',
           },
