@@ -16,7 +16,7 @@ const Profile = () => {
     return <Navigate to="/login" />
   }
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+
   const logOut = useCallback(() => {
     dispatch(logout())
   }, [dispatch])
