@@ -39,6 +39,8 @@ import {
   SET_CART_AMMOUNT,
   SET_CART_ITEMS,
   REMOVE_ALL_FROM_TRANSACTION,
+  SEARCH_WINE,
+  CLEAN_STATE_BY_NAME,
 
   // ADD_TO_CART,
   // REMOVE_ONE_CART,
@@ -64,6 +66,8 @@ const initialState = {
   wines: [],
   wineType: [],
   wineDetail: {},
+  wineByName: [],
+  searchWine: false,
   currentPage: 1,
   nameOrder: '',
   useFilter: false,
@@ -171,11 +175,21 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         price: action.payload,
       }
-    case GET_BY_NAME:
-      return {
-        ...state,
-        wines: action.payload,
-      }
+      case GET_BY_NAME:
+        return {
+          ...state,
+          wineByName: action.payload,
+        }
+      case SEARCH_WINE:
+        return {
+          ...state,
+          searchWine: action.payload,
+        }
+      case CLEAN_STATE_BY_NAME:
+        return {
+          ...state,
+          wineByName: (action.payload = []),
+        }
     case GET_BY_RANGE_PRICE:
       return {
         ...state,
@@ -364,3 +378,4 @@ const rootReducer = (state = initialState, action) => {
 }
 
 export default rootReducer
+
