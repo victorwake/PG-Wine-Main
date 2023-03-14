@@ -37,6 +37,9 @@ export const WineType = () => {
     notFound = true
   }
 
+  let loading = false
+  if (!wines.length) loading = true
+
   let typeWineSearchTo = []
   if (searchWine) {
     typeWineSearchTo = wineByName
@@ -91,20 +94,25 @@ export const WineType = () => {
 
       <div className="wine-type">
         <div className={'card-container-wine-' + clase}>
+          {loading && <Loading />}
           {notFound && <NotFoundType />}
-          {pageWines?.map(w => (
-            <fragment className="fragment" key={w.id}>
-              <Link to={'/details/' + w.id} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                <Card
-                  name={w.name}
-                  varietal={w.varietal}
-                  image={w.image}
-                  winery={w.winery}
-                  price={w.price}
-                />
-              </Link>
-            </fragment>
-          ))}
+          {!loading &&
+            pageWines?.map(w => (
+              <fragment className="fragment" key={w.id}>
+                <Link
+                  to={'/details/' + w.id}
+                  style={{ color: 'inherit', textDecoration: 'inherit' }}
+                >
+                  <Card
+                    name={w.name}
+                    varietal={w.varietal}
+                    image={w.image}
+                    winery={w.winery}
+                    price={w.price}
+                  />
+                </Link>
+              </fragment>
+            ))}
         </div>
       </div>
       <Footer />
