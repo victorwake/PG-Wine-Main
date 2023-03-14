@@ -16,6 +16,8 @@ import { Filters } from '../filters/Filters'
 import { priceDES, priceASC } from '../../helpers/sort'
 import { PriceRange } from '../priceRange/PriceRange'
 import { NotFoundType } from './NotFoundType'
+import { Loading } from '../loading/Loading'
+import { Footer } from '../footer/Footer'
 
 export const WineType = () => {
   const searchWine = useSelector(state => state.searchWine)
@@ -105,6 +107,7 @@ export const WineType = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
