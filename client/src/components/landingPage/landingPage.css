@@ -13,24 +13,11 @@
     background-color: rgb(68, 68, 68);
 }
 
-.d2 {
-    position: absolute;
-    background-image: url(https://media.admagazine.com/photos/618a6e99b67f79aa891eddde/master/pass/57648.jpg);
-    background-size: 1000px 862px;
-    height: 80vh;
-    width: 45vw;
-    background-position: -10vw 50%;
-    left: 0vw;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    animation: dd2 15s 2;
-    animation-delay: 1s;
-}
+
 
 .d3 {
     position: absolute;
-    background-image: url(https://mendozaviajes.com/wp-content/uploads/2020/08/Vinedos-con-vista-del-Cordon-del-Plata.jpg);
+    background-image: url(../../image/landinPage/center.jpg);
     background-size: 1490px 1062px;
     overflow: hidden;
     text-align: center;
@@ -40,7 +27,7 @@
     font-family: 'Wire One', sans-serif;
     height: 100vh;
     width: 40vw;
-    left: 25vw;
+    left: 30vw;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
     background-position: -15vw 50%;
     top: 50%;
@@ -50,15 +37,32 @@
     animation-delay: 1s;
 }
 
+.d2 {
+    position: absolute;
+    background-image: url(../../image/landinPage/left.webp);
+    background-size: 1000px 862px;
+    height: 80vh;
+    width: 45vw;
+    left: 65vw;
+    background-position: -10vw 50%;
+    left: 0vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd2 15s 2;
+    animation-delay: 1s;
+}
+
 .d4 {
     position: absolute;
-    overflow: hidden;
-    background-image: url(https://www.namesnack.com/images/namesnack-winery-business-names-4368x2912-20200915.jpeg?crop=21:16,smart&width=420&dpr=2);
-    background-size: 840px 840px;
+    /* overflow: hidden; */
+    background-image: url(../../image/landinPage/right.jpeg);
+    background-size: 1000px 862px;
     height: 80vh;
-    width: 35vw;
+    width: 45vw;
     left: 65vw;
     background-position: -70vw 50%;
+    right: 0vw;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
