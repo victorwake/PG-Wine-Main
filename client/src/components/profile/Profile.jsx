@@ -12,13 +12,13 @@ const Profile = () => {
   const dispatch = useDispatch()
   const tokenRevi = localStorage.getItem('nombre')
 
-  if (!currentUser) {
-    return <Navigate to="/login" />
-  }
-
   const logOut = useCallback(() => {
     dispatch(logout())
   }, [dispatch])
+
+  if (!currentUser) {
+    return <Navigate to="/login" />
+  }
 
   return (
     <div className={'contenedor-profile-' + clase}>

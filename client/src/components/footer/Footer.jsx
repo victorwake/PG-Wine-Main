@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const Footer = () => {
   return (
     <footer className="footer">
-      <div class="container">
+      <div>
         <div class="row">
           <div class="col-md-4">
             <p className="NombreFooter">Dionisio Wines</p>
@@ -16,7 +16,7 @@ export const Footer = () => {
             <ul class="list-unstyled">
               <li>
                 <a className="instagram" href="https://www.instagram.com/dionisiowinestienda">
-                  <i class="bi bi-instagram"></i>DionisioWines
+                  <i class="bi bi-instagram"></i>
                 </a>
               </li>
               <li style={{ display: 'inline-block', margin: '0 0.4em  ', color: 'white' }}>

@@ -4,14 +4,14 @@ import './landingPage.css'
 
 export const LandingPage = () => {
   return (
-    <div className="fondo">
-      <div class="main">
-        <div class="d2"></div>
+    <div>
+      <div class="landing-background">
+        <div className="img-left"></div>
         <Link to="/home">
           {' '}
-          <div class="d3">Dionisio Wines</div>
+          <div className="img-center">Dionisio Wines</div>
         </Link>
-        <div class="d4"></div>
+        <div className="img-right"></div>
       </div>
     </div>
   )

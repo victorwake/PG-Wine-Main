@@ -1,21 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
 
-/* * {
-    margin: 0;
-    padding: 0;
-    background-color: #2f2f2f;
-} */
-
-.main {
+.landing-background {
     height: 100vh;
     width: 100vw;
     position: relative;
     background-color: rgb(68, 68, 68);
 }
 
-
-
-.d3 {
+.img-center {
     position: absolute;
     background-image: url(../../image/landinPage/center.jpg);
     background-size: 1490px 1062px;
@@ -33,14 +25,14 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-    animation: dd3 15s 2;
+    animation: center-img 15s 2;
     animation-delay: 1s;
 }
 
-.d2 {
+.img-left {
     position: absolute;
     background-image: url(../../image/landinPage/left.webp);
-    background-size: 1000px 862px;
+    background-size: 1500px 862px;
     height: 80vh;
     width: 45vw;
     left: 65vw;
@@ -49,57 +41,55 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    animation: dd2 15s 2;
+    animation: left-img 15s 2;
     animation-delay: 1s;
 }
 
-.d4 {
+.img-right {
     position: absolute;
-    /* overflow: hidden; */
-    background-image: url(../../image/landinPage/right.jpeg);
-    background-size: 1000px 862px;
+    background-image: url(../../image/landinPage/right.webp);
+    background-size: 1500px 862px;
     height: 80vh;
     width: 45vw;
-    left: 65vw;
-    background-position: -70vw 50%;
+    background-position: -10vw 50%;
     right: 0vw;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    animation: dd4 15s 2;
+    animation: right-img 15s 2;
     animation-delay: 1s;
 }
 
-@keyframes dd12 {
-    0% {}
-    50% {
-        background-position: Calc(0vw - 40px) 50%;
-    }
-}
 
-@keyframes dd2 {
+@keyframes left-img {
     0% {}
     50% {
         background-position: Calc(-20vw - 60px) 50%;
     }
 }
 
-@keyframes dd3 {
+@keyframes center-img {
     0% {}
     50% {
-        background-position: Calc(-35vw - 60px) 50%;
+        background-position: Calc(-30vw - 60px) 50%;
     }
 }
 
-@keyframes dd4 {
+@keyframes right-img {
     0% {}
     50% {
-        background-position: Calc(-70vw - 70px) 50%;
+        background-position: Calc(-20vw - 20px) 50%;
     }
 }
 
 @media (min-width: 400px) and (max-width: 767px) {
-    .d3 {
+    .img-center  {
         font-size: 80px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+    .img-center  {
+        font-size: 60px;
     }
 }
