@@ -1,62 +1,119 @@
 
-.footer {
-    background-color: #292b2c;
-    color: #fff;
+.footer-dark {
+    background-color: #333333;
+    color: rgb(224, 224, 224);
     padding: 60px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .NombreFooter {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.list-unstyled-dark li a i {
+    font-size: 24px;
+    color: rgb(224, 224, 224);
+}
+
+.list-unstyled-dark li a i:hover {
+    color: #9e4d4d;
+}
+
+.terminos-dark {
+    color: rgb(224, 224, 224);
+}
+
+
+.NombreFooter {
     font-size: 24px;
     margin-bottom: 10px;
-  }
-  
-  .MailFooter {
+}
+
+.MailFooter {
     font-size: 18px;
     margin-bottom: 10px;
-  }
-  
-  .Siguenos {
+}
+
+.Siguenos {
     font-size: 20px;
     margin-bottom: 10px;
-  }
+}
 
-  .instagram{
+.instagram{
     margin: 10px;
-  }
+}
 
-  
-  .list-unstyled {
+
+.list-unstyled {
     list-style: none;
     padding: 0;
-  }
-  
-  .list-unstyled li {
+}
+
+.list-unstyled li {
     display: inline-block;
     color: white;
-  }
-  
-  .list-unstyled li a i {
-    font-size: 24px;
-    color: white;
-  }
+}
 
-  .list-unstyled li a i:hover {
+
+
+
+
+
+.footer-light {
+    background-color: rgb(224, 224, 224);
+    color: #333333;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}  
+
+.list-unstyled-light li a i {
+    font-size: 24px;
+    color: #333333;
+}
+
+.list-unstyled-light li a i:hover {
     color: #9e4d4d;
-  }
-  
-  @media (max-width: 768px) {
+}  
+
+.terminos-light {
+    color: #333333;
+}
+
+ul.list-unstyled-light li {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
     .col-md-4 {
-      width: 100%;
-      margin-bottom: 30px;
-      text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
     }
     
     .col-md-6 {
-      width: 100%;
-      margin-bottom: 30px;
-      text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
     }
-  }
+    .list-unstyled-light {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        
+    }
+    .list-unstyled-dark {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        
+    }
+}
+

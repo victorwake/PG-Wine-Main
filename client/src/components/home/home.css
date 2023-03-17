@@ -5,6 +5,7 @@
     padding-top: 1px;
     transition-duration: 01s;
     background-color: rgb(224, 224, 224);
+    
 }
 
 .card-container-home-light {
@@ -12,6 +13,7 @@
     grid-template-columns: repeat(auto-fill, 330px);
     align-items: center;
     justify-content: center;
+    padding-bottom: 50px;
     transition-duration: 01s;
     background-color: rgb(224, 224, 224);
 }
@@ -51,6 +53,7 @@
     grid-template-columns: repeat(auto-fill, 330px);
     align-items: center;
     justify-content: center;
+    padding-bottom: 50px;
     transition-duration: 01s;
     background-color: #333333;
 }

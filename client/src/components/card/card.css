@@ -9,7 +9,8 @@
 }
 
 .card-light{
-
+    width: 310px;
+    height: 350px;
     margin: 10px;
     border-radius: 8px;
     cursor: pointer;

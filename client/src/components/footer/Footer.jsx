@@ -1,9 +1,12 @@
 import './footer.css'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export const Footer = () => {
+  const clase = useSelector(store => store.theme)
+
   return (
-    <footer className="footer">
+    <footer className={'footer-' + clase}>
       <div>
         <div class="row">
           <div class="col-md-4">
@@ -13,7 +16,7 @@ export const Footer = () => {
           <hr></hr>
           <div class="col-md-4">
             <h4 className="Siguenos">Síguenos en redes sociales</h4>
-            <ul class="list-unstyled">
+            <ul class={'list-unstyled-' + clase}>
               <li>
                 <a className="instagram" href="https://www.instagram.com/dionisiowinestienda">
                   <i class="bi bi-instagram"></i>
@@ -63,7 +66,11 @@ export const Footer = () => {
             <p className="copyright">&copy; 2023 DionisioWines. Todos los derechos reservados.</p>
           </div>
           <div class="col-md-6 ">
-            <Link to="/terminos" style={{ color: 'white' }}>
+            <Link
+              className={'terminos' + clase}
+              to="/terminos"
+              style={{ color: 'inherit', textDecoration: 'inherit' }}
+            >
               Términos y Condiciones
             </Link>
           </div>
