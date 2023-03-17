@@ -7,10 +7,6 @@
 }
 
 
-/* .container {
-    padding: 2rem 0rem;
-} */
-
 .table-image thead td,
 .table-image thead th {
     border: 0;
@@ -58,4 +54,13 @@
 .myinput {
     width: 50px;
     height: 50px;
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+    .table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        
+    }
 }

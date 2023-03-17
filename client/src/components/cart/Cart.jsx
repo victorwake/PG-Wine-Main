@@ -134,7 +134,7 @@ export const Cart = () => {
         <Modal.Body>
           <table className="table table-image">
             <thead>
-              <tr>
+              <tr id="col">
                 <th scope="col">Imagen</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Varietal</th>
