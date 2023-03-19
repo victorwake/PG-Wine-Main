@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom'
 import { NavBar } from '../navBar/NavBar'
 import { Button, Modal } from 'react-bootstrap'
 import RatingStar from '../ratingStar/RatingStar'
+import { Footer } from '../../components/footer/Footer'
 
 export const Details = () => {
   const clase = useSelector(state => state.theme)
@@ -44,14 +45,6 @@ export const Details = () => {
       dispatch(addWineToFavorites(idUser, id)).then(() => setIsFavorite(true))
     }
   }
-
-  // useEffect(() => {
-  //   if (currentUser) {
-  //     dispatch(getWinesFromFavorites(idUser)).then(() => {
-  //       setIsFavorite(favorites.some(f => f.user_wine.wineId === id))
-  //     })
-  //   }
-  // }, [currentUser, dispatch, favorites, id, idUser])
 
   useEffect(() => {
     if (currentUser) {
@@ -114,97 +107,102 @@ export const Details = () => {
   }
 
   return (
-    <div className={'detail-container-' + clase}>
-      <NavBar />
-      <div className="containerData">
-        <div>
-          <Link to={`/vinos/${wineColorType}`}>
-            <button id={'agregar-' + clase} className="buttonBack">
-              <i class="bi bi-arrow-return-left"></i> Volver{' '}
+    <div>
+      <div className={'detail-container-' + clase}>
+        <NavBar />
+        <div className="containerData">
+          <div>
+            <Link to={`/vinos/${wineColorType}`}>
+              <button id={'agregar-' + clase} className="buttonBack">
+                <i class="bi bi-arrow-return-left"></i> Volver{' '}
+              </button>
+            </Link>
+          </div>
+          <div className="img">
+            <img className="imagen" src={wineDetail.image} alt={wineDetail.name} />
+          </div>
+          <div className={'name-' + colorType}>
+            <h2>
+              {colorName}S - {wineDetail.name}
+            </h2>
+          </div>
+          <div className="tabla">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th className={'th-' + colorType}>Variedad</th>
+                  <td id={'td-' + clase}>{wineDetail.varietal}</td>
+                </tr>
+                <tr>
+                  <th className={'th-' + colorType}>Bodega</th>
+                  <td id={'td-' + clase}>{wineDetail.winery}</td>
+                </tr>
+                <tr>
+                  <th className={'th-' + colorType}>Ubicacion</th>
+                  <td id={'td-' + clase}>{wineDetail.province}</td>
+                </tr>
+                <tr>
+                  <th className={'th-' + colorType}>Alcohol</th>
+                  <td id={'td-' + clase}>{wineDetail.alcohol} %</td>
+                </tr>
+                <tr>
+                  <th className={'th-' + colorType}>Año</th>
+                  <td id={'td-' + clase}>{wineDetail.year}</td>
+                </tr>
+                <tr>
+                  <th className={'th-' + colorType}>Nota de cata</th>
+                  <td id={'td-' + clase}>{wineDetail.description}</td>
+                </tr>
+                <tr>
+                  <th className={'th-' + colorType}>Puntaje</th>
+                  <RatingStar
+                    id={'th-' + clase}
+                    className="rating-review"
+                    glasses={wineDetail.rating}
+                    numOfReviews={wineDetail.numOfReviews}
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 className="price">$ {wineDetail.price}</h3>
+          {!showAdminBoard && (
+            <button
+              id={'agregar-' + clase}
+              className="addToCart"
+              onClick={handleAddToCart}
+              disabled={isAddingToCart || itemInCart}
+            >
+              <i id={'agregar-' + clase} class="bi bi-cart3">
+                {itemInCart ? 'Agregado' : 'Agregar'}
+              </i>
             </button>
-          </Link>
-        </div>
-        <div className="img">
-          <img className="imagen" src={wineDetail.image} alt={wineDetail.name} />
-        </div>
-        <div className={'name-' + colorType}>
-          <h2>
-            {colorName}S - {wineDetail.name}
-          </h2>
-        </div>
-        <div className="tabla">
-          <table class="table">
-            <tbody>
-              <tr>
-                <th className={'th-' + colorType}>Variedad</th>
-                <td id={'td-' + clase}>{wineDetail.varietal}</td>
-              </tr>
-              <tr>
-                <th className={'th-' + colorType}>Bodega</th>
-                <td id={'td-' + clase}>{wineDetail.winery}</td>
-              </tr>
-              <tr>
-                <th className={'th-' + colorType}>Ubicacion</th>
-                <td id={'td-' + clase}>{wineDetail.province}</td>
-              </tr>
-              <tr>
-                <th className={'th-' + colorType}>Alcohol</th>
-                <td id={'td-' + clase}>{wineDetail.alcohol} %</td>
-              </tr>
-              <tr>
-                <th className={'th-' + colorType}>Año</th>
-                <td id={'td-' + clase}>{wineDetail.year}</td>
-              </tr>
-              <tr>
-                <th className={'th-' + colorType}>Nota de cata</th>
-                <td id={'td-' + clase}>{wineDetail.description}</td>
-              </tr>
-              <tr>
-                <th className={'th-' + colorType}>Puntaje</th>
-                <RatingStar
-                  id={'th-' + clase}
-                  className="rating-review"
-                  glasses={wineDetail.rating}
-                  numOfReviews={wineDetail.numOfReviews}
-                />
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h3 className="price">$ {wineDetail.price}</h3>
-        {!showAdminBoard && (
-          <button
-            id={'agregar-' + clase}
-            className="addToCart"
-            onClick={handleAddToCart}
-            disabled={isAddingToCart || itemInCart}
-          >
-            <i id={'agregar-' + clase} class="bi bi-cart3">
-              {itemInCart ? 'Agregado' : 'Agregar'}
-            </i>
-          </button>
-        )}
+          )}
 
-        <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
-          <Modal.Header closeButton></Modal.Header>
-          <Modal.Body>Debe loguearce para agregar a favoritos.</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseEmptyCartModal}>
-              Cerrar
-            </Button>
-          </Modal.Footer>
-        </Modal>
-        {!showAdminBoard && (
-          <button className="heart" variant="success" onClick={handleFavorite}>
-            {!currentUser ? (
-              <i className="bi bi-heart"></i>
-            ) : !isFavorite ? (
-              <i className="bi bi-heart"></i>
-            ) : (
-              <i className="bi bi-heart-fill"></i>
-            )}
-          </button>
-        )}
+          <Modal show={showEmptyCartModal} onHide={handleCloseEmptyCartModal}>
+            <Modal.Header closeButton></Modal.Header>
+            <Modal.Body>Debe loguearce para agregar a favoritos.</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleCloseEmptyCartModal}>
+                Cerrar
+              </Button>
+            </Modal.Footer>
+          </Modal>
+          {!showAdminBoard && (
+            <button className="heart" variant="success" onClick={handleFavorite}>
+              {!currentUser ? (
+                <i className="bi bi-heart"></i>
+              ) : !isFavorite ? (
+                <i className="bi bi-heart"></i>
+              ) : (
+                <i className="bi bi-heart-fill"></i>
+              )}
+            </button>
+          )}
+        </div>
+      </div>
+      <div className="container-footer-details">
+        <Footer />
       </div>
     </div>
   )
