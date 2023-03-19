@@ -36,14 +36,14 @@ export const Details = () => {
     idUser = currentUser.usuario.idUser
   }
 
-  // const handleFavorite = () => {
-  //   // currentUser ? handleShow() : handleEmptyCart()
-  //   // if (isFavorite) {
-  //   //   dispatch(removeWineFromFavorites(idUser, id)).then(() => setIsFavorite(false))
-  //   // } else {
-  //   //   dispatch(addWineToFavorites(idUser, id)).then(() => setIsFavorite(true))
-  //   // }
-  // }
+  const handleFavorite = () => {
+    currentUser ? handleShow() : handleEmptyCart()
+    if (isFavorite) {
+      dispatch(removeWineFromFavorites(idUser, id)).then(() => setIsFavorite(false))
+    } else {
+      dispatch(addWineToFavorites(idUser, id)).then(() => setIsFavorite(true))
+    }
+  }
 
   // useEffect(() => {
   //   if (currentUser) {
@@ -61,16 +61,16 @@ export const Details = () => {
     }
   }, [currentUser])
 
-  // useEffect(() => {
-  //   if (currentUser) {
-  //     dispatch(getWinesFromFavorites(idUser)).then(() => {
-  //       const wine = favorites.find(wine => wine.id === id)
-  //       if (wine) {
-  //         setIsFavorite(true)
-  //       }
-  //     })
-  //   }
-  // }, [dispatch, currentUser, idUser, favorites, id])
+  useEffect(() => {
+    if (currentUser) {
+      dispatch(getWinesFromFavorites(idUser)).then(() => {
+        const wine = favorites.find(wine => wine.id === id)
+        if (wine) {
+          setIsFavorite(true)
+        }
+      })
+    }
+  }, [dispatch, currentUser, idUser, favorites, id])
 
   const wineColorType = wineDetail.color_type
   let colorType = ''
@@ -195,7 +195,7 @@ export const Details = () => {
           </Modal.Footer>
         </Modal>
         {!showAdminBoard && (
-          <button className="heart" variant="success" /* onClick={handleFavorite}*/>
+          <button className="heart" variant="success" onClick={handleFavorite}>
             {!currentUser ? (
               <i className="bi bi-heart"></i>
             ) : !isFavorite ? (
