@@ -438,6 +438,14 @@
         
     }
 
+    .cards-wrappe-dark {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 160px);
+        align-items: center;
+        justify-content: center;
+        
+    }
+
     .card-object {
         position: absolute;
         margin: 5px;

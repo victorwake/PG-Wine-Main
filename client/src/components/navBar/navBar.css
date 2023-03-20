@@ -202,24 +202,25 @@ input[type=checkbox] {
     
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
     .conteiner-switch-light{
         margin-top: 15px;
-        margin-left: -325px;
+        float: left;
     }
     .conteiner-switch-dark{
         margin-top: 15px;
-        margin-left: -325px;
+        float: left;
     }
     #navbar-expand-lg-light{
-        padding-bottom: 30px;
+        padding-bottom: 15px;
     }
     
     #navbar-expand-lg-dark{
-        padding-bottom: 30px;
+        padding-bottom: 15px;
     }
     .search-navbar{
-        margin-top: 35px;
+        margin-top: 28px;
+        float: left;
     }
 }
 
