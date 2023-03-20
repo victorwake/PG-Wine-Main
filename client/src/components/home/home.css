@@ -2,7 +2,6 @@
 
 .home-container-light {
     height: 100vh;
-    padding-top: 1px;
     transition-duration: 01s;
     background-color: rgb(224, 224, 224);
     
@@ -43,7 +42,6 @@
 
 .home-container-dark {
     height: 100vh;
-    padding-top: 1px;
     transition-duration: 01s;
     background-color: #333333;
 }
@@ -78,4 +76,8 @@
 #destacados {
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.home_nav_wineType {
+    padding-top: 100px !important;
 }

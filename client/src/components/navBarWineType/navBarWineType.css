@@ -13,8 +13,7 @@
     padding: 0 5%;
     display: flex;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     transition-duration: 01s;
     background-color: rgb(224, 224, 224);
 }
@@ -33,19 +32,12 @@
     padding: 0 5%;
     display: flex;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     transition-duration: 01s;
     background-color: #333333;
 }
 
 /* Modo dark fin */
-
-@media screen and (max-width: 888px) {
-    .cards-wrapper {
-        flex-direction: column;
-    }
-}
 
 .card-wrapper {
     display: block;
@@ -56,15 +48,15 @@
     height: 250px;
     padding: 0 0 0;
     perspective: 600px;
+
 }
 
 .card-object {
     color: #FFF;
     display: block;
-    float: left;
+    /* float: left; */
     position: absolute;
     top: 6%;
-    left: 6%;
     width: 88%;
     height: 88%;
     transform-style: preserve-3d;
@@ -429,4 +421,36 @@
         transform: translateY(100%) translateZ(100px) rotateX(180deg);
         transform-origin: 50% 0%;
     }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px){
+    .card-wrapper {
+        height: 200px;
+        width: 200px;
+
+
+    }
+    .cards-wrappe-light {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 190px);
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .card-object {
+        position: absolute;
+        margin: 5px;
+        top: 6%;
+        width: 88%;
+        height: 88%;
+        transform-style: preserve-3d;
+        margin-left: 47%;
+        margin-right: 53%;
+        -webkit-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+
+    }
+    
 }

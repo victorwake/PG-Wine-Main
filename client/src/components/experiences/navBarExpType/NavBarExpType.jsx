@@ -7,7 +7,7 @@ export const NavBarExpType = () => {
   const clase = useSelector(store => store.theme)
 
   return (
-    <div className={'cards-wrappe-' + clase}>
+    <div className={'cards-wrappe-exp-' + clase}>
       <Fragment>
         <div class="card-wrapper">
           {/* <Link

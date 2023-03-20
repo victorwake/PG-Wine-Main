@@ -55,7 +55,9 @@ export const Home = () => {
       <div className="home_nav">
         <NavBar />
       </div>
-      <NavBarWineType />
+      <div className="home_nav_wineType">
+        <NavBarWineType />
+      </div>
       <Carousel />
       <hr></hr>
       <div className={'card-container-home-' + clase}>

@@ -179,7 +179,7 @@ td {
 
 @media only screen and (max-width: 600px) {
     .containerData {
-      top: 90px;
+      top: 70px;
     }
     
     .imagen {
@@ -226,7 +226,6 @@ td {
     .buttonBack {
       left: 60%;
       transform: translateX(-50%);
-      margin-top: 10px;
     }
     .container-footer-details{
       top: 850px;
