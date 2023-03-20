@@ -423,16 +423,16 @@
     }
 }
 
-@media only screen and (min-width: 360px) and (max-width: 768px){
+@media only screen and (min-width: 300px) and (max-width: 768px){
     .card-wrapper {
-        height: 200px;
-        width: 200px;
+        height: 160px;
+        width: 160px;
 
 
     }
     .cards-wrappe-light {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 190px);
+        grid-template-columns: repeat(auto-fill, 160px);
         align-items: center;
         justify-content: center;
         

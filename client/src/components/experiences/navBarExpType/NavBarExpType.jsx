@@ -7,9 +7,9 @@ export const NavBarExpType = () => {
   const clase = useSelector(store => store.theme)
 
   return (
-    <div className={'cards-wrappe-exp-' + clase}>
+    <div className={'cards-wrappe-exp-' + clase} id="navBarExpType">
       <Fragment>
-        <div class="card-wrapper">
+        <div class="card-wrapper" id="top-margin">
           {/* <Link
             to={'/experiencias/' + 'hoteles'}
             style={{ color: 'inherit', textDecoration: 'inherit' }}
@@ -25,7 +25,7 @@ export const NavBarExpType = () => {
           {/* </Link> */}
         </div>
 
-        <div class="card-wrapper">
+        <div class="card-wrapper" id="top-margin">
           {/* <Link
             to={'/experiencias/' + 'gastronomia'}
             style={{ color: 'inherit', textDecoration: 'inherit' }}
@@ -41,12 +41,12 @@ export const NavBarExpType = () => {
           {/* </Link> */}
         </div>
 
-        <div class="card-wrapper">
+        <div class="card-wrapper" id="top-margin">
           {/* <Link
             to={'/experiencias/' + 'visitas guiadas'}
             style={{ color: 'inherit', textDecoration: 'inherit' }}
           > */}
-          <div class="card-7 card-object card-object-hf">
+          <div class="card-7 card-object card-object-hf" id="card-object-exp">
             <fragment class="face front">
               <div class="title-wrapper">
                 <div class="title">Visitas Guiadas</div>
@@ -57,7 +57,7 @@ export const NavBarExpType = () => {
           {/* </Link> */}
         </div>
 
-        <div class="card-wrapper">
+        <div class="card-wrapper" id="top-margin">
           {/* <Link
             to={'/experiencias/' + 'degustacion'}
             style={{ color: 'inherit', textDecoration: 'inherit' }}
